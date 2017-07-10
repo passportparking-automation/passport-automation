@@ -18,7 +18,7 @@ public class deviceAndroid {
 	public static final String appPackage = "com.passportparking.mobile";
 	*/
 
-	//JK
+	//JK 1
 	public static final String appiumVersion = "1.6.4";
 	public static final String platformName = "Android";
 	public static final String deviceName = "NotUsed";
