@@ -13,14 +13,14 @@ import Tests.AbstractBaseTests.TestBase;
 
 public class LandingPageTests extends TestBase {
 	
-	private LandingPage landingpage;
+	private LandingPage landingPage;
 	
 	@BeforeTest
 	@Override
 	public void setUpPage() {
 		switch(TestBase.executionOS) {
 		case ANDROID:
-			landingpage = new LandingPageAndroid(driver);
+			landingPage = new LandingPageAndroid(driver);
 			
 			break;
 		case IOS:
@@ -35,8 +35,8 @@ public class LandingPageTests extends TestBase {
 	@Test
 	public void checkLandingPageForExceptions() throws InterruptedException{
 		Thread.sleep(5000);
-		landingpage.CheckLandingPageForExceptions();
-		landingpage.CheckMenuOptionsForExceptions();
+		landingPage.CheckLandingPageForExceptions();
+		landingPage.CheckMenuOptionsForExceptions();
 	}
 	
 }

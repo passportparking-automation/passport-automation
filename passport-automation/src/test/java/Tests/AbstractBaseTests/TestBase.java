@@ -3,10 +3,12 @@ package Tests.AbstractBaseTests;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -30,8 +32,8 @@ public abstract class TestBase {
 	
 	/* Depending upon which platform is to tested, tester need to change 
 	 * the OS value either to: ANDROID, IOS or WEB
-	 */ 	
-	public static OS executionOS = OS.IOS;
+	 */ 
+	public static OS executionOS = OS.ANDROID;
 	
 	public enum OS {
 		ANDROID,
@@ -56,8 +58,8 @@ public abstract class TestBase {
 			
 			DesiredCapabilities capabilitiesAndroid = new DesiredCapabilities();
 			capabilitiesAndroid.setCapability(MobileCapabilityType.PLATFORM_NAME, deviceAndroid.platformName);
-			capabilitiesAndroid.setCapability(MobileCapabilityType.DEVICE_NAME, "NotUsed");
-			capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+			capabilitiesAndroid.setCapability(MobileCapabilityType.DEVICE_NAME, deviceAndroid.deviceName);
+			//capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 			capabilitiesAndroid.setCapability(MobileCapabilityType.APP, appAndroid);
 			capabilitiesAndroid.setCapability("appPackage", deviceAndroid.appPackage);
 			driver = new AppiumDriver<MobileElement>(url, capabilitiesAndroid);
@@ -73,8 +75,7 @@ public abstract class TestBase {
 			capabilitiesIOS.setCapability(MobileCapabilityType.PLATFORM_NAME, deviceIOS.platformName);
 			capabilitiesIOS.setCapability(MobileCapabilityType.DEVICE_NAME, deviceIOS.deviceName);
 			capabilitiesIOS.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "10");
-			capabilitiesIOS.setCapability(MobileCapabilityType.AUTOMATION_NAME,deviceIOS.automationName);
-			capabilitiesIOS.setCapability("useNewWDA", "true");
+			capabilitiesIOS.setCapability(MobileCapabilityType.AUTOMATION_NAME, deviceIOS.automationName);
 			capabilitiesIOS.setCapability(MobileCapabilityType.UDID, deviceIOS.udid);
 			capabilitiesIOS.setCapability(MobileCapabilityType.APP, appIOS);
 			driver = new AppiumDriver<MobileElement>(url, capabilitiesIOS);

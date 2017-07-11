@@ -8,5 +8,6 @@ public interface LandingPage {
 	public void CheckMenuOptionsForExceptions();
 	public void EnterLocationOrPayToParkCodeTest();
 	public void clickHelpButton();
+	public void clickPayToPark();
 
 }

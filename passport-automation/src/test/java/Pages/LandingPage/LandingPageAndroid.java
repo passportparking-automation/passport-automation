@@ -128,6 +128,11 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	public void clickHelpButton(){
 		helpButton.click();
 	}
+
+	@Override
+	public void clickPayToPark() {
+		payToParkButton.click();
+	}
 	
 	
 }

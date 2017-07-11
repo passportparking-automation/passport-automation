@@ -17,11 +17,18 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class BasePage {
 
+	
 	@FindBy (id = "menuButton")
 	public MobileElement menuIcon;
 	
-	@FindBy(id = "menuOption1")
-	public MobileElement menuOption1;
+	@FindBy(id = "btnOK")
+	public MobileElement acceptButton;
+	
+	@FindBy(id = "btnCancel")
+	public MobileElement declineButton;
+	
+	@FindBy (id ="backImageView")
+	public MobileElement backButton;
 	
 	
 	static WebDriverWait wait;
