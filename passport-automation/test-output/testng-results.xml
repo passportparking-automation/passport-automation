@@ -2,96 +2,59 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Test runner" duration-ms="34" started-at="2017-07-11T19:50:23Z" finished-at="2017-07-11T19:50:23Z">
+  <suite name="Test runner" duration-ms="52392" started-at="2017-07-11T20:05:38Z" finished-at="2017-07-11T20:06:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34" started-at="2017-07-11T19:50:23Z" finished-at="2017-07-11T19:50:23Z">
+    <test name="Default test" duration-ms="52392" started-at="2017-07-11T20:05:38Z" finished-at="2017-07-11T20:06:31Z">
       <class name="Tests.ActiveSessionPageTests">
-        <test-method status="FAIL" signature="initAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="initAppium" is-config="true" duration-ms="0" started-at="2017-07-11T15:49:54Z" finished-at="2017-07-11T15:49:54Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Unable to create new remote session. desired capabilities = Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.passportparking.mobile, platformName=Android, deviceName=Emulator3}], required capabilities = Capabilities [{}]
-Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
-System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
-Driver info: driver.version: AppiumDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.passportparking.mobile, platformName=Android, deviceName=Emulator3}], required capabilities = Capabilities [{}]
-Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
-System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
-Driver info: driver.version: AppiumDriver
-	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$1(AppiumProtocolHandShake.java:96)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:96)
-	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:112)
-	at Tests.AbstractBaseTests.TestBase.initAppium(TestBase.java:62)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:326)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="initAppium" is-config="true" duration-ms="15260" started-at="2017-07-11T16:05:23Z" finished-at="2017-07-11T16:05:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAppium -->
-        <test-method status="SKIP" signature="setUpPage()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="setUpPage" is-config="true" duration-ms="0" started-at="2017-07-11T15:50:23Z" finished-at="2017-07-11T15:50:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpPage -->
-        <test-method status="SKIP" signature="NonDieselOlderThan2015Test()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="NonDieselOlderThan2015Test" duration-ms="1" started-at="2017-07-11T15:50:23Z" finished-at="2017-07-11T15:50:23Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
+        <test-method status="FAIL" signature="setUpPage()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="setUpPage" is-config="true" duration-ms="0" started-at="2017-07-11T16:05:38Z" finished-at="2017-07-11T16:05:38Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to create new remote session. desired capabilities = Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.passportparking.mobile, platformName=Android, deviceName=Emulator3}], required capabilities = Capabilities [{}]
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 35.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
 System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
-Driver info: driver.version: AppiumDriver]]>
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
+*** Element info: {Using=id, value=btnOK}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.passportparking.mobile, platformName=Android, deviceName=Emulator3}], required capabilities = Capabilities [{}]
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 35.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
 System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
-Driver info: driver.version: AppiumDriver
-	at io.appium.java_client.remote.AppiumProtocolHandShake.lambda$1(AppiumProtocolHandShake.java:96)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at io.appium.java_client.remote.AppiumProtocolHandShake.createSession(AppiumProtocolHandShake.java:96)
-	at io.appium.java_client.remote.AppiumCommandExecutor.doExecute(AppiumCommandExecutor.java:111)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:162)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
+*** Element info: {Using=id, value=btnOK}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:112)
-	at Tests.AbstractBaseTests.TestBase.initAppium(TestBase.java:62)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at Pages.LoginPage.LoginPageAndroid.clickLoginButtonAndAcceptTerms(LoginPageAndroid.java:32)
+	at Tests.ActiveSessionPageTests.setUpPage(ActiveSessionPageTests.java:48)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,7 +63,11 @@ Driver info: driver.version: AppiumDriver
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:326)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:634)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
 	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
@@ -113,15 +80,88 @@ Driver info: driver.version: AppiumDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="SKIP" signature="NonDieselOlderThan2015Test()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="NonDieselOlderThan2015Test" duration-ms="3" started-at="2017-07-11T16:06:30Z" finished-at="2017-07-11T16:06:30Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 35.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
+System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
+*** Element info: {Using=id, value=btnOK}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 35.49 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
+System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
+*** Element info: {Using=id, value=btnOK}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at Pages.LoginPage.LoginPageAndroid.clickLoginButtonAndAcceptTerms(LoginPageAndroid.java:32)
+	at Tests.ActiveSessionPageTests.setUpPage(ActiveSessionPageTests.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:634)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NonDieselOlderThan2015Test -->
-        <test-method status="SKIP" signature="restartApp()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-11T15:50:23Z" finished-at="2017-07-11T15:50:23Z">
+        <test-method status="SKIP" signature="restartApp()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-11T16:06:31Z" finished-at="2017-07-11T16:06:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="SKIP" signature="tearDownAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="tearDownAppium" is-config="true" duration-ms="0" started-at="2017-07-11T15:50:23Z" finished-at="2017-07-11T15:50:23Z">
+        <test-method status="SKIP" signature="tearDownAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="tearDownAppium" is-config="true" duration-ms="0" started-at="2017-07-11T16:06:31Z" finished-at="2017-07-11T16:06:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->

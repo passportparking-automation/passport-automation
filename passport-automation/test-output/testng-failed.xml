@@ -5,6 +5,7 @@
     <classes>
       <class name="Tests.ActiveSessionPageTests">
         <methods>
+          <include name="setUpPage"/>
           <include name="NonDieselOlderThan2015Test"/>
           <include name="initAppium"/>
         </methods>

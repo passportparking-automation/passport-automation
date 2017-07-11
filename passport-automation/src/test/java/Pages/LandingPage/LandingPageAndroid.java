@@ -131,7 +131,13 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 
 	@Override
 	public void clickPayToPark() {
+		takeScreenshot("stagingNote");
 		payToParkButton.click();
+		try{
+			declineButton.click();
+		}catch (Throwable e) {
+		    System.err.println("The staging build thing did not appear");
+		}
 	}
 	
 	
