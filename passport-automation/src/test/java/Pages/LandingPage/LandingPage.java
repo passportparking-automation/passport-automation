@@ -1,13 +1,12 @@
 package Pages.LandingPage;
 
 public interface LandingPage {
-	
-	public void checkSignUpClickExpectTNC();
-	public void checkLoginInClickExpectTNC();
-	public void checkTermsAndCondtionsLinkClick();
-	public void checkPrivacyPolicyLinkClick();
-	public void checkSignUpClickExpectLoginSelection();
-	public void checkLoginClickExpectLoginSelection();
-	public void checkDeclineClick();
-	public void checkAcceptClickExpectLoginSelection();
+	public void LaunchTest();
+	public void ScrollTest();
+	public void PushNotificationTest();
+	public void CheckLandingPageForExceptions();
+	public void CheckMenuOptionsForExceptions();
+	public void EnterLocationOrPayToParkCodeTest();
+	public void clickHelpButton();
+
 }

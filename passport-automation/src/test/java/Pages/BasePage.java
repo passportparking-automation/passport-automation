@@ -2,11 +2,13 @@ package Pages;
 
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,7 +16,13 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public abstract class BasePage {
-	protected String androidID = "com.passportparking.mobile:id/";
+
+	@FindBy (id = "menuButton")
+	public MobileElement menuIcon;
+	
+	@FindBy(id = "menuOption1")
+	public MobileElement menuOption1;
+	
 	
 	static WebDriverWait wait;
 	
@@ -27,7 +35,7 @@ public abstract class BasePage {
     	this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, 35, TimeUnit.SECONDS), this);
     }
-
+    
     protected boolean sendKeysToElement(String input, WebElement element, boolean appendNewLine) throws InterruptedException {
         final int MAX_ATTEMPTS = 3;
         int attempts = 0;
