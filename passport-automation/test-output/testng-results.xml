@@ -1,112 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Test runner" duration-ms="52392" started-at="2017-07-11T20:05:38Z" finished-at="2017-07-11T20:06:31Z">
+  <suite name="Test runner" duration-ms="117468" started-at="2017-07-12T18:54:05Z" finished-at="2017-07-12T18:56:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52392" started-at="2017-07-11T20:05:38Z" finished-at="2017-07-11T20:06:31Z">
+    <test name="Default test" duration-ms="117468" started-at="2017-07-12T18:54:05Z" finished-at="2017-07-12T18:56:02Z">
       <class name="Tests.ActiveSessionPageTests">
-        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="initAppium" is-config="true" duration-ms="15260" started-at="2017-07-11T16:05:23Z" finished-at="2017-07-11T16:05:38Z">
+        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="initAppium" is-config="true" duration-ms="12291" started-at="2017-07-12T14:53:53Z" finished-at="2017-07-12T14:54:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAppium -->
-        <test-method status="FAIL" signature="setUpPage()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="setUpPage" is-config="true" duration-ms="0" started-at="2017-07-11T16:05:38Z" finished-at="2017-07-11T16:05:38Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 35.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
-System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
-*** Element info: {Using=id, value=btnOK}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 35.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
-System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
-*** Element info: {Using=id, value=btnOK}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at Pages.LoginPage.LoginPageAndroid.clickLoginButtonAndAcceptTerms(LoginPageAndroid.java:32)
-	at Tests.ActiveSessionPageTests.setUpPage(ActiveSessionPageTests.java:48)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:634)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="setUpPage" is-config="true" duration-ms="316" started-at="2017-07-12T14:54:05Z" finished-at="2017-07-12T14:54:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="SKIP" signature="NonDieselOlderThan2015Test()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="NonDieselOlderThan2015Test" duration-ms="3" started-at="2017-07-11T16:06:30Z" finished-at="2017-07-11T16:06:30Z">
+        <test-method status="FAIL" signature="NonDieselOlderThan2015Test()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="NonDieselOlderThan2015Test" duration-ms="117119" started-at="2017-07-12T14:54:05Z" finished-at="2017-07-12T14:56:02Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 35.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
-System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
-*** Element info: {Using=id, value=btnOK}]]>
+              <![CDATA[Can't locate an element by this strategy: By.xpath: //android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.Button[1]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 35.49 seconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.xpath: //android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.Button[1]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(<generated>)
+	at Pages.VehiclesPage.VehiclesPageAndroid.clickAddV(VehiclesPageAndroid.java:17)
+	at Tests.ActiveSessionPageTests.NonDieselOlderThan2015Test(ActiveSessionPageTests.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@46b56c2d (tried for 35 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:91)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
+	... 17 more
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 40.49 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.2.0', revision: '8c03df6b79', time: '2017-02-23 10:51:31 +0000'
 System info: host: 'Jamess-MacBook-Pro-2.local', ip: 'fe80:0:0:0:aebc:32ff:fe94:89ed%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_60'
 Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
-*** Element info: {Using=id, value=btnOK}
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, networkConnectionEnabled=true, dontStopAppOnReset=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, appActivity=com.parkopedia.parkright.ParkRightApp, dontStopAppOnReset=true, platformVersion=7.1.1, automationName=Appium, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, platformName=Android, deviceName=Emulator3}, platformVersion=7.1.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: c880fd00-3518-4977-8e2d-89f8a3eae3b4
+*** Element info: {Using=xpath, value=//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.Button[1]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -119,49 +67,33 @@ Session ID: 2ece61d6-9c09-4516-8e82-bdaac778d713
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at Pages.LoginPage.LoginPageAndroid.clickLoginButtonAndAcceptTerms(LoginPageAndroid.java:32)
-	at Tests.ActiveSessionPageTests.setUpPage(ActiveSessionPageTests.java:48)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:634)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:113)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:167)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 19 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NonDieselOlderThan2015Test -->
-        <test-method status="SKIP" signature="restartApp()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-11T16:06:31Z" finished-at="2017-07-11T16:06:31Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="restartApp" is-config="true" duration-ms="1" started-at="2017-07-12T14:56:02Z" finished-at="2017-07-12T14:56:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="SKIP" signature="tearDownAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="tearDownAppium" is-config="true" duration-ms="0" started-at="2017-07-11T16:06:31Z" finished-at="2017-07-11T16:06:31Z">
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="tearDownAppium" is-config="true" duration-ms="5838" started-at="2017-07-12T14:56:03Z" finished-at="2017-07-12T14:56:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->

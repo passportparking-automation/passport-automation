@@ -11,6 +11,11 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	@FindBy (id = "tutorialCloseButton")
 	public MobileElement closeHelpButton;
 	
+	@FindBy (xpath = "	//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.TextView[2]")
+	public MobileElement helpMenu;
+	
+
+	
 	
 	public HelpPageAndroid(AppiumDriver driver) {super(driver); }
 
@@ -20,12 +25,20 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	}
 
 	public void CheckHelpPageForExceptiosn() {
-		// TODO Auto-generated method stub
-		
+	
+			//landingpage.CheckMenuOptionsForExceptions();
+			menuIcon.click();
+			helpMenu.isDisplayed();
+			closeHelpButton.click();
+
 	}
 
 	public void HelpNavTest() {
+		// TODO Auto-generated method stub
 		
 	}
+	
+
+
 
 }

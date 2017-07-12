@@ -22,7 +22,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 		takeScreenshot("verTest1");
 		PINSubmitButton.click();
 		takeScreenshot("verTest1");
-		backButton.click();
+		//backButton.click();
 	}
 
 }

@@ -17,11 +17,10 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class BasePage {
 
-	
 	@FindBy (id = "menuButton")
 	public MobileElement menuIcon;
 	
-	@FindBy(id = "btnOK")
+	@FindBy(id = "btnOk")
 	public MobileElement acceptButton;
 	
 	@FindBy(id = "btnCancel")
@@ -42,6 +41,7 @@ public abstract class BasePage {
     	this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, 35, TimeUnit.SECONDS), this);
     }
+    
     
     protected boolean sendKeysToElement(String input, WebElement element, boolean appendNewLine) throws InterruptedException {
         final int MAX_ATTEMPTS = 3;

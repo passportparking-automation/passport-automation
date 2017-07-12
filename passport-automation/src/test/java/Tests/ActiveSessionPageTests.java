@@ -44,14 +44,6 @@ public class ActiveSessionPageTests extends TestBase{
 			zonePage = new ZonePageAndroid(driver);
 			vehiclesPage = new VehiclesPageAndroid(driver);
 			
-			landingPage.clickPayToPark();
-			loginPage.clickLoginButtonAndAcceptTerms();
-			signUpPage.signUpThroughEmail();
-			emailVerPage.ValidEmailTest();
-			codeVerificationPage.VerCodeTest();
-			pINPage.SendCorrectPINTest();
-			zonePage.goToDieselZone1();
-			vehiclesPage.clickAddV();
 			
 			break;
 		case IOS:
@@ -65,8 +57,15 @@ public class ActiveSessionPageTests extends TestBase{
 	
 	@Test
 	public void NonDieselOlderThan2015Test() throws InterruptedException{
+		landingPage.clickPayToPark();
+		loginPage.clickLoginButtonAndAcceptTerms();
+		signUpPage.signUpThroughEmail();
+		emailVerPage.ValidEmailTest();
+		codeVerificationPage.VerCodeTest();
+
+		pINPage.SendCorrectPINTest();
+		zonePage.goToDieselZone1();
 		vehiclesPage.clickAddV();
-		
 	}
 	/*
 	@Test
