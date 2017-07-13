@@ -37,7 +37,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]")
 	public MobileElement favButton; 
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]")
+	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]")
 	public MobileElement faqButton;
 	
 	@FindBy(xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[2]")
@@ -51,6 +51,9 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	
 	@FindBy (id = "logInButton")
 	public MobileElement logInButton;
+	
+	@FindBy (id="optionsContainer")
+	public MobileElement optionsCont;
 	
 	/*
 	@FindBy (className = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")
@@ -128,6 +131,21 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	public void clickHelpButton(){
 		helpButton.click();
 	}
+	
+	
+	public void navigateToFav(){
+		takeScreenshot("FavLanding");
+		favButton.click();
+		
+	}
+	
+	public void navigateToFAQ(){
+		takeScreenshot("FAQLanding");
+		faqButton.click();
+		
+		
+		
+		} 
 
 	@Override
 	public void clickPayToPark() {

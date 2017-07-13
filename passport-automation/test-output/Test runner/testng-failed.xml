@@ -3,15 +3,15 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
   <test name="Default test(failed)" parallel="classes">
     <classes>
-      <class name="Tests.ActiveSessionPageTests">
+      <class name="Tests.FAQPageTests">
         <methods>
+          <include name="FAQNavTest"/>
           <include name="setUpPage"/>
           <include name="restartApp"/>
           <include name="tearDownAppium"/>
-          <include name="NonDieselOlderThan2015Test"/>
           <include name="initAppium"/>
         </methods>
-      </class> <!-- Tests.ActiveSessionPageTests -->
+      </class> <!-- Tests.FAQPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Test runner] -->

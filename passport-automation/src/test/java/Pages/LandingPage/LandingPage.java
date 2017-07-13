@@ -9,5 +9,8 @@ public interface LandingPage {
 	public void EnterLocationOrPayToParkCodeTest();
 	public void clickHelpButton();
 	public void clickPayToPark();
+	public void navigateToFav();
+	public void navigateToFAQ();
+
 
 }

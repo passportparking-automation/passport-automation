@@ -29,6 +29,15 @@ public abstract class BasePage {
 	@FindBy (id ="backImageView")
 	public MobileElement backButton;
 	
+	@FindBy (xpath ="//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[3]/android.widget.TextView[1]")
+	public MobileElement reportBugButton;
+	
+	@FindBy (xpath = " //android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ScrollView[1]")
+	public MobileElement popUp;
+	
+	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[1]")
+	public  MobileElement homeOption;
+	
 	
 	static WebDriverWait wait;
 	
