@@ -88,7 +88,7 @@ public class TestParkRightDieselFlow extends TestBase {
 			break;
 		}
 	}
-	
+	/*
 	@Test(priority = 1)
 	public void Test() {
 		
@@ -166,5 +166,5 @@ public class TestParkRightDieselFlow extends TestBase {
 		paymentMethodPage.clickNoButton();
 		lengthOfStayPage.clickBackButton();
 
-	}
+	}*/
 }
