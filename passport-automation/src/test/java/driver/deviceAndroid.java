@@ -19,7 +19,7 @@ public class deviceAndroid {
 	
 	//Yulia caps
 	/*
-	 //Hello James
+	 //Hello James!
 	*/
 	
 	//Broderick caps
