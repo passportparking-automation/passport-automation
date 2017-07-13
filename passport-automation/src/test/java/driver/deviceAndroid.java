@@ -4,8 +4,7 @@ import java.io.File;
 
 public class deviceAndroid {
 	
-	//James caps
-	
+	//James caps- Hi Yulia
 	public static final String platformName = "Android";
 	public static final String deviceName = "Emulator3";
 	public static final String device = "Android";
@@ -16,7 +15,6 @@ public class deviceAndroid {
 	public static final String appName = "ParkRight-staging.apk";
 	public static final String appDir = "/Users/jameskoch/Downloads";
 	public static final String appPackage = "com.parkopedia.parkright";
-	//JK Update
 	
 	
 	//Yulia caps
