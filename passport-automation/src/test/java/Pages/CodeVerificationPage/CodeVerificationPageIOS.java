@@ -1,23 +1,24 @@
 package Pages.CodeVerificationPage;
 
-import org.openqa.selenium.support.FindBy;
-
-import Pages.BasePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class CodeVerificationPageAndroid extends BasePage implements CodeVerificationPage{
+import org.openqa.selenium.support.FindBy;
 
-	@FindBy (id = "codeTextBox")
+import Pages.BasePage;
+
+public class CodeVerificationPageIOS extends BasePage implements CodeVerificationPage {
+	
+	@FindBy (name = "codeInput")
 	public MobileElement codeInputBox;
 	
-	@FindBy (id="id_cvw_verify")
+	@FindBy (name = "Verify")
 	public MobileElement submitButton;
+
+	@FindBy (name = "Ok")
+	private MobileElement acceptButton;
 	
-	@FindBy (id="id_cvw_try_again")
-	public MobileElement tryAgainButton;
-	
-	public CodeVerificationPageAndroid(AppiumDriver driver) {super(driver);}
+	public CodeVerificationPageIOS(AppiumDriver driver) {super(driver);}
 
 	public void VerCodeTest() {
 		codeInputBox.sendKeys("777");
@@ -27,5 +28,4 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 		acceptButton.click();
 		takeScreenshot("pinTest3");
 	}
-
 }

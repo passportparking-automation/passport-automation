@@ -11,7 +11,7 @@ public class EmailVerPageAndroid extends BasePage implements EmailVerPage{
 	@FindBy (id = "emailTextBox")
 	public MobileElement emailInputBox;
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")
+	@FindBy (id = "id_evw_send_button")
 	public MobileElement sendCodeButton;
 	
 
