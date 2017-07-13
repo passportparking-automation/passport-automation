@@ -36,7 +36,7 @@ public class LandingPageTests extends TestBase {
 	public void checkLandingPageForExceptions() throws InterruptedException{
 		Thread.sleep(5000);
 		landingPage.CheckLandingPageForExceptions();
-		landingPage.CheckMenuOptionsForExceptions();
+
 	}
 	
 }

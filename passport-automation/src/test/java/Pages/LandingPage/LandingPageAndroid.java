@@ -40,8 +40,6 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]")
 	public MobileElement faqButton;
 	
-	@FindBy(xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[2]")
-	public MobileElement ppLogo;
 	
 	@FindBy (id = "signUpButton")
 	public MobileElement signUpButton;
@@ -90,7 +88,6 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		helpButton.isDisplayed();
 		favButton.isDisplayed();
 		faqButton.isDisplayed();
-		ppLogo.isDisplayed();
 		menuIcon.isDisplayed();
 		takeScreenshot("CheckLandingPageForExceptions");
 	}
