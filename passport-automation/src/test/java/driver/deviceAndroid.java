@@ -4,7 +4,7 @@ import java.io.File;
 
 public class deviceAndroid {
 	
-	//James caps- Hi Yulia, what's up? hows myrtle beach doing? 
+	//James caps- Hi Yulia, what's up? hows myrtle beach doing?? 
 	public static final String platformName = "Android";
 	public static final String deviceName = "Emulator3";
 	public static final String device = "Android";
