@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Test runner" duration-ms="58459" started-at="2017-07-13T17:16:24Z" finished-at="2017-07-13T17:17:23Z">
+  <suite name="Default suite" duration-ms="16465" started-at="2017-07-13T18:43:38Z" finished-at="2017-07-13T18:43:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="58459" started-at="2017-07-13T17:16:24Z" finished-at="2017-07-13T17:17:23Z">
-      <class name="Tests.FAQPageTests">
-        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.FAQPageTests@68999068]" name="initAppium" is-config="true" duration-ms="6741" started-at="2017-07-13T13:16:17Z" finished-at="2017-07-13T13:16:24Z">
+    <test name="Default test" duration-ms="16465" started-at="2017-07-13T18:43:38Z" finished-at="2017-07-13T18:43:55Z">
+      <class name="Tests.FavoritesPageTests">
+        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.FavoritesPageTests@31dc339b]" name="initAppium" is-config="true" duration-ms="5392" started-at="2017-07-13T14:43:33Z" finished-at="2017-07-13T14:43:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAppium -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.FAQPageTests@68999068]" name="setUpPage" is-config="true" duration-ms="220" started-at="2017-07-13T13:16:24Z" finished-at="2017-07-13T13:16:24Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.FavoritesPageTests@31dc339b]" name="setUpPage" is-config="true" duration-ms="170" started-at="2017-07-13T14:43:38Z" finished-at="2017-07-13T14:43:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="FAQNavTest()[pri:0, instance:Tests.FAQPageTests@68999068]" name="FAQNavTest" duration-ms="58204" started-at="2017-07-13T13:16:24Z" finished-at="2017-07-13T13:17:23Z">
+        <test-method status="PASS" signature="FavoritesTest()[pri:0, instance:Tests.FavoritesPageTests@31dc339b]" name="FavoritesTest" duration-ms="16274" started-at="2017-07-13T14:43:38Z" finished-at="2017-07-13T14:43:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FAQNavTest -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.FAQPageTests@68999068]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-13T13:17:23Z" finished-at="2017-07-13T13:17:23Z">
+        </test-method> <!-- FavoritesTest -->
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.FavoritesPageTests@31dc339b]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-13T14:43:55Z" finished-at="2017-07-13T14:43:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.FAQPageTests@68999068]" name="tearDownAppium" is-config="true" duration-ms="1281" started-at="2017-07-13T13:17:23Z" finished-at="2017-07-13T13:17:24Z">
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.FavoritesPageTests@31dc339b]" name="tearDownAppium" is-config="true" duration-ms="2802" started-at="2017-07-13T14:43:55Z" finished-at="2017-07-13T14:43:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->
-      </class> <!-- Tests.FAQPageTests -->
+      </class> <!-- Tests.FavoritesPageTests -->
     </test> <!-- Default test -->
-  </suite> <!-- Test runner -->
+  </suite> <!-- Default suite -->
 </testng-results>

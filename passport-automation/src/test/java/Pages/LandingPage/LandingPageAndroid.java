@@ -31,15 +31,14 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy (id = "payToParkButton")
 	public MobileElement payToParkButton;
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]")
+	@FindBy (id = "id_help_layout")
 	public MobileElement helpButton;
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]")
+	@FindBy (id = "id_favorites")
 	public MobileElement favButton; 
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[3]")
+	@FindBy (id = "id_about_layout")
 	public MobileElement faqButton;
-	
 	
 	@FindBy (id = "signUpButton")
 	public MobileElement signUpButton;

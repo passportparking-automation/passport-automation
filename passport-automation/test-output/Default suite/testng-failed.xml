@@ -3,12 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.FAQPageTests">
+      <class name="Tests.FavoritesPageTests">
         <methods>
-          <include name="FAQNavTest"/>
+          <include name="restartApp"/>
+          <include name="tearDownAppium"/>
+          <include name="setUpPage"/>
           <include name="initAppium"/>
+          <include name="FavoritesTest"/>
         </methods>
-      </class> <!-- Tests.FAQPageTests -->
+      </class> <!-- Tests.FavoritesPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

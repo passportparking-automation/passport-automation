@@ -26,7 +26,7 @@ public class deviceAndroid {
 	public static final String browserNameChrome = "Chrome";
 	public static final String browserNameFirefox = "Firefox";
 	
-	public static final String appName = "ParkRight.apk";
+	public static final String appName = "ParkRight-staging.apk";
 	public static final String appDir = "/Users/yuliyajus/Downloads";
 	public static final String appPackage = "com.parkopedia.parkright";
 	 //Hello James!
