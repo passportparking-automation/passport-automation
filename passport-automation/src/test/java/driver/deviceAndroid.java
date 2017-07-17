@@ -3,6 +3,8 @@ package driver;
 import java.io.File;
 
 public class deviceAndroid {
+	//James Caps
+	
 	public static final String platformName = "Android";
 	public static final String deviceName = "Emulator3";
 	public static final String device = "Android";
