@@ -8,10 +8,24 @@
           <include name="FAQNavTest"/>
           <include name="setUpPage"/>
           <include name="restartApp"/>
-          <include name="tearDownAppium"/>
-          <include name="initAppium"/>
         </methods>
       </class> <!-- Tests.FAQPageTests -->
+      <class name="Tests.FavoritesPageTests">
+        <methods>
+          <include name="restartApp"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- Tests.FavoritesPageTests -->
+      <class name="Tests.SendBugReportPageTests">
+        <methods>
+          <include name="EmptyBugTest"/>
+          <include name="CheckBugForExceptions"/>
+          <include name="restartApp"/>
+          <include name="tearDownAppium"/>
+          <include name="setUpPage"/>
+          <include name="initAppium"/>
+        </methods>
+      </class> <!-- Tests.SendBugReportPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Test runner] -->

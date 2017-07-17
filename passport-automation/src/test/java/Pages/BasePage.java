@@ -8,6 +8,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -39,9 +40,7 @@ public abstract class BasePage {
 	
 	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[1]")
 	public  MobileElement homeOption;
-
-	
-	
+		
 	static WebDriverWait wait;
 	
     private static final int KEYBOARD_ANIMATION_DELAY = 1000;
@@ -53,7 +52,6 @@ public abstract class BasePage {
     	this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, 35, TimeUnit.SECONDS), this);
     }
-    
     
     protected boolean sendKeysToElement(String input, WebElement element, boolean appendNewLine) throws InterruptedException {
         final int MAX_ATTEMPTS = 3;
@@ -80,6 +78,8 @@ public abstract class BasePage {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		return screenshot.renameTo(new File(screenshotDirectory, String.format("%s.png", name)));
 	}
+	
+	
 	
 	public static void sleep(int sleeptime) {
 		try {

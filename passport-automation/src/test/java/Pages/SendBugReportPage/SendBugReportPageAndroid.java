@@ -2,6 +2,8 @@ package Pages.SendBugReportPage;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,17 +24,18 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 	@FindBy (id = "commentsText")
 	public MobileElement commentReportBug;
 	
-	@FindBy (xpath = "	//android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")
-	public MobileElement submitReportBug;
-	
 	@FindBy (id = "menuImageView")
 	public MobileElement menuImage;
 	
+	@FindBy (xpath = "	//android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")
+	public MobileElement submitReportBug;
 
 	
 	public void CheckBugForExceptions(){
-		
 		menuIcon.click();
+		takeScreenshot("cbfe");
+		
+		
 		reportBugButton.click();
 		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
 		String actualHeader = pageHeader.getText();
@@ -71,8 +74,8 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 	
 	
 	public void EmptyBugTest(){
-		
 		menuIcon.click();
+		
 		reportBugButton.click();
 		submitReportBug.click();
 		popUp.isDisplayed();
