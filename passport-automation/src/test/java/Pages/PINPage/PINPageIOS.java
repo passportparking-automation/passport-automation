@@ -25,4 +25,11 @@ public class PINPageIOS extends BasePage implements PINPage {
 		PINSubmitButton.click();
 		takeScreenshot("verTest1");
 	}
+
+
+	@Override
+	public void CheckPINPageForExcpetions() {
+		// TODO Auto-generated method stub
+		
+	}
 }

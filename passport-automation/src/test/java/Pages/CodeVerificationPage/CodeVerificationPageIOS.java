@@ -28,4 +28,10 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 		acceptButton.click();
 		takeScreenshot("pinTest3");
 	}
+
+	@Override
+	public void CheckCodeVerForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
 }

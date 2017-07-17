@@ -135,8 +135,8 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		
 	}
 	
-	public void navigateToFAQ(){
-		takeScreenshot("FAQLanding");
+	public void navigateToAbout(){
+		takeScreenshot("AboutLanding");
 		faqButton.click();
 		
 		

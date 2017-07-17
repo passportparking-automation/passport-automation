@@ -1,4 +1,5 @@
-package Pages.FAQPage;
+package Pages.AboutPage;
+
 
 import static org.testng.Assert.assertTrue;
 
@@ -10,9 +11,9 @@ import Pages.BasePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class FAQPageAndroid extends BasePage implements FAQPage {
+public class AboutPageAndroid extends BasePage implements AboutPage {
 
-	public FAQPageAndroid(AppiumDriver driver) {  super(driver);  }
+	public AboutPageAndroid(AppiumDriver driver) {  super(driver);  }
 
 	
 	@FindBy (id = "menuImageView")
@@ -20,10 +21,7 @@ public class FAQPageAndroid extends BasePage implements FAQPage {
 	
 
 	
-	public void FAQNavTest(){
-		
-		menuIcon.click();
-		FAQMenuOption.click();
+	public void AboutTest(){
 		
 		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
 		String actualFAQHeader = pageHeader.getText();
@@ -34,13 +32,13 @@ public class FAQPageAndroid extends BasePage implements FAQPage {
 		}else{
 			assertTrue(false);
 		}
-		driver.navigate().back();
 		//driver.navigate().back();
+		driver.navigate().back();
 		//backButton.click();
 		//menuIcon.click();
 		//homeOption.click();
-	}
-	public void navigateToFAQ(){
+		
+		
 		
 	}
 	

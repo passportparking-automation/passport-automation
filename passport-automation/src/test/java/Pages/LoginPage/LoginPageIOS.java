@@ -106,4 +106,10 @@ public class LoginPageIOS extends BasePage implements LoginPage {
 		
 	}
 
+	@Override
+	public void CheckLoginPageForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

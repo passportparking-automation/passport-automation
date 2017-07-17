@@ -18,4 +18,10 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 
 	}
 
+	@Override
+	public void CheckVehiclesPageForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

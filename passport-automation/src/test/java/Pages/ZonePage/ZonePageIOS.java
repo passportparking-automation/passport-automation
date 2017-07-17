@@ -34,4 +34,10 @@ public class ZonePageIOS extends BasePage implements ZonePage {
 		takeScreenshot("desielScreenshot2");
 		continueButtonDieselPopUp.click();
 	}
+
+	@Override
+	public void CheckZoneForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
 }

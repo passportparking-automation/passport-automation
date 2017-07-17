@@ -102,8 +102,9 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 		
 	}
 
+
 	@Override
-	public void navigateToFAQ() {
+	public void navigateToAbout() {
 		// TODO Auto-generated method stub
 		
 	}

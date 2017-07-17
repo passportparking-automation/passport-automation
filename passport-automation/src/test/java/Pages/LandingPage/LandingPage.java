@@ -10,7 +10,7 @@ public interface LandingPage {
 	public void clickHelpButton();
 	public void clickPayToPark();
 	public void navigateToFav();
-	public void navigateToFAQ();
+	public void navigateToAbout();
 
 
 }

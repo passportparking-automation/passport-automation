@@ -29,4 +29,10 @@ public class EmailVerPageIOS extends BasePage implements EmailVerPage {
 		acceptButton.click();
 	}
 
+	@Override
+	public void CheckEmailVerPageForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

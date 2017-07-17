@@ -12,4 +12,11 @@ public class PayMethodPageAndroid extends BasePage implements  PayMethodPage{
 		
 	}
 
+
+	@Override
+	public void CheckPayMethodForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

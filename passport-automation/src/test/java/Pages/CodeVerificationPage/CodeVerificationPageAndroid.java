@@ -28,4 +28,10 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 		takeScreenshot("pinTest3");
 	}
 
+	@Override
+	public void CheckCodeVerForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

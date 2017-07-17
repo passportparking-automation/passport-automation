@@ -28,4 +28,10 @@ public class SignUpPageIOS extends BasePage implements SignUpPage {
 		takeScreenshot("pressPhone");
 }
 
+	@Override
+	public void CheckSigninPageForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

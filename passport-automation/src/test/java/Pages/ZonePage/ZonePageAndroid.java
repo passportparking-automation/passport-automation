@@ -25,4 +25,11 @@ public class ZonePageAndroid extends BasePage implements ZonePage{
 		continueButton.click();
 	}
 
+
+	@Override
+	public void CheckZoneForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

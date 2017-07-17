@@ -33,7 +33,7 @@ public class FAQPageTests extends TestBase {
 	@Test 
 	public void FAQNavTest() throws InterruptedException{
 		Thread.sleep(7000);
-		landingPage.navigateToFAQ();
+		landingPage.navigateToAbout();
 		Thread.sleep(7000);
 		faqPage.FAQNavTest();
 	}

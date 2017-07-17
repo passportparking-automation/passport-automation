@@ -25,4 +25,11 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 		//backButton.click();
 	}
 
+
+	@Override
+	public void CheckPINPageForExcpetions() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

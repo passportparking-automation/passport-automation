@@ -18,4 +18,10 @@ public class VehiclesPageIOS extends BasePage implements VehiclesPage {
 		addVehicleButton.click();
 
 }
+
+	@Override
+	public void CheckVehiclesPageForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
 }

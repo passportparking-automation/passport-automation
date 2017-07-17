@@ -29,11 +29,14 @@ public abstract class BasePage {
 	@FindBy(id = "btnCancel")
 	public MobileElement declineButton;
 	
-	@FindBy (id ="backImageView")
+	@FindBy (id ="backButton")
 	public MobileElement backButton;
 	
-	@FindBy (xpath ="//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[3]/android.widget.TextView[1]")
+	@FindBy (xpath ="//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[4]")
 	public MobileElement reportBugButton;
+	
+	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[5]")
+	public MobileElement FAQMenuOption;
 	
 	@FindBy (xpath = " //android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ScrollView[1]")
 	public MobileElement popUp;
