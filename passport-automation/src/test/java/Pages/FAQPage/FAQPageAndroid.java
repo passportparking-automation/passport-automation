@@ -40,7 +40,24 @@ public class FAQPageAndroid extends BasePage implements FAQPage {
 		//menuIcon.click();
 		//homeOption.click();
 	}
-	public void navigateToFAQ(){
+	
+	public void AboutTest(){
+		
+		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
+		String actualFAQHeader = pageHeader.getText();
+		String expectedFAQHeader = "FAQ";
+		//System.out.println("Actual Value is: " + actualFAQHeader);
+		if(expectedFAQHeader.equals(actualFAQHeader)){
+		assertTrue(true);
+		}else{
+			assertTrue(false);
+		}
+		//driver.navigate().back();
+		driver.navigate().back();
+		//backButton.click();
+		//menuIcon.click();
+		//homeOption.click();
+		
 		
 	}
 	
