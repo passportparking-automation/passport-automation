@@ -1,5 +1,7 @@
 package Pages.LoginPage;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
@@ -16,6 +18,9 @@ public class LoginPageAndroid extends BasePage implements LoginPage {
 	
 	@FindBy (id ="loginTypeHeader")
 	public MobileElement loginTypeHeader;
+	
+	@FindBy (xpath = "//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]")
+	public MobileElement termsPopUp;
 		
 	public LoginPageAndroid(AppiumDriver driver) {super(driver);}
 
@@ -33,8 +38,27 @@ public class LoginPageAndroid extends BasePage implements LoginPage {
 
 	@Override
 	public void CheckLoginPageForExceptions() {
-		// TODO Auto-generated method stub
-		
+		loginButton.click();
+		acceptButton.click();
+		backButton.click();
+	
 	}
+	
+	
+	public void AssureTermsAreAcceptedTest(){
+		signUpButton.click();
+		if(termsPopUp.isDisplayed()){
+			assertTrue(false);
+			}else{
+				assertTrue(true);
+			}
+		}
+	
+	
+	
+	
+	}
+	
 
-}
+
+

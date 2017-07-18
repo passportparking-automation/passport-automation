@@ -11,6 +11,9 @@ public interface LandingPage {
 	public void clickPayToPark();
 	public void navigateToFav();
 	public void navigateToAbout();
+	public void navigateToFindLocation();
+
+	
 
 
 }

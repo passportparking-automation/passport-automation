@@ -2,6 +2,8 @@ package Pages.LandingPage;
 
 
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -122,8 +124,23 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 
 
 	public void EnterLocationOrPayToParkCodeTest() {
+		goToMapButton.click();
+		WebElement pageHeader = driver.findElement(By.id("viewHeader"));
+		String actualFAQHeader = pageHeader.getText();
+		String expectedFAQHeader = "Find Parking";
+		// System.out.println("Actual Value is: " + actualFAQHeader);
+		if (expectedFAQHeader.equals(actualFAQHeader)) {
+			assertTrue(true);
+		} else {
+			assertTrue(false);
+		}
+		backButton.click();
+		CheckLandingPageForExceptions();
+			
 		
 	}
+	
+	
 	public void clickHelpButton(){
 		helpButton.click();
 	}
@@ -135,13 +152,17 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		
 	}
 	
+	public void navigateToFindLocation(){
+		takeScreenshot("FindLocationLanding");
+		goToMapButton.click();		
+		} 
+	
 	public void navigateToAbout(){
 		takeScreenshot("AboutLanding");
-		faqButton.click();
-		
-		
-		
+		faqButton.click();		
 		} 
+	
+	
 
 	@Override
 	public void clickPayToPark() {

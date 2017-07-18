@@ -35,14 +35,39 @@ public abstract class BasePage {
 	@FindBy (xpath ="//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[4]")
 	public MobileElement reportBugButton;
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[5]")
-	public MobileElement FAQMenuOption;
-	
+
 	@FindBy (xpath = " //android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ScrollView[1]")
 	public MobileElement popUp;
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[1]")
+	@FindBy (id = "split_action_bar")
 	public  MobileElement homeOption;
+	
+	@FindBy (id = "text")
+	public  MobileElement findParkingMenuOption;
+	
+
+	@FindBy (id = "textinput_error")
+	public  MobileElement sendBugMenuOption;
+	
+	@FindBy (id = "transition_current_scene")
+	public MobileElement FAQMenuOption;
+	
+	@FindBy (id = "transition_scene_layoutid_cache")
+	public MobileElement termsMenuOption;
+	
+	@FindBy (id = "tutorialCloseButton")
+	public  MobileElement privacyPolicyMenuOption;
+	
+
+	@FindBy (id = "tutorialStepCounter")
+	public  MobileElement loginMenuOption;
+	
+	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]")
+	public  MobileElement menuTray;
+	
+	@FindBy (id = "menuImageView")
+	public MobileElement menuImage;
+	
 		
 	static WebDriverWait wait;
 	

@@ -34,4 +34,16 @@ public class SignUpPageIOS extends BasePage implements SignUpPage {
 		
 	}
 
+	@Override
+	public void DeclineTermsTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void AcceptTermsTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

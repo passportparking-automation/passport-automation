@@ -108,4 +108,10 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void navigateToFindLocation() {
+		// TODO Auto-generated method stub
+		
+	}
 }

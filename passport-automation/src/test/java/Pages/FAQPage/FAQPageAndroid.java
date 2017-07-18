@@ -15,8 +15,7 @@ public class FAQPageAndroid extends BasePage implements FAQPage {
 	public FAQPageAndroid(AppiumDriver driver) {  super(driver);  }
 
 	
-	@FindBy (id = "menuImageView")
-	public MobileElement menuImage;
+	
 	
 
 	

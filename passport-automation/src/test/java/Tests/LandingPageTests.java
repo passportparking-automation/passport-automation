@@ -39,4 +39,12 @@ public class LandingPageTests extends TestBase {
 
 	}
 	
+	
+	@Test
+	public void EnterLocationOrPayToParkCodeTest() throws InterruptedException{
+		Thread.sleep(5000);
+		landingPage.EnterLocationOrPayToParkCodeTest();
+
+	}
+	
 }
