@@ -6,5 +6,6 @@ public interface LoginPage {
 	public void goToSignUp();
 
 	public void AssureTermsAreAcceptedTest();
+	public void TermsDisplayedTest();
 	
 }

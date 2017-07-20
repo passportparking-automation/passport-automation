@@ -119,4 +119,10 @@ public class LoginPageIOS extends BasePage implements LoginPage {
 		
 	}
 
+	@Override
+	public void TermsDisplayedTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

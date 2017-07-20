@@ -69,12 +69,9 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	
 	}
 	
-	public void AcceptTermsTest(){
+	public void AcceptTermsTest(){	
 		signUpButton.click();
 		acceptButton.click();
-		driver.navigate().back();
-		driver.navigate().back();
-		
 		
 	}
 

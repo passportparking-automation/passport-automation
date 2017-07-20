@@ -54,6 +54,13 @@ public class LoginPageAndroid extends BasePage implements LoginPage {
 			}
 		}
 	
+	public void TermsDisplayedTest(){
+		loginButton.click();
+		if(popUp.isDisplayed()){
+		acceptButton.click();
+		}
+		}
+	
 	
 	
 	

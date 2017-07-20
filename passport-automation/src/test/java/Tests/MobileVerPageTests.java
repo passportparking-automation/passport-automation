@@ -5,52 +5,50 @@ import org.testng.annotations.Test;
 
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
+import Pages.LoginPage.LoginPage;
+import Pages.LoginPage.LoginPageAndroid;
 import Pages.MobileVerPage.MobileVerPage;
 import Pages.MobileVerPage.MobileVerPageAndroid;
 import Pages.SignUpPage.SignUpPage;
 import Pages.SignUpPage.SignUpPageAndroid;
 import Tests.AbstractBaseTests.TestBase;
 
-public class SignUpPageTests extends TestBase {
-
+public class MobileVerPageTests extends TestBase{
 	private LandingPage landingPage;
-	private SignUpPage signUpPage;
 	private MobileVerPage mobileVerPage;
+	private LoginPage logInPage;
 	
-	
-
 	@BeforeTest
-	// @Override
 	public void setUpPage() {
-		switch (TestBase.executionOS) {
+		switch(TestBase.executionOS) {
 		case ANDROID:
 			landingPage = new LandingPageAndroid(driver);
-			signUpPage = new SignUpPageAndroid(driver);
 			mobileVerPage = new MobileVerPageAndroid(driver);
-
+			logInPage = new LoginPageAndroid(driver);
+			
 			break;
 		case IOS:
-			// landingpage = new LandingPageIOS(driver);
-
+			//landingpage = new LandingPageIOS(driver);
+			
 			break;
 		default:
 			break;
 		}
 	}
-	@Test
-	public void CheckSigninPageForExceptions() throws InterruptedException {
+	
+	@Test 
+	public void CheckMobileVerPageForExceptions(){
 		landingPage.clickPayToPark();
-		Thread.sleep(5000);
-		signUpPage.CheckSigninPageForExceptions();
-		driver.navigate().back();
-	}
-	@Test
-	public void DeclineAndAcceptTermsTest() {
-		landingPage.clickPayToPark();
-		signUpPage.DeclineTermsTest();
-		signUpPage.AcceptTermsTest();
+		logInPage.TermsDisplayedTest();
 		mobileVerPage.CheckMobileVerPageForExceptions();
 		driver.navigate().back();
 		driver.navigate().back();
-	}
+}
+	/*@Test
+	public void NavBackToLoginTest(){
+		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		mobileVerPage.NavBackToLoginTest();
+		logInPage.CheckLoginPageForExceptions();
+	}*/
 }
