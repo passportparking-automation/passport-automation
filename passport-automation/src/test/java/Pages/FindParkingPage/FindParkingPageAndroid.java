@@ -33,22 +33,17 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 		
 	}	
 
-	public void CheckFindParkingForExceptions() {
-		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
-		String actualFAQHeader = pageHeader.getText();
-		String expectedFAQHeader = "Find Parking";
-		//System.out.println("Actual Value is: " + actualFAQHeader);
-		if(expectedFAQHeader.equals(actualFAQHeader)){
-		assertTrue(true);
-		}else{
-			assertTrue(false);
-		}
-		
+	public void CheckFindParkingForExceptions() throws InterruptedException {		
+		/*
 		backButton.isDisplayed();
 		locationListModeIcon.isDisplayed();
 		availabilityContainer.isDisplayed();
 		myLocationButton.isDisplayed();
-		driver.navigate().back();	
+		*/
+		Thread.sleep(5000);
+		takeScreenshot("checkFP");
+		driver.navigate().back();
+		//backButton.click();	
 	}
 
 	@Override

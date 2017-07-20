@@ -7,8 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
+import Pages.FAQPage.FAQPage;
+import Pages.FAQPage.FAQPageAndroid;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
+import Pages.SendBugReportPage.SendBugReportPage;
+import Pages.SendBugReportPage.SendBugReportPageAndroid;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
@@ -17,9 +21,17 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	@FindBy (id = "tutorialCloseButton")
 	public MobileElement closeHelpButton;
 	
+	@FindBy (id = "id_ha_faq")
+	public MobileElement faqHelpButton;
 	
-    private LandingPage landingPage = new LandingPageAndroid(driver);
+	@FindBy (id = "id_ha_bug_report")
+	public MobileElement sendBugHelpButton;
 	
+	@FindBy (id = "id_ha_fix_session_button")
+	public MobileElement fixItHelpButton;
+	
+    private FAQPage faqPage = new FAQPageAndroid(driver);
+    private SendBugReportPage sendBug = new SendBugReportPageAndroid(driver);
 	
 	public HelpPageAndroid(AppiumDriver driver) {super(driver); }
 
@@ -29,82 +41,26 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 		
 	}
 	
-	public void HelpNavTest(){
-		
+	public void HelpNavTest() throws InterruptedException{
+		menuIcon.click();
+		helpMenuOption.click();
+		takeScreenshot("HelpNavTest1");
+		faqHelpButton.click();
+		faqPage.FAQNavTest();
+		takeScreenshot("HelpNavTest2");
+		sendBugHelpButton.click();
+		sendBug.CheckBugForExceptions();
+		takeScreenshot("HelpNavTest3");
+		fixItHelpButton.click();
+		popUp.isDisplayed();
+		takeScreenshot("HelpNavTest4");
+		acceptButton.click();
+		takeScreenshot("HelpNavTest5");
+		Thread.sleep(5000);
+		driver.navigate().back();
 	}
 
 	public void TutorialSwipeTest() {
 		
 	}
-	
-
-/*
-	public void MenuTrayHelpNavTest() {
-		menuIcon.click();
-		menuTray.isDisplayed();
-		sendBugMenuOption.click();
-		WebElement pageHeader = driver.findElement(By.id("viewHeader"));
-		String actualHeader = pageHeader.getText();
-		String expectedHeader = "Send Report";
-		// System.out.println("Actual Value is: " + actualFAQHeader);
-		if (expectedHeader.equals(actualHeader)) {
-			assertTrue(true);
-		} else {
-			assertTrue(false);
-		}
-		menuImage.click();
-		menuTray.isDisplayed();
-		FAQMenuOption.click();
-		pageHeader =   driver.findElement(By.id("viewHeader"));
-		String actualFAQHeader = pageHeader.getText();
-		String expectedFAQHeader = "FAQ";
-		//System.out.println("Actual Value is: " + actualFAQHeader);
-		if(expectedFAQHeader.equals(actualFAQHeader)){
-		assertTrue(true);
-		}else{
-			assertTrue(false);
-		}
-		
-		menuImage.click();
-		menuTray.isDisplayed();
-		termsMenuOption.click();
-		
-		pageHeader = driver.findElement(By.id("viewHeader"));
-		actualHeader = pageHeader.getText();
-		expectedHeader = "Terms and Conditions";
-		// System.out.println("Actual Value is: " + actualFAQHeader);
-		if (expectedHeader.equals(actualHeader)) {
-			assertTrue(true);
-		} else {
-			assertTrue(false);
-		}
-		
-		menuImage.click();
-		menuTray.isDisplayed();
-		privacyPolicyMenuOption.click();
-		
-		pageHeader = driver.findElement(By.id("viewHeader"));
-		actualHeader = pageHeader.getText();
-		expectedHeader = "Privacy Policy";
-		// System.out.println("Actual Value is: " + actualFAQHeader);
-		if (expectedHeader.equals(actualHeader)) {
-			assertTrue(true);
-		} else {
-			assertTrue(false);
-		}
-		
-		menuImage.click();
-		menuTray.isDisplayed();
-		
-		homeMenuOption.click();
-		landingPage.CheckLandingPageForExceptions();
-		
-
-		
-	}
-	*/
-	
-
-
-
 }

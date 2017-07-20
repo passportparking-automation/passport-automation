@@ -23,12 +23,10 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 	
 	@FindBy (id = "commentsText")
 	public MobileElement commentReportBug;
-	
 
 	@FindBy (id = "id_sm_bug_report_submit")
 	public MobileElement submitReportBug;
 	
-
 	@FindBy (id = "menuImageView")
 	public MobileElement menuImage;
 	
@@ -39,9 +37,6 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 	public MobileElement message;
 
 	public void CheckBugForExceptions(){
-		menuIcon.click();
-		takeScreenshot("cbfe");
-		sendBugMenuOption.click();
 		emailReportBug.isDisplayed();
 		commentReportBug.isDisplayed();
 		submitReportBug.isDisplayed();
@@ -63,37 +58,19 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		}
 		driver.navigate().back();
 		takeScreenshot("yada2");
-		menuIcon.click();
-		homeMenuOption.click();
-		takeScreenshot("yada3");
 	}
 	
 	public void EmptyBugTest(){
-		menuIcon.click();
-		sendBugMenuOption.click();
 		submitReportBug.click();
 		popUp.isDisplayed();
-		takeScreenshot("PopUp Message");
-		//Check if pop up is display after clicking anywhere the screen
-		TouchAction touchAction=new TouchAction(driver);
-		touchAction.tap(920, 620).perform();
+		takeScreenshot("PopUpMessage1");
 		popUp.isDisplayed();
 		//click ok button
 		acceptButton.click();
-		driver.navigate().back();
-		menuIcon.click();
-		homeMenuOption.click();	
-	}
-	
-	public void NotEmptyBugTest(){
-		menuIcon.click();
-		sendBugMenuOption.click();
-		//enter valid email address
-		emailReportBug.click();
-		emailReportBug.sendKeys("yjus@quilmont.com"+"\n");
+		emailReportBug.sendKeys("yjus@quilmont.com");
 		submitReportBug.click();
 		popUp.isDisplayed();
-		takeScreenshot("PopUp Message");
+		takeScreenshot("PopUpMessage");
 		
 		//Check the pop up with correct fields is displayed when comment box is empty
 		String actualTitle = title.getText();
@@ -120,30 +97,30 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 			}else{
 				assertTrue(false);
 			}
-		//Tap anywhere on the screen
-		TouchAction touchAction=new TouchAction(driver);
-		touchAction.tap(920, 620).perform();
-		popUp.isDisplayed();
-		
 		takeScreenshot("PopUpMessage2");
 		acceptButton.click();
 		
-		
-		//Enter text to comments box
-		commentReportBug.click();
+		driver.navigate().back();
+		takeScreenshot("yada3");
+	}
+	
+	public void NotEmptyBugTest(){
+		//enter valid email address
+		emailReportBug.sendKeys("yjus@quilmont.com");	
+		takeScreenshot("PopUpMessage2");
 		commentReportBug.sendKeys("Comment");
 		//close android keyboard
 		//driver.navigate().back();
 		submitReportBug.click();
 
 		// Check the pop up with correct fields is displayed when success
-		actualTitle = title.getText();
-		actualMessage = message.getText();
-		actualAcceptBtn = acceptButton.getText();
+		String actualTitle = title.getText();
+		String actualMessage = message.getText();
+		String actualAcceptBtn = acceptButton.getText();
 
-		expectedTitle = "Bug Report Sent";
-		expectedMessage = "We have received your bug report.";
-		expectedAcceptBtn = "Ok";
+		String expectedTitle = "Bug Report Sent";
+		String expectedMessage = "We have received your bug report.";
+		String expectedAcceptBtn = "Ok";
 
 		if (expectedTitle.equals(actualTitle)) {
 			assertTrue(true);
@@ -161,22 +138,17 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		} else {
 			assertTrue(false);
 		}
-	
-		// Tap anywhere on the screen
-		touchAction = new TouchAction(driver);
-		touchAction.tap(920, 620).perform();
 		popUp.isDisplayed();
 		takeScreenshot("ssxxx");
 		acceptButton.click();
 
 		driver.navigate().back();
-		takeScreenshot("ssx1xx");
-
-		
-		
-		
-		
-
+		takeScreenshot("ssx1xx");	
+	}
+	public void NavigateToBugReportPage() {
+		menuIcon.click();
+		sendBugMenuOption.click();
+		takeScreenshot("amIOnBug");
 	}
 
 	

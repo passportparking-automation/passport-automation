@@ -30,28 +30,19 @@ public class SendBugReportPageTests extends TestBase {
 			break;
 		}
 	}
-	
-	
 	@Test 
-	
 	public void CheckBugForExceptions() throws InterruptedException{
-		Thread.sleep(7000);
+		sendBugReportPage.NavigateToBugReportPage();
 		sendBugReportPage.CheckBugForExceptions();	
 	}
-	
 	@Test
 	public void EmptyBugTest() throws InterruptedException{
-	Thread.sleep(5000);
+		sendBugReportPage.NavigateToBugReportPage();
 		sendBugReportPage.EmptyBugTest();
 	}
-	
-	
-	
-	
-	
-	
-		
-		
-	
-
+	@Test
+	public void NotEmptyBugTest(){
+		sendBugReportPage.NavigateToBugReportPage();
+		sendBugReportPage.NotEmptyBugTest();
+	}
 }

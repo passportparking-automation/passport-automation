@@ -3,6 +3,40 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
   <test name="Default test(failed)" parallel="classes">
     <classes>
+      <class name="Tests.SendBugReportPageTests">
+        <methods>
+          <include name="EmptyBugTest"/>
+          <include name="CheckBugForExceptions"/>
+          <include name="NotEmptyBugTest"/>
+          <include name="restartApp"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- Tests.SendBugReportPageTests -->
+      <class name="Tests.FavoritesPageTests">
+        <methods>
+          <include name="restartApp"/>
+          <include name="setUpPage"/>
+          <include name="FavoritesTest"/>
+        </methods>
+      </class> <!-- Tests.FavoritesPageTests -->
+      <class name="Tests.HelpPageTests">
+        <methods>
+          <include name="HelpNavTest"/>
+          <include name="restartApp"/>
+          <include name="CloseHelpTest"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- Tests.HelpPageTests -->
+      <class name="Tests.LandingPageTests">
+        <methods>
+          <include name="restartApp"/>
+          <include name="tearDownAppium"/>
+          <include name="checkLandingPageForExceptions"/>
+          <include name="initAppium"/>
+          <include name="LandingPageScrollTest"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- Tests.LandingPageTests -->
       <class name="Tests.FAQPageTests">
         <methods>
           <include name="FAQNavTest"/>
@@ -10,22 +44,6 @@
           <include name="restartApp"/>
         </methods>
       </class> <!-- Tests.FAQPageTests -->
-      <class name="Tests.FavoritesPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.FavoritesPageTests -->
-      <class name="Tests.SendBugReportPageTests">
-        <methods>
-          <include name="EmptyBugTest"/>
-          <include name="CheckBugForExceptions"/>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
-          <include name="setUpPage"/>
-          <include name="initAppium"/>
-        </methods>
-      </class> <!-- Tests.SendBugReportPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Test runner] -->

@@ -35,7 +35,7 @@ public void setUpPage() {
 }	
 
 @Test
-public void CheckFindParkingForExceptions(){
+public void CheckFindParkingForExceptions() throws InterruptedException{
 	
 	landingPage.navigateToFindLocation();
 	findParkingPage.CheckFindParkingForExceptions();

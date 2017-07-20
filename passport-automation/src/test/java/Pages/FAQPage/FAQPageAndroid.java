@@ -17,8 +17,9 @@ public class FAQPageAndroid extends BasePage implements FAQPage {
 	public FAQPageAndroid(AppiumDriver driver) {  super(driver);  }
 
 	public void FAQNavTest(){
-		pageHeader.isDisplayed();
+		//pageHeader.isDisplayed();
 		takeScreenshot("faqNavTest");
-		backButton.click();
+		//backButton.click();
+		driver.navigate().back();
 	}
 }
