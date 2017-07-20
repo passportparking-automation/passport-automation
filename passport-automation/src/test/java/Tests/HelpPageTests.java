@@ -41,7 +41,7 @@ public void setUpPage() {
 @Test
 public void MenuTrayHelpNavTest() throws InterruptedException{
 	Thread.sleep(5000);
-	helpPage.MenuTrayHelpNavTest();
+	helpPage.HelpNavTest();
 }
 
 }

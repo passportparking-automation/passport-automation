@@ -13,6 +13,7 @@ import org.testng.Assert;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import Pages.BasePage;
@@ -54,6 +55,9 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy (id="optionsContainer")
 	public MobileElement optionsCont;
 	
+	@FindBy (id ="slidingmenumain")
+	public MobileElement mainScreen;
+	
 	/*
 	@FindBy (className = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")
 	public MobileElement termsAndConditionsButton;
@@ -70,14 +74,36 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 
 	}
 
-	public void ScrollTest() {
-		
+	public void SwipeLeftTest() {
+		takeScreenshot("swipeLeft1");
+		mainScreen.swipe(SwipeElementDirection.LEFT, 1, 1, 1000);
+		takeScreenshot("swipeLeft2");
+	}
+	
+	public void SwipeRightTest() {
+		takeScreenshot("swipeRight1");
+		mainScreen.swipe(SwipeElementDirection.RIGHT, 1, 1, 1000);
+		takeScreenshot("swipeRight2");
 		
 	}
+	public void SwipeUpTest() {
+		takeScreenshot("swipeUp1");
+		mainScreen.swipe(SwipeElementDirection.UP, 1, 1, 1000);
+		takeScreenshot("swipeUp2");
+	
+	}
+	public void SwipeDownTest() {
+		takeScreenshot("swipeDown1");
+		mainScreen.swipe(SwipeElementDirection.DOWN, 1, 1, 1000);
+		takeScreenshot("swipeDown2");
+	
+	}
+
 
 	public void PushNotificationTest() {
-		
-		
+		/*
+		 * N/A
+		 */
 	}
 
 	public void CheckLandingPageForExceptions() {
@@ -94,49 +120,25 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	}
 
 	public void CheckMenuOptionsForExceptions() {
-/*		menuIcon.click();
-		takeScreenshot("menuTestSS");
-		List<MobileElement> menuTray = driver.findElements(By.className("android.widget.ListView"));
-		String findParking = menuTray.get(2).getText();
-		Assert.assertEquals(findParking, "Find Parking");
-		
-		String helpTitle = menuTray.get(3).getText();
-		Assert.assertEquals(helpTitle, "Help");
-		
-		String sendBugButton = menuTray.get(4).getText();
-		Assert.assertEquals(sendBugButton, "Send Bug Report");
-		
-		String faqButton = menuTray.get(5).getText();
-		Assert.assertEquals(faqButton, "FAQ");
-		
-		String termsButton = menuTray.get(6).getText();
-		Assert.assertEquals(termsButton, "Terms & Conditions");
-		
-		String privButton = menuTray.get(7).getText();
-		Assert.assertEquals(privButton, "Privacy Policy");
-		
-		String loginButton = menuTray.get(7).getText();
-		Assert.assertEquals(loginButton, "Login");
-		
-		welcomeLogo.click();
-		takeScreenshot("backToPreviousState");*/
+		takeScreenshot("menuOptTest");	
+		menuIcon.click();
+		homeMenuOption.isDisplayed();
+		helpMenuOption.isDisplayed();
+		findParkingMenuOption.isDisplayed();
+		sendBugMenuOption.isDisplayed();
+		FAQMenuOption.isDisplayed();
+		termsMenuOption.isDisplayed();
+		privacyPolicyMenuOption.isDisplayed();
+		loginMenuOption.isDisplayed();
+		takeScreenshot("menuOptTest2");	
+		menuIcon.click();
+		takeScreenshot("menuOptTest3");
+			
 	}
 
 
 	public void EnterLocationOrPayToParkCodeTest() {
-		goToMapButton.click();
-		WebElement pageHeader = driver.findElement(By.id("viewHeader"));
-		String actualFAQHeader = pageHeader.getText();
-		String expectedFAQHeader = "Find Parking";
-		// System.out.println("Actual Value is: " + actualFAQHeader);
-		if (expectedFAQHeader.equals(actualFAQHeader)) {
-			assertTrue(true);
-		} else {
-			assertTrue(false);
-		}
-		backButton.click();
-		CheckLandingPageForExceptions();
-			
+		goToMapButton.click();	
 		
 	}
 	

@@ -38,30 +38,14 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 	@FindBy (id="message")
 	public MobileElement message;
 
-
-
-	
 	public void CheckBugForExceptions(){
 		menuIcon.click();
 		takeScreenshot("cbfe");
-		
-		
-		reportBugButton.click();
-		//Check if you are on the right page using Header
-		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
-		String actualHeader = pageHeader.getText();
-		String expectedHeader = "Send Report";
-		//System.out.println("Actual Value is: " + actualHeader);
-		if(expectedHeader.equals(actualHeader)){
-		assertTrue(true);
-		}else{
-			assertTrue(false);
-		}
-		
+		sendBugMenuOption.click();
 		emailReportBug.isDisplayed();
 		commentReportBug.isDisplayed();
 		submitReportBug.isDisplayed();
-		
+		takeScreenshot("yada1");
 		//Check if email and comment  boxes have inner text "Required"
 		String actualEmailBugRequired = emailReportBug.getText();
 		String expectedEmailBugRequired = "Required";
@@ -70,7 +54,6 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		}else{
 			assertTrue(false);
 		}
-		
 		String actualCommentBugRequired = commentReportBug.getText();
 		String expectedCommentBugRequired = "Required";
 		if(expectedCommentBugRequired.equals(actualCommentBugRequired)){
@@ -78,17 +61,16 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		}else{
 			assertTrue(false);
 		}
-		
 		driver.navigate().back();
+		takeScreenshot("yada2");
 		menuIcon.click();
-		homeOption.click();
-}
-	
+		homeMenuOption.click();
+		takeScreenshot("yada3");
+	}
 	
 	public void EmptyBugTest(){
 		menuIcon.click();
-		
-		reportBugButton.click();
+		sendBugMenuOption.click();
 		submitReportBug.click();
 		popUp.isDisplayed();
 		takeScreenshot("PopUp Message");
@@ -100,12 +82,12 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		acceptButton.click();
 		driver.navigate().back();
 		menuIcon.click();
-		homeOption.click();	
+		homeMenuOption.click();	
 	}
 	
 	public void NotEmptyBugTest(){
 		menuIcon.click();
-		reportBugButton.click();
+		sendBugMenuOption.click();
 		//enter valid email address
 		emailReportBug.click();
 		emailReportBug.sendKeys("yjus@quilmont.com"+"\n");
@@ -146,16 +128,6 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		takeScreenshot("PopUpMessage2");
 		acceptButton.click();
 		
-		//Check if you are on the right page using Header
-		WebElement pageHeader = driver.findElement(By.id("viewHeader"));
-		String actualHeader = pageHeader.getText();
-		String expectedHeader = "Send Report";
-		// System.out.println("Actual Value is: " + actualHeader);
-		if (expectedHeader.equals(actualHeader)) {
-			assertTrue(true);
-		} else {
-			assertTrue(false);
-		}
 		
 		//Enter text to comments box
 		commentReportBug.click();
@@ -194,23 +166,12 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		touchAction = new TouchAction(driver);
 		touchAction.tap(920, 620).perform();
 		popUp.isDisplayed();
-		
+		takeScreenshot("ssxxx");
 		acceptButton.click();
-		//Check if you are on the right page using Header
-		pageHeader = driver.findElement(By.id("viewHeader"));
-		actualHeader = pageHeader.getText();
-		expectedHeader = "Send Report";
-		// System.out.println("Actual Value is: " + actualHeader);
-		if (expectedHeader.equals(actualHeader)) {
-			assertTrue(true);
-		} else {
-			assertTrue(false);
-		}
-		
-		//backButton.click();
+
 		driver.navigate().back();
-		//menuIcon.click();
-		//homeOption.click();	
+		takeScreenshot("ssx1xx");
+
 		
 		
 		

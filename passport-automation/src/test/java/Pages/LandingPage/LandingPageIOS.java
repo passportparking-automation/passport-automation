@@ -54,11 +54,6 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 		
 	}
 
-	@Override
-	public void ScrollTest() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void PushNotificationTest() {
@@ -111,6 +106,30 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 
 	@Override
 	public void navigateToFindLocation() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SwipeLeftTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SwipeRightTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SwipeDownTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SwipeUpTest() {
 		// TODO Auto-generated method stub
 		
 	}

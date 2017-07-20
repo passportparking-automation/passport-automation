@@ -33,7 +33,6 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 		
 	}	
 
-	@Override
 	public void CheckFindParkingForExceptions() {
 		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
 		String actualFAQHeader = pageHeader.getText();
@@ -49,12 +48,7 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 		locationListModeIcon.isDisplayed();
 		availabilityContainer.isDisplayed();
 		myLocationButton.isDisplayed();
-		driver.navigate().back();
-		
-		
-		
-		
-		
+		driver.navigate().back();	
 	}
 
 	@Override

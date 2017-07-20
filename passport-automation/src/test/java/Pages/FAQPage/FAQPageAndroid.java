@@ -11,53 +11,14 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class FAQPageAndroid extends BasePage implements FAQPage {
-
+	@FindBy(id="viewHeader")
+	public MobileElement pageHeader;
+	
 	public FAQPageAndroid(AppiumDriver driver) {  super(driver);  }
 
-	
-	
-	
-
-	
 	public void FAQNavTest(){
-		
-		menuIcon.click();
-		FAQMenuOption.click();
-		
-		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
-		String actualFAQHeader = pageHeader.getText();
-		String expectedFAQHeader = "FAQ";
-		//System.out.println("Actual Value is: " + actualFAQHeader);
-		if(expectedFAQHeader.equals(actualFAQHeader)){
-		assertTrue(true);
-		}else{
-			assertTrue(false);
-		}
-		driver.navigate().back();
-		//driver.navigate().back();
-		//backButton.click();
-		//menuIcon.click();
-		//homeOption.click();
+		pageHeader.isDisplayed();
+		takeScreenshot("faqNavTest");
+		backButton.click();
 	}
-	
-	public void AboutTest(){
-		
-		WebElement pageHeader =   driver.findElement(By.id("viewHeader"));
-		String actualFAQHeader = pageHeader.getText();
-		String expectedFAQHeader = "FAQ";
-		//System.out.println("Actual Value is: " + actualFAQHeader);
-		if(expectedFAQHeader.equals(actualFAQHeader)){
-		assertTrue(true);
-		}else{
-			assertTrue(false);
-		}
-		//driver.navigate().back();
-		driver.navigate().back();
-		//backButton.click();
-		//menuIcon.click();
-		//homeOption.click();
-		
-		
-	}
-	
 }

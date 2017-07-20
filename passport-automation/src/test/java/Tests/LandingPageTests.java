@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Pages.BasePage;
+import Pages.FindParkingPage.FindParkingPage;
+import Pages.FindParkingPage.FindParkingPageAndroid;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
 import Tests.AbstractBaseTests.TestBase;
@@ -14,6 +16,7 @@ import Tests.AbstractBaseTests.TestBase;
 public class LandingPageTests extends TestBase {
 	
 	private LandingPage landingPage;
+	private FindParkingPage findParkingPage;
 	
 	@BeforeTest
 	@Override
@@ -21,6 +24,7 @@ public class LandingPageTests extends TestBase {
 		switch(TestBase.executionOS) {
 		case ANDROID:
 			landingPage = new LandingPageAndroid(driver);
+			findParkingPage = new FindParkingPageAndroid(driver);
 			
 			break;
 		case IOS:
@@ -31,20 +35,31 @@ public class LandingPageTests extends TestBase {
 			break;
 		}
 	}
-	
+	@Test
+	public void CheckMenuOptionsForExceptions() throws InterruptedException{
+		Thread.sleep(5000);
+		landingPage.CheckMenuOptionsForExceptions();
+	}
 	@Test
 	public void checkLandingPageForExceptions() throws InterruptedException{
 		Thread.sleep(5000);
 		landingPage.CheckLandingPageForExceptions();
-
 	}
-	
-	
 	@Test
 	public void EnterLocationOrPayToParkCodeTest() throws InterruptedException{
 		Thread.sleep(5000);
 		landingPage.EnterLocationOrPayToParkCodeTest();
-
+		findParkingPage.CheckFindParkingForExceptions();
 	}
-	
+	@Test
+	public void LandingPageScrollTest(){
+		landingPage.SwipeLeftTest();
+		landingPage.CheckLandingPageForExceptions();
+		landingPage.SwipeRightTest();
+		landingPage.CheckLandingPageForExceptions();
+		landingPage.SwipeDownTest();
+		landingPage.CheckLandingPageForExceptions();
+		landingPage.SwipeUpTest();
+		landingPage.CheckLandingPageForExceptions();
+	}
 }

@@ -19,7 +19,6 @@ public class AboutPageAndroid extends BasePage implements AboutPage {
 	@FindBy (id = "menuImageView")
 	public MobileElement menuImage;
 	
-
 	
 	public void AboutTest(){
 		

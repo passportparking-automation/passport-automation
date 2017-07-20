@@ -17,8 +17,6 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	@FindBy (id = "tutorialCloseButton")
 	public MobileElement closeHelpButton;
 	
-	@FindBy (xpath = "	//android.widget.RelativeLayout[1]/android.view.View[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.TextView[2]")
-	public MobileElement helpMenu;
 	
     private LandingPage landingPage = new LandingPageAndroid(driver);
 	
@@ -26,11 +24,21 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	public HelpPageAndroid(AppiumDriver driver) {super(driver); }
 
 	public void CloseHelpTest() {
+		takeScreenshot("closeHelpTest");
 		closeHelpButton.click();
 		
 	}
+	
+	public void HelpNavTest(){
+		
+	}
 
+	public void TutorialSwipeTest() {
+		
+	}
+	
 
+/*
 	public void MenuTrayHelpNavTest() {
 		menuIcon.click();
 		menuTray.isDisplayed();
@@ -88,13 +96,13 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 		menuImage.click();
 		menuTray.isDisplayed();
 		
-		homeOption.click();
+		homeMenuOption.click();
 		landingPage.CheckLandingPageForExceptions();
 		
 
 		
 	}
-	
+	*/
 	
 
 

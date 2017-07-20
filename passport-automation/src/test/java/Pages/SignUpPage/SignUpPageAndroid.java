@@ -28,12 +28,6 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	@FindBy (id = "title")
 	public MobileElement termsTitle;
 	
-	
-	@FindBy (xpath = "//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]")
-	public MobileElement termsPopUp;
-	
-	
-
 	public SignUpPageAndroid(AppiumDriver driver) {super(driver);}
 
 	public void signUpThroughEmail() {
@@ -57,7 +51,7 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	
 	public void DeclineTermsTest(){
 		signUpButton.click();
-		termsPopUp.isDisplayed();
+		popUp.isDisplayed();
 		
 		String actualTermsTitle = termsTitle.getText();
 		String expectedTermsTitle = "Terms & Conditions";
