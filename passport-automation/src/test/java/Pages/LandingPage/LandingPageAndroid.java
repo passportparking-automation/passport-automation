@@ -164,9 +164,6 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		faqButton.click();		
 		} 
 	
-	
-
-	@Override
 	public void clickPayToPark() {
 		takeScreenshot("stagingNote");
 		payToParkButton.click();

@@ -40,12 +40,10 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 		phoneButton.click();
 		takeScreenshot("pressPhone");
 	}
-
 	public void CheckSigninPageForExceptions() {
 	signUpButton.isDisplayed();
 	logInButton.isDisplayed();
 	poweredByLogo.isDisplayed();
-		
 	}
 	
 	public void DeclineTermsTest(){

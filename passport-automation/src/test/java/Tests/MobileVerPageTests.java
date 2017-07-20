@@ -17,6 +17,7 @@ public class MobileVerPageTests extends TestBase{
 	private LandingPage landingPage;
 	private MobileVerPage mobileVerPage;
 	private LoginPage logInPage;
+	private SignUpPage signUpPage;
 	
 	@BeforeTest
 	public void setUpPage() {
@@ -25,6 +26,7 @@ public class MobileVerPageTests extends TestBase{
 			landingPage = new LandingPageAndroid(driver);
 			mobileVerPage = new MobileVerPageAndroid(driver);
 			logInPage = new LoginPageAndroid(driver);
+			signUpPage = new SignUpPageAndroid(driver);
 			
 			break;
 		case IOS:
@@ -44,11 +46,12 @@ public class MobileVerPageTests extends TestBase{
 		driver.navigate().back();
 		driver.navigate().back();
 }
-	/*@Test
+	@Test
 	public void NavBackToLoginTest(){
 		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
 		mobileVerPage.NavBackToLoginTest();
-		logInPage.CheckLoginPageForExceptions();
-	}*/
+		signUpPage.CheckSigninPageForExceptions();
+		
+	}
 }

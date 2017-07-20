@@ -2,6 +2,8 @@ package Pages.LoginPage;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
@@ -56,16 +58,13 @@ public class LoginPageAndroid extends BasePage implements LoginPage {
 	
 	public void TermsDisplayedTest(){
 		loginButton.click();
-		if(popUp.isDisplayed()){
-		acceptButton.click();
+		try {
+			acceptButton.click();
+		} catch (Exception e) {
+			System.out.println("Terms message did not appear");
 		}
-		}
 	
-	
-	
-	
-	}
-	
-
+	}	
+}
 
 
