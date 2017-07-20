@@ -6,8 +6,8 @@
       <!--class name="Tests.LandingPageTests" />
       <class name="Tests.HelpPageTests" />
       <class name="Tests.FavoritesPageTests" />
-      <class name="Tests.FAQPageTests" />
-      <class name="Tests.SendBugReportPageTests"/-->
+      <class name="Tests.FAQPageTests" /-->
+      <class name="Tests.SendBugReportPageTests"/>
       <class name="Tests.SignUpPageTests"/>
       <class name="Tests.MobileVerPageTests"/>
     </classes>

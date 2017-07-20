@@ -3,47 +3,30 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
   <test name="Default test(failed)" parallel="classes">
     <classes>
+      <class name="Tests.SignUpPageTests">
+        <methods>
+          <include name="DeclineAndAcceptTermsTest"/>
+          <include name="restartApp"/>
+          <include name="CheckSigninPageForExceptions"/>
+          <include name="setUpPage"/>
+        </methods>
+      </class> <!-- Tests.SignUpPageTests -->
       <class name="Tests.SendBugReportPageTests">
-        <methods>
-          <include name="EmptyBugTest"/>
-          <include name="CheckBugForExceptions"/>
-          <include name="NotEmptyBugTest"/>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.SendBugReportPageTests -->
-      <class name="Tests.FavoritesPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-          <include name="FavoritesTest"/>
-        </methods>
-      </class> <!-- Tests.FavoritesPageTests -->
-      <class name="Tests.HelpPageTests">
-        <methods>
-          <include name="HelpNavTest"/>
-          <include name="restartApp"/>
-          <include name="CloseHelpTest"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.HelpPageTests -->
-      <class name="Tests.LandingPageTests">
         <methods>
           <include name="restartApp"/>
           <include name="tearDownAppium"/>
-          <include name="checkLandingPageForExceptions"/>
+          <include name="setUpPage"/>
           <include name="initAppium"/>
-          <include name="LandingPageScrollTest"/>
-          <include name="setUpPage"/>
         </methods>
-      </class> <!-- Tests.LandingPageTests -->
-      <class name="Tests.FAQPageTests">
+      </class> <!-- Tests.SendBugReportPageTests -->
+      <class name="Tests.MobileVerPageTests">
         <methods>
-          <include name="FAQNavTest"/>
           <include name="setUpPage"/>
+          <include name="NavBackToLoginTest"/>
           <include name="restartApp"/>
+          <include name="CheckMobileVerPageForExceptions"/>
         </methods>
-      </class> <!-- Tests.FAQPageTests -->
+      </class> <!-- Tests.MobileVerPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Test runner] -->

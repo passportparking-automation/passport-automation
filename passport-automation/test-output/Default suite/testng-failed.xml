@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.SendBugReportPageTests">
+      <class name="Tests.MobileVerPageTests">
         <methods>
-          <include name="NotEmptyBugTest"/>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
-          <include name="setUpPage"/>
+          <include name="NavBackToLoginTest"/>
           <include name="initAppium"/>
+          <include name="CheckMobileVerPageForExceptions"/>
         </methods>
-      </class> <!-- Tests.SendBugReportPageTests -->
+      </class> <!-- Tests.MobileVerPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
