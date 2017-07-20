@@ -41,7 +41,6 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 		takeScreenshot("pressPhone");
 	}
 
-	@Override
 	public void CheckSigninPageForExceptions() {
 	signUpButton.isDisplayed();
 	logInButton.isDisplayed();
@@ -71,7 +70,6 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	}
 	
 	public void AcceptTermsTest(){
-		
 		signUpButton.click();
 		acceptButton.click();
 		driver.navigate().back();
