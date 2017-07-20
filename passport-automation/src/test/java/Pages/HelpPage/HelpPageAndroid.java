@@ -45,9 +45,9 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 		menuIcon.click();
 		helpMenuOption.click();
 		takeScreenshot("HelpNavTest1");
-		faqHelpButton.click();
-		faqPage.FAQNavTest();
-		takeScreenshot("HelpNavTest2");
+		//faqHelpButton.click();
+		//faqPage.FAQNavTest();
+		//takeScreenshot("HelpNavTest2");
 		sendBugHelpButton.click();
 		sendBug.CheckBugForExceptions();
 		takeScreenshot("HelpNavTest3");
