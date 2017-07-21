@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
+  <test name="ParkRight Test Automation(failed)" parallel="classes">
     <classes>
+      <class name="Tests.CodeVerificationPageTests">
+        <methods>
+          <include name="setUpPage"/>
+          <include name="ValidInputTests"/>
+          <include name="NavBackandBlankInputkTests"/>
+          <include name="restartApp"/>
+        </methods>
+      </class> <!-- Tests.CodeVerificationPageTests -->
       <class name="Tests.MobileVerPageTests">
         <methods>
-          <include name="NavBackToLoginTest"/>
+          <include name="setUpPage"/>
+          <include name="restartApp"/>
+          <include name="tearDownAppium"/>
           <include name="initAppium"/>
-          <include name="CheckMobileVerPageForExceptions"/>
         </methods>
       </class> <!-- Tests.MobileVerPageTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- ParkRight Test Automation(failed) -->
+</suite> <!-- Failed suite [Test runner] -->

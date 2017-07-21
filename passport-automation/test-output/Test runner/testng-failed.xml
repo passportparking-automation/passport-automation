@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
-  <test name="Default test(failed)" parallel="classes">
+  <test name="ParkRight Test Automation(failed)" parallel="classes">
     <classes>
-      <class name="Tests.SignUpPageTests">
+      <class name="Tests.CodeVerificationPageTests">
         <methods>
-          <include name="DeclineAndAcceptTermsTest"/>
-          <include name="restartApp"/>
-          <include name="CheckSigninPageForExceptions"/>
           <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.SignUpPageTests -->
-      <class name="Tests.SendBugReportPageTests">
-        <methods>
+          <include name="ValidInputTests"/>
+          <include name="NavBackandBlankInputkTests"/>
           <include name="restartApp"/>
-          <include name="tearDownAppium"/>
-          <include name="setUpPage"/>
-          <include name="initAppium"/>
         </methods>
-      </class> <!-- Tests.SendBugReportPageTests -->
+      </class> <!-- Tests.CodeVerificationPageTests -->
       <class name="Tests.MobileVerPageTests">
         <methods>
           <include name="setUpPage"/>
-          <include name="NavBackToLoginTest"/>
           <include name="restartApp"/>
-          <include name="CheckMobileVerPageForExceptions"/>
+          <include name="tearDownAppium"/>
+          <include name="initAppium"/>
         </methods>
       </class> <!-- Tests.MobileVerPageTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- ParkRight Test Automation(failed) -->
 </suite> <!-- Failed suite [Test runner] -->
