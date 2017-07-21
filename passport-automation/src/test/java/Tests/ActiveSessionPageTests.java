@@ -61,7 +61,7 @@ public class ActiveSessionPageTests extends TestBase{
 		loginPage.clickLoginButtonAndAcceptTerms();
 		signUpPage.signUpThroughEmail();
 		emailVerPage.ValidEmailTest();
-		codeVerificationPage.VerCodeTest();
+		codeVerificationPage.SendCorrectCodeTest();
 
 		pINPage.SendCorrectPINTest();
 		zonePage.goToDieselZone1();

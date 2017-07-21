@@ -57,7 +57,11 @@ public class LoginPageAndroid extends BasePage implements LoginPage {
 		}
 	
 	public void TermsDisplayedTest(){
-		loginButton.click();
+		try {
+			loginButton.click();
+		} catch (Exception e) {
+			System.out.println("Terms message did not appear");
+		}
 		try {
 			acceptButton.click();
 		} catch (Exception e) {

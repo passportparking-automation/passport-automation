@@ -20,7 +20,7 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 	
 	public CodeVerificationPageIOS(AppiumDriver driver) {super(driver);}
 
-	public void VerCodeTest() {
+	public void SendCorrectCodeTest() {
 		codeInputBox.sendKeys("777");
 		takeScreenshot("pinTest");
 		submitButton.click();
@@ -31,6 +31,18 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 
 	@Override
 	public void CheckCodeVerForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void NavBackTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void EmptyVerTest() {
 		// TODO Auto-generated method stub
 		
 	}

@@ -166,7 +166,12 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	
 	public void clickPayToPark() {
 		takeScreenshot("stagingNote");
-		payToParkButton.click();
+		try{
+			payToParkButton.click();
+		}catch (Throwable e) {
+		    System.err.println("The payToParkButton did not appaer");
+		}
+		
 		try{
 			declineButton.click();
 		}catch (Throwable e) {

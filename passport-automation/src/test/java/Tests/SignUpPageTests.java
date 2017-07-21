@@ -12,13 +12,10 @@ import Pages.SignUpPage.SignUpPageAndroid;
 import Tests.AbstractBaseTests.TestBase;
 
 public class SignUpPageTests extends TestBase {
-
 	private LandingPage landingPage;
 	private SignUpPage signUpPage;
 	private MobileVerPage mobileVerPage;
 	
-	
-
 	@BeforeTest
 	// @Override
 	public void setUpPage() {

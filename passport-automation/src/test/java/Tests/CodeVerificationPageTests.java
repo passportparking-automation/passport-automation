@@ -13,15 +13,14 @@ import Pages.MobileVerPage.MobileVerPage;
 import Pages.MobileVerPage.MobileVerPageAndroid;
 import Pages.PINPage.PINPage;
 import Pages.PINPage.PINPageAndroid;
-import Pages.SignUpPage.SignUpPage;
-import Pages.SignUpPage.SignUpPageAndroid;
+
 import Tests.AbstractBaseTests.TestBase;
 
-public class MobileVerPageTests extends TestBase{
+public class CodeVerificationPageTests extends TestBase{
 	private LandingPage landingPage;
 	private MobileVerPage mobileVerPage;
 	private LoginPage logInPage;
-	private SignUpPage signUpPage;
+	private PINPage pinPage;
 	private CodeVerificationPage codeVerificationPage;
 	@BeforeTest
 	public void setUpPage() {
@@ -30,7 +29,7 @@ public class MobileVerPageTests extends TestBase{
 			landingPage = new LandingPageAndroid(driver);
 			mobileVerPage = new MobileVerPageAndroid(driver);
 			logInPage = new LoginPageAndroid(driver);
-			signUpPage = new SignUpPageAndroid(driver);
+			pinPage = new PINPageAndroid(driver);
 			codeVerificationPage = new CodeVerificationPageAndroid(driver);
 			
 			break;
@@ -41,27 +40,24 @@ public class MobileVerPageTests extends TestBase{
 		default:
 			break;
 		}
-	}
-	
-	@Test 
-	public void CheckMobileVerPageForExceptions() throws InterruptedException{
+	}	
+	@Test	
+	public void NavBackandBlankInputkTests(){
 		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
-		mobileVerPage.CheckMobileVerPageForExceptions();
-		mobileVerPage.NavBackToLoginTest();
-		signUpPage.CheckSigninPageForExceptions();
-		driver.navigate().back();
-	}
-	
-	@Test
-	public void InputTests(){
-		landingPage.clickPayToPark();
-		logInPage.TermsDisplayedTest();
-		mobileVerPage.BlankNumberProvidedTest();
-		mobileVerPage.ShortNumberProivdedTest();
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.CheckCodeVerForExceptions();
+		codeVerificationPage.EmptyVerTest();
+		codeVerificationPage.NavBackTest();
+		mobileVerPage.CheckMobileVerPageForExceptions();
 		driver.navigate().back();
 		driver.navigate().back();
+	}
+	@Test
+	public void ValidInputTests(){
+		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
 	}
 }

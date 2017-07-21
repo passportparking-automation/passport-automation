@@ -19,19 +19,30 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 	
 	public CodeVerificationPageAndroid(AppiumDriver driver) {super(driver);}
 
-	public void VerCodeTest() {
+	public void SendCorrectCodeTest() {
 		codeInputBox.sendKeys("777");
-		takeScreenshot("pinTest");
+		takeScreenshot("CodeTest1");
 		submitButton.click();
-		takeScreenshot("pinTest2");
+		takeScreenshot("CodeTest2");
 		acceptButton.click();
-		takeScreenshot("pinTest3");
+		takeScreenshot("CodeTest3");
 	}
-
-	@Override
 	public void CheckCodeVerForExceptions() {
-		// TODO Auto-generated method stub
-		
+		codeInputBox.isDisplayed();
+		submitButton.isDisplayed();
+		tryAgainButton.isDisplayed();
+		takeScreenshot("CodeTest4");
 	}
+	public void NavBackTest() {
+		backButton.click();
+	}
+	public void EmptyVerTest() {
+		takeScreenshot("CodeTest4");
+		submitButton.click();
+		popUp.isDisplayed();
+		acceptButton.click();
+		takeScreenshot("CodeTest4");
+	}
+	
 
 }
