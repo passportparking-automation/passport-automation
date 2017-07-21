@@ -59,5 +59,7 @@ public class CodeVerificationPageTests extends TestBase{
 		logInPage.TermsDisplayedTest();
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
+		pinPage.CheckSecureLoginForExceptions();
+		driver.navigate().back();
 	}
 }

@@ -28,7 +28,35 @@ public class PINPageIOS extends BasePage implements PINPage {
 
 
 	@Override
-	public void CheckPINPageForExcpetions() {
+	public void SendShortValuedPINTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void SendFalsePINTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void CheckSecureLoginForExceptions() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void EmptyPINTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void InvalidPINTest() {
 		// TODO Auto-generated method stub
 		
 	}

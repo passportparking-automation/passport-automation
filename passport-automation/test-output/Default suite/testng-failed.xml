@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.CodeVerificationPageTests">
+      <class name="Tests.PINPageTests">
         <methods>
-          <include name="ValidInputTests"/>
-          <include name="NavBackandBlankInputkTests"/>
+          <include name="CheckSecureLoginForExceptions"/>
+          <include name="SendDataTests"/>
           <include name="initAppium"/>
         </methods>
-      </class> <!-- Tests.CodeVerificationPageTests -->
+      </class> <!-- Tests.PINPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
