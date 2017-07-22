@@ -1,5 +1,7 @@
 package Pages.PINPage;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
@@ -23,6 +25,11 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	public void SendCorrectPINTest() {
 		PINInputBox.sendKeys("1111");
 		takeScreenshot("pinTest1");
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		PINSignInButton.click();
 		takeScreenshot("pinTest2");
 	}
@@ -48,6 +55,11 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	public void InvalidPINTest() {
 		PINInputBox.sendKeys("1211");
 		takeScreenshot("pinTest3");
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		PINSignInButton.click();
 		takeScreenshot("pinrTest4");
 		popUp.isDisplayed();

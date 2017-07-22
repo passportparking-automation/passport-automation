@@ -53,6 +53,11 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 	public void ShortNumberProivdedTest() {
 		phoneTextBox.sendKeys("281330");
 		takeScreenshot("short2");
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		textButton.click();
 		popUp.isDisplayed();
 		takeScreenshot("short1");
@@ -63,6 +68,11 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 	public void ValidMobileTest() {
 		phoneTextBox.sendKeys("5550000000");
 		takeScreenshot("valid2");
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		textButton.click();
 		popUp.isDisplayed();
 		takeScreenshot("valid1");

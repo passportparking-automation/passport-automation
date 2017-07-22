@@ -22,6 +22,11 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 	public void SendCorrectCodeTest() {
 		codeInputBox.sendKeys("777");
 		takeScreenshot("CodeTest1");
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		submitButton.click();
 		takeScreenshot("CodeTest2");
 		acceptButton.click();

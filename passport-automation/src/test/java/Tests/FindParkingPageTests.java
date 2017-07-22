@@ -39,6 +39,7 @@ public void CheckFindParkingForExceptions() throws InterruptedException{
 	
 	landingPage.navigateToFindLocation();
 	findParkingPage.CheckFindParkingForExceptions();
+	driver.navigate().back();
 }
 
 @Test
@@ -46,6 +47,27 @@ public void FindParkingNavTest(){
 	landingPage.navigateToFindLocation();
 	findParkingPage.FindParkingNavTest();	
 	landingPage.CheckLandingPageForExceptions();
+}
+
+@Test 
+public void ZoneTest(){
+	landingPage.navigateToFindLocation();
+	findParkingPage.ZoneTest();
+	driver.navigate().back();
+}
+
+@Test 
+public void ZoneTest2(){
+	landingPage.navigateToFindLocation();
+	findParkingPage.ZoneTest2();
+	driver.navigate().back();
+}
+
+@Test 
+public void NumericValueZoneTest(){
+	landingPage.navigateToFindLocation();
+	findParkingPage.NumericValueZoneTest();
+	driver.navigate().back();
 }
 	
 	

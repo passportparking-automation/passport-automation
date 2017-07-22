@@ -50,6 +50,7 @@ public class LandingPageTests extends TestBase {
 		Thread.sleep(5000);
 		landingPage.EnterLocationOrPayToParkCodeTest();
 		findParkingPage.CheckFindParkingForExceptions();
+		driver.navigate().back();
 	}
 	@Test
 	public void LandingPageScrollTest(){

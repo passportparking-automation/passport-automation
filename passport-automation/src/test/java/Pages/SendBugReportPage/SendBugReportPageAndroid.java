@@ -67,7 +67,12 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		popUp.isDisplayed();
 		//click ok button
 		acceptButton.click();
-		emailReportBug.sendKeys("yjus@quilmont.com");
+		emailReportBug.sendKeys("automaton+00@gopassport.com");
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		submitReportBug.click();
 		popUp.isDisplayed();
 		takeScreenshot("PopUpMessage");
@@ -106,11 +111,15 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 	
 	public void NotEmptyBugTest(){
 		//enter valid email address
-		emailReportBug.sendKeys("yjus@quilmont.com");	
+		emailReportBug.sendKeys("automaton+00@gopassport.com");	
 		takeScreenshot("PopUpMessage2");
 		commentReportBug.sendKeys("Comment");
 		//close android keyboard
-		//driver.navigate().back();
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		submitReportBug.click();
 
 		// Check the pop up with correct fields is displayed when success
