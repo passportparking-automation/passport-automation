@@ -58,15 +58,6 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy (id ="slidingmenumain")
 	public MobileElement mainScreen;
 	
-	/*
-	@FindBy (className = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")
-	public MobileElement termsAndConditionsButton;
-	
-	@FindBy (className = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[2]")
-	public MobileElement privacyPolicyButton;
-	*/
-	
-
 	public LandingPageAndroid(AppiumDriver driver) { super(driver); }
 
 	public void LaunchTest() {
