@@ -54,6 +54,11 @@ public class PINPageTests extends TestBase {
 		pinPage.SendCorrectPINTest();
 		driver.navigate().back();
 	}
+	@Override
+	public void exitCriteria() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

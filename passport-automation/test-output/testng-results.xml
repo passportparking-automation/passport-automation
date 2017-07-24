@@ -1,185 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="16" total="35" passed="19">
+<testng-results skipped="0" failed="0" ignored="12" total="31" passed="19">
   <reporter-output>
   </reporter-output>
-  <suite name="Test runner" duration-ms="751529" started-at="2017-07-21T20:42:58Z" finished-at="2017-07-21T20:55:29Z">
+  <suite name="Test runner" duration-ms="726094" started-at="2017-07-24T14:41:33Z" finished-at="2017-07-24T14:53:39Z">
     <groups>
     </groups>
-    <test name="ParkRight Test Automation" duration-ms="751529" started-at="2017-07-21T20:42:58Z" finished-at="2017-07-21T20:55:29Z">
+    <test name="LandingPageTests" duration-ms="63781" started-at="2017-07-24T14:41:33Z" finished-at="2017-07-24T14:42:37Z">
+      <class name="Tests.LandingPageTests">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.LandingPageTests@1e127982]" name="setUpPage" is-config="true" duration-ms="412" started-at="2017-07-24T10:41:33Z" finished-at="2017-07-24T10:41:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="CheckMenuOptionsForExceptions()[pri:0, instance:Tests.LandingPageTests@1e127982]" name="CheckMenuOptionsForExceptions" duration-ms="14660" started-at="2017-07-24T10:41:34Z" finished-at="2017-07-24T10:41:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckMenuOptionsForExceptions -->
+        <test-method status="PASS" signature="EnterLocationOrPayToParkCodeTest()[pri:0, instance:Tests.LandingPageTests@1e127982]" name="EnterLocationOrPayToParkCodeTest" duration-ms="19323" started-at="2017-07-24T10:41:48Z" finished-at="2017-07-24T10:42:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterLocationOrPayToParkCodeTest -->
+        <test-method status="PASS" signature="LandingPageScrollTest()[pri:0, instance:Tests.LandingPageTests@1e127982]" name="LandingPageScrollTest" duration-ms="21240" started-at="2017-07-24T10:42:08Z" finished-at="2017-07-24T10:42:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LandingPageScrollTest -->
+        <test-method status="PASS" signature="checkLandingPageForExceptions()[pri:0, instance:Tests.LandingPageTests@1e127982]" name="checkLandingPageForExceptions" duration-ms="8102" started-at="2017-07-24T10:42:29Z" finished-at="2017-07-24T10:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLandingPageForExceptions -->
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.LandingPageTests@1e127982]" name="restartApp" is-config="true" duration-ms="1" started-at="2017-07-24T10:42:37Z" finished-at="2017-07-24T10:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restartApp -->
+      </class> <!-- Tests.LandingPageTests -->
+    </test> <!-- LandingPageTests -->
+    <test name="HelpPageTests" duration-ms="34860" started-at="2017-07-24T14:42:37Z" finished-at="2017-07-24T14:43:12Z">
       <class name="Tests.HelpPageTests">
-        <test-method status="PASS" signature="CloseHelpTest()[pri:0, instance:Tests.HelpPageTests@3327bd23]" name="CloseHelpTest" duration-ms="7901" started-at="2017-07-21T16:43:55Z" finished-at="2017-07-21T16:44:03Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.HelpPageTests@13a5fe33]" name="setUpPage" is-config="true" duration-ms="28" started-at="2017-07-24T10:42:37Z" finished-at="2017-07-24T10:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="CloseHelpTest()[pri:0, instance:Tests.HelpPageTests@13a5fe33]" name="CloseHelpTest" duration-ms="6611" started-at="2017-07-24T10:42:37Z" finished-at="2017-07-24T10:42:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseHelpTest -->
-        <test-method status="PASS" signature="HelpNavTest()[pri:0, instance:Tests.HelpPageTests@3327bd23]" name="HelpNavTest" duration-ms="28760" started-at="2017-07-21T16:44:03Z" finished-at="2017-07-21T16:44:32Z">
+        <test-method status="PASS" signature="HelpNavTest()[pri:0, instance:Tests.HelpPageTests@13a5fe33]" name="HelpNavTest" duration-ms="28189" started-at="2017-07-24T10:42:44Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HelpNavTest -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.HelpPageTests@3327bd23]" name="restartApp" is-config="true" duration-ms="1" started-at="2017-07-21T16:44:32Z" finished-at="2017-07-21T16:44:32Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.HelpPageTests@13a5fe33]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
       </class> <!-- Tests.HelpPageTests -->
+    </test> <!-- HelpPageTests -->
+    <test name="Other Tests" duration-ms="627371" started-at="2017-07-24T14:43:12Z" finished-at="2017-07-24T14:53:39Z">
       <class name="Tests.SendBugReportPageTests">
-        <test-method status="PASS" signature="CheckBugForExceptions()[pri:0, instance:Tests.SendBugReportPageTests@52a86356]" name="CheckBugForExceptions" duration-ms="6689" started-at="2017-07-21T16:44:56Z" finished-at="2017-07-21T16:45:03Z">
+        <test-method status="PASS" signature="CheckBugForExceptions()[pri:0, instance:Tests.SendBugReportPageTests@6ddf90b0]" name="CheckBugForExceptions" duration-ms="6864" started-at="2017-07-24T10:43:45Z" finished-at="2017-07-24T10:43:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckBugForExceptions -->
-        <test-method status="PASS" signature="EmptyBugTest()[pri:0, instance:Tests.SendBugReportPageTests@52a86356]" name="EmptyBugTest" duration-ms="25857" started-at="2017-07-21T16:45:03Z" finished-at="2017-07-21T16:45:29Z">
+        <test-method status="PASS" signature="EmptyBugTest()[pri:0, instance:Tests.SendBugReportPageTests@6ddf90b0]" name="EmptyBugTest" duration-ms="25012" started-at="2017-07-24T10:43:52Z" finished-at="2017-07-24T10:44:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmptyBugTest -->
-        <test-method status="PASS" signature="NotEmptyBugTest()[pri:0, instance:Tests.SendBugReportPageTests@52a86356]" name="NotEmptyBugTest" duration-ms="28076" started-at="2017-07-21T16:45:29Z" finished-at="2017-07-21T16:45:57Z">
+        <test-method status="PASS" signature="NotEmptyBugTest()[pri:0, instance:Tests.SendBugReportPageTests@6ddf90b0]" name="NotEmptyBugTest" duration-ms="33670" started-at="2017-07-24T10:44:17Z" finished-at="2017-07-24T10:44:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NotEmptyBugTest -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.SendBugReportPageTests@52a86356]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-21T16:45:57Z" finished-at="2017-07-21T16:45:57Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.SendBugReportPageTests@6ddf90b0]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-24T10:44:50Z" finished-at="2017-07-24T10:44:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
       </class> <!-- Tests.SendBugReportPageTests -->
-      <class name="Tests.LandingPageTests">
-        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="initAppium" is-config="true" duration-ms="8619" started-at="2017-07-21T16:42:49Z" finished-at="2017-07-21T16:42:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initAppium -->
-        <test-method status="PASS" signature="CheckMenuOptionsForExceptions()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="CheckMenuOptionsForExceptions" duration-ms="14828" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:43:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckMenuOptionsForExceptions -->
-        <test-method status="PASS" signature="EnterLocationOrPayToParkCodeTest()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="EnterLocationOrPayToParkCodeTest" duration-ms="15135" started-at="2017-07-21T16:43:13Z" finished-at="2017-07-21T16:43:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EnterLocationOrPayToParkCodeTest -->
-        <test-method status="PASS" signature="LandingPageScrollTest()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="LandingPageScrollTest" duration-ms="20094" started-at="2017-07-21T16:43:28Z" finished-at="2017-07-21T16:43:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LandingPageScrollTest -->
-        <test-method status="PASS" signature="checkLandingPageForExceptions()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="checkLandingPageForExceptions" duration-ms="7047" started-at="2017-07-21T16:43:48Z" finished-at="2017-07-21T16:43:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkLandingPageForExceptions -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-21T16:43:55Z" finished-at="2017-07-21T16:43:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- restartApp -->
-        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="tearDownAppium" is-config="true" duration-ms="1771" started-at="2017-07-21T16:55:30Z" finished-at="2017-07-21T16:55:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownAppium -->
-      </class> <!-- Tests.LandingPageTests -->
-      <class name="Tests.SignUpPageTests">
-        <test-method status="PASS" signature="CheckSigninPageForExceptions()[pri:0, instance:Tests.SignUpPageTests@5ce81285]" name="CheckSigninPageForExceptions" duration-ms="17127" started-at="2017-07-21T16:45:57Z" finished-at="2017-07-21T16:46:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckSigninPageForExceptions -->
-        <test-method status="PASS" signature="DeclineAndAcceptTermsTest()[pri:0, instance:Tests.SignUpPageTests@5ce81285]" name="DeclineAndAcceptTermsTest" duration-ms="32276" started-at="2017-07-21T16:46:14Z" finished-at="2017-07-21T16:46:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeclineAndAcceptTermsTest -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.SignUpPageTests@5ce81285]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-21T16:46:46Z" finished-at="2017-07-21T16:46:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- restartApp -->
-      </class> <!-- Tests.SignUpPageTests -->
       <class name="Tests.PINPageTests">
-        <test-method status="PASS" signature="CheckSecureLoginForExceptions()[pri:0, instance:Tests.PINPageTests@4fe3c938]" name="CheckSecureLoginForExceptions" duration-ms="40371" started-at="2017-07-21T16:53:43Z" finished-at="2017-07-21T16:54:24Z">
+        <test-method status="PASS" signature="CheckSecureLoginForExceptions()[pri:0, instance:Tests.PINPageTests@4b4523f8]" name="CheckSecureLoginForExceptions" duration-ms="42125" started-at="2017-07-24T10:51:48Z" finished-at="2017-07-24T10:52:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckSecureLoginForExceptions -->
-        <test-method status="PASS" signature="SendDataTests()[pri:0, instance:Tests.PINPageTests@4fe3c938]" name="SendDataTests" duration-ms="65575" started-at="2017-07-21T16:54:24Z" finished-at="2017-07-21T16:55:29Z">
+        <test-method status="PASS" signature="SendDataTests()[pri:0, instance:Tests.PINPageTests@4b4523f8]" name="SendDataTests" duration-ms="69331" started-at="2017-07-24T10:52:30Z" finished-at="2017-07-24T10:53:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SendDataTests -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.PINPageTests@4fe3c938]" name="restartApp" is-config="true" duration-ms="1" started-at="2017-07-21T16:55:29Z" finished-at="2017-07-21T16:55:29Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.PINPageTests@4b4523f8]" name="restartApp" is-config="true" duration-ms="1" started-at="2017-07-24T10:53:39Z" finished-at="2017-07-24T10:53:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
       </class> <!-- Tests.PINPageTests -->
-      <class name="Tests.FavoritesPageTests">
-        <test-method status="PASS" signature="FavoritesTest()[pri:0, instance:Tests.FavoritesPageTests@4e1d422d]" name="FavoritesTest" duration-ms="6337" started-at="2017-07-21T16:44:32Z" finished-at="2017-07-21T16:44:38Z">
+      <class name="Tests.SignUpPageTests">
+        <test-method status="PASS" signature="CheckSigninPageForExceptions()[pri:0, instance:Tests.SignUpPageTests@57536d79]" name="CheckSigninPageForExceptions" duration-ms="18095" started-at="2017-07-24T10:44:50Z" finished-at="2017-07-24T10:45:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FavoritesTest -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.FavoritesPageTests@4e1d422d]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-21T16:44:38Z" finished-at="2017-07-21T16:44:38Z">
+        </test-method> <!-- CheckSigninPageForExceptions -->
+        <test-method status="PASS" signature="DeclineAndAcceptTermsTest()[pri:0, instance:Tests.SignUpPageTests@57536d79]" name="DeclineAndAcceptTermsTest" duration-ms="31809" started-at="2017-07-24T10:45:09Z" finished-at="2017-07-24T10:45:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeclineAndAcceptTermsTest -->
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.SignUpPageTests@57536d79]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-24T10:45:40Z" finished-at="2017-07-24T10:45:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
+      </class> <!-- Tests.SignUpPageTests -->
+      <class name="Tests.FavoritesPageTests">
+        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.FavoritesPageTests@eec5a4a]" name="initAppium" is-config="true" duration-ms="12439" started-at="2017-07-24T10:41:21Z" finished-at="2017-07-24T10:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initAppium -->
+        <test-method status="PASS" signature="FavoritesTest()[pri:0, instance:Tests.FavoritesPageTests@eec5a4a]" name="FavoritesTest" duration-ms="9395" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FavoritesTest -->
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.FavoritesPageTests@eec5a4a]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-24T10:43:22Z" finished-at="2017-07-24T10:43:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restartApp -->
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.FavoritesPageTests@eec5a4a]" name="tearDownAppium" is-config="true" duration-ms="2843" started-at="2017-07-24T10:53:40Z" finished-at="2017-07-24T10:53:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAppium -->
       </class> <!-- Tests.FavoritesPageTests -->
       <class name="Tests.FAQPageTests">
-        <test-method status="PASS" signature="FAQNavTest()[pri:0, instance:Tests.FAQPageTests@66480dd7]" name="FAQNavTest" duration-ms="18092" started-at="2017-07-21T16:44:38Z" finished-at="2017-07-21T16:44:56Z">
+        <test-method status="PASS" signature="FAQNavTest()[pri:0, instance:Tests.FAQPageTests@2b2948e2]" name="FAQNavTest" duration-ms="23243" started-at="2017-07-24T10:43:22Z" finished-at="2017-07-24T10:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FAQNavTest -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.FAQPageTests@66480dd7]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-21T16:44:56Z" finished-at="2017-07-21T16:44:56Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.FAQPageTests@2b2948e2]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-24T10:43:45Z" finished-at="2017-07-24T10:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
       </class> <!-- Tests.FAQPageTests -->
       <class name="Tests.CodeVerificationPageTests">
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.CodeVerificationPageTests@5ec0a365]" name="setUpPage" is-config="true" duration-ms="218" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.CodeVerificationPageTests@5a8e6209]" name="setUpPage" is-config="true" duration-ms="43" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.FAQPageTests@66480dd7]" name="setUpPage" is-config="true" duration-ms="4" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.FAQPageTests@2b2948e2]" name="setUpPage" is-config="true" duration-ms="33" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.FavoritesPageTests@4e1d422d]" name="setUpPage" is-config="true" duration-ms="5" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.FavoritesPageTests@eec5a4a]" name="setUpPage" is-config="true" duration-ms="18" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.HelpPageTests@3327bd23]" name="setUpPage" is-config="true" duration-ms="15" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.MobileVerPageTests@3b0143d3]" name="setUpPage" is-config="true" duration-ms="20" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.LandingPageTests@a67c67e]" name="setUpPage" is-config="true" duration-ms="7" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.PINPageTests@4b4523f8]" name="setUpPage" is-config="true" duration-ms="50" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.MobileVerPageTests@78c03f1f]" name="setUpPage" is-config="true" duration-ms="19" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.SendBugReportPageTests@6ddf90b0]" name="setUpPage" is-config="true" duration-ms="11" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.PINPageTests@4fe3c938]" name="setUpPage" is-config="true" duration-ms="7" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.SignUpPageTests@57536d79]" name="setUpPage" is-config="true" duration-ms="29" started-at="2017-07-24T10:43:12Z" finished-at="2017-07-24T10:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.SendBugReportPageTests@52a86356]" name="setUpPage" is-config="true" duration-ms="4" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.SignUpPageTests@5ce81285]" name="setUpPage" is-config="true" duration-ms="8" started-at="2017-07-21T16:42:58Z" finished-at="2017-07-21T16:42:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="NavBackandBlankInputkTests()[pri:0, instance:Tests.CodeVerificationPageTests@5ec0a365]" name="NavBackandBlankInputkTests" duration-ms="137385" started-at="2017-07-21T16:50:05Z" finished-at="2017-07-21T16:52:22Z">
+        <test-method status="PASS" signature="NavBackandBlankInputkTests()[pri:0, instance:Tests.CodeVerificationPageTests@5a8e6209]" name="NavBackandBlankInputkTests" duration-ms="140240" started-at="2017-07-24T10:48:09Z" finished-at="2017-07-24T10:50:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NavBackandBlankInputkTests -->
-        <test-method status="PASS" signature="ValidInputTests()[pri:0, instance:Tests.CodeVerificationPageTests@5ec0a365]" name="ValidInputTests" duration-ms="81073" started-at="2017-07-21T16:52:22Z" finished-at="2017-07-21T16:53:43Z">
+        <test-method status="PASS" signature="ValidInputTests()[pri:0, instance:Tests.CodeVerificationPageTests@5a8e6209]" name="ValidInputTests" duration-ms="78460" started-at="2017-07-24T10:50:29Z" finished-at="2017-07-24T10:51:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidInputTests -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.CodeVerificationPageTests@5ec0a365]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-21T16:53:43Z" finished-at="2017-07-21T16:53:43Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.CodeVerificationPageTests@5a8e6209]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-24T10:51:48Z" finished-at="2017-07-24T10:51:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
       </class> <!-- Tests.CodeVerificationPageTests -->
       <class name="Tests.MobileVerPageTests">
-        <test-method status="PASS" signature="CheckMobileVerPageForExceptions()[pri:0, instance:Tests.MobileVerPageTests@78c03f1f]" name="CheckMobileVerPageForExceptions" duration-ms="113439" started-at="2017-07-21T16:46:46Z" finished-at="2017-07-21T16:48:40Z">
+        <test-method status="PASS" signature="CheckMobileVerPageForExceptions()[pri:0, instance:Tests.MobileVerPageTests@3b0143d3]" name="CheckMobileVerPageForExceptions" duration-ms="54520" started-at="2017-07-24T10:45:40Z" finished-at="2017-07-24T10:46:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckMobileVerPageForExceptions -->
-        <test-method status="PASS" signature="InputTests()[pri:0, instance:Tests.MobileVerPageTests@78c03f1f]" name="InputTests" duration-ms="85104" started-at="2017-07-21T16:48:40Z" finished-at="2017-07-21T16:50:05Z">
+        <test-method status="PASS" signature="InputTests()[pri:0, instance:Tests.MobileVerPageTests@3b0143d3]" name="InputTests" duration-ms="94375" started-at="2017-07-24T10:46:35Z" finished-at="2017-07-24T10:48:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InputTests -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.MobileVerPageTests@78c03f1f]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-21T16:50:05Z" finished-at="2017-07-21T16:50:05Z">
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.MobileVerPageTests@3b0143d3]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-24T10:48:09Z" finished-at="2017-07-24T10:48:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
       </class> <!-- Tests.MobileVerPageTests -->
-    </test> <!-- ParkRight Test Automation -->
+    </test> <!-- Other Tests -->
   </suite> <!-- Test runner -->
 </testng-results>

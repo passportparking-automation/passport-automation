@@ -38,6 +38,12 @@ public class FavoritesPageTests extends TestBase {
 		landingPage.navigateToFav();
 		favoritesPage.FavoritesTest();
 	}
+
+	@Override
+	public void exitCriteria() {
+		// TODO Auto-generated method stub
+		
+	}
 		
 		
 	

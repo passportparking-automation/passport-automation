@@ -13,10 +13,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import Pages.BasePage;
 import driver.deviceAndroid;
@@ -121,6 +118,9 @@ public abstract class TestBase {
             driver.quit();
         }
 	}
+    @AfterTest
+    public abstract void exitCriteria();
+    
     
 	public static File getAndroidAppFile() {
 		File appDir = new File(deviceAndroid.appDir);

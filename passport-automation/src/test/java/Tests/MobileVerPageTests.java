@@ -64,4 +64,10 @@ public class MobileVerPageTests extends TestBase{
 		driver.navigate().back();
 		driver.navigate().back();
 	}
+
+	@Override
+	public void exitCriteria() {
+		// TODO Auto-generated method stub
+		
+	}
 }

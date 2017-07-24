@@ -62,4 +62,9 @@ public class CodeVerificationPageTests extends TestBase{
 		pinPage.CheckSecureLoginForExceptions();
 		driver.navigate().back();
 	}
+	@Override
+	public void exitCriteria() {
+		// TODO Auto-generated method stub
+		
+	}
 }

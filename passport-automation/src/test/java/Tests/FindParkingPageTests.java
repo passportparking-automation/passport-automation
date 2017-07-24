@@ -69,6 +69,12 @@ public void NumericValueZoneTest(){
 	findParkingPage.NumericValueZoneTest();
 	driver.navigate().back();
 }
+
+@Override
+public void exitCriteria() {
+	// TODO Auto-generated method stub
+	
+}
 	
 	
 	

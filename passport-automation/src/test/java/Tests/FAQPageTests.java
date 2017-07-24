@@ -37,4 +37,10 @@ public class FAQPageTests extends TestBase {
 		Thread.sleep(7000);
 		faqPage.FAQNavTest();
 	}
+
+	@Override
+	public void exitCriteria() {
+		// TODO Auto-generated method stub
+		
+	}
 }

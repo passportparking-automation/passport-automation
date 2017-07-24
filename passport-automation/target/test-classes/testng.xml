@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test runner" parallel="classes" thread-count="1">
-  <test verbose="2" name="ParkRight Test Automation">
+  <test verbose="2" name="LandingPageTests">
     <classes>
       <class name="Tests.LandingPageTests" />
+    </classes>
+  </test>  
+   
+  <test verbose="2" name="HelpPageTests">
+    <classes>
       <class name="Tests.HelpPageTests" />
+    </classes> 
+   </test>
+   
+   <test verbose="2" name="Other Tests"> 
       <class name="Tests.FavoritesPageTests" />
       <class name="Tests.FAQPageTests" />
       <class name="Tests.SendBugReportPageTests"/>

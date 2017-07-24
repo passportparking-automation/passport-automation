@@ -44,4 +44,10 @@ public void HelpNavTest() throws InterruptedException{
 	helpPage.HelpNavTest();
 }
 
+@Override
+public void exitCriteria() {
+	// TODO Auto-generated method stub
+	
+}
+
 }

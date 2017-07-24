@@ -63,4 +63,9 @@ public class LandingPageTests extends TestBase {
 		landingPage.SwipeUpTest();
 		landingPage.CheckLandingPageForExceptions();
 	}
+	@Override
+	public void exitCriteria() {
+		// TODO Auto-generated method stub
+		
+	}
 }

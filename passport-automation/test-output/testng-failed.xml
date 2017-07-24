@@ -1,65 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
-  <test name="ParkRight Test Automation(failed)" parallel="classes">
+  <test name="LandingPageTests(failed)" parallel="classes">
     <classes>
-      <class name="Tests.MobileVerPageTests">
+      <class name="Tests.LandingPageTests">
         <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
+          <include name="EnterLocationOrPayToParkCodeTest"/>
+          <include name="checkLandingPageForExceptions"/>
+          <include name="LandingPageScrollTest"/>
+          <include name="CheckMenuOptionsForExceptions"/>
         </methods>
-      </class> <!-- Tests.MobileVerPageTests -->
+      </class> <!-- Tests.LandingPageTests -->
+      <class name="Tests.FavoritesPageTests">
+        <methods>
+          <include name="initAppium"/>
+        </methods>
+      </class> <!-- Tests.FavoritesPageTests -->
+    </classes>
+  </test> <!-- LandingPageTests(failed) -->
+  <test name="HelpPageTests(failed)" parallel="classes">
+    <classes>
+      <class name="Tests.HelpPageTests">
+        <methods>
+          <include name="HelpNavTest"/>
+          <include name="CloseHelpTest"/>
+        </methods>
+      </class> <!-- Tests.HelpPageTests -->
+      <class name="Tests.FavoritesPageTests">
+        <methods>
+          <include name="initAppium"/>
+        </methods>
+      </class> <!-- Tests.FavoritesPageTests -->
+    </classes>
+  </test> <!-- HelpPageTests(failed) -->
+  <test name="Other Tests(failed)" parallel="classes">
+    <classes>
+      <class name="Tests.CodeVerificationPageTests">
+        <methods>
+          <include name="ValidInputTests"/>
+          <include name="NavBackandBlankInputkTests"/>
+        </methods>
+      </class> <!-- Tests.CodeVerificationPageTests -->
       <class name="Tests.SignUpPageTests">
         <methods>
           <include name="DeclineAndAcceptTermsTest"/>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
+          <include name="CheckSigninPageForExceptions"/>
         </methods>
       </class> <!-- Tests.SignUpPageTests -->
-      <class name="Tests.SendBugReportPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.SendBugReportPageTests -->
-      <class name="Tests.PINPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.PINPageTests -->
-      <class name="Tests.FavoritesPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.FavoritesPageTests -->
-      <class name="Tests.HelpPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.HelpPageTests -->
-      <class name="Tests.LandingPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
-          <include name="initAppium"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.LandingPageTests -->
-      <class name="Tests.CodeVerificationPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.CodeVerificationPageTests -->
       <class name="Tests.FAQPageTests">
         <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
+          <include name="FAQNavTest"/>
         </methods>
       </class> <!-- Tests.FAQPageTests -->
+      <class name="Tests.MobileVerPageTests">
+        <methods>
+          <include name="InputTests"/>
+          <include name="CheckMobileVerPageForExceptions"/>
+        </methods>
+      </class> <!-- Tests.MobileVerPageTests -->
+      <class name="Tests.SendBugReportPageTests">
+        <methods>
+          <include name="EmptyBugTest"/>
+          <include name="CheckBugForExceptions"/>
+          <include name="NotEmptyBugTest"/>
+        </methods>
+      </class> <!-- Tests.SendBugReportPageTests -->
+      <class name="Tests.FavoritesPageTests">
+        <methods>
+          <include name="initAppium"/>
+          <include name="FavoritesTest"/>
+        </methods>
+      </class> <!-- Tests.FavoritesPageTests -->
+      <class name="Tests.PINPageTests">
+        <methods>
+          <include name="CheckSecureLoginForExceptions"/>
+          <include name="SendDataTests"/>
+        </methods>
+      </class> <!-- Tests.PINPageTests -->
     </classes>
-  </test> <!-- ParkRight Test Automation(failed) -->
+  </test> <!-- Other Tests(failed) -->
 </suite> <!-- Failed suite [Test runner] -->
