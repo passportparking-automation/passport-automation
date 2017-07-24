@@ -100,9 +100,6 @@ public abstract class BasePage {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		return screenshot.renameTo(new File(screenshotDirectory, String.format("%s.png", name)));
 	}
-	
-	
-	
 	public static void sleep(int sleeptime) {
 		try {
 			Thread.sleep(sleeptime);
