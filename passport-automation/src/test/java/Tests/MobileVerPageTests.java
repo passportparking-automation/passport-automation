@@ -50,7 +50,7 @@ public class MobileVerPageTests extends TestBase{
 		mobileVerPage.CheckMobileVerPageForExceptions();
 		mobileVerPage.NavBackToLoginTest();
 		signUpPage.CheckSigninPageForExceptions();
-		driver.navigate().back();
+		signUpPage.navToLanding();
 	}
 	
 	@Test
@@ -61,13 +61,6 @@ public class MobileVerPageTests extends TestBase{
 		mobileVerPage.ShortNumberProivdedTest();
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.CheckCodeVerForExceptions();
-		driver.navigate().back();
-		driver.navigate().back();
-	}
-
-	@Override
-	public void exitCriteria() {
-		// TODO Auto-generated method stub
-		
+		codeVerificationPage.navToLanding();
 	}
 }

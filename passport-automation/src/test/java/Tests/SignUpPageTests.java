@@ -49,12 +49,6 @@ public class SignUpPageTests extends TestBase {
 		signUpPage.DeclineTermsTest();
 		signUpPage.AcceptTermsTest();
 		mobileVerPage.CheckMobileVerPageForExceptions();
-		driver.navigate().back();
-		driver.navigate().back();
-	}
-	@AfterTest
-	public void exitCriteria() {
-		// nav back to landing page
-		
+		mobileVerPage.navToLanding();
 	}
 }

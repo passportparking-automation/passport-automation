@@ -44,7 +44,7 @@ public class PINPageTests extends TestBase {
 	public void CheckSecureLoginForExceptions(){
 		landingPage.clickPayToPark();
 		pinPage.CheckSecureLoginForExceptions();
-		driver.navigate().back();
+		pinPage.navToLanding();
 	}
 	@Test
 	public void SendDataTests() {
@@ -52,13 +52,6 @@ public class PINPageTests extends TestBase {
 		pinPage.EmptyPINTest();
 		pinPage.InvalidPINTest();
 		pinPage.SendCorrectPINTest();
-		driver.navigate().back();
+		pinPage.navToLanding();
 	}
-	@Override
-	public void exitCriteria() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-
 }

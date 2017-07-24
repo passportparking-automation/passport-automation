@@ -46,4 +46,10 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void navToLanding() {
+		// TODO Auto-generated method stub
+		
+	}
 }

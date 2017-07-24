@@ -167,10 +167,4 @@ public class TestParkRightDieselFlow extends TestBase {
 		lengthOfStayPage.clickBackButton();
 
 	}*/
-
-	@Override
-	public void exitCriteria() {
-		// TODO Auto-generated method stub
-		
-	}
 }

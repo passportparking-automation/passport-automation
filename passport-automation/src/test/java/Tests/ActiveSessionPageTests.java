@@ -94,10 +94,4 @@ public class ActiveSessionPageTests extends TestBase{
 	}
 	*/
 
-	@Override
-	public void exitCriteria() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

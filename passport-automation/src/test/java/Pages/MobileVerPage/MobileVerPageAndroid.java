@@ -82,5 +82,10 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 		// NA
 	}
 
+	public void navToLanding() {
+		driver.navigate().back();
+		driver.navigate().back();
+	}
+
 
 }

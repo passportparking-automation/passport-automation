@@ -45,9 +45,4 @@ public class SendBugReportPageTests extends TestBase {
 		sendBugReportPage.NavigateToBugReportPage();
 		sendBugReportPage.NotEmptyBugTest();
 	}
-	@Override
-	public void exitCriteria() {
-		// TODO Auto-generated method stub
-		
-	}
 }

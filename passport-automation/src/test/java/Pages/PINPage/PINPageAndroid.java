@@ -66,4 +66,8 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 		takeScreenshot("pinTest5");
 		acceptButton.click();
 	}
+
+	public void navToLanding() {
+		driver.navigate().back();
+	}
 }

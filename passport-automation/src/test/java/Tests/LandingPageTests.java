@@ -51,7 +51,7 @@ public class LandingPageTests extends TestBase {
 		landingPage.EnterLocationOrPayToParkCodeTest();
 		findParkingPage.CheckFindParkingForExceptions();
 		driver.navigate().back();
-	}
+	}/*
 	@Test
 	public void LandingPageScrollTest(){
 		landingPage.SwipeLeftTest();
@@ -62,10 +62,5 @@ public class LandingPageTests extends TestBase {
 		landingPage.CheckLandingPageForExceptions();
 		landingPage.SwipeUpTest();
 		landingPage.CheckLandingPageForExceptions();
-	}
-	@Override
-	public void exitCriteria() {
-		// TODO Auto-generated method stub
-		
-	}
+	}*/
 }

@@ -42,7 +42,7 @@ public class CodeVerificationPageTests extends TestBase{
 		}
 	}	
 	@Test	
-	public void NavBackandBlankInputkTests(){
+	public void NavBackandBlankInputTests(){
 		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
 		mobileVerPage.ValidMobileTest();
@@ -50,8 +50,7 @@ public class CodeVerificationPageTests extends TestBase{
 		codeVerificationPage.EmptyVerTest();
 		codeVerificationPage.NavBackTest();
 		mobileVerPage.CheckMobileVerPageForExceptions();
-		driver.navigate().back();
-		driver.navigate().back();
+		mobileVerPage.navToLanding();
 	}
 	@Test
 	public void ValidInputTests(){
@@ -60,11 +59,6 @@ public class CodeVerificationPageTests extends TestBase{
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
 		pinPage.CheckSecureLoginForExceptions();
-		driver.navigate().back();
-	}
-	@Override
-	public void exitCriteria() {
-		// TODO Auto-generated method stub
-		
+		pinPage.navToLanding();
 	}
 }

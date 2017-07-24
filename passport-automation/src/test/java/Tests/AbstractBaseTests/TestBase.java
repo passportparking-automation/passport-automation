@@ -118,9 +118,6 @@ public abstract class TestBase {
             driver.quit();
         }
 	}
-    @AfterTest
-    public abstract void exitCriteria();
-    
     
 	public static File getAndroidAppFile() {
 		File appDir = new File(deviceAndroid.appDir);

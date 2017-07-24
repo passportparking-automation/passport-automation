@@ -12,7 +12,6 @@
       <class name="Tests.MobileVerPageTests"/>
       <class name="Tests.CodeVerificationPageTests"/>
       <class name="Tests.PINPageTests"/>
-      
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
