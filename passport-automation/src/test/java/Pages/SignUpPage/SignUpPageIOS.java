@@ -46,4 +46,10 @@ public class SignUpPageIOS extends BasePage implements SignUpPage {
 		
 	}
 
+	@Override
+	public void navToLanding() {
+		menuIcon.click();
+		homeMenuOption.click();
+	}
+
 }

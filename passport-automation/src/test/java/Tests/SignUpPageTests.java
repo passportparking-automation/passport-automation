@@ -1,5 +1,6 @@
 package Tests;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -39,7 +40,8 @@ public class SignUpPageTests extends TestBase {
 		landingPage.clickPayToPark();
 		Thread.sleep(5000);
 		signUpPage.CheckSigninPageForExceptions();
-		driver.navigate().back();
+		signUpPage.navToLanding();
+		
 	}
 	@Test
 	public void DeclineAndAcceptTermsTest() {
@@ -50,9 +52,9 @@ public class SignUpPageTests extends TestBase {
 		driver.navigate().back();
 		driver.navigate().back();
 	}
-	@Override
+	@AfterTest
 	public void exitCriteria() {
-		// TODO Auto-generated method stub
+		// nav back to landing page
 		
 	}
 }
