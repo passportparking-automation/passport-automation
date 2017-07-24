@@ -26,10 +26,8 @@ public class PayMethodPageIOS extends BasePage implements PayMethodPage {
 	public void clickNoButton() {
 		noButton.click();
 	}
-
-	@Override
-	public void CheckPayMethodForExceptions() {
-		// TODO Auto-generated method stub
+	
+	public void CheckPayMethodForExceptions(){
 		
 	}
 }

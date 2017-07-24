@@ -46,83 +46,28 @@ public class LoginPageIOS extends BasePage implements LoginPage {
 		super(driver);
 	}
 
-	public void checkSignUpClickExpectTNC() {
-		signUpButton.isDisplayed();
-		signUpButton.click();
-		
-		takeScreenshot("ss5");
-		declineButton.isDisplayed();
-		
-	}
-
-	public void checkLoginInClickExpectTNC() {
-		loginButton.isDisplayed();
-		loginButton.click();
-		
-		takeScreenshot("ss6");
-		acceptButton.isDisplayed();
-	
-	}
-
-	public void checkSignUpClickExpectLoginSelection() {
-		signUpButton.isDisplayed();
-		signUpButton.click();
-		
-		takeScreenshot("ss9");
-		backButton.click();
-	}
-
-	public void checkLoginClickExpectLoginSelection() {
-		loginButton.isDisplayed();
-		loginButton.click();
-		
-		takeScreenshot("ss9");
-	}
-
-	public void checkDeclineClick() {
-		declineButton.isDisplayed();
-		declineButton.click();
-		
-		takeScreenshot("ss7");
-	}
-
-	public void checkAcceptClickExpectLoginSelection() {
-		acceptButton.isDisplayed();
-		acceptButton.click();
-		
-		takeScreenshot("ss8");
-		backButton.click();
-	}
-
-	@Override
 	public void clickLoginButtonAndAcceptTerms() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void goToSignUp() {
-		// TODO Auto-generated method stub
+	public void TermsDisplayedTest() {
+		loginButton.click();
+		try {
+			acceptButton.click();
+		} catch (Exception e) {
+			System.out.println("Terms message did not appear");
+		}
 		
 	}
 
-	@Override
 	public void CheckLoginPageForExceptions() {
 		// TODO Auto-generated method stub
 		
 	}
 
-
-	@Override
 	public void AssureTermsAreAcceptedTest() {
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public void TermsDisplayedTest() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

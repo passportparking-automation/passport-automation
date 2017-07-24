@@ -17,7 +17,6 @@ public class AddVehiclePageIOS extends BasePage implements AddVehiclePage {
 	
 	@FindBy(id = "saveVehicleButton")
 	public MobileElement saveVButton;
-	
 
 	public AddVehiclePageIOS(AppiumDriver driver) {super(driver);	}
 

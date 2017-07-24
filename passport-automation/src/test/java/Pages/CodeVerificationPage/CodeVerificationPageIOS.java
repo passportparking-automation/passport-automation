@@ -16,34 +16,49 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 	public MobileElement submitButton;
 
 	@FindBy (name = "Ok")
-	private MobileElement acceptButton;
+	private MobileElement acceptButton;;
+	
+	@FindBy (name = "Retry")
+	public MobileElement tryAgainButton;
+	
+	@FindBy (name = "back")
+	public MobileElement backButton;
 	
 	public CodeVerificationPageIOS(AppiumDriver driver) {super(driver);}
 
 	public void SendCorrectCodeTest() {
-		codeInputBox.sendKeys("777");
-		takeScreenshot("pinTest");
+		codeInputBox.sendKeys("963");
+		takeScreenshot("CodeTest1");
+		try {
+            driver.hideKeyboard();
+            } catch (Exception e) {
+            	System.out.println("Keyboard wasn't displayed");
+            }
 		submitButton.click();
-		takeScreenshot("pinTest2");
+		takeScreenshot("CodeTest2");
 		acceptButton.click();
-		takeScreenshot("pinTest3");
+		takeScreenshot("CodeTest3");
+		
 	}
 
-	@Override
 	public void CheckCodeVerForExceptions() {
-		// TODO Auto-generated method stub
+		codeInputBox.isDisplayed();
+		submitButton.isDisplayed();
+		tryAgainButton.isDisplayed();
+		takeScreenshot("CodeTest4");
 		
 	}
 
-	@Override
-	public void NavBackTest() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void EmptyVerTest() {
-		// TODO Auto-generated method stub
+		takeScreenshot("CodeTest4");
+		submitButton.click();
+		acceptButton.click();
+		takeScreenshot("CodeTest4");
+		
+	}
+
+	public void NavBackTest() {
+		backButton.click();
 		
 	}
 }
