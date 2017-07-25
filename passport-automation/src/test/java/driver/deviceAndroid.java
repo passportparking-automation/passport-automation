@@ -17,7 +17,7 @@ public class deviceAndroid {
 	public static final String appPackage = "com.parkopedia.parkright";
 	*/
 	
-	//Yulia caps
+	//Yulia caps//
 	public static final String platformName = "Android";
 	public static final String deviceName = "Yuliya";
 	public static final String device = "Android";
