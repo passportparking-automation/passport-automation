@@ -39,7 +39,7 @@ public class FindParkingPageTests extends TestBase {
 
 		landingPage.navigateToFindLocation();
 		findParkingPage.CheckFindParkingForExceptions();
-		driver.navigate().back();
+		findParkingPage.navToLanding();
 	}
 
 	@Test
@@ -50,24 +50,39 @@ public class FindParkingPageTests extends TestBase {
 	}
 
 	@Test
-	public void ZoneTest() {
+	public void ZoneTest() throws InterruptedException {
 		landingPage.navigateToFindLocation();
 		findParkingPage.ZoneTest();
-		driver.navigate().back();
+		findParkingPage.CheckFindParkingForExceptions();
+		findParkingPage.navToLanding();
 	}
 
 	@Test
 	public void ZoneTest2() {
 		landingPage.navigateToFindLocation();
 		findParkingPage.ZoneTest2();
-		driver.navigate().back();
+		findParkingPage.navToLanding();
 	}
 
 	@Test
 	public void NumericValueZoneTest() {
 		landingPage.navigateToFindLocation();
 		findParkingPage.NumericValueZoneTest();
-		driver.navigate().back();
+		findParkingPage.navToLanding();
+	}
+	
+	/*@Test
+	public void TextValueZoneTest() {
+		landingPage.navigateToFindLocation();
+		findParkingPage.TextValueZoneTest();
+		findParkingPage.navToLanding();
+	}
+	*/
+	@Test
+	public void ZoneIconTest() {
+		landingPage.navigateToFindLocation();
+		findParkingPage.ZoneIconTest();
+		findParkingPage.navToLanding();
 	}
 
 }

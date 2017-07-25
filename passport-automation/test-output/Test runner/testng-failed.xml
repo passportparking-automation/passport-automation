@@ -11,55 +11,31 @@
       </class> <!-- Tests.MobileVerPageTests -->
       <class name="Tests.SignUpPageTests">
         <methods>
-          <include name="DeclineAndAcceptTermsTest"/>
           <include name="restartApp"/>
+          <include name="tearDownAppium"/>
+          <include name="initAppium"/>
           <include name="setUpPage"/>
         </methods>
       </class> <!-- Tests.SignUpPageTests -->
-      <class name="Tests.SendBugReportPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.SendBugReportPageTests -->
       <class name="Tests.PINPageTests">
         <methods>
           <include name="restartApp"/>
           <include name="setUpPage"/>
         </methods>
       </class> <!-- Tests.PINPageTests -->
-      <class name="Tests.FavoritesPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.FavoritesPageTests -->
-      <class name="Tests.HelpPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.HelpPageTests -->
-      <class name="Tests.LandingPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
-          <include name="initAppium"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.LandingPageTests -->
       <class name="Tests.CodeVerificationPageTests">
         <methods>
           <include name="setUpPage"/>
           <include name="restartApp"/>
         </methods>
       </class> <!-- Tests.CodeVerificationPageTests -->
-      <class name="Tests.FAQPageTests">
+      <class name="Tests.ResetPINPageTests">
         <methods>
           <include name="setUpPage"/>
           <include name="restartApp"/>
+          <include name="CheckResetPINPageForExceptions"/>
         </methods>
-      </class> <!-- Tests.FAQPageTests -->
+      </class> <!-- Tests.ResetPINPageTests -->
     </classes>
   </test> <!-- ParkRight Test Automation(failed) -->
 </suite> <!-- Failed suite [Test runner] -->

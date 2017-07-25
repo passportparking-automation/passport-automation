@@ -56,9 +56,11 @@ public abstract class TestBase {
 			DesiredCapabilities capabilitiesAndroid = new DesiredCapabilities();
 			capabilitiesAndroid.setCapability(MobileCapabilityType.PLATFORM_NAME, deviceAndroid.platformName);
 			capabilitiesAndroid.setCapability(MobileCapabilityType.DEVICE_NAME, deviceAndroid.deviceName);
-			//capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+			//capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "selendroid");
 			capabilitiesAndroid.setCapability(MobileCapabilityType.APP, appAndroid);
 			capabilitiesAndroid.setCapability("appPackage", deviceAndroid.appPackage);
+		//	capabilitiesAndroid.setCapability("automationName", "selendroid"); 
+			
 			driver = new AppiumDriver<MobileElement>(url, capabilitiesAndroid);
 			wait = new WebDriverWait(driver, 80);
 			break;
