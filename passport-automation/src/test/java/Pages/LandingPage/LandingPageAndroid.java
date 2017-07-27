@@ -17,6 +17,14 @@ import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import Pages.BasePage;
+import Pages.CodeVerificationPage.CodeVerificationPage;
+import Pages.CodeVerificationPage.CodeVerificationPageAndroid;
+import Pages.LoginPage.LoginPage;
+import Pages.LoginPage.LoginPageAndroid;
+import Pages.MobileVerPage.MobileVerPage;
+import Pages.MobileVerPage.MobileVerPageAndroid;
+import Pages.PINPage.PINPage;
+import Pages.PINPage.PINPageAndroid;
 
 public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy(id = "welcomeLogoImage")
@@ -57,6 +65,12 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 
 	@FindBy(id = "slidingmenumain")
 	public MobileElement mainScreen;
+	
+	
+	private LoginPage loginPage = new LoginPageAndroid(driver);
+	private MobileVerPage mobVerPage = new MobileVerPageAndroid(driver);
+	private CodeVerificationPage codeVerPage = new CodeVerificationPageAndroid(driver);
+	private PINPage pinPage  = new PINPageAndroid(driver);
 
 	public LandingPageAndroid(AppiumDriver driver) { super(driver);}
 
@@ -149,6 +163,44 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	public void navigateToAbout() {
 		takeScreenshot("AboutLanding");
 		faqButton.click();
+	}
+	
+	public void navigateToLogin() {
+		menuIcon.click();
+		loginMenuOption.click();
+		//staging popup check
+		try {
+			declineButton.click();
+		} catch (Throwable e) {
+			System.err.println("The staging build thing did not appear");
+		}
+		
+		try {
+			logInButton.click();
+			//check if there are terms and conditions
+			try {
+				acceptButton.click();
+			} catch (Exception e) {
+				System.out.println("Terms message did not appear");
+			}
+			mobVerPage.ValidMobileTest();
+			codeVerPage.SendCorrectCodeTest();
+			pinPage.SendCorrectPINTest();
+			
+		} catch (Throwable e) {
+			System.err.println("try another");
+		}
+	}
+	
+	public void logout() {
+		menuImage.click();
+		
+		logoutMenuOption.click();	
+	}
+	
+	public void navigateToProfilePage() {
+		menuIcon.click();
+		profileMenuOption.click();
 	}
 
 	public void clickPayToPark() {

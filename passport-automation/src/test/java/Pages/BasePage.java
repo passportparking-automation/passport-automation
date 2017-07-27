@@ -38,30 +38,47 @@ public abstract class BasePage {
 	@FindBy (id = "parent")
 	public MobileElement popUp;
 	
-	@FindBy (id = "split_action_bar")
+	@FindBy (id = "title")
+	public MobileElement popUpTitle;
+	
+	@FindBy (id = "sidemenu_item_sm_new_session")
 	public  MobileElement homeMenuOption;
 	
-	@FindBy (id = "text")
+	@FindBy (id = "sidemenu_item_sm_wayfinding")
 	public  MobileElement findParkingMenuOption;
 	
-	@FindBy (id = "textinput_error")
+	@FindBy (id = "sidemenu_item_help")
 	public  MobileElement helpMenuOption;
 
-	@FindBy (id = "transition_current_scene")
+	@FindBy (id = "sidemenu_item_sm_send_report")
 	public  MobileElement sendBugMenuOption;
 	
-	@FindBy (id = "transition_scene_layoutid_cache")
+	@FindBy (id = "sidemenu_item_sm_faq")
 	public MobileElement FAQMenuOption;
 	
-	@FindBy (id = "tutorialCloseButton")
+	@FindBy (id = "sidemenu_item_sm_terms")
 	public MobileElement termsMenuOption;
 	
-	@FindBy (id = "tutorialStepCounter")
+	@FindBy (id = "sidemenu_item_sm_privacy_policy")
 	public  MobileElement privacyPolicyMenuOption;
 	
-	@FindBy (id = "tutorialStepMessage")
+	@FindBy (id = "sidemenu_item_sm_login")
 	public  MobileElement loginMenuOption;
 	
+	@FindBy (id = "sidemenu_item_sm_parker_history")
+	public  MobileElement parkHistoryMenuOption;
+	
+	@FindBy (id = "sidemenu_item_sm_profile")
+	public  MobileElement profileMenuOption;
+	
+	@FindBy (id = "sidemenu_item_sm_payment")
+	public  MobileElement paymentMenuOption;
+	
+	@FindBy (id = "sidemenu_item_sm_vehicles")
+	public  MobileElement vehiclesMenuOption;
+	
+	@FindBy (id = "sidemenu_item_sm_logout")
+	public  MobileElement logoutMenuOption;
 		
 	static WebDriverWait wait;
 	
