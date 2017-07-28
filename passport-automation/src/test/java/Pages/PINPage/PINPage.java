@@ -8,4 +8,5 @@ public interface PINPage {
 	public void CheckSecureLoginForExceptions();
 	public void EmptyPINTest();
 	public void InvalidPINTest();
+	public void navToReset();
 }
