@@ -41,17 +41,24 @@ public class PINPageTests extends TestBase {
 		}
 	}	
 	@Test	
-	public void CheckSecureLoginForExceptions(){
+	public void CheckSecureLoginForExceptionsAndSendDataTests(){
 		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		try{
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
+		}
+		catch (Throwable e) {
+			System.out.println("Mobile Verification page was not displayed");
+		}
 		pinPage.CheckSecureLoginForExceptions();
 		pinPage.navToLanding();
-	}
-	@Test
-	public void SendDataTests() {
+		
 		landingPage.clickPayToPark();
 		pinPage.EmptyPINTest();
 		pinPage.InvalidPINTest();
 		pinPage.SendCorrectPINTest();
 		pinPage.navToLanding();
 	}
+
 }

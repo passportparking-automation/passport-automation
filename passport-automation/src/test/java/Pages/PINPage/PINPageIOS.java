@@ -67,4 +67,11 @@ public class PINPageIOS extends BasePage implements PINPage {
 		// TODO Auto-generated method stub
 		
 	}
+
+
+	@Override
+	public void navToReset() {
+		// TODO Auto-generated method stub
+		
+	}
 }

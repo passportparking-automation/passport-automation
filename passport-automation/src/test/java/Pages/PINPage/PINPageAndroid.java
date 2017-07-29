@@ -70,4 +70,8 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	public void navToLanding() {
 		driver.navigate().back();
 	}
+	public void navToReset(){
+		resetPINButton.click();
+		acceptButton.click();
+	}
 }
