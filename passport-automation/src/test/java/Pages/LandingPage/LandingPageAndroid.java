@@ -14,6 +14,7 @@ import org.testng.Assert;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.SwipeElementDirection;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import Pages.BasePage;
@@ -65,6 +66,9 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 
 	@FindBy(id = "slidingmenumain")
 	public MobileElement mainScreen;
+	
+	@FindBy(id = "overlay_header")
+	public MobileElement sessionOverlayHeader;
 	
 	
 	private LoginPage loginPage = new LoginPageAndroid(driver);
@@ -165,6 +169,23 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		faqButton.click();
 	}
 	
+	public void hideOverlay() {
+		try{
+			if(sessionOverlayHeader.isDisplayed()){
+				//Click on any part of the screen
+				TouchAction a2 = new TouchAction(driver);
+				a2.tap (779, 1236).perform();
+				menuImage.click();
+				homeMenuOption.click();
+			}
+		}
+			catch (Exception E){
+				System.out.println("Hide overlay was not performed");
+			}
+			
+		}
+	
+	
 	public void navigateToLogin() {
 		menuIcon.click();
 		loginMenuOption.click();
@@ -188,7 +209,8 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 			pinPage.SendCorrectPINTest();
 			
 		} catch (Throwable e) {
-			System.err.println("try another");
+			System.err.println("need to send pin");
+			pinPage.SendCorrectPINTest();
 		}
 	}
 	
@@ -201,6 +223,15 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	public void navigateToProfilePage() {
 		menuIcon.click();
 		profileMenuOption.click();
+	}
+	
+	public void navigateToYourCardsPage() {
+		menuIcon.click();
+		paymentMenuOption.click();
+	}
+	public void navigateToVehiclesPage() {
+		menuIcon.click();
+		vehiclesMenuOption.click();
 	}
 
 	public void clickPayToPark() {

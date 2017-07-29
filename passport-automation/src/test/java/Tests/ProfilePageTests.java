@@ -49,20 +49,33 @@ public class ProfilePageTests extends TestBase {
 	}
 	@Test 
 	public void CheckProfilePageForExceptions() {
-		//landingPage.clickPayToPark();
-		//loginPage.TermsDisplayedTest();
-		landingPage.navigateToLogin();
+		//should be changed to landingPage.navigateToLogin() after logout is coded
+				try{landingPage.navigateToLogin();
+				}
+				catch(Exception e){System.out.println("Wrong Screen");
+					driver.navigate().back(); 
+				}
+		landingPage.hideOverlay();
 		landingPage.navigateToProfilePage();
 		profilePage.CheckProfilePageForExceptions();
-		landingPage.logout();
+		driver.navigate().back();
+		//landingPage.logout();
 	}
 	
 	@Test 
 	public void NavToUpdateProfTest() {
-		landingPage.navigateToLogin();
-		landingPage.navigateToProfilePage();
-		profilePage.NavToUpdateProfTest();
-		landingPage.logout();
+		//should be changed to landingPage.navigateToLogin() after logout is coded
+		try{landingPage.navigateToLogin();
+		}
+		catch(Exception e){System.out.println("Wrong Screen");
+			driver.navigate().back(); 
+		}
+landingPage.hideOverlay();
+landingPage.navigateToProfilePage();
+profilePage.NavToUpdateProfTest();
+driver.navigate().back();
+driver.navigate().back();
+//landingPage.logout();
 	}
 
 }

@@ -38,7 +38,7 @@ public class UpdateProfPageAndroid extends BasePage implements UpdateProfPage {
 	
 	public UpdateProfPageAndroid(AppiumDriver driver) {  super(driver);  }
 
-	@Override
+	
 	public void UpdateProfNavTest() {
 		backButton1.click();
 		profilePage.CheckProfilePageForExceptions();

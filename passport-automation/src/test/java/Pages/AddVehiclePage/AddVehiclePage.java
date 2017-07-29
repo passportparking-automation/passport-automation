@@ -8,5 +8,7 @@ public interface AddVehiclePage {
 	public void addDieselOlderThan2015();
 	public void addDiesel2015();
 	public void NoGuruRecord();
+	public void AddVehicleTest();
+	public void CheckUpdateToVehiclePage();
 
 }

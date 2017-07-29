@@ -18,6 +18,9 @@ public interface LandingPage {
 	public void navigateToLogin();
 	public void navigateToProfilePage();
 	public void logout();
+	public void navigateToYourCardsPage();
+	public void hideOverlay();
+	public void navigateToVehiclesPage();
 	
 
 	

@@ -77,12 +77,12 @@ public class FindParkingPageTests extends TestBase {
 		findParkingPage.TextValueZoneTest();
 		findParkingPage.navToLanding();
 	}
-	*/
+	
 	@Test
 	public void ZoneIconTest() {
 		landingPage.navigateToFindLocation();
 		findParkingPage.ZoneIconTest();
 		findParkingPage.navToLanding();
-	}
+	}*/
 
 }

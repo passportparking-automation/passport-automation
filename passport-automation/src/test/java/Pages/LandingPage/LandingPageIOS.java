@@ -221,4 +221,22 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void navigateToYourCardsPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void hideOverlay() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void navigateToVehiclesPage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

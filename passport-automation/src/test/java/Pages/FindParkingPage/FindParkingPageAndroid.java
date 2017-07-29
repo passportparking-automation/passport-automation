@@ -167,6 +167,7 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 
 
 	public void ZoneIconTest() {
+		//does not send keys
 		List <MobileElement> listOfObj = driver.findElementsByClassName("android.view.View");
 		MobileElement icon1 = listOfObj.get(0);
 		mapSearchInput.sendKeys("Sackville Street London");

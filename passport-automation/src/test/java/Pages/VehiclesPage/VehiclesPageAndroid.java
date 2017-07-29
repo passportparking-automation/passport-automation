@@ -7,7 +7,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
-	@FindBy (xpath= "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")
+	@FindBy (id= "id_add_vehicle_button")
 	public MobileElement addVehicleButton;
 	
 	public VehiclesPageAndroid(AppiumDriver driver) {	super(driver);}
@@ -18,10 +18,15 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 
 	}
 
-	@Override
+
 	public void CheckVehiclesPageForExceptions() {
-		// TODO Auto-generated method stub
-		
+		addVehicleButton.isDisplayed();
+		addVehicleButton.click();
+		takeScreenshot("AddVehicle");
 	}
 
+	public void navToLanding() {
+		menuImage.click();
+		homeMenuOption.click();
+	}
 }

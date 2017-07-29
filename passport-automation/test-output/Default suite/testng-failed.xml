@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.UpdateProfPageTests">
+      <class name="Tests.AddVehiclePageTests">
         <methods>
-          <include name="CheckUpdateProfForExceptions"/>
-          <include name="UpdateProfNavTest"/>
+          <include name="AddVehicleTest"/>
           <include name="initAppium"/>
         </methods>
-      </class> <!-- Tests.UpdateProfPageTests -->
+      </class> <!-- Tests.AddVehiclePageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

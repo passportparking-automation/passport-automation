@@ -17,13 +17,15 @@ import Pages.ProfilePage.ProfilePage;
 import Pages.ProfilePage.ProfilePageAndroid;
 import Pages.UpdateProfPage.UpdateProfPage;
 import Pages.UpdateProfPage.UpdateProfPageAndroid;
+import Pages.YourCardsPage.YourCardsPage;
+import Pages.YourCardsPage.YourCardsPageAndroid;
 import Tests.AbstractBaseTests.TestBase;
 
-public class UpdateProfPageTests extends TestBase {
+public class YourCardsPageTests extends TestBase {
 	
 	private LandingPage landingPage;
 	private ProfilePage profilePage;
-	private UpdateProfPage updateProfPage;
+	private YourCardsPage yourCardsPage;
 	private LoginPage loginPage;
 	private MobileVerPage mobVerPage;
 	private CodeVerificationPage codeVerPage;
@@ -35,7 +37,7 @@ public class UpdateProfPageTests extends TestBase {
 		case ANDROID:
 			landingPage = new LandingPageAndroid(driver);
 			profilePage = new ProfilePageAndroid(driver);
-			updateProfPage = new UpdateProfPageAndroid(driver);
+			yourCardsPage = new YourCardsPageAndroid(driver);
 			loginPage = new LoginPageAndroid(driver);
 			mobVerPage = new MobileVerPageAndroid(driver);
 			codeVerPage = new CodeVerificationPageAndroid(driver);
@@ -51,7 +53,7 @@ public class UpdateProfPageTests extends TestBase {
 		}
 	}
 	@Test 
-	public void UpdateProfNavTest(){
+	public void CheckYCPageForExceptions(){
 		//should be changed to landingPage.navigateToLogin() after logout is coded
 		try{landingPage.navigateToLogin();
 		}
@@ -59,26 +61,25 @@ public class UpdateProfPageTests extends TestBase {
 			driver.navigate().back(); 
 		}
 		landingPage.hideOverlay();
-		landingPage.navigateToProfilePage();
-	profilePage.NavToUpdateProfTest();
-	updateProfPage.UpdateProfNavTest();
-	driver.navigate().back();
-	//landingPage.logout();
+		landingPage.navigateToYourCardsPage();
+		yourCardsPage.CheckYCPageForExceptions();
+		yourCardsPage.navToLanding();	
 	}
 	
-	@Test
-	public void CheckUpdateProfForExceptions() {
+	@Test 
+	public void NavToPayDetailsPage(){
 		//should be changed to landingPage.navigateToLogin() after logout is coded
 		try{landingPage.navigateToLogin();
 		}
 		catch(Exception e){System.out.println("Wrong Screen");
-		driver.navigate().back();}
+			driver.navigate().back(); 
+		}
 		landingPage.hideOverlay();
-		landingPage.navigateToProfilePage();
-		profilePage.NavToUpdateProfTest();
-		updateProfPage.CheckUpdateProfPageForExceptions();
-		profilePage.CheckProfilePageForExceptions();
+		landingPage.navigateToYourCardsPage();
+		yourCardsPage.NavToPayDetailsPage();
 		driver.navigate().back();
+		yourCardsPage.navToLanding();
 		
 	}
+
 }
