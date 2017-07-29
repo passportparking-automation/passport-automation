@@ -1,41 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
-  <test name="ParkRight Test Automation(failed)" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="Tests.MobileVerPageTests">
+      <class name="Tests.UpdateProfPageTests">
         <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.MobileVerPageTests -->
-      <class name="Tests.SignUpPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
+          <include name="CheckUpdateProfForExceptions"/>
+          <include name="UpdateProfNavTest"/>
           <include name="initAppium"/>
-          <include name="setUpPage"/>
         </methods>
-      </class> <!-- Tests.SignUpPageTests -->
-      <class name="Tests.PINPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.PINPageTests -->
-      <class name="Tests.CodeVerificationPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.CodeVerificationPageTests -->
-      <class name="Tests.ResetPINPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-          <include name="CheckResetPINPageForExceptions"/>
-        </methods>
-      </class> <!-- Tests.ResetPINPageTests -->
+      </class> <!-- Tests.UpdateProfPageTests -->
     </classes>
-  </test> <!-- ParkRight Test Automation(failed) -->
-</suite> <!-- Failed suite [Test runner] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

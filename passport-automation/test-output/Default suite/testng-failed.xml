@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.ResetPINPageTests">
+      <class name="Tests.UpdateProfPageTests">
         <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
+          <include name="CheckUpdateProfForExceptions"/>
+          <include name="UpdateProfNavTest"/>
           <include name="initAppium"/>
-          <include name="CheckResetPINPageForExceptions"/>
         </methods>
-      </class> <!-- Tests.ResetPINPageTests -->
+      </class> <!-- Tests.UpdateProfPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

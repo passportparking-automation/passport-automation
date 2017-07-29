@@ -1,51 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Test runner" duration-ms="164818" started-at="2017-07-25T21:16:57Z" finished-at="2017-07-25T21:19:42Z">
+  <suite name="Default suite" duration-ms="244432" started-at="2017-07-27T21:56:27Z" finished-at="2017-07-27T22:00:31Z">
     <groups>
     </groups>
-    <test name="ParkRight Test Automation" duration-ms="164818" started-at="2017-07-25T21:16:57Z" finished-at="2017-07-25T21:19:42Z">
-      <class name="Tests.ResetPINPageTests">
-        <test-method status="PASS" signature="CheckResetPINPageForExceptions()[pri:0, instance:Tests.ResetPINPageTests@31610302]" name="CheckResetPINPageForExceptions" duration-ms="51156" started-at="2017-07-25T17:18:51Z" finished-at="2017-07-25T17:19:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResetPINPageForExceptions -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.ResetPINPageTests@31610302]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-25T17:19:42Z" finished-at="2017-07-25T17:19:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- restartApp -->
-      </class> <!-- Tests.ResetPINPageTests -->
-      <class name="Tests.CodeVerificationPageTests">
-        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.CodeVerificationPageTests@544fe44c]" name="initAppium" is-config="true" duration-ms="12239" started-at="2017-07-25T17:16:45Z" finished-at="2017-07-25T17:16:57Z">
+    <test name="Default test" duration-ms="244432" started-at="2017-07-27T21:56:27Z" finished-at="2017-07-27T22:00:31Z">
+      <class name="Tests.UpdateProfPageTests">
+        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.UpdateProfPageTests@31dc339b]" name="initAppium" is-config="true" duration-ms="13578" started-at="2017-07-27T17:56:13Z" finished-at="2017-07-27T17:56:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAppium -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.CodeVerificationPageTests@544fe44c]" name="setUpPage" is-config="true" duration-ms="159" started-at="2017-07-25T17:16:57Z" finished-at="2017-07-25T17:16:58Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.UpdateProfPageTests@31dc339b]" name="setUpPage" is-config="true" duration-ms="206" started-at="2017-07-27T17:56:27Z" finished-at="2017-07-27T17:56:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.ResetPINPageTests@31610302]" name="setUpPage" is-config="true" duration-ms="5" started-at="2017-07-25T17:16:58Z" finished-at="2017-07-25T17:16:58Z">
+        <test-method status="PASS" signature="CheckUpdateProfForExceptions()[pri:0, instance:Tests.UpdateProfPageTests@31dc339b]" name="CheckUpdateProfForExceptions" duration-ms="183810" started-at="2017-07-27T17:56:27Z" finished-at="2017-07-27T17:59:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="NavBackandBlankInputTests()[pri:0, instance:Tests.CodeVerificationPageTests@544fe44c]" name="NavBackandBlankInputTests" duration-ms="39882" started-at="2017-07-25T17:16:58Z" finished-at="2017-07-25T17:17:38Z">
+        </test-method> <!-- CheckUpdateProfForExceptions -->
+        <test-method status="PASS" signature="UpdateProfNavTest()[pri:0, instance:Tests.UpdateProfPageTests@31dc339b]" name="UpdateProfNavTest" duration-ms="60393" started-at="2017-07-27T17:59:31Z" finished-at="2017-07-27T18:00:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NavBackandBlankInputTests -->
-        <test-method status="PASS" signature="ValidInputTests()[pri:0, instance:Tests.CodeVerificationPageTests@544fe44c]" name="ValidInputTests" duration-ms="73591" started-at="2017-07-25T17:17:38Z" finished-at="2017-07-25T17:18:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidInputTests -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.CodeVerificationPageTests@544fe44c]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-25T17:18:51Z" finished-at="2017-07-25T17:18:51Z">
+        </test-method> <!-- UpdateProfNavTest -->
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.UpdateProfPageTests@31dc339b]" name="restartApp" is-config="true" duration-ms="0" started-at="2017-07-27T18:00:31Z" finished-at="2017-07-27T18:00:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.CodeVerificationPageTests@544fe44c]" name="tearDownAppium" is-config="true" duration-ms="3083" started-at="2017-07-25T17:19:42Z" finished-at="2017-07-25T17:19:45Z">
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.UpdateProfPageTests@31dc339b]" name="tearDownAppium" is-config="true" duration-ms="3463" started-at="2017-07-27T18:00:31Z" finished-at="2017-07-27T18:00:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->
-      </class> <!-- Tests.CodeVerificationPageTests -->
-    </test> <!-- ParkRight Test Automation -->
-  </suite> <!-- Test runner -->
+      </class> <!-- Tests.UpdateProfPageTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
