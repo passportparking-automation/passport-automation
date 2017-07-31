@@ -193,7 +193,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		try {
 			declineButton.click();
 		} catch (Throwable e) {
-			System.err.println("The staging build thing did not appear");
+			System.err.println("The staging build message did not appear");
 		}
 		
 		try {
@@ -214,9 +214,10 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		}
 	}
 	
-	public void logout() {
-		menuImage.click();
-		
+	
+	
+	public void logout() { 
+		menuIcon.click();
 		logoutMenuOption.click();	
 	}
 	

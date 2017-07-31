@@ -22,9 +22,9 @@ public class ProfilePageTests extends TestBase {
 	
 	private LandingPage landingPage;
 	private ProfilePage profilePage;
-	private LoginPage loginPage;
-	private MobileVerPage mobVerPage;
-	private CodeVerificationPage codeVerPage;
+	private LoginPage logInPage;
+	private MobileVerPage mobileVerPage;
+	private CodeVerificationPage codeVerificationPage;
 	private PINPage pinPage;
 	
 	@BeforeTest
@@ -33,9 +33,9 @@ public class ProfilePageTests extends TestBase {
 		case ANDROID:
 			landingPage = new LandingPageAndroid(driver);
 			profilePage = new ProfilePageAndroid(driver);
-			loginPage = new LoginPageAndroid(driver);
-			mobVerPage = new MobileVerPageAndroid(driver);
-			codeVerPage = new CodeVerificationPageAndroid(driver);
+			logInPage = new LoginPageAndroid(driver);
+			mobileVerPage = new MobileVerPageAndroid(driver);
+			codeVerificationPage = new CodeVerificationPageAndroid(driver);
 			pinPage = new PINPageAndroid(driver);
 			
 			break;
@@ -49,33 +49,14 @@ public class ProfilePageTests extends TestBase {
 	}
 	@Test 
 	public void CheckProfilePageForExceptions() {
-		//should be changed to landingPage.navigateToLogin() after logout is coded
-				try{landingPage.navigateToLogin();
-				}
-				catch(Exception e){System.out.println("Wrong Screen");
-					driver.navigate().back(); 
-				}
-		landingPage.hideOverlay();
+		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
+		pinPage.SendCorrectPINTest();
 		landingPage.navigateToProfilePage();
 		profilePage.CheckProfilePageForExceptions();
-		driver.navigate().back();
-		//landingPage.logout();
-	}
-	
-	@Test 
-	public void NavToUpdateProfTest() {
-		//should be changed to landingPage.navigateToLogin() after logout is coded
-		try{landingPage.navigateToLogin();
-		}
-		catch(Exception e){System.out.println("Wrong Screen");
-			driver.navigate().back(); 
-		}
-landingPage.hideOverlay();
-landingPage.navigateToProfilePage();
-profilePage.NavToUpdateProfTest();
-driver.navigate().back();
-driver.navigate().back();
-//landingPage.logout();
+		profilePage.NavToUpdateProfTest();
 	}
 
 }

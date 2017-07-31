@@ -3,9 +3,16 @@ package Tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
+import Pages.CodeVerificationPage.CodeVerificationPage;
+import Pages.CodeVerificationPage.CodeVerificationPageAndroid;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
+import Pages.LoginPage.LoginPage;
+import Pages.LoginPage.LoginPageAndroid;
+import Pages.MobileVerPage.MobileVerPage;
+import Pages.MobileVerPage.MobileVerPageAndroid;
+import Pages.PINPage.PINPage;
+import Pages.PINPage.PINPageAndroid;
 import Pages.VehiclesPage.VehiclesPage;
 import Pages.VehiclesPage.VehiclesPageAndroid;
 import Tests.AbstractBaseTests.TestBase;
@@ -14,14 +21,20 @@ public class VehiclesPageTests  extends TestBase {
 		
 		private LandingPage landingPage;
 		private VehiclesPage vehiclesPage;
-		
+		private LoginPage logInPage;
+		private MobileVerPage mobileVerPage;
+		private CodeVerificationPage codeVerificationPage;
+		private PINPage pinPage;
 		@BeforeTest
 		public void setUpPage() {
 			switch(TestBase.executionOS) {
 			case ANDROID:
 				landingPage = new LandingPageAndroid(driver);
 				vehiclesPage = new VehiclesPageAndroid(driver);
-			
+				logInPage = new LoginPageAndroid(driver);
+				mobileVerPage = new MobileVerPageAndroid(driver);
+				codeVerificationPage = new CodeVerificationPageAndroid(driver);
+				pinPage = new PINPageAndroid(driver);
 				
 				break;
 			case IOS:
@@ -35,17 +48,14 @@ public class VehiclesPageTests  extends TestBase {
 		
 		@Test
 		public void CheckVehiclesPageForExceptions(){
-			//should be changed to landingPage.navigateToLogin() after logout is coded
-			try{landingPage.navigateToLogin();
-			}
-			catch(Exception e){System.out.println("Wrong Screen");
-				driver.navigate().back(); 
-			}
-			landingPage.hideOverlay();
+			landingPage.clickPayToPark();
+			logInPage.TermsDisplayedTest();
+			mobileVerPage.ValidMobileTest();
+			codeVerificationPage.SendCorrectCodeTest();
+			pinPage.SendCorrectPINTest();
 			landingPage.navigateToVehiclesPage();
 			vehiclesPage.CheckVehiclesPageForExceptions();
-			driver.navigate().back();
-			vehiclesPage.navToLanding();
+			
 		}
 		
 		

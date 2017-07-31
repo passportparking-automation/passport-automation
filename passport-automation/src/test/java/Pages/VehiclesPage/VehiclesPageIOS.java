@@ -30,4 +30,10 @@ public class VehiclesPageIOS extends BasePage implements VehiclesPage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void CheckUpdateToVehiclePage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

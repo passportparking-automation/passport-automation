@@ -63,10 +63,8 @@ public class ResetPINPageTests extends TestBase {
 		catch (Throwable e) {
 			System.out.println("Mobile Verification page was not displayed");
 		}
-		
 		pinPage.navToReset();
 		payDetailsPage.FillOutForm();
 		resetPINPage.ResetPINPageTest();
-		pinPage.navToLanding();
 	}
 }

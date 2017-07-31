@@ -4,6 +4,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.BasePage;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
 import Pages.MobileVerPage.MobileVerPage;
@@ -38,7 +39,7 @@ public class SignUpPageTests extends TestBase {
 	@Test
 	public void CheckSigninPageForExceptions() throws InterruptedException {
 		landingPage.clickPayToPark();
-		Thread.sleep(5000);
+		BasePage.sleep(5000);
 		signUpPage.CheckSigninPageForExceptions();
 		signUpPage.navToLanding();
 		

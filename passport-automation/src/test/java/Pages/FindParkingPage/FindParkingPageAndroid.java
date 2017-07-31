@@ -122,7 +122,7 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 	}
 
 	public void NumericValueZoneTest() {
-		mapSearchInput.setValue("8896");
+		mapSearchInput.sendKeys("8896");
 		try{
 			driver.hideKeyboard();
 			}

@@ -33,9 +33,9 @@ public class FAQPageTests extends TestBase {
 	
 	@Test 
 	public void FAQNavTest() throws InterruptedException{
-		BasePage.sleep(7000);
+		BasePage.sleep(5000);
 		landingPage.navigateToAbout();
-		BasePage.sleep(7000);
+		BasePage.sleep(5000);
 		faqPage.FAQNavTest();
 	}
 }

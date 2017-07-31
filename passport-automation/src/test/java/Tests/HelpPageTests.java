@@ -3,6 +3,7 @@ package Tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.BasePage;
 import Pages.HelpPage.HelpPage;
 import Pages.HelpPage.HelpPageAndroid;
 import Pages.LandingPage.LandingPage;
@@ -40,7 +41,7 @@ public class HelpPageTests extends TestBase {
 
 	@Test
 	public void HelpNavTest() throws InterruptedException {
-		Thread.sleep(5000);
+		BasePage.sleep(5000);
 		helpPage.HelpNavTest();
 	}
 /*	@Test

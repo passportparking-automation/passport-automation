@@ -29,8 +29,13 @@ public class PayDetailsPageAndroid extends BasePage implements PayDetailsPage{
 
 	public PayDetailsPageAndroid(AppiumDriver driver) {super(driver);}
 
-	public void ChecPayDetailForExpcetions() {
-		
+	public void CheckPayDetailForExpcetions() {
+		cardNumberTextBox.isDisplayed();
+		monthSpinner.isDisplayed();
+		yearSpinner.isDisplayed();
+		cvvTextBox.isDisplayed();
+		saveCardButton.isDisplayed();
+		takeScreenshot("ceckPDForEX");
 	}
 
 	public void FillOutForm() {
@@ -46,7 +51,10 @@ public class PayDetailsPageAndroid extends BasePage implements PayDetailsPage{
 		takeScreenshot("fillForm1");
 		saveCardButton.click();
 		takeScreenshot("fillForm2");
+		try{
 		acceptButton.click();
+		 } catch (Exception e) {
+         	System.out.println("okBtn Not displayed");
+         }
 	}
-
 }

@@ -22,13 +22,12 @@ import Pages.YourCardsPage.YourCardsPageAndroid;
 import Tests.AbstractBaseTests.TestBase;
 
 public class YourCardsPageTests extends TestBase {
-	
 	private LandingPage landingPage;
 	private ProfilePage profilePage;
 	private YourCardsPage yourCardsPage;
-	private LoginPage loginPage;
-	private MobileVerPage mobVerPage;
-	private CodeVerificationPage codeVerPage;
+	private LoginPage logInPage;
+	private MobileVerPage mobileVerPage;
+	private CodeVerificationPage codeVerificationPage;
 	private PINPage pinPage;
 	
 	@BeforeTest
@@ -38,9 +37,9 @@ public class YourCardsPageTests extends TestBase {
 			landingPage = new LandingPageAndroid(driver);
 			profilePage = new ProfilePageAndroid(driver);
 			yourCardsPage = new YourCardsPageAndroid(driver);
-			loginPage = new LoginPageAndroid(driver);
-			mobVerPage = new MobileVerPageAndroid(driver);
-			codeVerPage = new CodeVerificationPageAndroid(driver);
+			logInPage = new LoginPageAndroid(driver);
+			mobileVerPage = new MobileVerPageAndroid(driver);
+			codeVerificationPage = new CodeVerificationPageAndroid(driver);
 			pinPage = new PINPageAndroid(driver);
 			
 			break;
@@ -54,32 +53,14 @@ public class YourCardsPageTests extends TestBase {
 	}
 	@Test 
 	public void CheckYCPageForExceptions(){
-		//should be changed to landingPage.navigateToLogin() after logout is coded
-		try{landingPage.navigateToLogin();
-		}
-		catch(Exception e){System.out.println("Wrong Screen");
-			driver.navigate().back(); 
-		}
-		landingPage.hideOverlay();
+		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
+		pinPage.SendCorrectPINTest();
 		landingPage.navigateToYourCardsPage();
 		yourCardsPage.CheckYCPageForExceptions();
-		yourCardsPage.navToLanding();	
-	}
-	
-	@Test 
-	public void NavToPayDetailsPage(){
-		//should be changed to landingPage.navigateToLogin() after logout is coded
-		try{landingPage.navigateToLogin();
-		}
-		catch(Exception e){System.out.println("Wrong Screen");
-			driver.navigate().back(); 
-		}
-		landingPage.hideOverlay();
-		landingPage.navigateToYourCardsPage();
 		yourCardsPage.NavToPayDetailsPage();
-		driver.navigate().back();
-		yourCardsPage.navToLanding();
-		
 	}
 
 }

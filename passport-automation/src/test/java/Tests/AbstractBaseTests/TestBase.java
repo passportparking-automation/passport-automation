@@ -133,6 +133,7 @@ public abstract class TestBase {
 	
     @AfterClass
     public void restartApp() {
+    	driver.resetApp();
     }
 	
 }

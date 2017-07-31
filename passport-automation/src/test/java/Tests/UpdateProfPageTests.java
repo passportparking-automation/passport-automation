@@ -24,9 +24,9 @@ public class UpdateProfPageTests extends TestBase {
 	private LandingPage landingPage;
 	private ProfilePage profilePage;
 	private UpdateProfPage updateProfPage;
-	private LoginPage loginPage;
-	private MobileVerPage mobVerPage;
-	private CodeVerificationPage codeVerPage;
+	private LoginPage logInPage;
+	private MobileVerPage mobileVerPage;
+	private CodeVerificationPage codeVerificationPage;
 	private PINPage pinPage;
 	
 	@BeforeTest
@@ -36,9 +36,9 @@ public class UpdateProfPageTests extends TestBase {
 			landingPage = new LandingPageAndroid(driver);
 			profilePage = new ProfilePageAndroid(driver);
 			updateProfPage = new UpdateProfPageAndroid(driver);
-			loginPage = new LoginPageAndroid(driver);
-			mobVerPage = new MobileVerPageAndroid(driver);
-			codeVerPage = new CodeVerificationPageAndroid(driver);
+			logInPage = new LoginPageAndroid(driver);
+			mobileVerPage = new MobileVerPageAndroid(driver);
+			codeVerificationPage = new CodeVerificationPageAndroid(driver);
 			pinPage = new PINPageAndroid(driver);
 			
 			break;
@@ -50,35 +50,17 @@ public class UpdateProfPageTests extends TestBase {
 			break;
 		}
 	}
-	@Test 
-	public void UpdateProfNavTest(){
-		//should be changed to landingPage.navigateToLogin() after logout is coded
-		try{landingPage.navigateToLogin();
-		}
-		catch(Exception e){System.out.println("Wrong Screen");
-			driver.navigate().back(); 
-		}
-		landingPage.hideOverlay();
-		landingPage.navigateToProfilePage();
-	profilePage.NavToUpdateProfTest();
-	updateProfPage.UpdateProfNavTest();
-	driver.navigate().back();
-	//landingPage.logout();
-	}
 	
-	@Test
-	public void CheckUpdateProfForExceptions() {
-		//should be changed to landingPage.navigateToLogin() after logout is coded
-		try{landingPage.navigateToLogin();
-		}
-		catch(Exception e){System.out.println("Wrong Screen");
-		driver.navigate().back();}
-		landingPage.hideOverlay();
+	@Test 
+	public void ProfPageTests(){
+		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
+		pinPage.SendCorrectPINTest();
 		landingPage.navigateToProfilePage();
 		profilePage.NavToUpdateProfTest();
 		updateProfPage.CheckUpdateProfPageForExceptions();
-		profilePage.CheckProfilePageForExceptions();
-		driver.navigate().back();
-		
+		updateProfPage.UpdateProfNavTest();
 	}
 }

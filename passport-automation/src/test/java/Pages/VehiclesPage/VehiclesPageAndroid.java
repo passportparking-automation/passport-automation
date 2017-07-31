@@ -21,12 +21,14 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 
 	public void CheckVehiclesPageForExceptions() {
 		addVehicleButton.isDisplayed();
-		addVehicleButton.click();
 		takeScreenshot("AddVehicle");
 	}
 
 	public void navToLanding() {
 		menuImage.click();
 		homeMenuOption.click();
+	}
+	public void CheckUpdateToVehiclePage(){
+		takeScreenshot("VPage");
 	}
 }

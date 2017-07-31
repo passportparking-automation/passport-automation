@@ -27,20 +27,22 @@ public class UpdateProfPageAndroid extends BasePage implements UpdateProfPage {
 	private String headerText; 
 	private ProfilePage profilePage = new ProfilePageAndroid(driver);
 	
-	@FindBy (xpath="//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.EditText[1]")
+	@FindBy (id="profileactivity_firstname")
 	public MobileElement firstNameInput;
 	
-	@FindBy (xpath="//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]/android.widget.LinearLayout[1]/android.widget.EditText[1]")
+	@FindBy (id="profileactivity_lastname")
 	public MobileElement lastNameInput;
 	
-	@FindBy (xpath="//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[4]/android.widget.LinearLayout[1]/android.widget.EditText[1]")
+	@FindBy(id="profileactivity_phonenumber")
+	public MobileElement phoneNumberField;
+
+	@FindBy (id="profileactivity_emailaddress")
 	public MobileElement emailInput;
 	
 	public UpdateProfPageAndroid(AppiumDriver driver) {  super(driver);  }
 
 	
 	public void UpdateProfNavTest() {
-		backButton1.click();
 		profilePage.CheckProfilePageForExceptions();
 		profilePage.NavToUpdateProfTest();
 		headerText = header.getText();
@@ -59,14 +61,11 @@ public class UpdateProfPageAndroid extends BasePage implements UpdateProfPage {
 		//System.out.println(header.getText());
 		if(headerText.equals("Update Profile")){
 			assertTrue(true);
-		}else {assertTrue(false); }
-		
-		
-		
-		
+		}else {assertTrue(false); }		
 	}
 
 	public void CheckUpdateProfPageForExceptions() {
+		phoneNumberField.isDisplayed();
 		//first name
 		firstNameInput.sendKeys("");
 		try {
@@ -149,9 +148,5 @@ public class UpdateProfPageAndroid extends BasePage implements UpdateProfPage {
 		}else {assertTrue(false);}
 		takeScreenshot("UpdateProfileSuccess");
 		acceptButton.click();
-		
 	}
-
-	
-
 }
