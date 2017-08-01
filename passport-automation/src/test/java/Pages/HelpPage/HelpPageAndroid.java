@@ -2,7 +2,10 @@ package Pages.HelpPage;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.HashMap;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -61,6 +64,22 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	}
 
 	public void TutorialSwipeTest() {
-		
+		int numberOfSwipesRight = 10;
+		for(int p=0; p<numberOfSwipesRight; p++){
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			HashMap<String, String> swipeObject = new HashMap<String, String>();
+			swipeObject.put("direction", "right");
+			js.executeScript("mobile: swipe", swipeObject);
+			takeScreenshot("swipeTest"+p);
+		}
+		int numberOfSwipesLeft = 10;
+		for(int p=0; p<numberOfSwipesLeft; p++){
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			HashMap<String, String> swipeObject = new HashMap<String, String>();
+			swipeObject.put("direction", "left");
+			js.executeScript("mobile: swipe", swipeObject);
+			takeScreenshot("swipeTest"+p);
+		}
+			
 	}
 }

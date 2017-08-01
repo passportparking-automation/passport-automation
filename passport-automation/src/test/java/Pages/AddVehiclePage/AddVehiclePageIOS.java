@@ -86,4 +86,16 @@ public class AddVehiclePageIOS extends BasePage implements AddVehiclePage {
 		takeScreenshot("dTest45");
 		
 	}
+
+	@Override
+	public void AddVehicleTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void CheckUpdateToVehiclePage() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -1,6 +1,6 @@
 package Tests;
 
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import org.testng.annotations.Test;
 
 import Pages.LandingPage.LandingPage;
@@ -44,6 +44,12 @@ public void setUpPage() {
 @Test
 public void AssureTermsAreAcceptedTest(){
 	loginPage.AssureTermsAreAcceptedTest();
+}
+
+@AfterTest
+public void exitCriteria() {
+	// TODO Auto-generated method stub
+	
 }
 
 

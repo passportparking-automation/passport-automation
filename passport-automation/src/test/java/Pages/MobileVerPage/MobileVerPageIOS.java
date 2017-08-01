@@ -126,4 +126,10 @@ public class MobileVerPageIOS extends BasePage implements MobileVerPage {
 		
 	}
 
+	@Override
+	public void navToLanding() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

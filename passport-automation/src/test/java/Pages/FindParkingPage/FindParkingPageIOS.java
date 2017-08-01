@@ -71,4 +71,10 @@ public class FindParkingPageIOS extends BasePage implements FindParkingPage{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void navToLanding() {
+		// TODO Auto-generated method stub
+		
+	}
 }

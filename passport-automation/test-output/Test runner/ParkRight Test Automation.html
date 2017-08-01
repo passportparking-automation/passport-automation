@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ParkRight Test Automation</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>19/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/12</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 21 16:42:58 EDT 2017</td>
+<td>Started on:</td><td>Mon Jul 31 17:22:36 EDT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>751 seconds (751529 ms)</td>
+<tr><td>Total time:</td><td>295 seconds (295517 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,140 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Tests.SignUpPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.SignUpPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace288540919", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace288540919'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.SignUpPageTests@20398b7c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Tests.MobileVerPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.MobileVerPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.MobileVerPageTests@6fc6f14e</td></tr>
+<tr>
+<td title='Tests.CodeVerificationPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.CodeVerificationPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CodeVerificationPageTests@56235b8e</td></tr>
+<tr>
+<td title='Tests.PINPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.PINPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.PINPageTests@3632be31</td></tr>
+<tr>
+<td title='Tests.ResetPINPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.ResetPINPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.ResetPINPageTests@5abca1e0</td></tr>
+<tr>
+<td title='Tests.ProfilePageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.ProfilePageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.ProfilePageTests@2286778</td></tr>
+<tr>
+<td title='Tests.UpdateProfPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.UpdateProfPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.UpdateProfPageTests@4e9ba398</td></tr>
+<tr>
+<td title='Tests.YourCardsPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.YourCardsPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.YourCardsPageTests@6d7b4f4c</td></tr>
+<tr>
+<td title='Tests.PayDetailsPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.PayDetailsPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.PayDetailsPageTests@527740a2</td></tr>
+<tr>
+<td title='Tests.VehiclesPageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.VehiclesPageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.VehiclesPageTests@13a5fe33</td></tr>
+<tr>
+<td title='Tests.AddVehiclePageTests.restartApp()'><b>restartApp</b><br>Test class: Tests.AddVehiclePageTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AddVehiclePageTests@3108bc</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,98 +211,887 @@ function toggleAllBoxes() {
 <tr>
 <td title='Tests.SendBugReportPageTests.CheckBugForExceptions()'><b>CheckBugForExceptions</b><br>Test class: Tests.SendBugReportPageTests</td>
 <td></td>
-<td>6</td>
-<td>Tests.SendBugReportPageTests@52a86356</td></tr>
+<td>11</td>
+<td>Tests.SendBugReportPageTests@71423665</td></tr>
 <tr>
 <td title='Tests.LandingPageTests.CheckMenuOptionsForExceptions()'><b>CheckMenuOptionsForExceptions</b><br>Test class: Tests.LandingPageTests</td>
 <td></td>
-<td>14</td>
-<td>Tests.LandingPageTests@a67c67e</td></tr>
-<tr>
-<td title='Tests.MobileVerPageTests.CheckMobileVerPageForExceptions()'><b>CheckMobileVerPageForExceptions</b><br>Test class: Tests.MobileVerPageTests</td>
-<td></td>
-<td>113</td>
-<td>Tests.MobileVerPageTests@78c03f1f</td></tr>
-<tr>
-<td title='Tests.PINPageTests.CheckSecureLoginForExceptions()'><b>CheckSecureLoginForExceptions</b><br>Test class: Tests.PINPageTests</td>
-<td></td>
-<td>40</td>
-<td>Tests.PINPageTests@4fe3c938</td></tr>
+<td>16</td>
+<td>Tests.LandingPageTests@5ec0a365</td></tr>
 <tr>
 <td title='Tests.SignUpPageTests.CheckSigninPageForExceptions()'><b>CheckSigninPageForExceptions</b><br>Test class: Tests.SignUpPageTests</td>
 <td></td>
-<td>17</td>
-<td>Tests.SignUpPageTests@5ce81285</td></tr>
+<td>16</td>
+<td>Tests.SignUpPageTests@20398b7c</td></tr>
 <tr>
 <td title='Tests.HelpPageTests.CloseHelpTest()'><b>CloseHelpTest</b><br>Test class: Tests.HelpPageTests</td>
 <td></td>
 <td>7</td>
-<td>Tests.HelpPageTests@3327bd23</td></tr>
+<td>Tests.HelpPageTests@4fe3c938</td></tr>
 <tr>
 <td title='Tests.SignUpPageTests.DeclineAndAcceptTermsTest()'><b>DeclineAndAcceptTermsTest</b><br>Test class: Tests.SignUpPageTests</td>
 <td></td>
-<td>32</td>
-<td>Tests.SignUpPageTests@5ce81285</td></tr>
+<td>51</td>
+<td>Tests.SignUpPageTests@20398b7c</td></tr>
 <tr>
 <td title='Tests.SendBugReportPageTests.EmptyBugTest()'><b>EmptyBugTest</b><br>Test class: Tests.SendBugReportPageTests</td>
 <td></td>
-<td>25</td>
-<td>Tests.SendBugReportPageTests@52a86356</td></tr>
+<td>28</td>
+<td>Tests.SendBugReportPageTests@71423665</td></tr>
 <tr>
 <td title='Tests.LandingPageTests.EnterLocationOrPayToParkCodeTest()'><b>EnterLocationOrPayToParkCodeTest</b><br>Test class: Tests.LandingPageTests</td>
 <td></td>
-<td>15</td>
-<td>Tests.LandingPageTests@a67c67e</td></tr>
+<td>20</td>
+<td>Tests.LandingPageTests@5ec0a365</td></tr>
 <tr>
 <td title='Tests.FAQPageTests.FAQNavTest()'><b>FAQNavTest</b><br>Test class: Tests.FAQPageTests</td>
 <td></td>
 <td>18</td>
-<td>Tests.FAQPageTests@66480dd7</td></tr>
+<td>Tests.FAQPageTests@2ac273d3</td></tr>
 <tr>
 <td title='Tests.FavoritesPageTests.FavoritesTest()'><b>FavoritesTest</b><br>Test class: Tests.FavoritesPageTests</td>
 <td></td>
-<td>6</td>
-<td>Tests.FavoritesPageTests@4e1d422d</td></tr>
+<td>13</td>
+<td>Tests.FavoritesPageTests@5383967b</td></tr>
 <tr>
 <td title='Tests.HelpPageTests.HelpNavTest()'><b>HelpNavTest</b><br>Test class: Tests.HelpPageTests</td>
 <td></td>
-<td>28</td>
-<td>Tests.HelpPageTests@3327bd23</td></tr>
-<tr>
-<td title='Tests.MobileVerPageTests.InputTests()'><b>InputTests</b><br>Test class: Tests.MobileVerPageTests</td>
-<td></td>
-<td>85</td>
-<td>Tests.MobileVerPageTests@78c03f1f</td></tr>
-<tr>
-<td title='Tests.LandingPageTests.LandingPageScrollTest()'><b>LandingPageScrollTest</b><br>Test class: Tests.LandingPageTests</td>
-<td></td>
-<td>20</td>
-<td>Tests.LandingPageTests@a67c67e</td></tr>
-<tr>
-<td title='Tests.CodeVerificationPageTests.NavBackandBlankInputkTests()'><b>NavBackandBlankInputkTests</b><br>Test class: Tests.CodeVerificationPageTests</td>
-<td></td>
-<td>137</td>
-<td>Tests.CodeVerificationPageTests@5ec0a365</td></tr>
+<td>27</td>
+<td>Tests.HelpPageTests@4fe3c938</td></tr>
 <tr>
 <td title='Tests.SendBugReportPageTests.NotEmptyBugTest()'><b>NotEmptyBugTest</b><br>Test class: Tests.SendBugReportPageTests</td>
 <td></td>
-<td>28</td>
-<td>Tests.SendBugReportPageTests@52a86356</td></tr>
-<tr>
-<td title='Tests.PINPageTests.SendDataTests()'><b>SendDataTests</b><br>Test class: Tests.PINPageTests</td>
-<td></td>
-<td>65</td>
-<td>Tests.PINPageTests@4fe3c938</td></tr>
-<tr>
-<td title='Tests.CodeVerificationPageTests.ValidInputTests()'><b>ValidInputTests</b><br>Test class: Tests.CodeVerificationPageTests</td>
-<td></td>
-<td>81</td>
-<td>Tests.CodeVerificationPageTests@5ec0a365</td></tr>
+<td>30</td>
+<td>Tests.SendBugReportPageTests@71423665</td></tr>
 <tr>
 <td title='Tests.LandingPageTests.checkLandingPageForExceptions()'><b>checkLandingPageForExceptions</b><br>Test class: Tests.LandingPageTests</td>
 <td></td>
 <td>7</td>
-<td>Tests.LandingPageTests@a67c67e</td></tr>
+<td>Tests.LandingPageTests@5ec0a365</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Tests.AddVehiclePageTests.AddVehicleTest()'><b>AddVehicleTest</b><br>Test class: Tests.AddVehiclePageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace994965533", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace994965533'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.AddVehiclePageTests@3108bc</td></tr>
+<tr>
+<td title='Tests.MobileVerPageTests.CheckMobileVerPageForExceptions()'><b>CheckMobileVerPageForExceptions</b><br>Test class: Tests.MobileVerPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace574642756", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace574642756'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.MobileVerPageTests@6fc6f14e</td></tr>
+<tr>
+<td title='Tests.ProfilePageTests.CheckProfilePageForExceptions()'><b>CheckProfilePageForExceptions</b><br>Test class: Tests.ProfilePageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace379143353", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace379143353'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.ProfilePageTests@2286778</td></tr>
+<tr>
+<td title='Tests.PINPageTests.CheckSecureLoginForExceptionsAndSendDataTests()'><b>CheckSecureLoginForExceptionsAndSendDataTests</b><br>Test class: Tests.PINPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1861518459", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1861518459'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.PINPageTests@3632be31</td></tr>
+<tr>
+<td title='Tests.VehiclesPageTests.CheckVehiclesPageForExceptions()'><b>CheckVehiclesPageForExceptions</b><br>Test class: Tests.VehiclesPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1875417437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1875417437'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.VehiclesPageTests@13a5fe33</td></tr>
+<tr>
+<td title='Tests.YourCardsPageTests.CheckYCPageForExceptions()'><b>CheckYCPageForExceptions</b><br>Test class: Tests.YourCardsPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace115629670", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace115629670'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.YourCardsPageTests@6d7b4f4c</td></tr>
+<tr>
+<td title='Tests.MobileVerPageTests.InputTests()'><b>InputTests</b><br>Test class: Tests.MobileVerPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace624057227", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace624057227'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.MobileVerPageTests@6fc6f14e</td></tr>
+<tr>
+<td title='Tests.CodeVerificationPageTests.NavBackandBlankInputTests()'><b>NavBackandBlankInputTests</b><br>Test class: Tests.CodeVerificationPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace663438234", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace663438234'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.CodeVerificationPageTests@56235b8e</td></tr>
+<tr>
+<td title='Tests.PayDetailsPageTests.PayDetailPageTests()'><b>PayDetailPageTests</b><br>Test class: Tests.PayDetailsPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace482018235", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace482018235'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.PayDetailsPageTests@527740a2</td></tr>
+<tr>
+<td title='Tests.UpdateProfPageTests.ProfPageTests()'><b>ProfPageTests</b><br>Test class: Tests.UpdateProfPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1713148579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1713148579'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.UpdateProfPageTests@4e9ba398</td></tr>
+<tr>
+<td title='Tests.ResetPINPageTests.ResetPINPageTest()'><b>ResetPINPageTest</b><br>Test class: Tests.ResetPINPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1871130298", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1871130298'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.ResetPINPageTests@5abca1e0</td></tr>
+<tr>
+<td title='Tests.CodeVerificationPageTests.ValidInputTests()'><b>ValidInputTests</b><br>Test class: Tests.CodeVerificationPageTests</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div><a href='#' onClick='toggleBox("stack-trace282241763", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace282241763'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error occured while starting App. Original error: com.parkopedia.parkright.ParkRightApp or com.parkopedia.parkright.com.parkopedia.parkright.ParkRightApp never started (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.92 seconds
+Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
+System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;2601:c0:c100:49:0:0:0:fc41&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=800x1280, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Downloads/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
+Session ID: 20742eb3-bb19-481d-96e4-414c70f96466
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.InteractsWithApps.resetApp(InteractsWithApps.java:65)
+	at Tests.AbstractBaseTests.TestBase.restartApp(TestBase.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>Tests.CodeVerificationPageTests@56235b8e</td></tr>
 </table><p>
 </body>
 </html>

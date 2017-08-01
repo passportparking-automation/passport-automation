@@ -2,6 +2,7 @@ package Pages.PINPage;
 
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
@@ -18,7 +19,6 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	@FindBy (id="id_lw_reset_button")
 	public MobileElement resetPINButton;
 	
-	
 
 	public PINPageAndroid(AppiumDriver driver) {super(driver);}
 
@@ -32,6 +32,13 @@ public class PINPageAndroid extends BasePage  implements PINPage{
             }
 		PINSignInButton.click();
 		takeScreenshot("pinTest2");
+		
+		try {
+            driver.findElement(By.id("button1")).click();
+            } catch (Exception e) {
+            	System.out.println("Run is not on Emulator");
+            }
+		driver.navigate().back();
 	}
 	public void SendShortValuedPINTest() {
 
@@ -64,6 +71,14 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 		takeScreenshot("pinrTest4");
 		popUp.isDisplayed();
 		takeScreenshot("pinTest5");
+		acceptButton.click();
+	}
+
+	public void navToLanding() {
+		driver.navigate().back();
+	}
+	public void navToReset(){
+		resetPINButton.click();
 		acceptButton.click();
 	}
 }

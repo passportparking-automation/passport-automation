@@ -9,4 +9,6 @@ public interface FindParkingPage {
 	public void NumericValueZoneTest();
 	public void TextValueZoneTest();
 	public void ZoneIconTest();
+	public void navToLanding();
+
 }

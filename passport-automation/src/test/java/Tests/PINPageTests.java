@@ -3,6 +3,7 @@ package Tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.BasePage;
 import Pages.CodeVerificationPage.CodeVerificationPage;
 import Pages.CodeVerificationPage.CodeVerificationPageAndroid;
 import Pages.LandingPage.LandingPage;
@@ -41,19 +42,19 @@ public class PINPageTests extends TestBase {
 		}
 	}	
 	@Test	
-	public void CheckSecureLoginForExceptions(){
+	public void CheckSecureLoginForExceptionsAndSendDataTests() throws InterruptedException{
 		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
 		pinPage.CheckSecureLoginForExceptions();
-		driver.navigate().back();
-	}
-	@Test
-	public void SendDataTests() {
+		BasePage.sleep(2000);
+		pinPage.navToLanding();
+		
 		landingPage.clickPayToPark();
 		pinPage.EmptyPINTest();
 		pinPage.InvalidPINTest();
 		pinPage.SendCorrectPINTest();
-		driver.navigate().back();
 	}
-	
 
 }

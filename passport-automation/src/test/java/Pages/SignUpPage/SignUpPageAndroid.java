@@ -72,5 +72,9 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 		acceptButton.click();
 		
 	}
+	
+	public void navToLanding(){
+		driver.navigate().back();
+	}
 
 }

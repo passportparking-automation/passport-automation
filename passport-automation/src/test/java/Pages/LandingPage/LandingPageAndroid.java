@@ -1,12 +1,12 @@
 package Pages.LandingPage;
 
-
-
 import static org.testng.Assert.assertTrue;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -14,91 +14,91 @@ import org.testng.Assert;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.SwipeElementDirection;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import Pages.BasePage;
+import Pages.CodeVerificationPage.CodeVerificationPage;
+import Pages.CodeVerificationPage.CodeVerificationPageAndroid;
+import Pages.LoginPage.LoginPage;
+import Pages.LoginPage.LoginPageAndroid;
+import Pages.MobileVerPage.MobileVerPage;
+import Pages.MobileVerPage.MobileVerPageAndroid;
+import Pages.PINPage.PINPage;
+import Pages.PINPage.PINPageAndroid;
 
 public class LandingPageAndroid extends BasePage implements LandingPage {
-	@FindBy (id = "welcomeLogoImage")
+	@FindBy(id = "welcomeLogoImage")
 	public MobileElement welcomeLogo;
-	
-	@FindBy (id = "messageLabel")
+
+	@FindBy(id = "messageLabel")
 	public MobileElement messageLabel;
-	
-	@FindBy (id = "goToMapButton")
+
+	@FindBy(id = "goToMapButton")
 	public MobileElement goToMapButton;
-	
-	@FindBy (id = "orLabel")
+
+	@FindBy(id = "orLabel")
 	public MobileElement orLabel;
-	
-	@FindBy (id = "payToParkButton")
+
+	@FindBy(id = "payToParkButton")
 	public MobileElement payToParkButton;
-	
-	@FindBy (id = "id_help_layout")
+
+	@FindBy(id = "id_help_layout")
 	public MobileElement helpButton;
-	
-	@FindBy (id = "id_favorites")
-	public MobileElement favButton; 
-	
-	@FindBy (id = "id_about_layout")
+
+	@FindBy(id = "id_favorites")
+	public MobileElement favButton;
+
+	@FindBy(id = "id_about_layout")
 	public MobileElement faqButton;
-	
-	@FindBy (id = "signUpButton")
+
+	@FindBy(id = "signUpButton")
 	public MobileElement signUpButton;
-	
-	@FindBy (id = "haveAccountLabel")
+
+	@FindBy(id = "haveAccountLabel")
 	public MobileElement haveAccountLabel;
-	
-	@FindBy (id = "logInButton")
+
+	@FindBy(id = "logInButton")
 	public MobileElement logInButton;
-	
-	@FindBy (id="optionsContainer")
+
+	@FindBy(id = "optionsContainer")
 	public MobileElement optionsCont;
-	
-	@FindBy (id ="slidingmenumain")
+
+	@FindBy(id = "slidingmenumain")
 	public MobileElement mainScreen;
 	
-	/*
-	@FindBy (className = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[1]")
-	public MobileElement termsAndConditionsButton;
+	@FindBy(id = "overlay_header")
+	public MobileElement sessionOverlayHeader;
 	
-	@FindBy (className = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.TextView[2]")
-	public MobileElement privacyPolicyButton;
-	*/
 	
+	private LoginPage loginPage = new LoginPageAndroid(driver);
+	private MobileVerPage mobVerPage = new MobileVerPageAndroid(driver);
+	private CodeVerificationPage codeVerPage = new CodeVerificationPageAndroid(driver);
+	private PINPage pinPage  = new PINPageAndroid(driver);
 
-	public LandingPageAndroid(AppiumDriver driver) { super(driver); }
+	public LandingPageAndroid(AppiumDriver driver) { super(driver);}
 
 	public void LaunchTest() {
-		
-
+		// all do this
 	}
-
 	public void SwipeLeftTest() {
-		takeScreenshot("swipeLeft1");
-		mainScreen.swipe(SwipeElementDirection.LEFT, 1, 1, 1000);
-		takeScreenshot("swipeLeft2");
+
 	}
-	
 	public void SwipeRightTest() {
-		takeScreenshot("swipeRight1");
-		mainScreen.swipe(SwipeElementDirection.RIGHT, 1, 1, 1000);
-		takeScreenshot("swipeRight2");
 		
-	}
-	public void SwipeUpTest() {
-		takeScreenshot("swipeUp1");
-		mainScreen.swipe(SwipeElementDirection.UP, 1, 1, 1000);
-		takeScreenshot("swipeUp2");
-	
 	}
 	public void SwipeDownTest() {
-		takeScreenshot("swipeDown1");
-		mainScreen.swipe(SwipeElementDirection.DOWN, 1, 1, 1000);
-		takeScreenshot("swipeDown2");
+        int offset = 1;
+        int y = driver.manage().window().getSize().getHeight();
+        int x = driver.manage().window().getSize().getWidth();
+        TouchAction touchAction = new TouchAction(driver);
+        System.out.println(x + " " + y);
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
 	
 	}
-
+	public void SwipeUpTest() {
+	
+	}
 
 	public void PushNotificationTest() {
 		/*
@@ -120,7 +120,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	}
 
 	public void CheckMenuOptionsForExceptions() {
-		takeScreenshot("menuOptTest");	
+		takeScreenshot("menuOptTest");
 		menuIcon.click();
 		homeMenuOption.isDisplayed();
 		helpMenuOption.isDisplayed();
@@ -130,54 +130,106 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		termsMenuOption.isDisplayed();
 		privacyPolicyMenuOption.isDisplayed();
 		loginMenuOption.isDisplayed();
-		takeScreenshot("menuOptTest2");	
+		takeScreenshot("menuOptTest2");
 		menuIcon.click();
 		takeScreenshot("menuOptTest3");
-			
-	}
 
+	}
 
 	public void EnterLocationOrPayToParkCodeTest() {
-		goToMapButton.click();	
-		
+		goToMapButton.click();
+
 	}
-	
-	
-	public void clickHelpButton(){
+
+	public void clickHelpButton() {
 		helpButton.click();
 	}
-	
-	
-	public void navigateToFav(){
+
+	public void navigateToFav() {
 		takeScreenshot("FavLanding");
 		favButton.click();
-		
+
+	}
+
+	public void navigateToFindLocation() {
+		takeScreenshot("FindLocationLanding");
+		goToMapButton.click();
+	}
+
+	public void navigateToAbout() {
+		takeScreenshot("AboutLanding");
+		faqButton.click();
 	}
 	
-	public void navigateToFindLocation(){
-		takeScreenshot("FindLocationLanding");
-		goToMapButton.click();		
-		} 
+
+	public void navigateToLogin() {
+		menuIcon.click();
+		loginMenuOption.click();
+		//staging popup check
+		try {
+			declineButton.click();
+		} catch (Throwable e) {
+			System.err.println("The staging build message did not appear");
+		}
+		
+		try {
+			logInButton.click();
+			//check if there are terms and conditions
+			try {
+				acceptButton.click();
+			} catch (Exception e) {
+				System.out.println("Terms message did not appear");
+			}
+			mobVerPage.ValidMobileTest();
+			codeVerPage.SendCorrectCodeTest();
+			pinPage.SendCorrectPINTest();
+			
+		} catch (Throwable e) {
+			System.err.println("need to send pin");
+			pinPage.SendCorrectPINTest();
+		}
+	}
 	
-	public void navigateToAbout(){
-		takeScreenshot("AboutLanding");
-		faqButton.click();		
-		} 
 	
+	
+	public void logout() { 		
+		menuIcon.click();
+        int offset = 1;
+        int y = driver.manage().window().getSize().getHeight();
+        int x = driver.manage().window().getSize().getWidth();
+        TouchAction touchAction = new TouchAction(driver);
+        System.out.println(x + " " + y);
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
+		logoutMenuOption.click();	
+	}
+	
+	public void navigateToProfilePage() {
+		menuIcon.click();
+		profileMenuOption.click();
+	}
+	
+	public void navigateToYourCardsPage() {
+		menuIcon.click();
+		paymentMenuOption.click();
+	}
+	public void navigateToVehiclesPage() {
+		menuIcon.click();
+		vehiclesMenuOption.click();
+	}
+
 	public void clickPayToPark() {
 		takeScreenshot("stagingNote");
-		try{
+		try {
 			payToParkButton.click();
-		}catch (Throwable e) {
-		    System.err.println("The payToParkButton did not appaer");
+		} catch (Throwable e) {
+			System.err.println("The payToParkButton did not appaer");
 		}
-		
-		try{
+
+		try {
 			declineButton.click();
-		}catch (Throwable e) {
-		    System.err.println("The staging build thing did not appear");
+		} catch (Throwable e) {
+			System.err.println("The staging build message did not appear");
 		}
 	}
-	
-	
+
 }

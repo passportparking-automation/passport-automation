@@ -70,4 +70,10 @@ public class LoginPageIOS extends BasePage implements LoginPage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void goToSignUp() {
+		// TODO Auto-generated method stub
+		
+	}
 }

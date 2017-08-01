@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
+import Pages.ExcelReading;
 
 public class LandingPageIOS extends BasePage implements LandingPage {
 
@@ -79,7 +80,7 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 	@FindBy (name = "back")
 	private MobileElement backButton;
 	
-	public LandingPageIOS(AppiumDriver driver) {
+	public LandingPageIOS(AppiumDriver driver) throws Exception {
 		super(driver);
 	}
 
@@ -125,6 +126,8 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 	public void CheckLandingPageForExceptions() {
 		/*welcomeLogo.isDisplayed();
 		messageLabel.isDisplayed();*/
+//		String mobileNumber = ExcelReading.getCellData(2, 2);
+//    	System.out.println(mobileNumber);
 		goToMapButton.isDisplayed();
 		orLabel.isDisplayed();
 		payToParkButton.isDisplayed();
@@ -138,6 +141,12 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 
 	public void EnterLocationOrPayToParkCodeTest() {
 		goToMapButton.click();
+		if(!driver.findElements(By.name("Allow")).isEmpty()) {
+			BasePage.sleep(6000);
+			allowButton.isDisplayed();
+			dontAllowButton.isDisplayed();
+			allowButton.click();
+		}
 		backButton.isDisplayed();
 		
 	}
@@ -190,7 +199,50 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 		menuIcon.click();
 		homeMenuOption.click();
 		takeScreenshot("FavLanding");
+		SwipeUpTest();
 		favButton.click();
+		
+	}
+
+	@Override
+	public void LaunchTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void PushNotificationTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void navigateToLogin() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void navigateToProfilePage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void logout() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void navigateToYourCardsPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void navigateToVehiclesPage() {
+		// TODO Auto-generated method stub
 		
 	}
 }

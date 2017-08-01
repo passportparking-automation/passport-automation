@@ -13,10 +13,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import Pages.BasePage;
 import driver.deviceAndroid;
@@ -59,9 +56,11 @@ public abstract class TestBase {
 			DesiredCapabilities capabilitiesAndroid = new DesiredCapabilities();
 			capabilitiesAndroid.setCapability(MobileCapabilityType.PLATFORM_NAME, deviceAndroid.platformName);
 			capabilitiesAndroid.setCapability(MobileCapabilityType.DEVICE_NAME, deviceAndroid.deviceName);
-			//capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+			//capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "selendroid");
 			capabilitiesAndroid.setCapability(MobileCapabilityType.APP, appAndroid);
 			capabilitiesAndroid.setCapability("appPackage", deviceAndroid.appPackage);
+		//	capabilitiesAndroid.setCapability("automationName", "selendroid"); 
+			
 			driver = new AppiumDriver<MobileElement>(url, capabilitiesAndroid);
 			wait = new WebDriverWait(driver, 80);
 			break;
@@ -134,6 +133,7 @@ public abstract class TestBase {
 	
     @AfterClass
     public void restartApp() {
+    	driver.resetApp();
     }
 	
 }

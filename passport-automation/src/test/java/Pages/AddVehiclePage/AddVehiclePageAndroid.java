@@ -1,5 +1,7 @@
 package Pages.AddVehiclePage;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
@@ -15,6 +17,19 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	
 	@FindBy(id = "saveVehicleButton")
 	public MobileElement saveVButton;
+	
+	@FindBy (id="viewHeader")
+	public MobileElement header;
+	
+	@FindBy (id= "id_add_vehicle_button")
+	public MobileElement addVehicleButton;
+	
+	@FindBy (id="lpnBox")
+	public MobileElement vrmInput;
+	
+	@FindBy (id ="backImageView")
+	public MobileElement backButton;
+
 	
 
 	public AddVehiclePageAndroid(AppiumDriver driver) {super(driver);	}
@@ -83,6 +98,24 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 		takeScreenshot("dTest35");
 		saveVButton.click();
 		takeScreenshot("dTest45");
+		
+	}
+
+	public void AddVehicleTest() {
+		backButton.click();
+		assertEquals(header.getText(), "Vehicles");
+		addVehicleButton.click();
+		saveVButton.click();
+		assertEquals(popUpTitle.getText(), "Invalid VRM");
+		takeScreenshot("InvalidVRM");
+		acceptButton.click();
+		vrmInput.sendKeys("Test");
+		saveVButton.click();
+		assertEquals(header.getText(), "Vehicles");
+	}
+	
+	public void CheckUpdateToVehiclePage(){
+		
 		
 	}
 

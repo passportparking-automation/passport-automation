@@ -5,4 +5,5 @@ public interface CodeVerificationPage {
 	public void NavBackTest();
 	public void EmptyVerTest();
 	public void SendCorrectCodeTest();
+	public void navToLanding();
 }

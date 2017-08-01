@@ -7,4 +7,5 @@ public interface MobileVerPage {
 	public void ShortNumberProivdedTest();
 	public void ValidMobileTest();
 	public void ForceQuitTest();
+	public void navToLanding();
 }

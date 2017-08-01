@@ -73,7 +73,7 @@ public class TestParkRightDieselFlow extends TestBase {
 			
 			break;
 		case IOS:
-			landingPage = new LandingPageIOS(driver);
+//			landingPage = new LandingPageIOS(driver);
 			loginPage = new LoginPageIOS(driver);
 			signUpPage = new SignUpPageIOS(driver);
 			emailVerPage = new EmailVerPageIOS(driver);

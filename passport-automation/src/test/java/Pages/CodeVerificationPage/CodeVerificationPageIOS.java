@@ -61,4 +61,10 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 		backButton.click();
 		
 	}
+
+	@Override
+	public void navToLanding() {
+		// TODO Auto-generated method stub
+		
+	}
 }

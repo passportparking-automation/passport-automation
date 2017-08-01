@@ -48,6 +48,11 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 		acceptButton.click();
 		takeScreenshot("CodeTest4");
 	}
+
+	public void navToLanding() {
+		driver.navigate().back();
+		driver.navigate().back();
+	}
 	
 
 }

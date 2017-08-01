@@ -15,6 +15,12 @@ public interface LandingPage {
 	public void navigateToFav();
 	public void navigateToAbout();
 	public void navigateToFindLocation();
+	public void navigateToLogin();
+	public void navigateToProfilePage();
+	public void logout();
+	public void navigateToYourCardsPage();
+	public void navigateToVehiclesPage();
+	
 
 	
 

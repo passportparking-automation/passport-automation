@@ -5,9 +5,11 @@
     <classes>
       <class name="Tests.PINPageTests">
         <methods>
-          <include name="CheckSecureLoginForExceptions"/>
-          <include name="SendDataTests"/>
+          <include name="restartApp"/>
+          <include name="setUpPage"/>
+          <include name="tearDownAppium"/>
           <include name="initAppium"/>
+          <include name="CheckSecureLoginForExceptionsAndSendDataTests"/>
         </methods>
       </class> <!-- Tests.PINPageTests -->
     </classes>

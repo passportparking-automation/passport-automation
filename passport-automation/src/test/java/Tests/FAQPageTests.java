@@ -3,6 +3,7 @@ package Tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.BasePage;
 import Pages.FAQPage.*;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
@@ -32,9 +33,9 @@ public class FAQPageTests extends TestBase {
 	
 	@Test 
 	public void FAQNavTest() throws InterruptedException{
-		Thread.sleep(7000);
+		BasePage.sleep(5000);
 		landingPage.navigateToAbout();
-		Thread.sleep(7000);
+		BasePage.sleep(5000);
 		faqPage.FAQNavTest();
 	}
 }

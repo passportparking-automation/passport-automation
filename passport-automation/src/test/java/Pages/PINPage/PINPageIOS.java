@@ -66,4 +66,30 @@ public class PINPageIOS extends BasePage implements PINPage {
 		/*okButton.click();*/
 		
 	}
+
+
+	@Override
+	public void navToLanding() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void navToReset() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SendShortValuedPINTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SendFalsePINTest() {
+		// TODO Auto-generated method stub
+		
+	}
 }
