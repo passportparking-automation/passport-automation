@@ -82,22 +82,33 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		// all do this
 	}
 	public void SwipeLeftTest() {
-
+		takeScreenshot("swipeLeft1");
+		TouchAction swipe = new TouchAction(driver).press(250, 147).waitAction().moveTo(150,147).release();
+		swipe.perform();
+        takeScreenshot("swipeLeft2");
 	}
+	
 	public void SwipeRightTest() {
-		
+		takeScreenshot("swipeRight1");
+		TouchAction swipe = new TouchAction(driver).press(38, 459).waitAction().moveTo(463,468).release();
+		swipe.perform();
+		takeScreenshot("swipeRight2");
+	}
+	public void SwipeUpTest() {
+		takeScreenshot("swipeUp1");
+		TouchAction swipe = new TouchAction(driver).press(289, 93).waitAction().moveTo(320,707).release();
+		swipe.perform();
+		takeScreenshot("swipeUp2");
+	
 	}
 	public void SwipeDownTest() {
-        int offset = 1;
+		takeScreenshot("swipeDown1");
+		int offset = 1;
         int y = driver.manage().window().getSize().getHeight();
         int x = driver.manage().window().getSize().getWidth();
         TouchAction touchAction = new TouchAction(driver);
-        System.out.println(x + " " + y);
         touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
-	
-	}
-	public void SwipeUpTest() {
-	
+		takeScreenshot("swipeDown2");
 	}
 
 	public void PushNotificationTest() {

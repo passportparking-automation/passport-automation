@@ -54,13 +54,13 @@ public class LandingPageTests extends TestBase {
 	}
 	@Test
 	public void LandingPageScrollTest(){
-		landingPage.SwipeLeftTest();
-		landingPage.CheckLandingPageForExceptions();
-		landingPage.SwipeRightTest();
-		landingPage.CheckLandingPageForExceptions();
+		BasePage.sleep(5000);
 		landingPage.SwipeDownTest();
 		landingPage.CheckLandingPageForExceptions();
 		landingPage.SwipeUpTest();
+		landingPage.CheckLandingPageForExceptions();
+		landingPage.SwipeRightTest();
+		landingPage.SwipeLeftTest();
 		landingPage.CheckLandingPageForExceptions();
 	}
 }
