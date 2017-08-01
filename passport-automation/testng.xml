@@ -4,7 +4,7 @@
   <test verbose="2" name="ParkRight Test Automation">
     <classes>
     	<class name="Tests.LandingPageTests" />
-     	<!--class name="Tests.FindParkingPageTests"/-->
+     	<class name="Tests.FindParkingPageTests"/>
      	<class name="Tests.HelpPageTests" />
     	<class name="Tests.FavoritesPageTests" />
      	<class name="Tests.FAQPageTests" />
