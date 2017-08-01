@@ -161,23 +161,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		faqButton.click();
 	}
 	
-	public void hideOverlay() {
-		try{
-			if(sessionOverlayHeader.isDisplayed()){
-				//Click on any part of the screen
-				TouchAction a2 = new TouchAction(driver);
-				a2.tap (779, 1236).perform();
-				menuImage.click();
-				homeMenuOption.click();
-			}
-		}
-			catch (Exception E){
-				System.out.println("Hide overlay was not performed");
-			}
-			
-		}
-	
-	
+
 	public void navigateToLogin() {
 		menuIcon.click();
 		loginMenuOption.click();
@@ -208,8 +192,14 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	
 	
 	
-	public void logout() { 
+	public void logout() { 		
 		menuIcon.click();
+        int offset = 1;
+        int y = driver.manage().window().getSize().getHeight();
+        int x = driver.manage().window().getSize().getWidth();
+        TouchAction touchAction = new TouchAction(driver);
+        System.out.println(x + " " + y);
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
 		logoutMenuOption.click();	
 	}
 	

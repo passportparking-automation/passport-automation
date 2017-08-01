@@ -229,12 +229,6 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 	}
 
 	@Override
-	public void hideOverlay() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void navigateToVehiclesPage() {
 		// TODO Auto-generated method stub
 		
