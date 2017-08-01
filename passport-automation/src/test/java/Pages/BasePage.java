@@ -3,6 +3,7 @@ package Pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 import org.openqa.selenium.By;
@@ -111,6 +112,8 @@ public abstract class BasePage {
 
         return element.getText().contains(input);
     }
+  
+    
 	
 	public boolean takeScreenshot(final String name) {
 		String screenshotDirectory = System.getProperty("appium.screenshots.dir", System.getProperty("java.io.tmpdir", ""));

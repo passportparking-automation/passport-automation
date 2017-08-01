@@ -82,30 +82,22 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		// all do this
 	}
 	public void SwipeLeftTest() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		HashMap<String, String> swipeObject = new HashMap<String, String>();
-		swipeObject.put("direction", "left");
-		js.executeScript("mobile: swipe", swipeObject);
-		BasePage.sleep(3000);
-		homeMenuOption.click();
+
 	}
 	public void SwipeRightTest() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		HashMap<String, String> swipeObject = new HashMap<String, String>();
-		swipeObject.put("direction", "right");
-		js.executeScript("mobile: swipe", swipeObject);
+		
 	}
 	public void SwipeDownTest() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		HashMap<String, String> swipeObject = new HashMap<String, String>();
-		swipeObject.put("direction", "down");
-		js.executeScript("mobile: swipe", swipeObject);
+        int offset = 1;
+        int y = driver.manage().window().getSize().getHeight();
+        int x = driver.manage().window().getSize().getWidth();
+        TouchAction touchAction = new TouchAction(driver);
+        System.out.println(x + " " + y);
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
+	
 	}
 	public void SwipeUpTest() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		HashMap<String, String> swipeObject = new HashMap<String, String>();
-		swipeObject.put("direction", "up");
-		js.executeScript("mobile: swipe", swipeObject);
+	
 	}
 
 	public void PushNotificationTest() {
