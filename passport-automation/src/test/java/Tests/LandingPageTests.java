@@ -35,16 +35,19 @@ public class LandingPageTests extends TestBase {
 			break;
 		}
 	}
+	/*
 	@Test
 	public void CheckMenuOptionsForExceptions() throws InterruptedException{
 		Thread.sleep(5000);
 		landingPage.CheckMenuOptionsForExceptions();
 	}
+	*/
 	@Test
 	public void checkLandingPageForExceptions() throws InterruptedException{
 		Thread.sleep(5000);
 		landingPage.CheckLandingPageForExceptions();
 	}
+	/*
 	@Test
 	public void EnterLocationOrPayToParkCodeTest() throws InterruptedException{
 		Thread.sleep(5000);
@@ -52,6 +55,7 @@ public class LandingPageTests extends TestBase {
 		findParkingPage.CheckFindParkingForExceptions();
 		driver.navigate().back();
 	}
+	*/
 	@Test
 	public void LandingPageScrollTest(){
 		BasePage.sleep(5000);

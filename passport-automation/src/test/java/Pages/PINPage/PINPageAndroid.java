@@ -38,6 +38,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
             } catch (Exception e) {
             	System.out.println("Run is not on Emulator");
             }
+		BasePage.sleep(2000);
 		driver.navigate().back();
 	}
 	public void SendShortValuedPINTest() {

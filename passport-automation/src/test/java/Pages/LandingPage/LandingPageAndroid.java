@@ -81,13 +81,14 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	public void LaunchTest() {
 		// all do this
 	}
+	//From Right to Left
 	public void SwipeLeftTest() {
 		takeScreenshot("swipeLeft1");
 		TouchAction swipe = new TouchAction(driver).press(481, 318).waitAction().moveTo(203,337).release();
 		swipe.perform();
         takeScreenshot("swipeLeft2");
 	}
-	
+	//Left to Right
 	public void SwipeRightTest() {
 		takeScreenshot("swipeRight1");
 		TouchAction swipe = new TouchAction(driver).press(38, 459).waitAction().moveTo(463,468).release();
@@ -128,7 +129,24 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		favButton.isDisplayed();
 		faqButton.isDisplayed();
 		menuIcon.isDisplayed();
-		takeScreenshot("CheckLandingPageForExceptions");
+		takeScreenshot("CheckLandingPageForExceptions1");
+		
+		takeScreenshot("swipeDown1"+System.currentTimeMillis());
+		int offset = 1;
+        int y = driver.manage().window().getSize().getHeight();
+        int x = driver.manage().window().getSize().getWidth();
+        TouchAction touchAction = new TouchAction(driver);
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();
+        touchAction.perform();
+		takeScreenshot("swipeDown2"+System.currentTimeMillis());
+		
+		//powerdByLogo.isDisplayed();
+		
+		takeScreenshot("swipeUp1"+System.currentTimeMillis());
+		TouchAction swipe = new TouchAction(driver).press(289, 93).waitAction().moveTo(320,707).release();
+		swipe.perform();
+		takeScreenshot("swipeUp2"+System.currentTimeMillis());
+		
 	}
 
 	public void CheckMenuOptionsForExceptions() {
@@ -206,12 +224,17 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	
 	public void logout() { 		
 		menuIcon.click();
-        int offset = 1;
+		
+		takeScreenshot("swipeDown1"+System.currentTimeMillis());
+		int offset = 1;
         int y = driver.manage().window().getSize().getHeight();
         int x = driver.manage().window().getSize().getWidth();
         TouchAction touchAction = new TouchAction(driver);
-        System.out.println(x + " " + y);
-        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
+        touchAction.press(x / 4, y - offset).moveTo(0, -(y - (4 * offset))).release();
+        touchAction.perform();
+		takeScreenshot("swipeDown2"+System.currentTimeMillis());
+        
+       
 		logoutMenuOption.click();	
 	}
 	
