@@ -83,7 +83,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	}
 	public void SwipeLeftTest() {
 		takeScreenshot("swipeLeft1");
-		TouchAction swipe = new TouchAction(driver).press(250, 147).waitAction().moveTo(150,147).release();
+		TouchAction swipe = new TouchAction(driver).press(1014, 958).waitAction().moveTo(132,1000).release();
 		swipe.perform();
         takeScreenshot("swipeLeft2");
 	}
@@ -107,7 +107,8 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
         int y = driver.manage().window().getSize().getHeight();
         int x = driver.manage().window().getSize().getWidth();
         TouchAction touchAction = new TouchAction(driver);
-        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();
+        touchAction.perform();
 		takeScreenshot("swipeDown2");
 	}
 
