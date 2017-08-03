@@ -88,10 +88,10 @@ public class TestParkRightDieselFlow extends TestBase {
 			break;
 		}
 	}
-	/*
-	@Test(priority = 1)
+	
+	@Test
 	public void Test() {
-		
+		/*
 		landingPage.checkAllowButtonClick();
 		landingPage.checkOkButtonClick();
 		landingPage.CheckPayToParkButtonClick();
@@ -164,7 +164,6 @@ public class TestParkRightDieselFlow extends TestBase {
 		lengthOfStayPage.clickMaxStayButton();
 		paymentMethodPage.clickTestCreditCard();
 		paymentMethodPage.clickNoButton();
-		lengthOfStayPage.clickBackButton();
-
-	}*/
+		lengthOfStayPage.clickBackButton();*/
+	}
 }
