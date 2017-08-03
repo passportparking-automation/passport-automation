@@ -204,11 +204,6 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 		
 	}
 
-	@Override
-	public void navigateToLogin() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void navigateToProfilePage() {

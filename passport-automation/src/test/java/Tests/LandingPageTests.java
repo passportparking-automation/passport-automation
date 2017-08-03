@@ -35,36 +35,31 @@ public class LandingPageTests extends TestBase {
 			break;
 		}
 	}
-	/*
+	
 	@Test
 	public void CheckMenuOptionsForExceptions() throws InterruptedException{
-		Thread.sleep(5000);
 		landingPage.CheckMenuOptionsForExceptions();
-	}
-	*/
-	@Test
-	public void checkLandingPageForExceptions() throws InterruptedException{
-		Thread.sleep(5000);
-		landingPage.CheckLandingPageForExceptions();
-	}
-	/*
-	@Test
-	public void EnterLocationOrPayToParkCodeTest() throws InterruptedException{
-		Thread.sleep(5000);
-		landingPage.EnterLocationOrPayToParkCodeTest();
-		findParkingPage.CheckFindParkingForExceptions();
-		driver.navigate().back();
 	}
 	
 	@Test
-	public void LandingPageScrollTest(){
-		BasePage.sleep(5000);
-		landingPage.SwipeDownTest();
+	public void checkLandingPageForExceptions() throws InterruptedException{
 		landingPage.CheckLandingPageForExceptions();
-		landingPage.SwipeUpTest();
-		landingPage.CheckLandingPageForExceptions();
+	}
+	
+	/*@Test
+	public void EnterLocationOrPayToParkCodeTest() throws InterruptedException{
+		landingPage.EnterLocationOrPayToParkCodeTest();
+		findParkingPage.CheckFindParkingForExceptions();
+		findParkingPage.navToLanding();
+	}
+	*/
+	@Test
+	public void LandingPageSwipeTest(){
 		landingPage.SwipeRightTest();
+		landingPage.CheckMenuOptionsForExceptions();
 		landingPage.SwipeLeftTest();
-		landingPage.CheckLandingPageForExceptions(); 
-	}*/
+		landingPage.CheckLandingPageForExceptions();
+		 
+	}
+	
 }
