@@ -32,4 +32,10 @@ public class PayMethodPageIOS extends BasePage implements PayMethodPage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void declinePayment() {
+		// TODO Auto-generated method stub
+		
+	}
 }

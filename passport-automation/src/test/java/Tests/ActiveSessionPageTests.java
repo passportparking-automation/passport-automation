@@ -2,20 +2,30 @@ package Tests;
 
 import org.testng.annotations.*;
 
+import Pages.AddVehiclePage.AddVehiclePage;
+import Pages.AddVehiclePage.AddVehiclePageAndroid;
 import Pages.CodeVerificationPage.CodeVerificationPage;
 import Pages.CodeVerificationPage.CodeVerificationPageAndroid;
 import Pages.EmailVerPage.EmailVerPage;
 import Pages.EmailVerPage.EmailVerPageAndroid;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
+import Pages.LengthOfStayPage.LengthOfStayPage;
+import Pages.LengthOfStayPage.LengthOfStayPageAndroid;
 import Pages.LoginPage.LoginPage;
 import Pages.LoginPage.LoginPageAndroid;
+import Pages.MobileVerPage.MobileVerPage;
+import Pages.MobileVerPage.MobileVerPageAndroid;
 import Pages.PINPage.PINPage;
 import Pages.PINPage.PINPageAndroid;
+import Pages.PayMethodPage.PayMethodPage;
+import Pages.PayMethodPage.PayMethodPageAndroid;
 import Pages.SignUpPage.SignUpPage;
 import Pages.SignUpPage.SignUpPageAndroid;
 import Pages.VehiclesPage.VehiclesPage;
 import Pages.VehiclesPage.VehiclesPageAndroid;
+import Pages.YourCardsPage.YourCardsPage;
+import Pages.YourCardsPage.YourCardsPageAndroid;
 import Pages.ZonePage.ZonePage;
 import Pages.ZonePage.ZonePageAndroid;
 import Tests.AbstractBaseTests.TestBase;
@@ -26,9 +36,14 @@ public class ActiveSessionPageTests extends TestBase{
 	private SignUpPage signUpPage;
 	private EmailVerPage emailVerPage;
 	private CodeVerificationPage codeVerificationPage;
+	private MobileVerPage mobileVerPage;
 	private  PINPage pINPage;
 	private ZonePage zonePage;
 	private VehiclesPage vehiclesPage;
+	private AddVehiclePage addVehiclePage;
+	private LengthOfStayPage losPage;
+	private YourCardsPage yourCardsPage;
+	private PayMethodPage payMethodPage;
 	
 	@BeforeTest
 	@Override
@@ -43,8 +58,11 @@ public class ActiveSessionPageTests extends TestBase{
 			pINPage = new PINPageAndroid(driver);
 			zonePage = new ZonePageAndroid(driver);
 			vehiclesPage = new VehiclesPageAndroid(driver);
-			
-			
+			mobileVerPage = new MobileVerPageAndroid(driver);
+			addVehiclePage= new AddVehiclePageAndroid(driver);
+			losPage= new LengthOfStayPageAndroid(driver);
+			yourCardsPage = new YourCardsPageAndroid(driver);
+			payMethodPage = new PayMethodPageAndroid(driver);
 			break;
 		case IOS:
 			//landingpage = new LandingPageIOS(driver);
@@ -55,19 +73,11 @@ public class ActiveSessionPageTests extends TestBase{
 		}
 	}
 	
-	@Test
+	/*@Test
 	public void NonDieselOlderThan2015Test() throws InterruptedException{
-		landingPage.clickPayToPark();
-		loginPage.clickLoginButtonAndAcceptTerms();
-		signUpPage.signUpThroughEmail();
-		emailVerPage.ValidEmailTest();
-		codeVerificationPage.SendCorrectCodeTest();
 
-		pINPage.SendCorrectPINTest();
-		zonePage.goToDieselZone1();
-		vehiclesPage.clickAddV();
 	}
-	/*
+	
 	@Test
 	public void NonDieselYoungerThan2015Test() throws InterruptedException{
 		
@@ -83,12 +93,24 @@ public class ActiveSessionPageTests extends TestBase{
 	@Test
 	public void DieselOlderThan2015Test() throws InterruptedException{
 		
-	}
+	}*/
 	@Test
 	public void DieselYoungerThan2015Test() throws InterruptedException{
-		
+		landingPage.clickPayToPark();
+		loginPage.clickLoginButtonAndAcceptTerms();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
+		pINPage.SendCorrectPINTest();
+		zonePage.goToDieselZone1();
+		vehiclesPage.CheckVehiclesPageForExceptions();
+		vehiclesPage.clickAddV();
+		addVehiclePage.addDieselOlderThan2015();
+		losPage.clickMaxStayButton();
+		yourCardsPage.clickTestCreditCard();
+		payMethodPage.CheckPayMethodForExceptions();
+		payMethodPage.declinePayment();
 	}
-	@Test
+	/*@Test
 	public void NoGuruRecordTest() throws InterruptedException{
 		
 	}

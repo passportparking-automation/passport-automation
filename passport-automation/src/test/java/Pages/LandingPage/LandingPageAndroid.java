@@ -225,14 +225,16 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	public void logout() { 		
 		menuIcon.click();
 		
-		takeScreenshot("swipeDown1"+System.currentTimeMillis());
-		int offset = 1;
+        takeScreenshot("swipeDown1");
+        /*int offset = 1;
         int y = driver.manage().window().getSize().getHeight();
         int x = driver.manage().window().getSize().getWidth();
         TouchAction touchAction = new TouchAction(driver);
-        touchAction.press(x / 4, y - offset).moveTo(0, -(y - (4 * offset))).release();
-        touchAction.perform();
-		takeScreenshot("swipeDown2"+System.currentTimeMillis());
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();
+        touchAction.perform();*/
+        TouchAction swipe = new TouchAction(driver).press(46, 845).waitAction().moveTo(61,198).release();
+        swipe.perform();
+        takeScreenshot("swipeDown2");
         
        
 		logoutMenuOption.click();	

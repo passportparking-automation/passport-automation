@@ -9,20 +9,29 @@ import Pages.BasePage;
 
 public class LengthOfStayPageAndroid extends BasePage implements LengthOfStayPage {
 
+	@FindBy (id="durationHeader")
+	public MobileElement durationMessage;
+	
 	@FindBy (id = "shortcutButton")
-	private MobileElement maxStayButton;
+	public MobileElement maxStayButton;
 	
 	@FindBy (id = "id_titlebar_back_button")
-	private MobileElement backButton;
+	public MobileElement backButton;
 	
 	public LengthOfStayPageAndroid(AppiumDriver driver) {super(driver);}
 	
 	public void clickMaxStayButton() {
-		maxStayButton.isDisplayed();
-		takeScreenshot("lengthOfStay1");
 		maxStayButton.click();
 		takeScreenshot("lengthOfStay2");
 	}
+	public void CheckLOSForExceptions(){
+		
+	}
+	
+	
+	
+	
+	
 	
 	public void clickBackButton() {
 		BasePage.sleep(4000);

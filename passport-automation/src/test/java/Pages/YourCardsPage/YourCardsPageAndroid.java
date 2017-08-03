@@ -44,7 +44,7 @@ public class YourCardsPageAndroid extends BasePage implements YourCardsPage {
 			assertEquals(header.getText(), "Add Payment Details");
 			takeScreenshot("PD1");
 	}
-
+	
 	public void CardScreenTest() {
 		cardButton.click();
 		cardTypeImage.isDisplayed();
@@ -62,5 +62,12 @@ public class YourCardsPageAndroid extends BasePage implements YourCardsPage {
 		addCardButton.isDisplayed();
 		takeScreenshot("PD6");
 	}
+	public void clickTestCreditCard(){
+		takeScreenshot("PD7");
+		cardButton.click();
+	}
+
+
+	
 
 }

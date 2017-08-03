@@ -10,6 +10,9 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 	@FindBy (id= "id_add_vehicle_button")
 	public MobileElement addVehicleButton;
 	
+	@FindBy(id="zoneInfo")
+	public MobileElement zoneInfo;
+	
 	public VehiclesPageAndroid(AppiumDriver driver) {	super(driver);}
 
 	@Override
@@ -21,6 +24,8 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 
 	public void CheckVehiclesPageForExceptions() {
 		addVehicleButton.isDisplayed();
+		zoneInfo.isDisplayed();
+		BasePage.sleep(2000);
 		takeScreenshot("AddVehicle");
 	}
 
