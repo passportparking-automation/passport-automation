@@ -60,7 +60,7 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 		takeScreenshot("HelpNavTest4");
 		acceptButton.click();
 		takeScreenshot("HelpNavTest5");
-		Thread.sleep(5000);
+		BasePage.sleep(5000);
 		driver.navigate().back();
 	}
 

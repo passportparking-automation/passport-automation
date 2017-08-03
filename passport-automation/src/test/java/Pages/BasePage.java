@@ -42,6 +42,9 @@ public abstract class BasePage {
 	@FindBy (id = "title")
 	public MobileElement popUpTitle;
 	
+	@FindBy (id = "message")
+	public MobileElement popUpMessage;
+	
 	@FindBy (id = "sidemenu_item_sm_new_session")
 	public  MobileElement homeMenuOption;
 	
@@ -57,10 +60,10 @@ public abstract class BasePage {
 	@FindBy (id = "sidemenu_item_sm_faq")
 	public MobileElement FAQMenuOption;
 	
-	@FindBy (id = "sidemenu_item_sm_terms")
+	@FindBy (xpath = " //android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[9]")
 	public MobileElement termsMenuOption;
 	
-	@FindBy (id = "sidemenu_item_sm_privacy_policy")
+	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[10]")
 	public  MobileElement privacyPolicyMenuOption;
 	
 	@FindBy (id = "sidemenu_item_sm_login")
@@ -78,7 +81,7 @@ public abstract class BasePage {
 	@FindBy (id = "sidemenu_item_sm_vehicles")
 	public  MobileElement vehiclesMenuOption;
 	
-	@FindBy (id = "sidemenu_item_sm_logout")
+	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[11]")
 	public  MobileElement logoutMenuOption;
 		
 	static WebDriverWait wait;

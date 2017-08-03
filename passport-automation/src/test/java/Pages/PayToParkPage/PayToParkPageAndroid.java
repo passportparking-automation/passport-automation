@@ -49,7 +49,7 @@ public class PayToParkPageAndroid extends BasePage implements PayToParkPage {
 		assertEquals(popUpMessage.getText(), "This is not a location within our system. Please try a different location before continuing.");
 		takeScreenshot("WrongLocationNumber2");
 		acceptButton.click();
-		backButton.click();
+		
 		
 		
 	}
@@ -59,8 +59,12 @@ public class PayToParkPageAndroid extends BasePage implements PayToParkPage {
 		zoneInfoButton.click();
 		takeScreenshot("LocationInfo");
 		acceptButton.click();
-		backButton.click();
+	
 		
+	}
+	
+	public void navToLanding(){
+		backButton.click();
 	}
 
 

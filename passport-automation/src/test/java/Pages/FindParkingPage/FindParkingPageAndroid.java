@@ -76,7 +76,7 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 		}
 		filterButton.isDisplayed();
 
-		Thread.sleep(5000);
+		BasePage.sleep(5000);
 		takeScreenshot("checkFP");
 		
 		//backButton.click();	

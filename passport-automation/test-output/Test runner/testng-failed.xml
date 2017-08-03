@@ -3,28 +3,26 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
   <test name="ParkRight Test Automation(failed)" parallel="classes">
     <classes>
-      <class name="Tests.HelpPageTests">
+      <class name="Tests.VehiclesPageTests">
         <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
+          <include name="CheckVehiclesPageForExceptions"/>
         </methods>
-      </class> <!-- Tests.HelpPageTests -->
+      </class> <!-- Tests.VehiclesPageTests -->
       <class name="Tests.LandingPageTests">
         <methods>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
           <include name="checkLandingPageForExceptions"/>
           <include name="initAppium"/>
-          <include name="LandingPageScrollTest"/>
-          <include name="setUpPage"/>
+          <include name="CheckMenuOptionsForExceptions"/>
+          <include name="LandingPageSwipeTest"/>
         </methods>
       </class> <!-- Tests.LandingPageTests -->
-      <class name="Tests.FavoritesPageTests">
+      <class name="Tests.HelpPageTests">
         <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
+          <include name="HelpNavTest"/>
+          <include name="TutorialSwipeTest"/>
+          <include name="CloseHelpTest"/>
         </methods>
-      </class> <!-- Tests.FavoritesPageTests -->
+      </class> <!-- Tests.HelpPageTests -->
     </classes>
   </test> <!-- ParkRight Test Automation(failed) -->
 </suite> <!-- Failed suite [Test runner] -->
