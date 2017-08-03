@@ -7,7 +7,7 @@
      	<!--class name="Tests.FindParkingPageTests"/-->
      	<class name="Tests.HelpPageTests" />
     	<class name="Tests.FavoritesPageTests" />
-     	<class name="Tests.FAQPageTests" />
+     	<!--  <class name="Tests.FAQPageTests" />
      	<class name="Tests.SendBugReportPageTests"/>
      	<class name="Tests.SignUpPageTests"/>
      	<class name="Tests.MobileVerPageTests"/>
@@ -19,7 +19,7 @@
      	<class name="Tests.YourCardsPageTests" />
      	<class name="Tests.PayDetailsPageTests" />
        	<class name="Tests.VehiclesPageTests" />
-       	<class name="Tests.AddVehiclePageTests" />
+       	<class name="Tests.AddVehiclePageTests" />-->
        	
     </classes>
   </test> <!-- Default test -->

@@ -67,8 +67,8 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	public void TutorialSwipeTest() {
 		int numberOfSwipesLeft = 10;
 		for(int p=0; p<numberOfSwipesLeft; p++){
-			takeScreenshot("swipeLeft"+System.currentTimeMillis());
-			TouchAction swipe = new TouchAction(driver).press(1014, 958).waitAction().moveTo(132,1000).release();
+			takeScreenshot("swipeLeft1"+ System.currentTimeMillis());
+			TouchAction swipe = new TouchAction(driver).press(481, 318).waitAction().moveTo(203,337).release();
 			swipe.perform();
 	        takeScreenshot("swipeLeft2"+System.currentTimeMillis());
 		}
@@ -78,7 +78,7 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 			TouchAction swipe = new TouchAction(driver).press(38, 459).waitAction().moveTo(463,468).release();
 			swipe.perform();
 			takeScreenshot("swipeRight2"+System.currentTimeMillis());
-		}
 			
 	}
+}
 }

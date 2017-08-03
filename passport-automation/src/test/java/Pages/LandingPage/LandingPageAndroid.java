@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -130,7 +131,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		faqButton.isDisplayed();
 		menuIcon.isDisplayed();
 		takeScreenshot("CheckLandingPageForExceptions1");
-		
+		/*
 		takeScreenshot("swipeDown1"+System.currentTimeMillis());
 		int offset = 1;
         int y = driver.manage().window().getSize().getHeight();
@@ -146,7 +147,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		TouchAction swipe = new TouchAction(driver).press(289, 93).waitAction().moveTo(320,707).release();
 		swipe.perform();
 		takeScreenshot("swipeUp2"+System.currentTimeMillis());
-		
+		*/
 	}
 
 	public void CheckMenuOptionsForExceptions() {
@@ -223,22 +224,23 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	
 	
 	public void logout() { 		
-		menuIcon.click();
-		
-        takeScreenshot("swipeDown1");
-        /*int offset = 1;
-        int y = driver.manage().window().getSize().getHeight();
-        int x = driver.manage().window().getSize().getWidth();
-        TouchAction touchAction = new TouchAction(driver);
-        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();
-        touchAction.perform();*/
-        TouchAction swipe = new TouchAction(driver).press(46, 845).waitAction().moveTo(61,198).release();
-        swipe.perform();
-        takeScreenshot("swipeDown2");
-        
-       
-		logoutMenuOption.click();	
-	}
+		 menuIcon.click();
+	        
+	        takeScreenshot("swipeDown1"+System.currentTimeMillis());
+	        Dimension size = driver.manage().window().getSize();
+	        int starty = (int) (size.height * 0.80);
+	        //Finding endy coordinate which is at top side of screen.
+	        int endy = (int) (size.height * 0.30);
+	        //Find horizontal point where you wants to swipe. It is in middle of screen width.
+	        int startx = size.width / 2;
+	        System.out.println("starty = " + starty + " ,endy = " + endy + " , startx = " + startx);
+
+	        TouchAction swipe = new TouchAction(driver).press(startx, starty).waitAction().moveTo(startx,endy).release();
+	        swipe.perform();
+	        takeScreenshot("swipeDown2"+System.currentTimeMillis());
+	        logoutMenuOption.click();    
+	    }
+	
 	
 	public void navigateToProfilePage() {
 		menuIcon.click();

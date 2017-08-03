@@ -55,7 +55,7 @@ public class LandingPageTests extends TestBase {
 		findParkingPage.CheckFindParkingForExceptions();
 		driver.navigate().back();
 	}
-	*/
+	
 	@Test
 	public void LandingPageScrollTest(){
 		BasePage.sleep(5000);
@@ -66,5 +66,5 @@ public class LandingPageTests extends TestBase {
 		landingPage.SwipeRightTest();
 		landingPage.SwipeLeftTest();
 		landingPage.CheckLandingPageForExceptions(); 
-	}
+	}*/
 }

@@ -44,12 +44,12 @@ public class HelpPageTests extends TestBase {
 		BasePage.sleep(5000);
 		helpPage.HelpNavTest();
 	}
-/*	@Test
+	@Test
 	public void TutorialSwipeTest(){
 		landingPage.clickHelpButton();
 		helpPage.TutorialSwipeTest(); 
 	}
-	*/
+	
 
 
 }
