@@ -23,10 +23,8 @@
        	
        	
        	<class name="Tests.LandingPageTests" />
- 
        	<class name="Tests.VehiclesPageTests" />
-       	
-       		<class name="Tests.HelpPageTests" />
+       	<class name="Tests.HelpPageTests" />
        	
        	
     </classes>
