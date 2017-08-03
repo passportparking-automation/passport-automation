@@ -97,7 +97,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 		takeScreenshot("dTest35");
 		saveVButton.click();
 		takeScreenshot("dTest45");
-		
+		 
 	}
 
 	public void AddVehicleTest() {

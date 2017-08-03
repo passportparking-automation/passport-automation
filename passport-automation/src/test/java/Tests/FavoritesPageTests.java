@@ -35,6 +35,6 @@ public class FavoritesPageTests extends TestBase {
 	@Test
 	public void FavoritesTest(){	
 		landingPage.navigateToFav();
-		favoritesPage.FavoritesTest();
+		favoritesPage.FavoritesTest(); 
 	}
 }

@@ -25,7 +25,7 @@ public class LengthOfStayPageAndroid extends BasePage implements LengthOfStayPag
 		takeScreenshot("lengthOfStay2");
 	}
 	public void CheckLOSForExceptions(){
-		
+		 
 	}
 	
 	

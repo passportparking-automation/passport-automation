@@ -148,5 +148,6 @@ public class UpdateProfPageAndroid extends BasePage implements UpdateProfPage {
 		}else {assertTrue(false);}
 		takeScreenshot("UpdateProfileSuccess");
 		acceptButton.click();
+		
 	}
 }

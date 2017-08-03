@@ -13,10 +13,7 @@ public class ZonePageAndroid extends BasePage implements ZonePage{
 	@FindBy(id ="id_continue_button")
 	public MobileElement continueButton;
 	
-	public ZonePageAndroid(AppiumDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
+	public ZonePageAndroid(AppiumDriver driver) {super(driver);}
 
 	
 	public void goToDieselZone1() {

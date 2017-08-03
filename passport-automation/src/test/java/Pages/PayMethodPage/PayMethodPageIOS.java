@@ -21,6 +21,7 @@ public class PayMethodPageIOS extends BasePage implements PayMethodPage {
 		takeScreenshot("testcreditcard1");
 		testCreditCard.click();
 		takeScreenshot("testcreditcard2");
+		
 	}
 	
 	public void clickNoButton() {

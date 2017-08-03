@@ -9,4 +9,5 @@ public interface PINPage {
 	public void EmptyPINTest();
 	public void InvalidPINTest();
 	public void navToReset();
+	
 }

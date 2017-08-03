@@ -26,7 +26,7 @@ public class LengthOfStayPageIOS extends BasePage implements LengthOfStayPage {
 	
 	public void clickBackButton() {
 		BasePage.sleep(4000);
-		backButton.click();
+		backButton.click(); 
 	}
 
 	@Override

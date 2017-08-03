@@ -65,6 +65,6 @@ public class LandingPageTests extends TestBase {
 		landingPage.CheckLandingPageForExceptions();
 		landingPage.SwipeRightTest();
 		landingPage.SwipeLeftTest();
-		landingPage.CheckLandingPageForExceptions();
+		landingPage.CheckLandingPageForExceptions(); 
 	}
 }

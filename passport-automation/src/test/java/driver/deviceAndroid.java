@@ -32,7 +32,7 @@ public class deviceAndroid {
 	*/
 	
 	
-
+ 
 	
 	//Broderick caps
 	/*

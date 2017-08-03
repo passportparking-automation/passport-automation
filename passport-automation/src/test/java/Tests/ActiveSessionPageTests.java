@@ -109,10 +109,11 @@ public class ActiveSessionPageTests extends TestBase{
 		yourCardsPage.clickTestCreditCard();
 		payMethodPage.CheckPayMethodForExceptions();
 		payMethodPage.declinePayment();
+		
 	}
 	/*@Test
 	public void NoGuruRecordTest() throws InterruptedException{
-		
+		 
 	}
 	*/
 

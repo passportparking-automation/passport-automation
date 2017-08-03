@@ -84,7 +84,7 @@ public class TestParkRightDieselFlow extends TestBase {
 			addVehiclePage = new AddVehiclePageIOS(driver);
 			lengthOfStayPage = new LengthOfStayPageIOS(driver);
 			paymentMethodPage = new PayMethodPageIOS(driver);
-			
+		
 			break;
 		}
 	}

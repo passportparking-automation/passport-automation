@@ -23,6 +23,7 @@ public class MobileVerPageTests extends TestBase{
 	private LoginPage logInPage;
 	private SignUpPage signUpPage;
 	private CodeVerificationPage codeVerificationPage;
+	
 	@BeforeTest
 	public void setUpPage() {
 		switch(TestBase.executionOS) {

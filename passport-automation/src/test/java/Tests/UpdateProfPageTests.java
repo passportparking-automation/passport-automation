@@ -62,5 +62,6 @@ public class UpdateProfPageTests extends TestBase {
 		profilePage.NavToUpdateProfTest();
 		updateProfPage.CheckUpdateProfPageForExceptions();
 		updateProfPage.UpdateProfNavTest();
+		
 	}
 }

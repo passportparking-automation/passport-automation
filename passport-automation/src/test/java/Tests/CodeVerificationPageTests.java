@@ -59,6 +59,6 @@ public class CodeVerificationPageTests extends TestBase{
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
 		pinPage.CheckSecureLoginForExceptions();
-		pinPage.navToLanding();
+		pinPage.navToLanding(); 
 	}
 }

@@ -55,6 +55,7 @@ public class PINPageTests extends TestBase {
 		pinPage.EmptyPINTest();
 		pinPage.InvalidPINTest();
 		pinPage.SendCorrectPINTest();
+		
 	}
 
 }

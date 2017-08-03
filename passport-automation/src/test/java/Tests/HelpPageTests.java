@@ -47,7 +47,7 @@ public class HelpPageTests extends TestBase {
 /*	@Test
 	public void TutorialSwipeTest(){
 		landingPage.clickHelpButton();
-		helpPage.TutorialSwipeTest();
+		helpPage.TutorialSwipeTest(); 
 	}
 	*/
 

@@ -112,7 +112,7 @@ public abstract class BasePage {
 
         return element.getText().contains(input);
     }
-  
+   
     
 	
 	public boolean takeScreenshot(final String name) {

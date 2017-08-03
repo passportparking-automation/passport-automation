@@ -28,7 +28,7 @@ public class AddVehiclePageTests extends TestBase {
 	private MobileVerPage mobileVerPage;
 	private CodeVerificationPage codeVerificationPage;
 	private PINPage pinPage;
-	
+	 
 	@BeforeTest
 	public void setUpPage() {
 		switch(TestBase.executionOS) {

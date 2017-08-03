@@ -110,7 +110,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
         TouchAction touchAction = new TouchAction(driver);
         touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();
         touchAction.perform();
-		takeScreenshot("swipeDown2");
+		takeScreenshot("swipeDown2"); 
 	}
 
 	public void PushNotificationTest() {

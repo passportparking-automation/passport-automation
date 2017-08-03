@@ -54,7 +54,8 @@ public class PayDetailsPageAndroid extends BasePage implements PayDetailsPage{
 		try{
 		acceptButton.click();
 		 } catch (Exception e) {
-         	System.out.println("okBtn Not displayed");
+         	System.out.println("okBtn Not displayed"); 
+         	
          }
 	}
 }

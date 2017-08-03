@@ -65,7 +65,6 @@ public class PayDetailsPageTests extends TestBase{
 		payDetailsPage.CheckPayDetailForExpcetions();
 		payDetailsPage.FillOutForm();
 		yourCardsPage.CardScreenTest();
-
 	}
 
 }

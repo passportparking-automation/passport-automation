@@ -46,11 +46,6 @@ public void AssureTermsAreAcceptedTest(){
 	loginPage.AssureTermsAreAcceptedTest();
 }
 
-@AfterTest
-public void exitCriteria() {
-	// TODO Auto-generated method stub
-	
-}
 
 
 }

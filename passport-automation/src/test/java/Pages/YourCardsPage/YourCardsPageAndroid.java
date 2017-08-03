@@ -65,6 +65,7 @@ public class YourCardsPageAndroid extends BasePage implements YourCardsPage {
 	public void clickTestCreditCard(){
 		takeScreenshot("PD7");
 		cardButton.click();
+		
 	}
 
 

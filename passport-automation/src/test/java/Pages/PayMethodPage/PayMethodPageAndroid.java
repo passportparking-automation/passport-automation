@@ -24,6 +24,7 @@ public class PayMethodPageAndroid extends BasePage implements  PayMethodPage{
 	
 	
 	
+	
 	public void clickTestCreditCard() {	
 		
 	}

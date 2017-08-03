@@ -36,7 +36,7 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 		textButton.isDisplayed();
 		callButton.isDisplayed();
 		backButton.isDisplayed();
-		takeScreenshot("MobileVer1");
+		takeScreenshot("MobileVer1"); 
 	}
 	public void NavBackToLoginTest() {
 		backButton.click();

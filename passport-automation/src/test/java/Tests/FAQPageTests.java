@@ -36,6 +36,6 @@ public class FAQPageTests extends TestBase {
 		BasePage.sleep(5000);
 		landingPage.navigateToAbout();
 		BasePage.sleep(5000);
-		faqPage.FAQNavTest();
+		faqPage.FAQNavTest(); 
 	}
 }

@@ -57,6 +57,7 @@ public class ProfilePageTests extends TestBase {
 		landingPage.navigateToProfilePage();
 		profilePage.CheckProfilePageForExceptions();
 		profilePage.NavToUpdateProfTest();
+		
 	}
 
 }

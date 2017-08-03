@@ -82,7 +82,7 @@ public class FindParkingPageTests extends TestBase {
 	public void ZoneIconTest() {
 		landingPage.navigateToFindLocation();
 		findParkingPage.ZoneIconTest();
-		findParkingPage.navToLanding();
+		findParkingPage.navToLanding(); 
 	}*/
 
 }

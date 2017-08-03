@@ -17,7 +17,7 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 
 	@FindBy (name = "Ok")
 	private MobileElement acceptButton;
-	
+	 
 	public CodeVerificationPageIOS(AppiumDriver driver) {super(driver);}
 
 	public void SendCorrectCodeTest() {

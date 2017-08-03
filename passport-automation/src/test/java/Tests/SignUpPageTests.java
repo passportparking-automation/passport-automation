@@ -51,5 +51,6 @@ public class SignUpPageTests extends TestBase {
 		signUpPage.AcceptTermsTest();
 		mobileVerPage.CheckMobileVerPageForExceptions();
 		mobileVerPage.navToLanding();
+		
 	}
 }

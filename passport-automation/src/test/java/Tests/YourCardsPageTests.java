@@ -61,6 +61,7 @@ public class YourCardsPageTests extends TestBase {
 		landingPage.navigateToYourCardsPage();
 		yourCardsPage.CheckYCPageForExceptions();
 		yourCardsPage.NavToPayDetailsPage();
+		
 	}
 
 }

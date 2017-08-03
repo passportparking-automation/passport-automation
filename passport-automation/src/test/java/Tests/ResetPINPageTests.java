@@ -66,5 +66,6 @@ public class ResetPINPageTests extends TestBase {
 		pinPage.navToReset();
 		payDetailsPage.FillOutForm();
 		resetPINPage.ResetPINPageTest();
+		
 	}
 }

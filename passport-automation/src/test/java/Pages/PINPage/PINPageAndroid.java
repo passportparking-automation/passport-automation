@@ -18,7 +18,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	
 	@FindBy (id="id_lw_reset_button")
 	public MobileElement resetPINButton;
-	
+	 
 
 	public PINPageAndroid(AppiumDriver driver) {super(driver);}
 

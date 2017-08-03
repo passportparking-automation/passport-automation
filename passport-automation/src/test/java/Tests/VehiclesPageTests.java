@@ -59,6 +59,7 @@ public class VehiclesPageTests  extends TestBase {
 			//landingPage.navigateToVehiclesPage();
 			//vehiclesPage.CheckVehiclesPageForExceptions();
 			
+			
 		}
 		
 		

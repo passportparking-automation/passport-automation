@@ -44,5 +44,6 @@ public class SendBugReportPageTests extends TestBase {
 	public void NotEmptyBugTest(){
 		sendBugReportPage.NavigateToBugReportPage();
 		sendBugReportPage.NotEmptyBugTest();
+		
 	}
 }

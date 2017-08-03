@@ -51,7 +51,7 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 
 	public void navToLanding() {
 		driver.navigate().back();
-		driver.navigate().back();
+		driver.navigate().back(); 
 	}
 	
 

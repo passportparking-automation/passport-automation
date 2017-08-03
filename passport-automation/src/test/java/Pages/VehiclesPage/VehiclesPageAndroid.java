@@ -18,6 +18,7 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 	@Override
 	public void clickAddV() {
 		addVehicleButton.click();
+		
 
 	}
 

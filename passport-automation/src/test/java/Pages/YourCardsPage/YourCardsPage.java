@@ -6,4 +6,5 @@ public interface YourCardsPage {
 	public void navToLanding();
 	public void CardScreenTest();
 	public void clickTestCreditCard();
+	
 }
