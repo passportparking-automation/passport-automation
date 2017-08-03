@@ -84,7 +84,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	//From Right to Left
 	public void SwipeLeftTest() {
 		takeScreenshot("swipeLeft1");
-		TouchAction swipe = new TouchAction(driver).press(1014, 958).waitAction().moveTo(132,1000).release();
+		TouchAction swipe = new TouchAction(driver).press(481, 318).waitAction().moveTo(203,337).release();
 		swipe.perform();
         takeScreenshot("swipeLeft2");
 	}
