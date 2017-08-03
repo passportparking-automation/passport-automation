@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="91829" started-at="2017-08-02T14:39:21Z" finished-at="2017-08-02T14:40:53Z">
+  <suite name="Default suite" duration-ms="194853" started-at="2017-08-02T20:48:07Z" finished-at="2017-08-02T20:51:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="91829" started-at="2017-08-02T14:39:21Z" finished-at="2017-08-02T14:40:53Z">
-      <class name="Tests.VehiclesPageTests">
-        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.VehiclesPageTests@3c0f93f1]" name="initAppium" is-config="true" duration-ms="13210" started-at="2017-08-02T10:39:08Z" finished-at="2017-08-02T10:39:21Z">
+    <test name="Default test" duration-ms="194853" started-at="2017-08-02T20:48:07Z" finished-at="2017-08-02T20:51:22Z">
+      <class name="Tests.ActiveSessionPageTests">
+        <test-method status="PASS" signature="initAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="initAppium" is-config="true" duration-ms="20570" started-at="2017-08-02T16:47:47Z" finished-at="2017-08-02T16:48:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAppium -->
-        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.VehiclesPageTests@3c0f93f1]" name="setUpPage" is-config="true" duration-ms="394" started-at="2017-08-02T10:39:21Z" finished-at="2017-08-02T10:39:21Z">
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="setUpPage" is-config="true" duration-ms="463" started-at="2017-08-02T16:48:07Z" finished-at="2017-08-02T16:48:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method status="PASS" signature="CheckVehiclesPageForExceptions()[pri:0, instance:Tests.VehiclesPageTests@3c0f93f1]" name="CheckVehiclesPageForExceptions" duration-ms="83146" started-at="2017-08-02T10:39:21Z" finished-at="2017-08-02T10:40:44Z">
+        <test-method status="PASS" signature="DieselYoungerThan2015Test()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="DieselYoungerThan2015Test" duration-ms="180201" started-at="2017-08-02T16:48:08Z" finished-at="2017-08-02T16:51:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckVehiclesPageForExceptions -->
-        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.VehiclesPageTests@3c0f93f1]" name="restartApp" is-config="true" duration-ms="8260" started-at="2017-08-02T10:40:44Z" finished-at="2017-08-02T10:40:53Z">
+        </test-method> <!-- DieselYoungerThan2015Test -->
+        <test-method status="PASS" signature="restartApp()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="restartApp" is-config="true" duration-ms="14147" started-at="2017-08-02T16:51:08Z" finished-at="2017-08-02T16:51:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restartApp -->
-        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.VehiclesPageTests@3c0f93f1]" name="tearDownAppium" is-config="true" duration-ms="2049" started-at="2017-08-02T10:40:53Z" finished-at="2017-08-02T10:40:55Z">
+        <test-method status="PASS" signature="tearDownAppium()[pri:0, instance:Tests.ActiveSessionPageTests@617faa95]" name="tearDownAppium" is-config="true" duration-ms="8320" started-at="2017-08-02T16:51:22Z" finished-at="2017-08-02T16:51:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAppium -->
-      </class> <!-- Tests.VehiclesPageTests -->
+      </class> <!-- Tests.ActiveSessionPageTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
