@@ -47,19 +47,32 @@ public class VehiclesPageTests  extends TestBase {
 			}
 		}
 		
-		@Test
+		/*@Test
 		public void CheckVehiclesPageForExceptions(){
+			landingPage.login();
 			landingPage.clickPayToPark();
-			logInPage.TermsDisplayedTest();
-			mobileVerPage.ValidMobileTest();
-			codeVerificationPage.SendCorrectCodeTest();
-			pinPage.SendCorrectPINTest();
-			BasePage.sleep(5000);
-			pinPage.navToLanding();
-			//landingPage.navigateToVehiclesPage();
-			//vehiclesPage.CheckVehiclesPageForExceptions();	
+			vehiclesPage.CheckVehiclesPageForExceptions();	
+			vehiclesPage.navToLanding();
+			landingPage.logout();
+		}*/
+		
+		@Test
+		public void AddVTest(){
+			landingPage.login();
+			landingPage.clickPayToPark();
+			vehiclesPage.AddVTest();	
+			vehiclesPage.navToLanding();
 			landingPage.logout();
 		}
+		
+		/*@Test
+		public void NavTest(){
+			landingPage.login();
+			landingPage.clickPayToPark();
+			vehiclesPage.NavTest();	
+			vehiclesPage.navToLanding();
+			landingPage.logout();
+		}*/
 		
 }
 
