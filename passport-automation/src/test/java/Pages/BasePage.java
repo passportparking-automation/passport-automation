@@ -59,13 +59,15 @@ public abstract class BasePage {
 	
 	@FindBy (id = "sidemenu_item_sm_faq")
 	public MobileElement FAQMenuOption;
-	/*
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[9]")
+
+	
+	//@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[9]")
+	@FindBy (id = "sidemenu_item_sm_terms")
 	public MobileElement termsMenuOption;
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[10]")
+	@FindBy (id = "sidemenu_item_sm_privacy_policy")
 	public  MobileElement privacyPolicyMenuOption;
-	*/
+	
 	@FindBy (id = "sidemenu_item_sm_login")
 	public  MobileElement loginMenuOption;
 	

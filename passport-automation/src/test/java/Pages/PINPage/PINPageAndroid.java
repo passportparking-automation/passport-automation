@@ -23,6 +23,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	public PINPageAndroid(AppiumDriver driver) {super(driver);}
 
 	public void SendCorrectPINTest() {
+		BasePage.sleep(4000);
 		PINInputBox.sendKeys("1111");
 		takeScreenshot("pinTest1");
 		try {
