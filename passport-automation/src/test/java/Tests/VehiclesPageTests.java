@@ -56,9 +56,9 @@ public class VehiclesPageTests  extends TestBase {
 			pinPage.SendCorrectPINTest();
 			BasePage.sleep(5000);
 			pinPage.navToLanding();
-			//landingPage.navigateToVehiclesPage();
-			//vehiclesPage.CheckVehiclesPageForExceptions();	
-			landingPage.logout();
+			landingPage.navigateToVehiclesPage();
+			vehiclesPage.CheckVehiclesPageForExceptions();	
+			//landingPage.logout();
 		}
 		
 }

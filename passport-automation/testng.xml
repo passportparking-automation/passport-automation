@@ -3,11 +3,6 @@
 <suite name="Test runner" parallel="classes" thread-count="1">
   <test verbose="2" name="ParkRight Test Automation">
     <classes>
-    	<!-- class name="Tests.LandingPageTests" />
-     	<class name="Tests.FindParkingPageTests"/>
-     	<class name="Tests.HelpPageTests" />
-    	<class name="Tests.FavoritesPageTests" />
-     	<class name="Tests.FAQPageTests" />
      	<class name="Tests.SendBugReportPageTests"/>
      	<class name="Tests.SignUpPageTests"/>
      	<class name="Tests.MobileVerPageTests"/>
@@ -19,13 +14,14 @@
      	<class name="Tests.YourCardsPageTests" />
      	<class name="Tests.PayDetailsPageTests" />
        	<class name="Tests.VehiclesPageTests" />
-       	<class name="Tests.AddVehiclePageTests" />-->
-       	
-       	
-       	<class name="Tests.LandingPageTests" />
-       	<class name="Tests.VehiclesPageTests" />
-       	<class name="Tests.HelpPageTests" />
-       	
+       	<class name="Tests.AddVehiclePageTests" />
+       	<class name="Tests.PayToParkPageTests" />
+        <class name="Tests.LandingPageTests" />
+     	<class name="Tests.FindParkingPageTests"/>
+     	<class name="Tests.HelpPageTests" />
+    	<class name="Tests.FavoritesPageTests" />
+     	<class name="Tests.FAQPageTests" />
+       	<class name="Tests.ActiveSessionPageTests" />
        	
     </classes>
   </test> <!-- Default test -->

@@ -50,23 +50,20 @@ public class PayToParkPageTests extends TestBase {
 		}
 	}
 	@Test 
-	public void EmptyAndFalseZoneTest(){
-		landingPage.login();
+	public void PayTopParkTests(){
+		landingPage.clickPayToPark();
+		logInPage.TermsDisplayedTest();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
+		pinPage.SendCorrectPINTest();
+		BasePage.sleep(5000);
+		pinPage.navToLanding();
 		landingPage.clickPayToPark();
 		payToParkPage.EmptyAndFalseZoneTest();
-		payToParkPage.navToLanding();
-		landingPage.CheckLandingPageForExceptions();
-		landingPage.logout();
+		payToParkPage.CorrectZoneNavTest();
+
 	}
 	
-	@Test 
-	public void CorrectZoneNavTest(){
-		landingPage.login();
-		landingPage.clickPayToPark();
-		payToParkPage.CorrectZoneNavTest();
-		payToParkPage.navToLanding();
-		landingPage.CheckLandingPageForExceptions();
-		landingPage.logout();
-	}
+
 
 }

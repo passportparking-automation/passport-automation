@@ -13,6 +13,7 @@ import Pages.PINPage.PINPage;
 import Pages.PINPage.PINPageAndroid;
 import Pages.VehiclesPage.VehiclesPage;
 import Pages.VehiclesPage.VehiclesPageAndroid;
+import Pages.BasePage;
 import Pages.AddVehiclePage.AddVehiclePage;
 import Pages.AddVehiclePage.AddVehiclePageAndroid;
 import Pages.CodeVerificationPage.CodeVerificationPage;
@@ -59,7 +60,8 @@ public class AddVehiclePageTests extends TestBase {
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
 		pinPage.SendCorrectPINTest();
-		
+		BasePage.sleep(3000);
+		pinPage.navToLanding();
 		landingPage.navigateToVehiclesPage();
 		vehiclesPage.CheckVehiclesPageForExceptions();
 		addVehiclePage.AddVehicleTest();

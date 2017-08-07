@@ -5,10 +5,10 @@
     <classes>
       <class name="Tests.PayToParkPageTests">
         <methods>
+          <include name="PayTopParkTests"/>
           <include name="restartApp"/>
           <include name="tearDownAppium"/>
           <include name="initAppium"/>
-          <include name="EmptyAndFalseZoneTest"/>
           <include name="setUpPage"/>
         </methods>
       </class> <!-- Tests.PayToParkPageTests -->

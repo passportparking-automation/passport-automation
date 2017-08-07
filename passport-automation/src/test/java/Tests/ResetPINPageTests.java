@@ -56,13 +56,8 @@ public class ResetPINPageTests extends TestBase {
 	public void ResetPINPageTest(){	
 		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
-		try{
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
-		}
-		catch (Throwable e) {
-			System.out.println("Mobile Verification page was not displayed");
-		}
 		pinPage.navToReset();
 		payDetailsPage.FillOutForm();
 		resetPINPage.ResetPINPageTest();

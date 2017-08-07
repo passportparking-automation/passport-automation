@@ -4,6 +4,7 @@ package Tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.BasePage;
 import Pages.CodeVerificationPage.CodeVerificationPage;
 import Pages.CodeVerificationPage.CodeVerificationPageAndroid;
 import Pages.LandingPage.LandingPage;
@@ -54,6 +55,8 @@ public class ProfilePageTests extends TestBase {
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
 		pinPage.SendCorrectPINTest();
+		BasePage.sleep(3000);
+		pinPage.navToLanding();
 		landingPage.navigateToProfilePage();
 		profilePage.CheckProfilePageForExceptions();
 		profilePage.NavToUpdateProfTest();

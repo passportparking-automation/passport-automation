@@ -74,10 +74,6 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy(id="id_poweredbypassport")
 	public MobileElement powerdByLogo;
 	
-	private LoginPage loginPage = new LoginPageAndroid(driver);
-	private MobileVerPage mobVerPage = new MobileVerPageAndroid(driver);
-	private CodeVerificationPage codeVerPage = new CodeVerificationPageAndroid(driver);
-	private PINPage pinPage  = new PINPageAndroid(driver);
 	
 	public LandingPageAndroid(AppiumDriver driver) { super(driver);}
 
@@ -159,8 +155,8 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		findParkingMenuOption.isDisplayed();
 		sendBugMenuOption.isDisplayed();
 		FAQMenuOption.isDisplayed();
-		termsMenuOption.isDisplayed();
-		privacyPolicyMenuOption.isDisplayed();
+		//termsMenuOption.isDisplayed();
+		//privacyPolicyMenuOption.isDisplayed();
 		loginMenuOption.isDisplayed();
 		takeScreenshot("menuOptTest2");
 		menuIcon.click();
@@ -168,42 +164,6 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 
 	}
 	
-	public void login() {
-	
-		//staging popup check
-		try {
-			menuIcon.click();
-			loginMenuOption.click();
-			declineButton.click();
-		} catch (Throwable e) {
-			System.err.println("The staging build message did not appear");
-		}
-		
-		try {
-			menuIcon.click();
-			loginMenuOption.click();
-			logInButton.click();
-			//check if there are terms and conditions
-			try {
-				acceptButton.click();
-			} catch (Exception e) {
-				System.out.println("Terms message did not appear");
-			}
-			mobVerPage.ValidMobileTest();
-			codeVerPage.SendCorrectCodeTest();
-			pinPage.SendCorrectPINTest();
-			BasePage.sleep(5000);
-			//pinPage.navToLanding();
-			
-		} catch (Throwable e) {
-			System.err.println("need to send pin");
-			pinPage.SendCorrectPINTest();
-			BasePage.sleep(5000);
-			//pinPage.navToLanding();
-		}
-	}
-
-
 	public void EnterLocationOrPayToParkCodeTest() {
 		goToMapButton.click();
 
@@ -245,7 +205,9 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	        TouchAction swipe = new TouchAction(driver).press(startx, starty).waitAction().moveTo(startx,endy).release();
 	        swipe.perform();
 	        takeScreenshot("swipeDown2"+System.currentTimeMillis());
-	        logoutMenuOption.click();    
+	        //logoutMenuOption.click();    
+	        
+	        profileMenuOption.click();
 	    }
 	
 	

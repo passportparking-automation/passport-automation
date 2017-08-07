@@ -25,7 +25,7 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 
 	public void CheckVehiclesPageForExceptions() {
 		addVehicleButton.isDisplayed();
-		zoneInfo.isDisplayed();
+		//zoneInfo.isDisplayed();
 		BasePage.sleep(2000);
 		takeScreenshot("AddVehicle");
 	}

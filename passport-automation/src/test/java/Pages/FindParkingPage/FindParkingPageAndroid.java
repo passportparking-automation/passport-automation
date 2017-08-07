@@ -129,7 +129,7 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 			catch(Exception e){
 				System.out.println("Keyboard wasn't displayed");
 			}			
-		mapSearchZoneHeader.isDisplayed();
+		//mapSearchZoneHeader.isDisplayed();
 		try {
            if(ZoneResult1.getText().equals("Location 8896")){
         	   assertTrue(true);
@@ -156,7 +156,7 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 			catch(Exception e){
 				System.out.println("Keyboard wasn't displayed");
 			}	
-		mapSuggestionsHeader.isDisplayed();
+		//mapSuggestionsHeader.isDisplayed();
 		takeScreenshot("SeachSuggestions");
 		suggestionsResult1.click();
 		icon1.isDisplayed();

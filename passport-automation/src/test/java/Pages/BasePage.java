@@ -59,13 +59,13 @@ public abstract class BasePage {
 	
 	@FindBy (id = "sidemenu_item_sm_faq")
 	public MobileElement FAQMenuOption;
-	
+	/*
 	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[9]")
 	public MobileElement termsMenuOption;
 	
 	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[10]")
 	public  MobileElement privacyPolicyMenuOption;
-	
+	*/
 	@FindBy (id = "sidemenu_item_sm_login")
 	public  MobileElement loginMenuOption;
 	
@@ -81,8 +81,8 @@ public abstract class BasePage {
 	@FindBy (id = "sidemenu_item_sm_vehicles")
 	public  MobileElement vehiclesMenuOption;
 	
-	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[11]")
-	public  MobileElement logoutMenuOption;
+	//@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[11]")
+	//public  MobileElement logoutMenuOption;
 		
 	static WebDriverWait wait;
 	
