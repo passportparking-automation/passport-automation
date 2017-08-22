@@ -55,12 +55,12 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 	
 	
 	
-	public FindParkingPageAndroid(AppiumDriver driver) {
+	public FindParkingPageAndroid(AppiumDriver driver) throws Exception {
 		super(driver);
 		
 	}	
 
-	public void CheckFindParkingForExceptions() throws InterruptedException {		
+	public void CheckFindParkingForExceptions() {		
 		backButton.isDisplayed();
 		locationListModeIcon.isDisplayed();
 		availabilityContainer.isDisplayed();
@@ -76,7 +76,7 @@ public class FindParkingPageAndroid extends BasePage implements FindParkingPage{
 		}
 		filterButton.isDisplayed();
 
-		Thread.sleep(5000);
+		BasePage.sleep(5000);
 		takeScreenshot("checkFP");
 		
 		//backButton.click();	

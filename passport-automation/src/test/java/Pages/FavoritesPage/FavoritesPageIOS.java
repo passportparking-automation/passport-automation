@@ -14,7 +14,7 @@ public class FavoritesPageIOS extends BasePage implements FavoritesPage{
 	@FindBy (name = "back")
 	private MobileElement backButton;
 	
-	public FavoritesPageIOS(AppiumDriver driver) { super(driver); }
+	public FavoritesPageIOS(AppiumDriver driver) throws Exception { super(driver); }
 
 	public void FavoritesTest() {
 		takeScreenshot("FavPage");

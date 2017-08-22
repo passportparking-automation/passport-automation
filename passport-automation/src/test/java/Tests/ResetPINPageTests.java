@@ -1,26 +1,44 @@
 package Tests;
 
+import io.appium.java_client.MobileElement;
+
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.BasePage;
 import Pages.CodeVerificationPage.CodeVerificationPage;
 import Pages.CodeVerificationPage.CodeVerificationPageAndroid;
+import Pages.CodeVerificationPage.CodeVerificationPageIOS;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
+import Pages.LandingPage.LandingPageIOS;
 import Pages.LoginPage.LoginPage;
 import Pages.LoginPage.LoginPageAndroid;
+import Pages.LoginPage.LoginPageIOS;
 import Pages.MobileVerPage.MobileVerPage;
 import Pages.MobileVerPage.MobileVerPageAndroid;
+import Pages.MobileVerPage.MobileVerPageIOS;
 import Pages.PINPage.PINPage;
 import Pages.PINPage.PINPageAndroid;
+import Pages.PINPage.PINPageIOS;
 import Pages.PayDetailsPage.PayDetailsPage;
 import Pages.PayDetailsPage.PayDetailsPageAndroid;
+import Pages.PayDetailsPage.PayDetailsPageIOS;
 import Pages.ResetPINPage.ResetPINPage;
 import Pages.ResetPINPage.ResetPINPageAndroid;
+import Pages.ResetPINPage.ResetPINPageIOS;
 import Tests.AbstractBaseTests.TestBase;
 
 public class ResetPINPageTests extends TestBase {
 	
+	public ResetPINPageTests() throws Exception {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	String mobileNumber = readingExcel.getCellData("ParkRight", "PhoneNumber", 2);
+
 	private LandingPage landingPage;
 	private ResetPINPage resetPINPage;
 	private PINPage pinPage;
@@ -31,7 +49,7 @@ public class ResetPINPageTests extends TestBase {
 	
 	@BeforeTest
 	@Override
-	public void setUpPage() {
+	public void setUpPage() throws Exception {
 		switch(TestBase.executionOS) {
 		case ANDROID:
 			landingPage = new LandingPageAndroid(driver);
@@ -44,7 +62,13 @@ public class ResetPINPageTests extends TestBase {
 			
 			break;
 		case IOS:
-			//landingpage = new LandingPageIOS(driver);
+			landingPage = new LandingPageIOS(driver);
+			resetPINPage = new ResetPINPageIOS(driver);
+			pinPage = new PINPageIOS(driver);
+			logInPage = new LoginPageIOS(driver);
+			mobileVerPage = new MobileVerPageIOS(driver);
+			payDetailsPage = new PayDetailsPageIOS(driver);
+			codeVerificationPage = new CodeVerificationPageIOS(driver);
 			
 			break;
 		default:
@@ -55,9 +79,10 @@ public class ResetPINPageTests extends TestBase {
 	@Test
 	public void ResetPINPageTest(){	
 		landingPage.clickPayToPark();
+		BasePage.sleep(5000);
 		logInPage.TermsDisplayedTest();
 		try{
-		mobileVerPage.ValidMobileTest();
+		mobileVerPage.ValidMobileTest(mobileNumber);
 		codeVerificationPage.SendCorrectCodeTest();
 		}
 		catch (Throwable e) {
@@ -66,5 +91,6 @@ public class ResetPINPageTests extends TestBase {
 		pinPage.navToReset();
 		payDetailsPage.FillOutForm();
 		resetPINPage.ResetPINPageTest();
+		
 	}
 }

@@ -10,7 +10,7 @@ public class FavoritesPageAndroid extends BasePage implements FavoritesPage{
 	
 	
 	
-	public FavoritesPageAndroid(AppiumDriver driver) { super(driver); }
+	public FavoritesPageAndroid(AppiumDriver driver) throws Exception { super(driver); }
 
 	public void FavoritesTest() {
 		takeScreenshot("FavPage");

@@ -1,5 +1,8 @@
 package Tests;
 
+import io.appium.java_client.MobileElement;
+
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -7,20 +10,27 @@ import org.testng.annotations.Test;
 import Pages.BasePage;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
+import Pages.LandingPage.LandingPageIOS;
 import Pages.MobileVerPage.MobileVerPage;
 import Pages.MobileVerPage.MobileVerPageAndroid;
+import Pages.MobileVerPage.MobileVerPageIOS;
 import Pages.SignUpPage.SignUpPage;
 import Pages.SignUpPage.SignUpPageAndroid;
+import Pages.SignUpPage.SignUpPageIOS;
 import Tests.AbstractBaseTests.TestBase;
 
 public class SignUpPageTests extends TestBase {
+	public SignUpPageTests() throws Exception {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	private LandingPage landingPage;
 	private SignUpPage signUpPage;
 	private MobileVerPage mobileVerPage;
 	
 	@BeforeTest
 	// @Override
-	public void setUpPage() {
+	public void setUpPage() throws Exception {
 		switch (TestBase.executionOS) {
 		case ANDROID:
 			landingPage = new LandingPageAndroid(driver);
@@ -29,7 +39,9 @@ public class SignUpPageTests extends TestBase {
 
 			break;
 		case IOS:
-			// landingpage = new LandingPageIOS(driver);
+			landingPage = new LandingPageIOS(driver);
+			signUpPage = new SignUpPageIOS(driver);
+			mobileVerPage = new MobileVerPageIOS(driver);
 
 			break;
 		default:

@@ -1,7 +1,7 @@
 package Pages.FindParkingPage;
 
 public interface FindParkingPage {
-	public void CheckFindParkingForExceptions() throws InterruptedException;
+	public void CheckFindParkingForExceptions();
 	public void FindParkingNavTest();
 	public void ZoneTest();
 	public void WhatZoneTest();

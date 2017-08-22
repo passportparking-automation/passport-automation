@@ -19,7 +19,10 @@
      	<class name="Tests.YourCardsPageTests" />
      	<class name="Tests.PayDetailsPageTests" />
        	<class name="Tests.VehiclesPageTests" />
+       	<class name="Tests.PayToParkPageTests" />
        	<class name="Tests.AddVehiclePageTests" />
+       	<class name="Tests.ActiveSessionPageTests" />
+       	
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->

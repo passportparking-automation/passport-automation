@@ -39,7 +39,7 @@ public class UpdateProfPageAndroid extends BasePage implements UpdateProfPage {
 	@FindBy (id="profileactivity_emailaddress")
 	public MobileElement emailInput;
 	
-	public UpdateProfPageAndroid(AppiumDriver driver) {  super(driver);  }
+	public UpdateProfPageAndroid(AppiumDriver driver) throws Exception {  super(driver);  }
 
 	
 	public void UpdateProfNavTest() {
@@ -148,5 +148,6 @@ public class UpdateProfPageAndroid extends BasePage implements UpdateProfPage {
 		}else {assertTrue(false);}
 		takeScreenshot("UpdateProfileSuccess");
 		acceptButton.click();
+		
 	}
 }

@@ -15,7 +15,7 @@ public class EmailVerPageAndroid extends BasePage implements EmailVerPage{
 	public MobileElement sendCodeButton;
 	
 
-	public EmailVerPageAndroid(AppiumDriver driver) {super(driver);}
+	public EmailVerPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void ValidEmailTest() {
 		emailInputBox.sendKeys("automaton+00@gopassport.com");
@@ -26,7 +26,6 @@ public class EmailVerPageAndroid extends BasePage implements EmailVerPage{
 		acceptButton.click();
 	}
 
-	@Override
 	public void CheckEmailVerPageForExceptions() {
 		// TODO Auto-generated method stub
 		

@@ -15,7 +15,7 @@ public class LengthOfStayPageIOS extends BasePage implements LengthOfStayPage {
 	@FindBy (name = "back")
 	private MobileElement backButton;
 	
-	public LengthOfStayPageIOS(AppiumDriver driver) {super(driver);}
+	public LengthOfStayPageIOS(AppiumDriver driver) throws Exception {super(driver);}
 	
 	public void clickMaxStayButton() {
 		maxStayButton.isDisplayed();
@@ -27,5 +27,10 @@ public class LengthOfStayPageIOS extends BasePage implements LengthOfStayPage {
 	public void clickBackButton() {
 		BasePage.sleep(4000);
 		backButton.click();
+	}
+
+	public void CheckLOSForExceptions() {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -2,6 +2,8 @@ package Pages.PINPage;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,12 +20,13 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	
 	@FindBy (id="id_lw_reset_button")
 	public MobileElement resetPINButton;
-	
+	 
 
-	public PINPageAndroid(AppiumDriver driver) {super(driver);}
+	public PINPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void SendCorrectPINTest() {
 		PINInputBox.sendKeys("1111");
+
 		takeScreenshot("pinTest1");
 		try {
             driver.hideKeyboard();
@@ -38,7 +41,6 @@ public class PINPageAndroid extends BasePage  implements PINPage{
             } catch (Exception e) {
             	System.out.println("Run is not on Emulator");
             }
-		driver.navigate().back();
 	}
 	public void SendShortValuedPINTest() {
 

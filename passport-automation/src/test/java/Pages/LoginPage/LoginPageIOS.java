@@ -1,5 +1,7 @@
 package Pages.LoginPage;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
@@ -42,12 +44,21 @@ public class LoginPageIOS extends BasePage implements LoginPage {
 	@FindBy(name = "Accept")
 	private MobileElement acceptButton;
 	
-	public LoginPageIOS(AppiumDriver driver) {
+	@FindBy (name = "Home")
+	public  MobileElement homeMenuOption;
+	
+	@FindBy (name = "menuicon")
+	public MobileElement menuIcon;
+	
+	public LoginPageIOS(AppiumDriver driver) throws Exception {
 		super(driver);
 	}
 
 	public void clickLoginButtonAndAcceptTerms() {
-		// TODO Auto-generated method stub
+		loginButton.click();
+		takeScreenshot("login");
+		acceptButton.click();
+		takeScreenshot("login2");
 		
 	}
 
@@ -62,16 +73,24 @@ public class LoginPageIOS extends BasePage implements LoginPage {
 	}
 
 	public void CheckLoginPageForExceptions() {
-		// TODO Auto-generated method stub
+		loginButton.click();
+		try {
+			acceptButton.click();
+		} catch (Exception e) {
+			System.out.println("Terms message did not appear");
+		}
+		backButton.click();
 		
 	}
 
 	public void AssureTermsAreAcceptedTest() {
-		// TODO Auto-generated method stub
-		
+		handlingIosNotificatioPopUp();
+		signUpButton.click();
+		declineButton.click();
+		menuIcon.click();
+		homeMenuOption.click();
 	}
 
-	@Override
 	public void goToSignUp() {
 		// TODO Auto-generated method stub
 		

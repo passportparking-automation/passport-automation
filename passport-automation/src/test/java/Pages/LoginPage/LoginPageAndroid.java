@@ -24,7 +24,7 @@ public class LoginPageAndroid extends BasePage implements LoginPage {
 	@FindBy (xpath = "//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]")
 	public MobileElement termsPopUp;
 		
-	public LoginPageAndroid(AppiumDriver driver) {super(driver);}
+	public LoginPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void clickLoginButtonAndAcceptTerms() {
 		loginButton.click();
@@ -38,7 +38,6 @@ public class LoginPageAndroid extends BasePage implements LoginPage {
 		
 	}
 
-	@Override
 	public void CheckLoginPageForExceptions() {
 		loginButton.click();
 		acceptButton.click();

@@ -1,33 +1,26 @@
 package Pages;
 
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import driver.deviceAndroid;
-import driver.deviceIOS;
-
 public abstract class BasePage {
-	
+
 	@FindBy (id = "menuButton")
 	public MobileElement menuIcon;
 	
@@ -48,6 +41,9 @@ public abstract class BasePage {
 	
 	@FindBy (id = "title")
 	public MobileElement popUpTitle;
+	
+	@FindBy (id = "message")
+	public MobileElement popUpMessage;
 	
 	@FindBy (id = "sidemenu_item_sm_new_session")
 	public  MobileElement homeMenuOption;
@@ -72,7 +68,7 @@ public abstract class BasePage {
 	
 	@FindBy (id = "sidemenu_item_sm_login")
 	public  MobileElement loginMenuOption;
-
+	
 	@FindBy (id = "sidemenu_item_sm_parker_history")
 	public  MobileElement parkHistoryMenuOption;
 	
@@ -85,32 +81,36 @@ public abstract class BasePage {
 	@FindBy (id = "sidemenu_item_sm_vehicles")
 	public  MobileElement vehiclesMenuOption;
 	
-	@FindBy (id = "sidemenu_item_sm_logout")
+	@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[11]")
 	public  MobileElement logoutMenuOption;
+	
+	@FindBy(name = "Don’t Allow")
+	private static MobileElement dontAllowButton;
+	
+	@FindBy(name = "Allow")
+	private static MobileElement allowButton;
+	
+	@FindBy(name = "OK")
+	private static MobileElement OkButtonNotification;
+	
+	@FindBy(name = "OK")
+	private static MobileElement okButtonBuddyBuild;
 		
 	static WebDriverWait wait;
 	
     private static final int KEYBOARD_ANIMATION_DELAY = 1000;
     private static final int XML_REFRESH_DELAY = 1000;
-    
-    /*public static final String excelPath = "/Users/Anand/Testing/Office/passport-automation/";
-	public static final String excelName = "Automation Sheet.xlsx";
-	public static final String excelSheetName = "TestData";*/
 
     protected static AppiumDriver driver;
     
-	private static XSSFSheet ExcelWSheet;
-	private static XSSFWorkbook ExcelWBook;
-	private static XSSFCell Cell;
-    private static XSSFRow Row;
+    public static final String File_TestData = "TestData.xlsx";
 
-    public BasePage(AppiumDriver driver) {
+    /*This to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method*/
+    protected ExcelReading readingExcel = new ExcelReading(File_TestData);
+
+    public BasePage(AppiumDriver driver) throws Exception {
     	this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, 35, TimeUnit.SECONDS), this);
-    }
-    
-    public static void excelFileReading() throws Exception {
-    	/*ExcelReading.setExcelFile(excelPath + excelName, excelSheetName);*/
     }
     
     protected boolean sendKeysToElement(String input, WebElement element, boolean appendNewLine) throws InterruptedException {
@@ -132,7 +132,7 @@ public abstract class BasePage {
 
         return element.getText().contains(input);
     }
-  
+   
     
 	
 	public boolean takeScreenshot(final String name) {
@@ -140,7 +140,6 @@ public abstract class BasePage {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		return screenshot.renameTo(new File(screenshotDirectory, String.format("%s.png", name)));
 	}
-	
 	public static void sleep(int sleeptime) {
 		try {
 			Thread.sleep(sleeptime);
@@ -149,8 +148,26 @@ public abstract class BasePage {
 		}
 	}
 	
-	public static void waitForClickability(MobileElement mobileElementLocator) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.elementToBeClickable(mobileElementLocator));
+	public static void handlingIosNotificatioPopUp() {
+		BasePage.sleep(5000);
+		try {
+			if(!driver.findElements(By.name("OK")).isEmpty()) {
+				OkButtonNotification.isDisplayed();
+				dontAllowButton.isDisplayed();
+				OkButtonNotification.click();
+			} else if(!driver.findElements(By.name("Allow")).isEmpty()) {
+				allowButton.isDisplayed();
+				dontAllowButton.isDisplayed();
+				allowButton.click();
+			} else {
+				//Do Nothing
+			}
+			BasePage.sleep(5000);
+			okButtonBuddyBuild.isDisplayed();
+			okButtonBuddyBuild.click();
+		} catch(Throwable e) {
+			System.out.println("Notification Pop is not displayed");
+			
+		}
 	}
 }

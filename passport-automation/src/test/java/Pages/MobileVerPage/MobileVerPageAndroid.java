@@ -5,11 +5,17 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
+import Pages.ExcelReading;
+import Pages.ExcelReading;
 import Pages.SendBugReportPage.SendBugReportPage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
+	
+//	String mobileNumber = readingExcel.getCellData("TestData", "PhoneNumber", 2);
+//	String invalidMobileNumber = readingExcel.getCellData("TestData", "Invalid_PhoneNumber", 2);
+	
 	@FindBy (id = "prefixSpinner")
 	public MobileElement prefixInputDD;
 	
@@ -28,9 +34,10 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 	@FindBy(id = "backImageView")
 	MobileElement backButton;
 	
-	public MobileVerPageAndroid(AppiumDriver driver) {super(driver);}
+	public MobileVerPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void CheckMobileVerPageForExceptions() {
+
 		prefixInputDD.isDisplayed();
 		phoneTextBox.isDisplayed();
 		textButton.isDisplayed();
@@ -65,8 +72,10 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 		textButton.isDisplayed();
 		
 	}
-	public void ValidMobileTest() {
-		phoneTextBox.sendKeys("5550000000");
+	public void ValidMobileTest(String mobileNumber) {
+//		System.out.println(invalidMobileNumber);
+//		System.out.println(mobileNumber);
+		phoneTextBox.sendKeys(mobileNumber);
 		takeScreenshot("valid2");
 		try {
             driver.hideKeyboard();

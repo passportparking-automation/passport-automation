@@ -16,7 +16,7 @@ import io.appium.java_client.TouchAction;
 public class SendBugReportPageAndroid extends BasePage implements SendBugReportPage {
 
 
-	public SendBugReportPageAndroid(AppiumDriver driver) {  super(driver);  }
+	public SendBugReportPageAndroid(AppiumDriver driver) throws Exception {  super(driver);  }
 	
 	@FindBy (id = "emailAddressInput")
 	public MobileElement emailReportBug;

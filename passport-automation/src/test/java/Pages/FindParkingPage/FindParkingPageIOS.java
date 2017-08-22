@@ -1,5 +1,7 @@
 package Pages.FindParkingPage;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
@@ -21,21 +23,34 @@ public class FindParkingPageIOS extends BasePage implements FindParkingPage{
 	@FindBy(name = "back")
 	private MobileElement backButton;
 	
+	@FindBy(name = "numlisticon")
+	private MobileElement locationListModeIcon;
+	
+	@FindBy(name = "crosshair")
+	private MobileElement myLocationButton;
+	
+	@FindBy(name = "filter")
+	private MobileElement filterButton;
+	
 	private LandingPage landingPage;
 	
-	public FindParkingPageIOS(AppiumDriver driver) {
+	public FindParkingPageIOS(AppiumDriver driver) throws Exception {
 		super(driver);
 		
 	}	
 
-	public void CheckFindParkingForExceptions() throws InterruptedException {		
-		/*if(!driver.findElements(By.name("Allow")).isEmpty()) {
-			allowButton.isDisplayed();
-			dontAllowButton.isDisplayed();
-			allowButton.click();
-		}*/
-		takeScreenshot("checkFP");
-		backButton.click();	
+	public void CheckFindParkingForExceptions() {		
+		handlingIosNotificatioPopUp();
+		backButton.isDisplayed();
+		locationListModeIcon.isDisplayed();
+//		availabilityContainer.isDisplayed();
+		myLocationButton.isDisplayed();
+//		mapView.isDisplayed();
+//		mapSearchInput.isDisplayed();
+		filterButton.isDisplayed();
+
+		BasePage.sleep(5000);
+		takeScreenshot("checkFP");	
 	}
 
 	public void FindParkingNavTest() {
@@ -43,8 +58,7 @@ public class FindParkingPageIOS extends BasePage implements FindParkingPage{
 	}
 
 	public void ZoneTest() {
-		// TODO Auto-generated method stub
-		
+		//Id's missing search textfield. 
 	}
 
 	public void WhatZoneTest() {
@@ -72,9 +86,8 @@ public class FindParkingPageIOS extends BasePage implements FindParkingPage{
 		
 	}
 
-	@Override
 	public void navToLanding() {
-		// TODO Auto-generated method stub
+		backButton.click();
 		
 	}
 }

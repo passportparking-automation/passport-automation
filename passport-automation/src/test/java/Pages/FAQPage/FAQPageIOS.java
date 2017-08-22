@@ -11,7 +11,7 @@ public class FAQPageIOS extends BasePage implements FAQPage {
 	@FindBy (name = "back")
 	private MobileElement backButton;
 	
-	public FAQPageIOS(AppiumDriver driver) {
+	public FAQPageIOS(AppiumDriver driver) throws Exception {
 		super(driver);
 	}
 

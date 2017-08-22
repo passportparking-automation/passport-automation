@@ -34,12 +34,12 @@ public class SignUpPageIOS extends BasePage implements SignUpPage {
 	@FindBy (name = "Decline")
 	private MobileElement declineButton;
 
-	public SignUpPageIOS(AppiumDriver driver) {super(driver);}
+	public SignUpPageIOS(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void signUpThroughEmail() {
 		
 	}
-
+	
 	public void signUpThroughPhone() {
 	}
 
@@ -47,8 +47,6 @@ public class SignUpPageIOS extends BasePage implements SignUpPage {
 		signUpButton.isDisplayed();
 		logInButton.isDisplayed();
 		poweredByLogo.isDisplayed();
-		menuIcon.click();
-		homeMenuOption.click();
 		
 	}
 
@@ -80,10 +78,10 @@ public class SignUpPageIOS extends BasePage implements SignUpPage {
 		
 	}
 
-	@Override
 	public void navToLanding() {
 		menuIcon.click();
 		homeMenuOption.click();
+		
 	}
 
 }

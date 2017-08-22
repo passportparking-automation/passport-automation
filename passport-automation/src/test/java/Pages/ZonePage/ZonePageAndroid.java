@@ -8,25 +8,20 @@ import io.appium.java_client.MobileElement;
 
 public class ZonePageAndroid extends BasePage implements ZonePage{
 	@FindBy(id ="zoneTextBox")
-	public MobileElement zoneInputBox;
+	public MobileElement zoneTextBox;
 	
-	@FindBy(xpath ="//android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.Button[1]")
+	@FindBy(id ="id_continue_button")
 	public MobileElement continueButton;
 	
-	public ZonePageAndroid(AppiumDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
+	public ZonePageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	
 	public void goToDieselZone1() {
-		zoneInputBox.sendKeys("6861");
+		zoneTextBox.sendKeys("6861");
 		takeScreenshot("desielScreenshot1");
 		continueButton.click();
 	}
 
-
-	@Override
 	public void CheckZoneForExceptions() {
 		// TODO Auto-generated method stub
 		

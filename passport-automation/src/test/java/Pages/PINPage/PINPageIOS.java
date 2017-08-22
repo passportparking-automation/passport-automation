@@ -27,7 +27,7 @@ public class PINPageIOS extends BasePage implements PINPage {
 	@FindBy (name = "Ok")
 	public MobileElement okButton;
 
-	public PINPageIOS(AppiumDriver driver) {super(driver);}
+	public PINPageIOS(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void SendCorrectPINTest() {
 		PINInputBox.sendKeys("1111");
@@ -41,9 +41,6 @@ public class PINPageIOS extends BasePage implements PINPage {
 		PINSignInButton.isDisplayed();
 		resetPINButton.isDisplayed();
 		takeScreenshot("pinTest8");
-		menuButton.click();
-		homeMenuOption.click();
-		
 	}
 
 	public void EmptyPINTest() {
@@ -63,33 +60,28 @@ public class PINPageIOS extends BasePage implements PINPage {
             }
 		PINSignInButton.click();
 		takeScreenshot("pinrTest4");
-		/*okButton.click();*/
+		okButton.click();
 		
 	}
 
-
-	@Override
 	public void navToLanding() {
-		// TODO Auto-generated method stub
-		
+		menuButton.click();
+		homeMenuOption.click();
 	}
 
-
-	@Override
-	public void navToReset() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void SendShortValuedPINTest() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void SendFalsePINTest() {
 		// TODO Auto-generated method stub
+		
+	}
+
+	public void navToReset() {
+		resetPINButton.click();
+		okButton.click();
 		
 	}
 }

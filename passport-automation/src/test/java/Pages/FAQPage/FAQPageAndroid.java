@@ -14,7 +14,7 @@ public class FAQPageAndroid extends BasePage implements FAQPage {
 	@FindBy(id="viewHeader")
 	public MobileElement pageHeader;
 	
-	public FAQPageAndroid(AppiumDriver driver) {  super(driver);  }
+	public FAQPageAndroid(AppiumDriver driver) throws Exception {  super(driver);  }
 
 	public void FAQNavTest(){
 		takeScreenshot("faqNavTest");

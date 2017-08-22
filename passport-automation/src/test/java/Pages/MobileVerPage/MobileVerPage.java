@@ -5,7 +5,7 @@ public interface MobileVerPage {
 	public void NavBackToLoginTest();
 	public void BlankNumberProvidedTest();
 	public void ShortNumberProivdedTest();
-	public void ValidMobileTest();
+	public void ValidMobileTest(String mobileNumber);
 	public void ForceQuitTest();
-	public void navToLanding();
+	public void navToLanding(); 
 }

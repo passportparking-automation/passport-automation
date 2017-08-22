@@ -13,7 +13,7 @@ import io.appium.java_client.MobileElement;
 
 public class AboutPageAndroid extends BasePage implements AboutPage {
 
-	public AboutPageAndroid(AppiumDriver driver) {  super(driver);  }
+	public AboutPageAndroid(AppiumDriver driver) throws Exception {  super(driver);  }
 
 	
 	@FindBy (id = "menuImageView")

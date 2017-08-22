@@ -27,7 +27,7 @@ public class PayDetailsPageAndroid extends BasePage implements PayDetailsPage{
 	@FindBy (id="saveCardButton")
 	public MobileElement saveCardButton;
 
-	public PayDetailsPageAndroid(AppiumDriver driver) {super(driver);}
+	public PayDetailsPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void CheckPayDetailForExpcetions() {
 		cardNumberTextBox.isDisplayed();
@@ -54,7 +54,8 @@ public class PayDetailsPageAndroid extends BasePage implements PayDetailsPage{
 		try{
 		acceptButton.click();
 		 } catch (Exception e) {
-         	System.out.println("okBtn Not displayed");
+         	System.out.println("okBtn Not displayed"); 
+         	
          }
 	}
 }

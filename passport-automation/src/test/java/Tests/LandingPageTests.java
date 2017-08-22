@@ -1,26 +1,36 @@
 package Tests;
 
+import io.appium.java_client.MobileElement;
+
 import java.io.BufferedReader;
 import java.util.Scanner;
 
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Pages.BasePage;
 import Pages.FindParkingPage.FindParkingPage;
 import Pages.FindParkingPage.FindParkingPageAndroid;
+import Pages.FindParkingPage.FindParkingPageIOS;
 import Pages.LandingPage.LandingPage;
 import Pages.LandingPage.LandingPageAndroid;
+import Pages.LandingPage.LandingPageIOS;
 import Tests.AbstractBaseTests.TestBase;
 
 public class LandingPageTests extends TestBase {
 	
+	public LandingPageTests() throws Exception {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	private LandingPage landingPage;
 	private FindParkingPage findParkingPage;
 	
 	@BeforeTest
 	@Override
-	public void setUpPage() {
+	public void setUpPage() throws Exception {
 		switch(TestBase.executionOS) {
 		case ANDROID:
 			landingPage = new LandingPageAndroid(driver);
@@ -28,39 +38,39 @@ public class LandingPageTests extends TestBase {
 			
 			break;
 		case IOS:
-			//landingpage = new LandingPageIOS(driver);
+			landingPage = new LandingPageIOS(driver);
+			findParkingPage = new FindParkingPageIOS(driver);
 			
 			break;
 		default:
 			break;
 		}
 	}
+	
 	@Test
 	public void CheckMenuOptionsForExceptions() throws InterruptedException{
-		Thread.sleep(5000);
 		landingPage.CheckMenuOptionsForExceptions();
 	}
+	
 	@Test
 	public void checkLandingPageForExceptions() throws InterruptedException{
-		Thread.sleep(5000);
 		landingPage.CheckLandingPageForExceptions();
 	}
-	@Test
+	
+	/*@Test
 	public void EnterLocationOrPayToParkCodeTest() throws InterruptedException{
-		Thread.sleep(5000);
 		landingPage.EnterLocationOrPayToParkCodeTest();
 		findParkingPage.CheckFindParkingForExceptions();
-		driver.navigate().back();
+		findParkingPage.navToLanding();
 	}
+	*/
 	@Test
-	public void LandingPageScrollTest(){
+	public void LandingPageSwipeTest(){
+		landingPage.SwipeRightTest();
+		landingPage.CheckMenuOptionsForExceptions();
 		landingPage.SwipeLeftTest();
 		landingPage.CheckLandingPageForExceptions();
-		landingPage.SwipeRightTest();
-		landingPage.CheckLandingPageForExceptions();
-		landingPage.SwipeDownTest();
-		landingPage.CheckLandingPageForExceptions();
-		landingPage.SwipeUpTest();
-		landingPage.CheckLandingPageForExceptions();
+		 
 	}
+	
 }

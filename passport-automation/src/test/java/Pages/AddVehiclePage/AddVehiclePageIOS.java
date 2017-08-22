@@ -1,8 +1,13 @@
 package Pages.AddVehiclePage;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.List;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
@@ -17,8 +22,17 @@ public class AddVehiclePageIOS extends BasePage implements AddVehiclePage {
 	
 	@FindBy(id = "saveVehicleButton")
 	public MobileElement saveVButton;
+	
+	@FindBy (id= "id_add_vehicle_button")
+	public MobileElement addVehicleButton;
+	
+	@FindBy (name = "back")
+	private MobileElement backButton;
+	
+	@FindBy (name = "Ok")
+	private MobileElement okButton;
 
-	public AddVehiclePageIOS(AppiumDriver driver) {super(driver);	}
+	public AddVehiclePageIOS(AppiumDriver driver) throws Exception {super(driver);	}
 
 	public void addNonDieselYoungerThan2015() {
 		VRMInputBox.sendKeys("DF59HZX");
@@ -50,9 +64,9 @@ public class AddVehiclePageIOS extends BasePage implements AddVehiclePage {
 
 
 	public void addDieselYoungerThan2015() {
-		VRMInputBox.sendKeys("DE06YJB");
+		VRMInputBox.sendKeys("LV66TXZ");
 		takeScreenshot("dTest23");
-		nickNameInputBox.sendKeys("DE06YJB");
+		nickNameInputBox.sendKeys("LV66TXZ");
 		takeScreenshot("dTest33");
 		saveVButton.click();
 		takeScreenshot("dTest43");
@@ -60,9 +74,9 @@ public class AddVehiclePageIOS extends BasePage implements AddVehiclePage {
 
 	public void addDieselOlderThan2015() {
 
-		VRMInputBox.sendKeys("LV66TXZ");
+		VRMInputBox.sendKeys("DE06YJB");
 		takeScreenshot("dTest24");
-		nickNameInputBox.sendKeys("LV66TXZ");
+		nickNameInputBox.sendKeys("DE06YJB");
 		takeScreenshot("dTest34");
 		saveVButton.click();
 		takeScreenshot("dTest44");
@@ -87,15 +101,16 @@ public class AddVehiclePageIOS extends BasePage implements AddVehiclePage {
 		
 	}
 
-	@Override
 	public void AddVehicleTest() {
-		// TODO Auto-generated method stub
-		
+		addVehicleButton.click();
+		saveVButton.click();
+		takeScreenshot("InvalidVRM");
+		okButton.click();
+		VRMInputBox.sendKeys("Test");
+		saveVButton.click();
 	}
 
-	@Override
 	public void CheckUpdateToVehiclePage() {
-		// TODO Auto-generated method stub
-		
+
 	}
 }

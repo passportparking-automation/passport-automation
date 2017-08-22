@@ -14,7 +14,13 @@ public class PayMethodPageIOS extends BasePage implements PayMethodPage {
 	@FindBy (name = "No")
 	private MobileElement noButton;
 	
-	public PayMethodPageIOS(AppiumDriver driver) {super(driver);}
+	@FindBy (name = "Yes")
+	private MobileElement yesButton;
+	
+	@FindBy (name = "Please select the length of stay in Location 6861, F2, Baker St at F2 Westminster City Council. VRM  TEST.")
+	private MobileElement paymentMethodMessage;
+	
+	public PayMethodPageIOS(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void clickTestCreditCard() {
 		testCreditCard.isDisplayed();
@@ -23,11 +29,15 @@ public class PayMethodPageIOS extends BasePage implements PayMethodPage {
 		takeScreenshot("testcreditcard2");
 	}
 	
-	public void clickNoButton() {
+	public void CheckPayMethodForExceptions(){
+		takeScreenshot("DieselPopup");
+	}
+
+	public void declinePayment() {
 		noButton.click();
 	}
 	
-	public void CheckPayMethodForExceptions(){
-		
+	public void acceptPayment() {
+		yesButton.click();
 	}
 }

@@ -6,6 +6,7 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.support.FindBy;
 
 import Pages.BasePage;
+import Pages.ExcelReading;
 
 public class EmailVerPageIOS extends BasePage implements EmailVerPage {
 	
@@ -18,21 +19,15 @@ public class EmailVerPageIOS extends BasePage implements EmailVerPage {
 	@FindBy (name = "Yes")
 	private MobileElement acceptButton;
 
-	public EmailVerPageIOS(AppiumDriver driver) {super(driver);}
+	public EmailVerPageIOS(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void ValidEmailTest() {
-		emailInputBox.sendKeys("automaton+01@gopassport.com");
+		emailInputBox.sendKeys();
 		takeScreenshot("validEmail");
 		sendCodeButton.click();
 		takeScreenshot("verifyEmailMessage");
 		//Verify notification message
 		acceptButton.click();
-	}
-
-	@Override
-	public void CheckEmailVerPageForExceptions() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

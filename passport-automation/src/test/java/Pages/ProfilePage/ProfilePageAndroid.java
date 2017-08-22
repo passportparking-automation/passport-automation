@@ -14,15 +14,14 @@ public class ProfilePageAndroid extends BasePage implements ProfilePage {
 	@FindBy (name= "E-mail")
 	public MobileElement userEmailField;
 	
-	@FindBy (id="update")
+	@FindBy (name="update")
 	public MobileElement updateButton;
 	
-	public ProfilePageAndroid(AppiumDriver driver) {  super(driver);  }
+	public ProfilePageAndroid(AppiumDriver driver) throws Exception {  super(driver);  }
 	
 	public void CheckProfilePageForExceptions(){
 		//userIDField.isDisplayed();
 		//userEmailField.isDisplayed();
-		updateButton.isDisplayed();
 		takeScreenshot("ProfPage");
 	}
 	

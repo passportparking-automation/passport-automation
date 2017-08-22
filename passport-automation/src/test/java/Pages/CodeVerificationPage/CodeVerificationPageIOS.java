@@ -16,7 +16,7 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 	public MobileElement submitButton;
 
 	@FindBy (name = "Ok")
-	private MobileElement acceptButton;;
+	private MobileElement okButton;;
 	
 	@FindBy (name = "Retry")
 	public MobileElement tryAgainButton;
@@ -24,10 +24,17 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 	@FindBy (name = "back")
 	public MobileElement backButton;
 	
-	public CodeVerificationPageIOS(AppiumDriver driver) {super(driver);}
+	@FindBy (name = "Home")
+	public  MobileElement homeMenuOption;
+	
+	@FindBy (name = "menuicon")
+	public MobileElement menuIcon;
+	
+	public CodeVerificationPageIOS(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void SendCorrectCodeTest() {
-		codeInputBox.sendKeys("963");
+		BasePage.sleep(5000);
+		codeInputBox.sendKeys("426");
 		takeScreenshot("CodeTest1");
 		try {
             driver.hideKeyboard();
@@ -36,7 +43,7 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
             }
 		submitButton.click();
 		takeScreenshot("CodeTest2");
-		acceptButton.click();
+		okButton.click();
 		takeScreenshot("CodeTest3");
 		
 	}
@@ -52,7 +59,7 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 	public void EmptyVerTest() {
 		takeScreenshot("CodeTest4");
 		submitButton.click();
-		acceptButton.click();
+		okButton.click();
 		takeScreenshot("CodeTest4");
 		
 	}
@@ -62,9 +69,11 @@ public class CodeVerificationPageIOS extends BasePage implements CodeVerificatio
 		
 	}
 
-	@Override
 	public void navToLanding() {
-		// TODO Auto-generated method stub
+		backButton.click();
+		backButton.click();
+		menuIcon.click();
+		homeMenuOption.click();
 		
 	}
 }

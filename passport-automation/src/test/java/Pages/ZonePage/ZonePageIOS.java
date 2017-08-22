@@ -21,7 +21,7 @@ public class ZonePageIOS extends BasePage implements ZonePage {
 	@FindBy(name = "Continue")
 	private MobileElement continueButtonDieselPopUp;
 	
-	public ZonePageIOS(AppiumDriver driver) {super(driver);}
+	public ZonePageIOS(AppiumDriver driver) throws Exception {super(driver);}
 	
 	public void goToDieselZone1() {
 		zoneInputBox.sendKeys("6861");
@@ -35,7 +35,6 @@ public class ZonePageIOS extends BasePage implements ZonePage {
 		continueButtonDieselPopUp.click();
 	}
 
-	@Override
 	public void CheckZoneForExceptions() {
 		// TODO Auto-generated method stub
 		

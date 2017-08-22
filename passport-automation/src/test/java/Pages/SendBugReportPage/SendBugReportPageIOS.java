@@ -15,7 +15,7 @@ import io.appium.java_client.TouchAction;
 
 public class SendBugReportPageIOS extends BasePage implements SendBugReportPage {
 
-	public SendBugReportPageIOS(AppiumDriver driver) {  super(driver);  }
+	public SendBugReportPageIOS(AppiumDriver driver) throws Exception {  super(driver);  }
 	
 	@FindBy(xpath = ".//XCUIElementTypeTextField[1]")
 	private MobileElement emailReportBug;
@@ -57,12 +57,14 @@ public class SendBugReportPageIOS extends BasePage implements SendBugReportPage 
 	public  MobileElement homeMenuOption;
 
 	public void CheckBugForExceptions(){
+		handlingIosNotificatioPopUp();
 		emailReportBug.isDisplayed();
 		commentReportBug.isDisplayed();
 		submitReportBug.isDisplayed();
 		takeScreenshot("yada1");
-		/*backButton.click();
-		takeScreenshot("yada2");*/
+		menuIcon.click();
+		homeMenuOption.click();
+		takeScreenshot("yada2");
 	}
 	
 	public void EmptyBugTest(){
@@ -70,13 +72,15 @@ public class SendBugReportPageIOS extends BasePage implements SendBugReportPage 
 		takeScreenshot("PopUpMessage1");
 		//click ok button
 		okButton.click();
+		emailReportBug.clear();
 		emailReportBug.sendKeys("automaton+00@gopassport.com");
+		//close android keyboard
+		driver.hideKeyboard();
 		submitReportBug.click();
 		takeScreenshot("PopUpMessage");
 		
 		//Check the pop up with correct fields is displayed when comment box is empty
 		String actualTitle = titlePopUp.getText();
-		String actualMessage = message.getText();
 		String actualAcceptBtn = okButton.getText();
 		
 		String expectedTitle = "Missing Description";
@@ -88,12 +92,7 @@ public class SendBugReportPageIOS extends BasePage implements SendBugReportPage 
 			}else{
 				assertTrue(false);
 			}
-		if(expectedMessage.equals(actualMessage)){
-			assertTrue(true);
-			}else{
-				assertTrue(false);
-			}
-		
+
 		if(expectedAcceptBtn.equals(actualAcceptBtn)){
 			assertTrue(true);
 			}else{
@@ -107,11 +106,12 @@ public class SendBugReportPageIOS extends BasePage implements SendBugReportPage 
 	
 	public void NotEmptyBugTest(){
 		//enter valid email address
+		emailReportBug.clear();
 		emailReportBug.sendKeys("automaton+00@gopassport.com");	
 		takeScreenshot("PopUpMessage2");
 		commentReportBug.sendKeys("Comment");
 		//close android keyboard
-		//driver.navigate().back();
+		driver.hideKeyboard();
 		submitReportBug.click();
 
 		// Check the pop up with correct fields is displayed when success
@@ -147,6 +147,7 @@ public class SendBugReportPageIOS extends BasePage implements SendBugReportPage 
 		takeScreenshot("ssx1xx");	
 	}
 	public void NavigateToBugReportPage() {
+		handlingIosNotificatioPopUp();
 		menuIcon.click();
 		sendBugMenuOption.click();
 		takeScreenshot("amIOnBug");

@@ -3,27 +3,32 @@ package Tests;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Pages.LandingPage.LandingPage;
-import Pages.LandingPage.LandingPageAndroid;
+import Pages.BasePage;
 import Pages.SendBugReportPage.SendBugReportPage;
 import Pages.SendBugReportPage.SendBugReportPageAndroid;
+import Pages.SendBugReportPage.SendBugReportPageIOS;
 import Tests.AbstractBaseTests.TestBase;
 
 public class SendBugReportPageTests extends TestBase {
 	
-	private LandingPage landingPage;
+	public SendBugReportPageTests() throws Exception {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	String mobileNumber = readingExcel.getCellData("ParkRight", "PhoneNumber", 2);
+	
 	private SendBugReportPage sendBugReportPage;
 	
 	@BeforeTest
-	public void setUpPage() {
+	public void setUpPage() throws Exception {
 		switch(TestBase.executionOS) {
 		case ANDROID:
-			landingPage = new LandingPageAndroid(driver);
 			sendBugReportPage = new SendBugReportPageAndroid(driver);
 			
 			break;
 		case IOS:
-			//landingpage = new LandingPageIOS(driver);
+			sendBugReportPage = new SendBugReportPageIOS(driver);
 			
 			break;
 		default:

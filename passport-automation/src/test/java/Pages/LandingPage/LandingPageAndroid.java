@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -70,34 +71,51 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy(id = "overlay_header")
 	public MobileElement sessionOverlayHeader;
 	
+	@FindBy(id="id_poweredbypassport")
+	public MobileElement powerdByLogo;
+	
+	String mobileNumber = readingExcel.getCellData("ParkRight", "PhoneNumber", 2);
 	
 	private LoginPage loginPage = new LoginPageAndroid(driver);
 	private MobileVerPage mobVerPage = new MobileVerPageAndroid(driver);
 	private CodeVerificationPage codeVerPage = new CodeVerificationPageAndroid(driver);
 	private PINPage pinPage  = new PINPageAndroid(driver);
-
-	public LandingPageAndroid(AppiumDriver driver) { super(driver);}
+	
+	public LandingPageAndroid(AppiumDriver driver) throws Exception { super(driver);}
 
 	public void LaunchTest() {
 		// all do this
 	}
+	//From Right to Left
 	public void SwipeLeftTest() {
-
+		takeScreenshot("swipeLeft1");
+		TouchAction swipe = new TouchAction(driver).press(481, 318).waitAction().moveTo(203,337).release();
+		swipe.perform();
+        takeScreenshot("swipeLeft2");
 	}
+	//Left to Right
 	public void SwipeRightTest() {
-		
+		takeScreenshot("swipeRight1");
+		TouchAction swipe = new TouchAction(driver).press(38, 459).waitAction().moveTo(463,468).release();
+		swipe.perform();
+		takeScreenshot("swipeRight2");
+	}
+	public void SwipeUpTest() {
+		takeScreenshot("swipeUp1");
+		TouchAction swipe = new TouchAction(driver).press(289, 93).waitAction().moveTo(320,707).release();
+		swipe.perform();
+		takeScreenshot("swipeUp2");
+	
 	}
 	public void SwipeDownTest() {
-        int offset = 1;
+		takeScreenshot("swipeDown1");
+		int offset = 1;
         int y = driver.manage().window().getSize().getHeight();
         int x = driver.manage().window().getSize().getWidth();
         TouchAction touchAction = new TouchAction(driver);
-        System.out.println(x + " " + y);
-        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
-	
-	}
-	public void SwipeUpTest() {
-	
+        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();
+        touchAction.perform();
+		takeScreenshot("swipeDown2"); 
 	}
 
 	public void PushNotificationTest() {
@@ -116,7 +134,23 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		favButton.isDisplayed();
 		faqButton.isDisplayed();
 		menuIcon.isDisplayed();
-		takeScreenshot("CheckLandingPageForExceptions");
+		
+		takeScreenshot("CheckLandingPageForExceptions1");
+		takeScreenshot("swipeDown1"+System.currentTimeMillis());
+        Dimension size = driver.manage().window().getSize();
+        int starty = (int) (size.height * 0.80);
+        //Finding endy coordinate which is at top side of screen.
+        int endy = (int) (size.height * 0.30);
+        //Find horizontal point where you wants to swipe. It is in middle of screen width.
+        int startx = size.width / 2;
+        System.out.println("starty = " + starty + " ,endy = " + endy + " , startx = " + startx);
+
+        TouchAction swipe = new TouchAction(driver).press(startx, starty).waitAction().moveTo(startx,endy).release();
+        swipe.perform();
+        takeScreenshot("swipeDown2"+System.currentTimeMillis());
+        
+		powerdByLogo.isDisplayed();
+	
 	}
 
 	public void CheckMenuOptionsForExceptions() {
@@ -135,6 +169,42 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		takeScreenshot("menuOptTest3");
 
 	}
+	
+	public void login() {
+	
+		//staging popup check
+		try {
+			menuIcon.click();
+			loginMenuOption.click();
+			declineButton.click();
+		} catch (Throwable e) {
+			System.err.println("The staging build message did not appear");
+		}
+		
+		try {
+			menuIcon.click();
+			loginMenuOption.click();
+			logInButton.click();
+			//check if there are terms and conditions
+			try {
+				acceptButton.click();
+			} catch (Exception e) {
+				System.out.println("Terms message did not appear");
+			}
+			mobVerPage.ValidMobileTest(mobileNumber);
+			codeVerPage.SendCorrectCodeTest();
+			pinPage.SendCorrectPINTest();
+			BasePage.sleep(5000);
+			//pinPage.navToLanding();
+			
+		} catch (Throwable e) {
+			System.err.println("need to send pin");
+			pinPage.SendCorrectPINTest();
+			BasePage.sleep(5000);
+			//pinPage.navToLanding();
+		}
+	}
+
 
 	public void EnterLocationOrPayToParkCodeTest() {
 		goToMapButton.click();
@@ -162,46 +232,24 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	}
 	
 
-	public void navigateToLogin() {
-		menuIcon.click();
-		loginMenuOption.click();
-		//staging popup check
-		try {
-			declineButton.click();
-		} catch (Throwable e) {
-			System.err.println("The staging build message did not appear");
-		}
-		
-		try {
-			logInButton.click();
-			//check if there are terms and conditions
-			try {
-				acceptButton.click();
-			} catch (Exception e) {
-				System.out.println("Terms message did not appear");
-			}
-			mobVerPage.ValidMobileTest();
-			codeVerPage.SendCorrectCodeTest();
-			pinPage.SendCorrectPINTest();
-			
-		} catch (Throwable e) {
-			System.err.println("need to send pin");
-			pinPage.SendCorrectPINTest();
-		}
-	}
-	
-	
-	
 	public void logout() { 		
-		menuIcon.click();
-        int offset = 1;
-        int y = driver.manage().window().getSize().getHeight();
-        int x = driver.manage().window().getSize().getWidth();
-        TouchAction touchAction = new TouchAction(driver);
-        System.out.println(x + " " + y);
-        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release().perform();
-		logoutMenuOption.click();	
-	}
+		 menuIcon.click();
+	        
+	        takeScreenshot("swipeDown1"+System.currentTimeMillis());
+	        Dimension size = driver.manage().window().getSize();
+	        int starty = (int) (size.height * 0.80);
+	        //Finding endy coordinate which is at top side of screen.
+	        int endy = (int) (size.height * 0.30);
+	        //Find horizontal point where you wants to swipe. It is in middle of screen width.
+	        int startx = size.width / 2;
+	        System.out.println("starty = " + starty + " ,endy = " + endy + " , startx = " + startx);
+
+	        TouchAction swipe = new TouchAction(driver).press(startx, starty).waitAction().moveTo(startx,endy).release();
+	        swipe.perform();
+	        takeScreenshot("swipeDown2"+System.currentTimeMillis());
+	        logoutMenuOption.click();    
+	    }
+	
 	
 	public void navigateToProfilePage() {
 		menuIcon.click();
@@ -218,6 +266,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	}
 
 	public void clickPayToPark() {
+		
 		takeScreenshot("stagingNote");
 		try {
 			payToParkButton.click();

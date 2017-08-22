@@ -1,62 +1,71 @@
 package Pages;
- 
+
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream; 
+import java.io.InputStream;
+import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.poi.hssf.usermodel.HSSFDateUtil;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell; 
 import org.apache.poi.xssf.usermodel.XSSFRow; 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  
 public class ExcelReading {
+	public static InputStream fis = null;
+	public static XSSFWorkbook workbook = null;
+	public static XSSFSheet sheet = null;
+	public static XSSFRow row = null;
+	public static XSSFCell cell = null;
 	
-	private static XSSFSheet ExcelWSheet;
-	private static XSSFWorkbook ExcelWBook;
-	private static XSSFCell Cell;
-    private static XSSFRow Row;
+	public ExcelReading(String xcelSheet) throws Exception
+	{
+		fis = ClassLoader.getSystemResourceAsStream(xcelSheet);
+		System.out.println("Value = " + fis);
+		workbook = new XSSFWorkbook(fis);
+		fis.close();
+	}
 	
-    //This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
-    public static void setExcelFile(String Path,String SheetName) throws Exception {
-       try {
-    	   // Open the Excel file
-    	   FileInputStream ExcelFile = new FileInputStream(Path);
-    	   // Access the required test data sheet
-    	   ExcelWBook = new XSSFWorkbook(ExcelFile);
-    	   ExcelWSheet = ExcelWBook.getSheet(SheetName);
-		} catch (Exception e){
-			throw (e);
+	public String getCellData(String sheetName, String colName, int rowNum)
+	{
+		try
+		{
+			int col_Num = -1;
+			sheet = workbook.getSheet(sheetName);
+			row = sheet.getRow(0);
+			for(int i = 0; i < row.getLastCellNum(); i++)
+			{
+				if(row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
+				col_Num = i;
+	        }	
+			row = sheet.getRow(rowNum - 1);
+			cell = row.getCell(col_Num);
+			
+			if(cell.getCellTypeEnum() == CellType.STRING)
+				return cell.getStringCellValue();
+	        else if(cell.getCellTypeEnum() == CellType.NUMERIC || cell.getCellTypeEnum() == CellType.FORMULA)
+	        {
+	        	String cellValue = String.valueOf(cell.getNumericCellValue());
+	        	if(HSSFDateUtil.isCellDateFormatted(cell))
+	        	{
+	        		DateFormat df = new SimpleDateFormat("dd/MM/yy");
+	        		Date date = cell.getDateCellValue();
+	        		cellValue = df.format(date);
+	        	}
+	        	return cellValue;
+	        }else if(cell.getCellTypeEnum() == CellType.BLANK)
+	        	return "";
+	        else
+	        	return String.valueOf(cell.getBooleanCellValue());
 		}
- 	}
-  	
-    //This method is to read the test data from the Excel cell, in this we are passing parameters as Row num and Col num
-   public static String getCellData(int RowNum, int ColNum) throws Exception{
-	   try{
-		   Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-		   String CellData = Cell.getStringCellValue();
-		   return CellData;
-	   }catch (Exception e){
-		   return"";
-	   }
-   }
- 
-   //This method is to write in the Excel cell, Row num and Col num are the parameters
-   public static void setCellData(String Result,  int RowNum, int ColNum) throws Exception	{
-	   try{
-		   Row  = ExcelWSheet.getRow(RowNum);
-		   Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
-		   if (Cell == null) {
-			   Cell = Row.createCell(ColNum);
-			   Cell.setCellValue(Result);
-		   } else {
-			   Cell.setCellValue(Result);
-		   }
- 
-          // Constant variables Test Data path and Test Data file name
-          FileOutputStream fileOut = new FileOutputStream("/Users/Anand/Testing/Office/passport-automation/" + "Automation Sheet - TestData.csv");
-          ExcelWBook.write(fileOut);
-          fileOut.flush();
-          fileOut.close();
-	   }catch(Exception e){
-		   throw (e);
-	   }
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return "row "+rowNum+" or column "+colName +" does not exist  in Excel";
+	    }
 	} 
 }

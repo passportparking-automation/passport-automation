@@ -30,9 +30,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	@FindBy (id ="backImageView")
 	public MobileElement backButton;
 
-	
-
-	public AddVehiclePageAndroid(AppiumDriver driver) {super(driver);	}
+	public AddVehiclePageAndroid(AppiumDriver driver) throws Exception {super(driver);	}
 
 	public void addNonDieselYoungerThan2015() {
 		VRMInputBox.sendKeys("DF59HZX");
@@ -63,7 +61,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	}
 
 
-	public void addDieselYoungerThan2015() {
+	public void addDieselOlderThan2015() {
 		VRMInputBox.sendKeys("DE06YJB");
 		takeScreenshot("dTest23");
 		nickNameInputBox.sendKeys("DE06YJB");
@@ -72,8 +70,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 		takeScreenshot("dTest43");
 	}
 
-	public void addDieselOlderThan2015() {
-
+	public void addDieselYoungerThan2015() {
 		VRMInputBox.sendKeys("LV66TXZ");
 		takeScreenshot("dTest24");
 		nickNameInputBox.sendKeys("LV66TXZ");
@@ -98,7 +95,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 		takeScreenshot("dTest35");
 		saveVButton.click();
 		takeScreenshot("dTest45");
-		
+		 
 	}
 
 	public void AddVehicleTest() {

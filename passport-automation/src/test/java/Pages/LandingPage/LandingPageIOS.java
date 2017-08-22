@@ -41,6 +41,9 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 	@FindBy (name = "FAQ")
 	public  MobileElement FAQMenuOption;
 	
+	@FindBy (name = "Payment")
+	public  MobileElement paymentMenuOption;
+	
 	@FindBy (name = "Terms & Conditions")
 	public  MobileElement termsMenuOption;
 	
@@ -80,34 +83,36 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 	@FindBy (name = "back")
 	private MobileElement backButton;
 	
+	@FindBy (name = "Vehicles")
+	private MobileElement vehiclesMenuOption;
+	
+	@FindBy (name = "Profile")
+	private MobileElement profileMenuOption;
+	
+	@FindBy (name = "Logout")
+	private MobileElement logoutMenuOption;
+	
 	public LandingPageIOS(AppiumDriver driver) throws Exception {
 		super(driver);
 	}
 
 	public void clickPayToPark() {
+		handlingIosNotificatioPopUp();
+		BasePage.sleep(5000);
 		payToParkButton.isDisplayed();
 		payToParkButton.click();
 		
 	}
 
 	public void navigateToAbout() {
+		handlingIosNotificatioPopUp();
 		takeScreenshot("AboutLanding");
+		SwipeDownTest();
 		faqButton.click();
 	}
 
 	public void CheckMenuOptionsForExceptions() {
-		if(!driver.findElements(By.name("OK")).isEmpty()) {
-			BasePage.sleep(6000);
-			OkButtonNotification.isDisplayed();
-			dontAllowButton.isDisplayed();
-			OkButtonNotification.click();
-		} else {
-			allowButton.isDisplayed();
-			dontAllowButton.isDisplayed();
-			allowButton.click();
-		}
-		okButtonBuddyBuild.isDisplayed();
-		okButtonBuddyBuild.click();
+		handlingIosNotificatioPopUp();
 		takeScreenshot("menuOptTest");
 		menuIcon.click();
 		helpMenuOption.isDisplayed();
@@ -126,8 +131,6 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 	public void CheckLandingPageForExceptions() {
 		/*welcomeLogo.isDisplayed();
 		messageLabel.isDisplayed();*/
-//		String mobileNumber = ExcelReading.getCellData(2, 2);
-//    	System.out.println(mobileNumber);
 		goToMapButton.isDisplayed();
 		orLabel.isDisplayed();
 		payToParkButton.isDisplayed();
@@ -185,64 +188,67 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 	}
 
 	public void clickHelpButton() {
+		SwipeDownTest();
 		helpButton.click();
 		
 	}
 
 	public void navigateToFindLocation() {
+		handlingIosNotificatioPopUp();
 		takeScreenshot("FindLocationLanding");
 		goToMapButton.click();
 		
 	}
 
 	public void navigateToFav() {
-		menuIcon.click();
-		homeMenuOption.click();
+		handlingIosNotificatioPopUp();
 		takeScreenshot("FavLanding");
-		SwipeUpTest();
+		SwipeDownTest();
 		favButton.click();
 		
 	}
 
-	@Override
+	public void logout() {
+		SwipeDownTest();
+		logoutMenuOption.click();
+		
+	}
+
 	public void LaunchTest() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void PushNotificationTest() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void navigateToLogin() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void navigateToProfilePage() {
-		// TODO Auto-generated method stub
+		backButton.click();
+		menuIcon.click();
+		profileMenuOption.click();
 		
 	}
 
-	@Override
-	public void logout() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void navigateToYourCardsPage() {
-		// TODO Auto-generated method stub
+		backButton.click();
+		menuIcon.click();
+		paymentMenuOption.click();
 		
 	}
 
-	@Override
 	public void navigateToVehiclesPage() {
-		// TODO Auto-generated method stub
+		backButton.click();
+		menuIcon.click();
+		vehiclesMenuOption.click();
+		
+	}
+
+	public void login() {
+		handlingIosNotificatioPopUp();
+		menuIcon.click();
+		loginMenuOption.click();
 		
 	}
 }

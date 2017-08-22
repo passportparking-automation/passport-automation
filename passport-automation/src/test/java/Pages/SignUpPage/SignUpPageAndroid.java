@@ -28,7 +28,7 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	@FindBy (id = "title")
 	public MobileElement termsTitle;
 	
-	public SignUpPageAndroid(AppiumDriver driver) {super(driver);}
+	public SignUpPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void signUpThroughEmail() {
 		emailButton.click();

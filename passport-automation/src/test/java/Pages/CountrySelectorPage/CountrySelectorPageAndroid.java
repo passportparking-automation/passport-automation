@@ -38,7 +38,7 @@ public class CountrySelectorPageAndroid extends BasePage implements CountrySelec
 	@AndroidFindBy(xpath = "//android.widget.Button[@text='Continue']")
 	private MobileElement continueButton;
 	
-	public CountrySelectorPageAndroid(AppiumDriver driver) {
+	public CountrySelectorPageAndroid(AppiumDriver driver) throws Exception {
 		super(driver);
 	}
 

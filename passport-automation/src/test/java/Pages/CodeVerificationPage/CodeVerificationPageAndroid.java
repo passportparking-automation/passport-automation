@@ -17,7 +17,7 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 	@FindBy (id="id_cvw_try_again")
 	public MobileElement tryAgainButton;
 	
-	public CodeVerificationPageAndroid(AppiumDriver driver) {super(driver);}
+	public CodeVerificationPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void SendCorrectCodeTest() {
 		codeInputBox.sendKeys("777");
@@ -51,7 +51,7 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 
 	public void navToLanding() {
 		driver.navigate().back();
-		driver.navigate().back();
+		driver.navigate().back(); 
 	}
 	
 

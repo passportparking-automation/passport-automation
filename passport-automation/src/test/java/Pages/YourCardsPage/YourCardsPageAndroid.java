@@ -28,7 +28,7 @@ public class YourCardsPageAndroid extends BasePage implements YourCardsPage {
 	@FindBy(id="id_ccd_delete")
 	public MobileElement deleteCardButton;
 	
-	public YourCardsPageAndroid(AppiumDriver driver) {super(driver);}
+	public YourCardsPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 	
 	public void CheckYCPageForExceptions() {
 		addCardButton.isDisplayed();
@@ -44,7 +44,7 @@ public class YourCardsPageAndroid extends BasePage implements YourCardsPage {
 			assertEquals(header.getText(), "Add Payment Details");
 			takeScreenshot("PD1");
 	}
-
+	
 	public void CardScreenTest() {
 		cardButton.click();
 		cardTypeImage.isDisplayed();
@@ -62,5 +62,13 @@ public class YourCardsPageAndroid extends BasePage implements YourCardsPage {
 		addCardButton.isDisplayed();
 		takeScreenshot("PD6");
 	}
+	public void clickTestCreditCard(){
+		takeScreenshot("PD7");
+		cardButton.click();
+		
+	}
+
+
+	
 
 }

@@ -2,15 +2,19 @@ package Pages.MobileVerPage;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import Pages.BasePage;
+import Pages.ExcelReading;
 
 public class MobileVerPageIOS extends BasePage implements MobileVerPage {
 
-	@FindBy(name = "phoneNumberInput")
+	@FindBy(name = "phoneTextBox")
 	MobileElement phoneTextBox;
 	
 	@FindBy(name = "Text Me")
@@ -34,6 +38,9 @@ public class MobileVerPageIOS extends BasePage implements MobileVerPage {
 	@FindBy(name = "Yes")
 	MobileElement yesButton;
 	
+	@FindBy(name = "Ok")
+	MobileElement okButton;
+	
 	@FindBy(name = "No")
 	MobileElement noButton;
 	
@@ -43,43 +50,16 @@ public class MobileVerPageIOS extends BasePage implements MobileVerPage {
 	@FindBy(id="Login")
 	public MobileElement logInButton;
 	
-	public MobileVerPageIOS(AppiumDriver driver) {
+	public MobileVerPageIOS(AppiumDriver driver) throws Exception {
 		super(driver);
 	}
 
 	public void CheckMobileVerPageForExceptions() {
-		backButton.click();
-		BasePage.sleep(4000);
-		menuButton.click();
-		homeMenuOption.click();
-		payToParkButton.click();
-		logInButton.click();
-		takeScreenshot("MobileVer1");
-		String actualphoneTextBox = phoneTextBox.getAttribute("value");
-		String expectedphoneTextBox = "Phone number";
-		if(expectedphoneTextBox.equals(actualphoneTextBox)){
-		assertTrue(true);
-		}else{
-			assertTrue(false);
-		}
-		
+		phoneTextBox.isDisplayed();
 		textButton.isDisplayed();
 		callButton.isDisplayed();
-		
-		String actualParagraph = paragraph.getText();
-		String expectedParagraph = "Your phone number will be the means by which you register for ParkRight. We use your phone number to identify you in our system, so we just need to verify your phone number by sending a 3 digit code to you via text or call.";
-		if(expectedParagraph.equals(actualParagraph)){
-		assertTrue(true);
-		}else{
-			assertTrue(false);
-		}
-		
 		backButton.isDisplayed();
-		backButton.click();
-		BasePage.sleep(4000);
-		menuButton.click();
-		homeMenuOption.click();
-		
+		takeScreenshot("MobileVer1");		
 	}
 
 	public void NavBackToLoginTest() {
@@ -90,16 +70,15 @@ public class MobileVerPageIOS extends BasePage implements MobileVerPage {
 
 	public void BlankNumberProvidedTest() {
 		callButton.click();
-		popUp.isDisplayed();
 		takeScreenshot("blank1");
-		acceptButton.click();
+		okButton.click();
 		callButton.isDisplayed();
 		takeScreenshot("blank2");
 		
 	}
 
 	public void ShortNumberProivdedTest() {
-		phoneTextBox.sendKeys("281330");
+		phoneTextBox.sendKeys("5465846");
 		takeScreenshot("short2");
 		try {
             driver.hideKeyboard();
@@ -107,15 +86,14 @@ public class MobileVerPageIOS extends BasePage implements MobileVerPage {
             	System.out.println("Keyboard wasn't displayed");
             }
 		textButton.click();
-		popUp.isDisplayed();
 		takeScreenshot("short1");
-		acceptButton.click();
+		okButton.click();
 		textButton.isDisplayed();
 		
 	}
 
-	public void ValidMobileTest() {
-		phoneTextBox.sendKeys("2477180135");
+	public void ValidMobileTest(String mobileNumber) {
+		phoneTextBox.sendKeys(mobileNumber);
 		textButton.click();
 		yesButton.click();
 
@@ -126,10 +104,10 @@ public class MobileVerPageIOS extends BasePage implements MobileVerPage {
 		
 	}
 
-	@Override
 	public void navToLanding() {
-		// TODO Auto-generated method stub
-		
+		backButton.click();
+		menuButton.click();
+		homeMenuOption.click();
 	}
 
 }

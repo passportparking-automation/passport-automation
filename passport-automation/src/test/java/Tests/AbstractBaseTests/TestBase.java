@@ -3,12 +3,10 @@ package Tests.AbstractBaseTests;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -16,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import Pages.BasePage;
+import Pages.ExcelReading;
 import driver.deviceAndroid;
 import driver.deviceIOS;
 
@@ -30,7 +29,7 @@ public abstract class TestBase {
 	/* Depending upon which platform is to tested, tester need to change 
 	 * the OS value either to: ANDROID, IOS or WEB
 	 */ 
-	public static OS executionOS = OS.ANDROID;
+	public static OS executionOS = OS.IOS;
 	
 	public enum OS {
 		ANDROID,
@@ -38,9 +37,17 @@ public abstract class TestBase {
 		WEBANDROID,
 		WEBIOS
 	}
+	public static final String File_TestData = "TestData.xlsx";
+	
+	/*This to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method*/
+    protected ExcelReading readingExcel = new ExcelReading(File_TestData);
+    
+    public TestBase() throws Exception {
+		// TODO Auto-generated constructor stub
+	}
 	
 	@BeforeTest
-    public abstract void setUpPage();
+    public abstract void setUpPage() throws Exception;
 	
     @BeforeSuite
 	public static void initAppium() throws MalformedURLException {
@@ -78,7 +85,8 @@ public abstract class TestBase {
 			capabilitiesIOS.setCapability(MobileCapabilityType.UDID, deviceIOS.udid);
 			capabilitiesIOS.setCapability(MobileCapabilityType.APP, appIOS);
 			driver = new AppiumDriver<MobileElement>(url, capabilitiesIOS);
-			wait = new WebDriverWait(driver, 80);
+			wait = new WebDriverWait(driver, 30);
+			
 			break;
 			
 		case WEBANDROID:
@@ -133,7 +141,9 @@ public abstract class TestBase {
 	
     @AfterClass
     public void restartApp() {
+    	BasePage.sleep(3000);
     	driver.resetApp();
+    	
     }
 	
 }

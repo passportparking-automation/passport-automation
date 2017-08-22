@@ -21,7 +21,7 @@ public class ResetPINPageAndroid extends BasePage implements ResetPINPage{
 	public MobileElement createPinButton;
 	
 	
-	public ResetPINPageAndroid(AppiumDriver driver) {super(driver);}
+	public ResetPINPageAndroid(AppiumDriver driver) throws Exception {super(driver);}
 
 	public void ResetPINPageTest() {
 		pinLabel1.isDisplayed();

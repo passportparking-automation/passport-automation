@@ -5,5 +5,6 @@ public interface YourCardsPage {
 	public void  NavToPayDetailsPage();
 	public void navToLanding();
 	public void CardScreenTest();
-
+	public void clickTestCreditCard();
+	
 }

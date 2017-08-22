@@ -18,6 +18,7 @@ import Pages.SendBugReportPage.SendBugReportPage;
 import Pages.SendBugReportPage.SendBugReportPageAndroid;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 
 public class HelpPageAndroid extends BasePage implements HelpPage {
 	
@@ -36,7 +37,7 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
     private FAQPage faqPage = new FAQPageAndroid(driver);
     private SendBugReportPage sendBug = new SendBugReportPageAndroid(driver);
 	
-	public HelpPageAndroid(AppiumDriver driver) {super(driver); }
+	public HelpPageAndroid(AppiumDriver driver) throws Exception {super(driver); }
 
 	public void CloseHelpTest() {
 		takeScreenshot("closeHelpTest");
@@ -59,27 +60,25 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 		takeScreenshot("HelpNavTest4");
 		acceptButton.click();
 		takeScreenshot("HelpNavTest5");
-		Thread.sleep(5000);
+		BasePage.sleep(5000);
 		driver.navigate().back();
 	}
 
 	public void TutorialSwipeTest() {
-		int numberOfSwipesRight = 10;
-		for(int p=0; p<numberOfSwipesRight; p++){
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			HashMap<String, String> swipeObject = new HashMap<String, String>();
-			swipeObject.put("direction", "right");
-			js.executeScript("mobile: swipe", swipeObject);
-			takeScreenshot("swipeTest"+p);
-		}
 		int numberOfSwipesLeft = 10;
 		for(int p=0; p<numberOfSwipesLeft; p++){
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			HashMap<String, String> swipeObject = new HashMap<String, String>();
-			swipeObject.put("direction", "left");
-			js.executeScript("mobile: swipe", swipeObject);
-			takeScreenshot("swipeTest"+p);
+			takeScreenshot("swipeLeft1"+ System.currentTimeMillis());
+			TouchAction swipe = new TouchAction(driver).press(481, 318).waitAction().moveTo(203,337).release();
+			swipe.perform();
+	        takeScreenshot("swipeLeft2"+System.currentTimeMillis());
 		}
+		int numberOfSwipesRight = 10;
+		for(int p=0; p<numberOfSwipesRight; p++){
+			takeScreenshot("swipeRight1"+System.currentTimeMillis());
+			TouchAction swipe = new TouchAction(driver).press(38, 459).waitAction().moveTo(463,468).release();
+			swipe.perform();
+			takeScreenshot("swipeRight2"+System.currentTimeMillis());
 			
 	}
+}
 }

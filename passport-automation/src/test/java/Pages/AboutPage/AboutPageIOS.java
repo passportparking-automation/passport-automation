@@ -10,7 +10,7 @@ import Pages.BasePage;
 
 public class AboutPageIOS extends BasePage implements AboutPage {
 
-	public AboutPageIOS(AppiumDriver driver) {
+	public AboutPageIOS(AppiumDriver driver) throws Exception {
 		super(driver);
 	}
 
@@ -24,8 +24,6 @@ public class AboutPageIOS extends BasePage implements AboutPage {
 		}else{
 			assertTrue(false);
 		}
-		//driver.navigate().back();
-		driver.navigate().back();
 		//backButton.click();
 		//menuIcon.click();
 		//homeOption.click();
