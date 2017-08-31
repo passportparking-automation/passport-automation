@@ -101,7 +101,6 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	}
 
 	public void AddVehicleTest() {
-		backButton.click();
 		assertEquals(header.getText(), "Vehicles");
 		addVehicleButton.click();
 		saveVButton.click();
@@ -115,6 +114,13 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	
 	public void CheckUpdateToVehiclePage(){
 		
+		
+	}
+
+	
+	public void DeleteTest() {
+		vrmInput.sendKeys("DeleteV");
+		saveVButton.click();
 		
 	}
 

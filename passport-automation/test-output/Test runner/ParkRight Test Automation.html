@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ParkRight Test Automation</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>28/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>22/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 04 15:18:14 EDT 2017</td>
+<td>Started on:</td><td>Wed Aug 30 16:58:07 EDT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>3813 seconds (3813408 ms)</td>
+<tr><td>Total time:</td><td>4252 seconds (4252006 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,270 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.YourCardsPageTests.CheckYCPageForExceptions()'><b>CheckYCPageForExceptions</b><br>Test class: Tests.YourCardsPageTests</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: menuButton
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at Pages.LandingPage.LandingPageAndroid.navigateToYourCardsPage(LandingPageAndroid.java:220)
-	at Tests.YourCardsPageTests.CheckYCPageForExceptions(YourCardsPageTests.java:64)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@27d65301 (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:91)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
-	... 17 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 581 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
-System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:aebc:32ff:fe94:89ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=1200x1920, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5556, platform=LINUX, deviceUDID=emulator-5556, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
-*** Element info: {Using=id, value=menuButton}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:113)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:167)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 19 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1079690290", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1079690290'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: menuButton
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at Pages.LandingPage.LandingPageAndroid.navigateToYourCardsPage(LandingPageAndroid.java:220)
-	at Tests.YourCardsPageTests.CheckYCPageForExceptions(YourCardsPageTests.java:64)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@27d65301 (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:91)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
-	... 17 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 581 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
-System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:aebc:32ff:fe94:89ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=1200x1920, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5556, platform=LINUX, deviceUDID=emulator-5556, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
-*** Element info: {Using=id, value=menuButton}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:113)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:167)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 19 more
-</pre></div></td>
-<td>160</td>
-<td>Tests.YourCardsPageTests@4e9ba398</td></tr>
-<tr>
-<td title='Tests.ActiveSessionPageTests.DieselYoungerThan2015Test()'><b>DieselYoungerThan2015Test</b><br>Test class: Tests.ActiveSessionPageTests</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: cardTypeImage
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at Pages.YourCardsPage.YourCardsPageAndroid.clickTestCreditCard(YourCardsPageAndroid.java:67)
-	at Tests.ActiveSessionPageTests.DieselYoungerThan2015Test(ActiveSessionPageTests.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@7294111b (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:91)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
-	... 17 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 8.96 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
-System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:aebc:32ff:fe94:89ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=1200x1920, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5556, platform=LINUX, deviceUDID=emulator-5556, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
-*** Element info: {Using=id, value=cardTypeImage}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:113)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:167)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 19 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace493264517", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace493264517'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: cardTypeImage
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at Pages.YourCardsPage.YourCardsPageAndroid.clickTestCreditCard(YourCardsPageAndroid.java:67)
-	at Tests.ActiveSessionPageTests.DieselYoungerThan2015Test(ActiveSessionPageTests.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@7294111b (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:91)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
-	... 17 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 8.96 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
-System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:aebc:32ff:fe94:89ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=1200x1920, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5556, platform=LINUX, deviceUDID=emulator-5556, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
-*** Element info: {Using=id, value=cardTypeImage}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:113)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:167)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 19 more
-</pre></div></td>
-<td>307</td>
-<td>Tests.ActiveSessionPageTests@520a3426</td></tr>
-<tr>
-<td title='Tests.FindParkingPageTests.NumericValueZoneTest()'><b>NumericValueZoneTest</b><br>Test class: Tests.FindParkingPageTests</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+<td title='Tests.PayToParkPageTests.PayToParkTests()'><b>PayToParkTests</b><br>Test class: Tests.PayToParkPageTests</td>
+<td><div><pre>java.lang.AssertionError: expected [This is not a location within our system. Please try a different location before continuing.] but found [Verifying location...]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at Pages.FindParkingPage.FindParkingPageAndroid.NumericValueZoneTest(FindParkingPageAndroid.java:138)
-	at Tests.FindParkingPageTests.NumericValueZoneTest(FindParkingPageTests.java:70)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at Pages.PayToParkPage.PayToParkPageAndroid.EmptyAndFalseZoneTest(PayToParkPageAndroid.java:45)
+	at Tests.PayToParkPageTests.PayToParkTests(PayToParkPageTests.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -352,14 +98,16 @@ Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-</pre></div><a href='#' onClick='toggleBox("stack-trace800807066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace800807066'><pre>java.lang.AssertionError: expected [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace376811894", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace376811894'><pre>java.lang.AssertionError: expected [This is not a location within our system. Please try a different location before continuing.] but found [Verifying location...]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at Pages.FindParkingPage.FindParkingPageAndroid.NumericValueZoneTest(FindParkingPageAndroid.java:138)
-	at Tests.FindParkingPageTests.NumericValueZoneTest(FindParkingPageTests.java:70)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at Pages.PayToParkPage.PayToParkPageAndroid.EmptyAndFalseZoneTest(PayToParkPageAndroid.java:45)
+	at Tests.PayToParkPageTests.PayToParkTests(PayToParkPageTests.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -374,136 +122,8 @@ Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
-<td>55</td>
-<td>Tests.FindParkingPageTests@5f9d02cb</td></tr>
-<tr>
-<td title='Tests.FindParkingPageTests.ZoneTest()'><b>ZoneTest</b><br>Test class: Tests.FindParkingPageTests</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: mapSearchBarInput
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at Pages.FindParkingPage.FindParkingPageAndroid.ZoneTest(FindParkingPageAndroid.java:90)
-	at Tests.FindParkingPageTests.ZoneTest(FindParkingPageTests.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@37bd1ee6 (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:91)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
-	... 17 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 164 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
-System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:aebc:32ff:fe94:89ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=1200x1920, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5556, platform=LINUX, deviceUDID=emulator-5556, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
-*** Element info: {Using=id, value=mapSearchBarInput}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:113)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:167)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 19 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1129390314", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1129390314'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.id: mapSearchBarInput
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:61)
-	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.click(&lt;generated&gt;)
-	at Pages.FindParkingPage.FindParkingPageAndroid.ZoneTest(FindParkingPageAndroid.java:90)
-	at Tests.FindParkingPageTests.ZoneTest(FindParkingPageTests.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@37bd1ee6 (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:91)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:112)
-	... 17 more
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 164 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.2.0&apos;, revision: &apos;8c03df6b79&apos;, time: &apos;2017-02-23 10:51:31 +0000&apos;
-System info: host: &apos;Jamess-MacBook-Pro-2.local&apos;, ip: &apos;fe80:0:0:0:aebc:32ff:fe94:89ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_60&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, deviceScreenSize=1200x1920, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.parkopedia.parkright, appWaitActivity=com.parkopedia.parkright.ParkRightApp, databaseEnabled=false, deviceName=emulator-5556, platform=LINUX, deviceUDID=emulator-5556, appActivity=com.parkopedia.parkright.ParkRightApp, desired={app=/Users/jameskoch/Desktop/passportCI/ParkRight-staging.apk, appPackage=com.parkopedia.parkright, platformName=Android, deviceName=Emulator2}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Android SDK built for x86, platformName=Android, deviceManufacturer=unknown}]
-Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
-*** Element info: {Using=id, value=mapSearchBarInput}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:420)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:36)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:113)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:167)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 19 more
-</pre></div></td>
-<td>51</td>
-<td>Tests.FindParkingPageTests@5f9d02cb</td></tr>
+<td>161</td>
+<td>Tests.PayToParkPageTests@67b92f0a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -515,143 +135,113 @@ Session ID: 2d5c8c95-ef46-4f9b-80e2-7847673e3920
 <tr>
 <td title='Tests.AddVehiclePageTests.AddVehicleTest()'><b>AddVehicleTest</b><br>Test class: Tests.AddVehiclePageTests</td>
 <td></td>
-<td>203</td>
-<td>Tests.AddVehiclePageTests@13a5fe33</td></tr>
+<td>266</td>
+<td>Tests.AddVehiclePageTests@3a5ed7a6</td></tr>
+<tr>
+<td title='Tests.ActiveSessionPageTests.CheckActiveSessionPageForExceptions()'><b>CheckActiveSessionPageForExceptions</b><br>Test class: Tests.ActiveSessionPageTests</td>
+<td></td>
+<td>241</td>
+<td>Tests.ActiveSessionPageTests@4f970963</td></tr>
 <tr>
 <td title='Tests.SendBugReportPageTests.CheckBugForExceptions()'><b>CheckBugForExceptions</b><br>Test class: Tests.SendBugReportPageTests</td>
 <td></td>
-<td>19</td>
-<td>Tests.SendBugReportPageTests@2ac273d3</td></tr>
+<td>92</td>
+<td>Tests.SendBugReportPageTests@eec5a4a</td></tr>
 <tr>
-<td title='Tests.FindParkingPageTests.CheckFindParkingForExceptions()'><b>CheckFindParkingForExceptions</b><br>Test class: Tests.FindParkingPageTests</td>
+<td title='Tests.LengthOfStayPageTests.CheckLengthOfStayForExceptions()'><b>CheckLengthOfStayForExceptions</b><br>Test class: Tests.LengthOfStayPageTests</td>
 <td></td>
-<td>26</td>
-<td>Tests.FindParkingPageTests@5f9d02cb</td></tr>
-<tr>
-<td title='Tests.LandingPageTests.CheckMenuOptionsForExceptions()'><b>CheckMenuOptionsForExceptions</b><br>Test class: Tests.LandingPageTests</td>
-<td></td>
-<td>26</td>
-<td>Tests.LandingPageTests@370736d9</td></tr>
+<td>185</td>
+<td>Tests.LengthOfStayPageTests@2b9627bc</td></tr>
 <tr>
 <td title='Tests.MobileVerPageTests.CheckMobileVerPageForExceptions()'><b>CheckMobileVerPageForExceptions</b><br>Test class: Tests.MobileVerPageTests</td>
 <td></td>
-<td>32</td>
-<td>Tests.MobileVerPageTests@20398b7c</td></tr>
+<td>159</td>
+<td>Tests.MobileVerPageTests@6ddf90b0</td></tr>
+<tr>
+<td title='Tests.OptionsPageTests.CheckOptionsPageForExceptions()'><b>CheckOptionsPageForExceptions</b><br>Test class: Tests.OptionsPageTests</td>
+<td></td>
+<td>164</td>
+<td>Tests.OptionsPageTests@7d907bac</td></tr>
+<tr>
+<td title='Tests.PayMethodPageTests.CheckPayMethodPageForExceptions()'><b>CheckPayMethodPageForExceptions</b><br>Test class: Tests.PayMethodPageTests</td>
+<td></td>
+<td>311</td>
+<td>Tests.PayMethodPageTests@65e2dbf3</td></tr>
 <tr>
 <td title='Tests.ProfilePageTests.CheckProfilePageForExceptions()'><b>CheckProfilePageForExceptions</b><br>Test class: Tests.ProfilePageTests</td>
 <td></td>
-<td>165</td>
-<td>Tests.ProfilePageTests@5abca1e0</td></tr>
+<td>182</td>
+<td>Tests.ProfilePageTests@4b4523f8</td></tr>
 <tr>
-<td title='Tests.PINPageTests.CheckSecureLoginForExceptionsAndSendDataTests()'><b>CheckSecureLoginForExceptionsAndSendDataTests</b><br>Test class: Tests.PINPageTests</td>
+<td title='Tests.PINPageTests.CheckSecureLoginForExceptionss()'><b>CheckSecureLoginForExceptionss</b><br>Test class: Tests.PINPageTests</td>
 <td></td>
-<td>221</td>
-<td>Tests.PINPageTests@56235b8e</td></tr>
+<td>187</td>
+<td>Tests.PINPageTests@3b0143d3</td></tr>
 <tr>
-<td title='Tests.SignUpPageTests.CheckSigninPageForExceptions()'><b>CheckSigninPageForExceptions</b><br>Test class: Tests.SignUpPageTests</td>
+<td title='Tests.SignUpPageTests.CheckSignUpPageForExceptions()'><b>CheckSignUpPageForExceptions</b><br>Test class: Tests.SignUpPageTests</td>
 <td></td>
-<td>64</td>
-<td>Tests.SignUpPageTests@71423665</td></tr>
+<td>160</td>
+<td>Tests.SignUpPageTests@2b2948e2</td></tr>
+<tr>
+<td title='Tests.UpdateVehiclePageTests.CheckUpdateVehiclePageForExceptions()'><b>CheckUpdateVehiclePageForExceptions</b><br>Test class: Tests.UpdateVehiclePageTests</td>
+<td></td>
+<td>217</td>
+<td>Tests.UpdateVehiclePageTests@1d16f93d</td></tr>
+<tr>
+<td title='Tests.VehicleDetailPageTests.CheckVehicleDetailPageForExceptions()'><b>CheckVehicleDetailPageForExceptions</b><br>Test class: Tests.VehicleDetailPageTests</td>
+<td></td>
+<td>191</td>
+<td>Tests.VehicleDetailPageTests@6325a3ee</td></tr>
 <tr>
 <td title='Tests.VehiclesPageTests.CheckVehiclesPageForExceptions()'><b>CheckVehiclesPageForExceptions</b><br>Test class: Tests.VehiclesPageTests</td>
 <td></td>
-<td>157</td>
-<td>Tests.VehiclesPageTests@527740a2</td></tr>
+<td>153</td>
+<td>Tests.VehiclesPageTests@7791a895</td></tr>
 <tr>
-<td title='Tests.HelpPageTests.CloseHelpTest()'><b>CloseHelpTest</b><br>Test class: Tests.HelpPageTests</td>
+<td title='Tests.YourCardsPageTests.CheckYCPageForExceptions()'><b>CheckYCPageForExceptions</b><br>Test class: Tests.YourCardsPageTests</td>
 <td></td>
-<td>16</td>
-<td>Tests.HelpPageTests@63753b6d</td></tr>
-<tr>
-<td title='Tests.SignUpPageTests.DeclineAndAcceptTermsTest()'><b>DeclineAndAcceptTermsTest</b><br>Test class: Tests.SignUpPageTests</td>
-<td></td>
-<td>94</td>
-<td>Tests.SignUpPageTests@71423665</td></tr>
-<tr>
-<td title='Tests.SendBugReportPageTests.EmptyBugTest()'><b>EmptyBugTest</b><br>Test class: Tests.SendBugReportPageTests</td>
-<td></td>
-<td>46</td>
-<td>Tests.SendBugReportPageTests@2ac273d3</td></tr>
+<td>138</td>
+<td>Tests.YourCardsPageTests@369f73a2</td></tr>
 <tr>
 <td title='Tests.FAQPageTests.FAQNavTest()'><b>FAQNavTest</b><br>Test class: Tests.FAQPageTests</td>
 <td></td>
-<td>24</td>
-<td>Tests.FAQPageTests@6536e911</td></tr>
+<td>23</td>
+<td>Tests.FAQPageTests@210366b4</td></tr>
 <tr>
 <td title='Tests.FavoritesPageTests.FavoritesTest()'><b>FavoritesTest</b><br>Test class: Tests.FavoritesPageTests</td>
 <td></td>
-<td>21</td>
-<td>Tests.FavoritesPageTests@6b09bb57</td></tr>
+<td>16</td>
+<td>Tests.FavoritesPageTests@335eadca</td></tr>
 <tr>
-<td title='Tests.FindParkingPageTests.FindParkingNavTest()'><b>FindParkingNavTest</b><br>Test class: Tests.FindParkingPageTests</td>
+<td title='Tests.HelpPageTests.HelpPageTest()'><b>HelpPageTest</b><br>Test class: Tests.HelpPageTests</td>
 <td></td>
-<td>30</td>
-<td>Tests.FindParkingPageTests@5f9d02cb</td></tr>
+<td>181</td>
+<td>Tests.HelpPageTests@67784306</td></tr>
 <tr>
-<td title='Tests.HelpPageTests.HelpNavTest()'><b>HelpNavTest</b><br>Test class: Tests.HelpPageTests</td>
+<td title='Tests.LandingPageTests.LandingPageTest()'><b>LandingPageTest</b><br>Test class: Tests.LandingPageTests</td>
 <td></td>
-<td>47</td>
-<td>Tests.HelpPageTests@63753b6d</td></tr>
-<tr>
-<td title='Tests.MobileVerPageTests.InputTests()'><b>InputTests</b><br>Test class: Tests.MobileVerPageTests</td>
-<td></td>
-<td>138</td>
-<td>Tests.MobileVerPageTests@20398b7c</td></tr>
-<tr>
-<td title='Tests.LandingPageTests.LandingPageSwipeTest()'><b>LandingPageSwipeTest</b><br>Test class: Tests.LandingPageTests</td>
-<td></td>
-<td>78</td>
-<td>Tests.LandingPageTests@370736d9</td></tr>
+<td>17</td>
+<td>Tests.LandingPageTests@185d8b6</td></tr>
 <tr>
 <td title='Tests.CodeVerificationPageTests.NavBackandBlankInputTests()'><b>NavBackandBlankInputTests</b><br>Test class: Tests.CodeVerificationPageTests</td>
 <td></td>
-<td>110</td>
-<td>Tests.CodeVerificationPageTests@6fc6f14e</td></tr>
-<tr>
-<td title='Tests.SendBugReportPageTests.NotEmptyBugTest()'><b>NotEmptyBugTest</b><br>Test class: Tests.SendBugReportPageTests</td>
-<td></td>
-<td>51</td>
-<td>Tests.SendBugReportPageTests@2ac273d3</td></tr>
+<td>139</td>
+<td>Tests.CodeVerificationPageTests@57536d79</td></tr>
 <tr>
 <td title='Tests.PayDetailsPageTests.PayDetailPageTests()'><b>PayDetailPageTests</b><br>Test class: Tests.PayDetailsPageTests</td>
 <td></td>
-<td>253</td>
-<td>Tests.PayDetailsPageTests@6d7b4f4c</td></tr>
-<tr>
-<td title='Tests.PayToParkPageTests.PayTopParkTests()'><b>PayTopParkTests</b><br>Test class: Tests.PayToParkPageTests</td>
-<td></td>
-<td>282</td>
-<td>Tests.PayToParkPageTests@3108bc</td></tr>
+<td>241</td>
+<td>Tests.PayDetailsPageTests@1f28c152</td></tr>
 <tr>
 <td title='Tests.UpdateProfPageTests.ProfPageTests()'><b>ProfPageTests</b><br>Test class: Tests.UpdateProfPageTests</td>
 <td></td>
-<td>378</td>
-<td>Tests.UpdateProfPageTests@2286778</td></tr>
+<td>392</td>
+<td>Tests.UpdateProfPageTests@731a74c</td></tr>
 <tr>
 <td title='Tests.ResetPINPageTests.ResetPINPageTest()'><b>ResetPINPageTest</b><br>Test class: Tests.ResetPINPageTests</td>
 <td></td>
-<td>242</td>
-<td>Tests.ResetPINPageTests@3632be31</td></tr>
-<tr>
-<td title='Tests.HelpPageTests.TutorialSwipeTest()'><b>TutorialSwipeTest</b><br>Test class: Tests.HelpPageTests</td>
-<td></td>
-<td>177</td>
-<td>Tests.HelpPageTests@63753b6d</td></tr>
-<tr>
-<td title='Tests.CodeVerificationPageTests.ValidInputTests()'><b>ValidInputTests</b><br>Test class: Tests.CodeVerificationPageTests</td>
-<td></td>
-<td>118</td>
-<td>Tests.CodeVerificationPageTests@6fc6f14e</td></tr>
-<tr>
-<td title='Tests.FindParkingPageTests.ZoneTest2()'><b>ZoneTest2</b><br>Test class: Tests.FindParkingPageTests</td>
-<td></td>
-<td>25</td>
-<td>Tests.FindParkingPageTests@5f9d02cb</td></tr>
-<tr>
-<td title='Tests.LandingPageTests.checkLandingPageForExceptions()'><b>checkLandingPageForExceptions</b><br>Test class: Tests.LandingPageTests</td>
-<td></td>
-<td>19</td>
-<td>Tests.LandingPageTests@370736d9</td></tr>
+<td>235</td>
+<td>Tests.ResetPINPageTests@5a8e6209</td></tr>
 </table><p>
 </body>
 </html>

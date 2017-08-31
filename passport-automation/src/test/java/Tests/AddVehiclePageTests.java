@@ -11,6 +11,8 @@ import Pages.MobileVerPage.MobileVerPage;
 import Pages.MobileVerPage.MobileVerPageAndroid;
 import Pages.PINPage.PINPage;
 import Pages.PINPage.PINPageAndroid;
+import Pages.VehicleDetailPage.VehicleDetailPage;
+import Pages.VehicleDetailPage.VehicleDetailPageAndroid;
 import Pages.VehiclesPage.VehiclesPage;
 import Pages.VehiclesPage.VehiclesPageAndroid;
 import Pages.BasePage;
@@ -29,6 +31,7 @@ public class AddVehiclePageTests extends TestBase {
 	private MobileVerPage mobileVerPage;
 	private CodeVerificationPage codeVerificationPage;
 	private PINPage pinPage;
+	private VehicleDetailPage vehicleDetailPage;
 	 
 	@BeforeTest
 	public void setUpPage() {
@@ -41,6 +44,7 @@ public class AddVehiclePageTests extends TestBase {
 			mobileVerPage = new MobileVerPageAndroid(driver);
 			codeVerificationPage = new CodeVerificationPageAndroid(driver);
 			pinPage = new PINPageAndroid(driver);
+			vehicleDetailPage = new VehicleDetailPageAndroid(driver);
 		
 			
 			break;
@@ -66,6 +70,10 @@ public class AddVehiclePageTests extends TestBase {
 		vehiclesPage.CheckVehiclesPageForExceptions();
 		addVehiclePage.AddVehicleTest();
 		vehiclesPage.CheckUpdateToVehiclePage();
+		vehiclesPage.clickAddV();
+		addVehiclePage.DeleteTest();
+		vehiclesPage.navToUpdateDeleteVehicleDetialPage();
+		vehicleDetailPage.DeleteTest();
 	}
 	
 }

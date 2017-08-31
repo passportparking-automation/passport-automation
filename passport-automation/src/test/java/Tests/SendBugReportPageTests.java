@@ -33,17 +33,8 @@ public class SendBugReportPageTests extends TestBase {
 	@Test 
 	public void CheckBugForExceptions() throws InterruptedException{
 		sendBugReportPage.NavigateToBugReportPage();
-		sendBugReportPage.CheckBugForExceptions();	
-	}
-	@Test
-	public void EmptyBugTest() throws InterruptedException{
-		sendBugReportPage.NavigateToBugReportPage();
+		sendBugReportPage.CheckBugForExceptions();
 		sendBugReportPage.EmptyBugTest();
-	}
-	@Test
-	public void NotEmptyBugTest(){
-		sendBugReportPage.NavigateToBugReportPage();
 		sendBugReportPage.NotEmptyBugTest();
-		
 	}
 }

@@ -34,7 +34,7 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	@FindBy (id = "id_ha_fix_session_button")
 	public MobileElement fixItHelpButton;
 	
-    private FAQPage faqPage = new FAQPageAndroid(driver);
+
     private SendBugReportPage sendBug = new SendBugReportPageAndroid(driver);
 	
 	public HelpPageAndroid(AppiumDriver driver) {super(driver); }
@@ -48,18 +48,16 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 	public void HelpNavTest() throws InterruptedException{
 		menuIcon.click();
 		helpMenuOption.click();
-		takeScreenshot("HelpNavTest1");
 		//faqHelpButton.click();
-		//faqPage.FAQNavTest();
-		//takeScreenshot("HelpNavTest2");
+		//BasePage.sleep(4000);
+		//driver.navigate().back();
+		takeScreenshot("help");
 		sendBugHelpButton.click();
 		sendBug.CheckBugForExceptions();
-		takeScreenshot("HelpNavTest3");
+		driver.navigate().back();
 		fixItHelpButton.click();
 		popUp.isDisplayed();
-		takeScreenshot("HelpNavTest4");
 		acceptButton.click();
-		takeScreenshot("HelpNavTest5");
 		BasePage.sleep(5000);
 		driver.navigate().back();
 	}
@@ -80,5 +78,5 @@ public class HelpPageAndroid extends BasePage implements HelpPage {
 			takeScreenshot("swipeRight2"+System.currentTimeMillis());
 			
 	}
-}
+	}
 }

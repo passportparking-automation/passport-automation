@@ -5,7 +5,9 @@ public interface VehiclesPage {
 	public void clickAddV();
 	public void navToLanding();
 	public void CheckUpdateToVehiclePage();
-	public void AddVTest();
 	public void NavTest();
-	
+	public void navToUpdateVehicleDetialPage();
+	public void navToUpdateDeleteVehicleDetialPage();
+	public void clickTestVehicle();
 }
+

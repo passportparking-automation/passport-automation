@@ -29,7 +29,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 		try {
             driver.hideKeyboard();
             } catch (Exception e) {
-            	System.out.println("Keyboard wasn't displayed");
+            	//System.out.println("Keyboard wasn't displayed");
             }
 		PINSignInButton.click();
 		takeScreenshot("pinTest2");
@@ -37,7 +37,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 		try {
             driver.findElement(By.id("button1")).click();
             } catch (Exception e) {
-            	System.out.println("Run is not on Emulator");
+            	//System.out.println("Run is not on Emulator");
             }
 	}
 	public void SendShortValuedPINTest() {
@@ -65,7 +65,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 		try {
             driver.hideKeyboard();
             } catch (Exception e) {
-            	System.out.println("Keyboard wasn't displayed");
+            	//System.out.println("Keyboard wasn't displayed");
             }
 		PINSignInButton.click();
 		takeScreenshot("pinrTest4");
@@ -75,6 +75,7 @@ public class PINPageAndroid extends BasePage  implements PINPage{
 	}
 
 	public void navToLanding() {
+		BasePage.sleep(5000);
 		driver.navigate().back();
 	}
 	public void navToReset(){

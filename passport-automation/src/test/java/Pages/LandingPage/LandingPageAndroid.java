@@ -14,7 +14,7 @@ import org.testng.Assert;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.SwipeElementDirection;
+//import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -62,8 +62,8 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 	@FindBy(id = "logInButton")
 	public MobileElement logInButton;
 
-	@FindBy(id = "optionsContainer")
-	public MobileElement optionsCont;
+	@FindBy(id = "sidemenu_item_sm_options")
+	public MobileElement optionsButton;
 
 	@FindBy(id = "slidingmenumain")
 	public MobileElement mainScreen;
@@ -128,7 +128,7 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		favButton.isDisplayed();
 		faqButton.isDisplayed();
 		menuIcon.isDisplayed();
-		
+		/*
 		takeScreenshot("CheckLandingPageForExceptions1");
 		takeScreenshot("swipeDown1"+System.currentTimeMillis());
         Dimension size = driver.manage().window().getSize();
@@ -144,28 +144,28 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
         takeScreenshot("swipeDown2"+System.currentTimeMillis());
         
 		powerdByLogo.isDisplayed();
-	
+		*/
 	}
 
 	public void CheckMenuOptionsForExceptions() {
-		takeScreenshot("menuOptTest");
 		menuIcon.click();
 		homeMenuOption.isDisplayed();
 		helpMenuOption.isDisplayed();
 		findParkingMenuOption.isDisplayed();
 		sendBugMenuOption.isDisplayed();
 		FAQMenuOption.isDisplayed();
-		//termsMenuOption.isDisplayed();
-		//privacyPolicyMenuOption.isDisplayed();
 		loginMenuOption.isDisplayed();
 		takeScreenshot("menuOptTest2");
 		menuIcon.click();
-		takeScreenshot("menuOptTest3");
+		
 
 	}
 	
 	public void EnterLocationOrPayToParkCodeTest() {
 		goToMapButton.click();
+		BasePage.sleep(3000);
+		takeScreenshot("checkIfOnGoToMap");
+		driver.navigate().back();
 
 	}
 
@@ -238,6 +238,11 @@ public class LandingPageAndroid extends BasePage implements LandingPage {
 		} catch (Throwable e) {
 			System.err.println("The staging build message did not appear");
 		}
+	}
+
+	public void navigateToOptionsPage() {
+		menuIcon.click();
+		optionsButton.click();
 	}
 
 }

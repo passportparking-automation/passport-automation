@@ -50,15 +50,8 @@ public class CodeVerificationPageTests extends TestBase{
 		codeVerificationPage.EmptyVerTest();
 		codeVerificationPage.NavBackTest();
 		mobileVerPage.CheckMobileVerPageForExceptions();
-		mobileVerPage.navToLanding();
-	}
-	@Test
-	public void ValidInputTests(){
-		landingPage.clickPayToPark();
-		logInPage.TermsDisplayedTest();
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
 		pinPage.CheckSecureLoginForExceptions();
-		pinPage.navToLanding(); 
 	}
 }

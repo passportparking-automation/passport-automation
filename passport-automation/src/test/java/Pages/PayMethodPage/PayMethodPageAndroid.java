@@ -13,26 +13,21 @@ public class PayMethodPageAndroid extends BasePage implements  PayMethodPage{
 	public PayMethodPageAndroid(AppiumDriver driver) {super(driver);}
 
 	public void CheckPayMethodForExceptions() {
+		popUp.isDisplayed();
 		paymentMethodMessage.isDisplayed();
 		BasePage.sleep(2000);
-		takeScreenshot("DieselPopup");
-	}
-
-	
-	
-	
-	
-	
-	
-	
-	public void clickTestCreditCard() {	
-		
+		takeScreenshot("DieselPopup"+System.currentTimeMillis());
 	}
 
 	public void declinePayment() {
 		declineButton.click();
 		
 	}
+	
+	public void acceptPayment() {	
+		acceptButton.click();
+	}
+
 	
 
 }

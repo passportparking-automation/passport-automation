@@ -52,4 +52,16 @@ public class SignUpPageIOS extends BasePage implements SignUpPage {
 		homeMenuOption.click();
 	}
 
+	@Override
+	public void TermsandConTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void PrivacyPolTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

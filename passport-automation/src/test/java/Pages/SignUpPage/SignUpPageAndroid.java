@@ -28,6 +28,19 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	@FindBy (id = "title")
 	public MobileElement termsTitle;
 	
+	@FindBy (id= "pDialogExternalLink_1")
+	public MobileElement privacyPolExternalLink;
+	
+	@FindBy (id= "pDialogExternalLink_2")
+	public MobileElement termsandConExternalLink;
+	
+	@FindBy (id="id_ws_terms")
+	public MobileElement termsandConInternalLink;
+	
+	@FindBy (id="id_sm_privacy_policy")
+	public MobileElement privacyPolInternalLink;
+	
+	
 	public SignUpPageAndroid(AppiumDriver driver) {super(driver);}
 
 	public void signUpThroughEmail() {
@@ -44,12 +57,15 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	signUpButton.isDisplayed();
 	logInButton.isDisplayed();
 	poweredByLogo.isDisplayed();
+	termsandConInternalLink.isDisplayed();
+	privacyPolInternalLink.isDisplayed();
 	}
 	
 	public void DeclineTermsTest(){
 		signUpButton.click();
 		popUp.isDisplayed();
-		
+		termsandConExternalLink.isDisplayed();
+		privacyPolExternalLink.isDisplayed();
 		String actualTermsTitle = termsTitle.getText();
 		String expectedTermsTitle = "Terms & Conditions";
 		if(expectedTermsTitle.equals(actualTermsTitle)){
@@ -75,6 +91,32 @@ public class SignUpPageAndroid extends BasePage implements SignUpPage{
 	
 	public void navToLanding(){
 		driver.navigate().back();
+	}
+
+	public void TermsandConTest() {
+		termsandConInternalLink.click();
+		takeScreenshot("tcInternal");
+		backButton.click();
+		signUpButton.click();
+		termsandConExternalLink.click();
+		takeScreenshot("TandC");
+		driver.navigate().back();
+		popUp.isDisplayed();
+		declineButton.click();
+	}
+
+	
+	public void PrivacyPolTest() {
+		privacyPolInternalLink.click();
+		takeScreenshot("ppInternal");
+		backButton.click();
+		signUpButton.click();
+		privacyPolExternalLink.click();
+		takeScreenshot("PandP");
+		driver.navigate().back();
+		popUp.isDisplayed();
+		declineButton.click();
+		
 	}
 
 }

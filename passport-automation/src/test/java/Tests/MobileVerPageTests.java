@@ -48,20 +48,13 @@ public class MobileVerPageTests extends TestBase{
 	public void CheckMobileVerPageForExceptions() throws InterruptedException{
 		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
-		mobileVerPage.CheckMobileVerPageForExceptions();
+		mobileVerPage.CheckMobileVerPageForExceptions();	
 		mobileVerPage.NavBackToLoginTest();
 		signUpPage.CheckSigninPageForExceptions();
-		signUpPage.navToLanding();
-	}
-	
-	@Test
-	public void InputTests(){
-		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
 		mobileVerPage.BlankNumberProvidedTest();
 		mobileVerPage.ShortNumberProivdedTest();
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.CheckCodeVerForExceptions();
-		codeVerificationPage.navToLanding();
 	}
 }

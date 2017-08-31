@@ -10,5 +10,6 @@ public interface AddVehiclePage {
 	public void NoGuruRecord();
 	public void AddVehicleTest();
 	public void CheckUpdateToVehiclePage();
+	public void DeleteTest();
  
 }

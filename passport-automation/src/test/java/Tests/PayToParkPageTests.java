@@ -21,7 +21,6 @@ import Pages.ProfilePage.ProfilePageAndroid;
 import Tests.AbstractBaseTests.TestBase;
 
 public class PayToParkPageTests extends TestBase {
-	
 	private LandingPage landingPage;
 	private PayToParkPage payToParkPage;
 	private LoginPage logInPage;
@@ -50,15 +49,13 @@ public class PayToParkPageTests extends TestBase {
 		}
 	}
 	@Test 
-	public void PayTopParkTests(){
+	public void PayToParkTests(){
 		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
 		mobileVerPage.ValidMobileTest();
 		codeVerificationPage.SendCorrectCodeTest();
 		pinPage.SendCorrectPINTest();
 		BasePage.sleep(5000);
-		pinPage.navToLanding();
-		landingPage.clickPayToPark();
 		payToParkPage.EmptyAndFalseZoneTest();
 		payToParkPage.CorrectZoneNavTest();
 

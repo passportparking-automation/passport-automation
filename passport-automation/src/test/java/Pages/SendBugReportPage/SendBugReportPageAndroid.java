@@ -56,8 +56,6 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		}else{
 			assertTrue(false);
 		}
-		driver.navigate().back();
-		takeScreenshot("yada2");
 	}
 	
 	public void EmptyBugTest(){
@@ -105,8 +103,6 @@ public class SendBugReportPageAndroid extends BasePage implements SendBugReportP
 		takeScreenshot("PopUpMessage2");
 		acceptButton.click();
 		
-		driver.navigate().back();
-		takeScreenshot("yada3");
 	}
 	
 	public void NotEmptyBugTest(){

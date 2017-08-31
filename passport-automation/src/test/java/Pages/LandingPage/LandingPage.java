@@ -19,6 +19,7 @@ public interface LandingPage {
 	public void logout();
 	public void navigateToYourCardsPage();
 	public void navigateToVehiclesPage();
+	public void navigateToOptionsPage();
 	
  
 	

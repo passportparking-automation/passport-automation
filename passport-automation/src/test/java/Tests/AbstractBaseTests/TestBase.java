@@ -54,12 +54,14 @@ public abstract class TestBase {
 			System.out.println(appAndroid.getName());
 			
 			DesiredCapabilities capabilitiesAndroid = new DesiredCapabilities();
-			capabilitiesAndroid.setCapability(MobileCapabilityType.PLATFORM_NAME, deviceAndroid.platformName);
+			//capabilitiesAndroid.setCapability(MobileCapabilityType.PLATFORM_NAME, deviceAndroid.platformName);
 			capabilitiesAndroid.setCapability(MobileCapabilityType.DEVICE_NAME, deviceAndroid.deviceName);
-			//capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "selendroid");
+			//capabilitiesAndroid.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 			capabilitiesAndroid.setCapability(MobileCapabilityType.APP, appAndroid);
+			capabilitiesAndroid.setCapability("platformName","android");
 			capabilitiesAndroid.setCapability("appPackage", deviceAndroid.appPackage);
-		//	capabilitiesAndroid.setCapability("automationName", "selendroid"); 
+			capabilitiesAndroid.setCapability("appActivity", "com.parkopedia.parkright.ParkRightApp");
+			//capabilitiesAndroid.setCapability("automationName", "uiautomator2"); 
 			
 			driver = new AppiumDriver<MobileElement>(url, capabilitiesAndroid);
 			wait = new WebDriverWait(driver, 80);

@@ -22,9 +22,6 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 	@FindBy(id = "id_mvw_call_button")
 	MobileElement callButton;
 	
-	@FindBy(xpath = "//android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.TextView[3]")
-	MobileElement paragraph;
-	
 	@FindBy(id = "backImageView")
 	MobileElement backButton;
 	
@@ -48,7 +45,6 @@ public class MobileVerPageAndroid  extends BasePage implements MobileVerPage {
 		takeScreenshot("blank1");
 		acceptButton.click();
 		callButton.isDisplayed();
-		takeScreenshot("blank2");
 	}
 	public void ShortNumberProivdedTest() {
 		phoneTextBox.sendKeys("281330");

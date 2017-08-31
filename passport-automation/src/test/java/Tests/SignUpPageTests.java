@@ -37,20 +37,14 @@ public class SignUpPageTests extends TestBase {
 		}
 	}
 	@Test
-	public void CheckSigninPageForExceptions() throws InterruptedException {
+	public void CheckSignUpPageForExceptions() throws InterruptedException {
 		landingPage.clickPayToPark();
 		BasePage.sleep(5000);
 		signUpPage.CheckSigninPageForExceptions();
-		signUpPage.navToLanding();
-		
-	}
-	@Test
-	public void DeclineAndAcceptTermsTest() {
-		landingPage.clickPayToPark();
+		signUpPage.PrivacyPolTest();
+		signUpPage.TermsandConTest();
 		signUpPage.DeclineTermsTest();
 		signUpPage.AcceptTermsTest();
 		mobileVerPage.CheckMobileVerPageForExceptions();
-		mobileVerPage.navToLanding();
-		
 	}
 }

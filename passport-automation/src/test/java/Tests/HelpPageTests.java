@@ -34,22 +34,12 @@ public class HelpPageTests extends TestBase {
 	}
 
 	@Test
-	public void CloseHelpTest() {
+	public void HelpPageTest() throws InterruptedException {
 		landingPage.clickHelpButton();
 		helpPage.CloseHelpTest();
-	}
-
-	@Test
-	public void HelpNavTest() throws InterruptedException {
-		BasePage.sleep(5000);
+		BasePage.sleep(4000);
 		helpPage.HelpNavTest();
-	}
-	@Test
-	public void TutorialSwipeTest(){
 		landingPage.clickHelpButton();
 		helpPage.TutorialSwipeTest(); 
 	}
-	
-
-
 }

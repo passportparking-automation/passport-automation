@@ -99,4 +99,10 @@ public class AddVehiclePageIOS extends BasePage implements AddVehiclePage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void DeleteTest() {
+		// TODO Auto-generated method stub
+		
+	}
 }

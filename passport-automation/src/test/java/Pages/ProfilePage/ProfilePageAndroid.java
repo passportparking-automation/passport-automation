@@ -8,10 +8,10 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class ProfilePageAndroid extends BasePage implements ProfilePage {
-	@FindBy (name= "User ID")
-	public MobileElement userIDField;
+	//@FindBy (name= "User ID")
+	//public MobileElement userIDField;
 	
-	@FindBy (name= "E-mail")
+	@FindBy (id= "activity_profile_email_row")
 	public MobileElement userEmailField;
 	
 	@FindBy (id="update")
@@ -23,6 +23,7 @@ public class ProfilePageAndroid extends BasePage implements ProfilePage {
 		//userIDField.isDisplayed();
 		//userEmailField.isDisplayed();
 		updateButton.isDisplayed();
+		userEmailField.isDisplayed();
 		takeScreenshot("ProfPage");
 	}
 	

@@ -35,31 +35,16 @@ public class LandingPageTests extends TestBase {
 			break;
 		}
 	}
-	
+
 	@Test
-	public void CheckMenuOptionsForExceptions() throws InterruptedException{
-		landingPage.CheckMenuOptionsForExceptions();
-	}
-	
-	@Test
-	public void checkLandingPageForExceptions() throws InterruptedException{
+	public void LandingPageTest() throws InterruptedException{
+		//landingPage.SwipeRightTest();
+		//landingPage.CheckMenuOptionsForExceptions();
+		//landingPage.SwipeLeftTest();
 		landingPage.CheckLandingPageForExceptions();
-	}
-	
-	/*@Test
-	public void EnterLocationOrPayToParkCodeTest() throws InterruptedException{
 		landingPage.EnterLocationOrPayToParkCodeTest();
-		findParkingPage.CheckFindParkingForExceptions();
-		findParkingPage.navToLanding();
-	}
-	*/
-	@Test
-	public void LandingPageSwipeTest(){
-		landingPage.SwipeRightTest();
-		landingPage.CheckMenuOptionsForExceptions();
-		landingPage.SwipeLeftTest();
-		landingPage.CheckLandingPageForExceptions();
-		 
+		
+		
 	}
 	
 }

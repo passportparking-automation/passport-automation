@@ -229,4 +229,10 @@ public class LandingPageIOS extends BasePage implements LandingPage {
 		
 	}
 
+	@Override
+	public void navigateToOptionsPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

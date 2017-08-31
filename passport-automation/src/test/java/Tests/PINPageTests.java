@@ -42,7 +42,7 @@ public class PINPageTests extends TestBase {
 		}
 	}	
 	@Test	
-	public void CheckSecureLoginForExceptionsAndSendDataTests() throws InterruptedException{
+	public void CheckSecureLoginForExceptionss() throws InterruptedException{
 		landingPage.clickPayToPark();
 		logInPage.TermsDisplayedTest();
 		mobileVerPage.ValidMobileTest();
@@ -50,7 +50,6 @@ public class PINPageTests extends TestBase {
 		pinPage.CheckSecureLoginForExceptions();
 		BasePage.sleep(2000);
 		pinPage.navToLanding();
-		
 		landingPage.clickPayToPark();
 		pinPage.EmptyPINTest();
 		pinPage.InvalidPINTest();

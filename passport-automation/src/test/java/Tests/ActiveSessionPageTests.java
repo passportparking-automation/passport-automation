@@ -2,6 +2,8 @@ package Tests;
 
 import org.testng.annotations.*;
 
+import Pages.ActiveSessionPage.ActiveSessionPage;
+import Pages.ActiveSessionPage.ActiveSessionPageAndroid;
 import Pages.AddVehiclePage.AddVehiclePage;
 import Pages.AddVehiclePage.AddVehiclePageAndroid;
 import Pages.CodeVerificationPage.CodeVerificationPage;
@@ -44,6 +46,7 @@ public class ActiveSessionPageTests extends TestBase{
 	private LengthOfStayPage losPage;
 	private YourCardsPage yourCardsPage;
 	private PayMethodPage payMethodPage;
+	private ActiveSessionPage activeSessionPage;
 	
 	@BeforeTest
 	@Override
@@ -63,6 +66,7 @@ public class ActiveSessionPageTests extends TestBase{
 			losPage= new LengthOfStayPageAndroid(driver);
 			yourCardsPage = new YourCardsPageAndroid(driver);
 			payMethodPage = new PayMethodPageAndroid(driver);
+			activeSessionPage = new ActiveSessionPageAndroid(driver);
 			break;
 		case IOS:
 			//landingpage = new LandingPageIOS(driver);
@@ -71,6 +75,22 @@ public class ActiveSessionPageTests extends TestBase{
 		default:
 			break;
 		}
+	}
+	
+	@Test
+	public void CheckActiveSessionPageForExceptions(){
+		landingPage.clickPayToPark();
+		loginPage.clickLoginButtonAndAcceptTerms();
+		mobileVerPage.ValidMobileTest();
+		codeVerificationPage.SendCorrectCodeTest();
+		pINPage.SendCorrectPINTest();
+		zonePage.goToDieselZone1();
+		vehiclesPage.CheckVehiclesPageForExceptions();
+		vehiclesPage.clickTestVehicle();
+		losPage.clickMaxStayButton();
+		yourCardsPage.clickTestCreditCard();
+		payMethodPage.acceptPayment();
+		activeSessionPage.CheckActiveSessionPageForExceptions();
 	}
 	
 	/*@Test
@@ -93,7 +113,7 @@ public class ActiveSessionPageTests extends TestBase{
 	@Test
 	public void DieselOlderThan2015Test() throws InterruptedException{
 		
-	}*/
+	}
 	@Test
 	public void DieselYoungerThan2015Test() throws InterruptedException{
 		landingPage.clickPayToPark();
@@ -111,7 +131,7 @@ public class ActiveSessionPageTests extends TestBase{
 		payMethodPage.declinePayment();
 		
 	}
-	/*@Test
+	@Test
 	public void NoGuruRecordTest() throws InterruptedException{
 		 
 	}

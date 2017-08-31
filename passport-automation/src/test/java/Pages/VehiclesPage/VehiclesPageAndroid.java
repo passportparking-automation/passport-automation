@@ -20,14 +20,8 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 	@FindBy(id="zoneTextBox")
 	public MobileElement zoneTextBox;
 	
-	@FindBy (id="viewHeader")
-	public MobileElement header;
-	
 	@FindBy(id="id_continue_button")
 	public MobileElement continueButton;
-	
-	@FindBy (id="vehicleListLabel")
-	public MobileElement listLabel;
 	
 	@FindBy (id="backImageView")
 	public MobileElement backButton;
@@ -35,25 +29,26 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 	@FindBy (id="saveVehicleButton")
 	public MobileElement saveButton;
 	
+	@FindBy(id="vehicleListItem_1")
+	public MobileElement testVehicle1;
+	
+	@FindBy(id="vehicleListItem_2")
+	public MobileElement testVehicle2;
+	
 	public VehiclesPageAndroid(AppiumDriver driver) {	super(driver);}
-
-
-	public void clickAddV() {
-		addVehicleButton.click();
-	}
 
 
 	public void CheckVehiclesPageForExceptions() {
 		addVehicleButton.isDisplayed();
 		//zoneInfo.isDisplayed();
-		zoneTextBox.sendKeys("8904");
+/*		zoneTextBox.sendKeys("8904");
 		continueButton.click();
 		BasePage.sleep(2000);
 		assertEquals(header.getText(), "Select Vehicle");
 		takeScreenshot("AddVehicle");
 		assertEquals(listLabel.getText(), "Please choose the vehicle you would like to park in Location 8904 (E1, Bury Street at E1 Westminster City Council)");
 		backButton.click();
-		assertEquals(header.getText(), "Enter Location");
+		assertEquals(header.getText(), "Enter Location");*/
 	}
 
 	public void navToLanding() {
@@ -74,25 +69,19 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 
 	}
 	
-	public void AddVTest(){
-		zoneTextBox.sendKeys("8904");
-		continueButton.click();
-		BasePage.sleep(5000);
-		//scroll//
-		int offset = 1;
-        int y = driver.manage().window().getSize().getHeight();
-        int x = driver.manage().window().getSize().getWidth();
-        TouchAction touchAction = new TouchAction(driver);
-        touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();
-        touchAction.perform();
-      //scroll//
+	public void clickAddV(){
 		addVehicleButton.click();
 		assertEquals(header.getText(), "Add Vehicle");
 		
 	}
+	public void clickTestVehicle(){
+		takeScreenshot("addV");
+		testVehicle1.click();
+		
+	}
 	
 	public void NavTest(){
-		AddVTest();
+		clickAddV();
 		backButton.click();
 		Dimension size = driver.manage().window().getSize();
         int starty = (int) (size.height * 0.80);
@@ -113,6 +102,18 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 		
 	}
 	public void CheckUpdateToVehiclePage(){
-		takeScreenshot("VPage");
+		testVehicle1.isDisplayed();
+		takeScreenshot("UpdatedVPage");
 	}
+	
+	public void navToUpdateVehicleDetialPage(){
+		testVehicle1.click();
+	}
+
+	public void navToUpdateDeleteVehicleDetialPage() {
+		testVehicle2.click();
+		
+	}
+
+
 }

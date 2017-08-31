@@ -25,7 +25,7 @@ public class CodeVerificationPageAndroid extends BasePage implements CodeVerific
 		try {
             driver.hideKeyboard();
             } catch (Exception e) {
-            	System.out.println("Keyboard wasn't displayed");
+            	//System.out.println("Keyboard wasn't displayed");
             }
 		submitButton.click();
 		takeScreenshot("CodeTest2");

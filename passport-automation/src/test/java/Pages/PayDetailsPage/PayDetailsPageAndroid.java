@@ -43,7 +43,6 @@ public class PayDetailsPageAndroid extends BasePage implements PayDetailsPage{
 		monthSpinner.click();
 		List<MobileElement> monthList = driver.findElements(By.className("android.widget.CheckedTextView"));
 		monthList.get(11).click();
-		
 		yearSpinner.click();
 		List<MobileElement> YearList = driver.findElements(By.className("android.widget.CheckedTextView"));
 		YearList.get(1).click();
@@ -51,11 +50,10 @@ public class PayDetailsPageAndroid extends BasePage implements PayDetailsPage{
 		takeScreenshot("fillForm1");
 		saveCardButton.click();
 		takeScreenshot("fillForm2");
-		try{
-		acceptButton.click();
-		 } catch (Exception e) {
-         	System.out.println("okBtn Not displayed"); 
-         	
-         }
+		try{				acceptButton.click();
+		} catch (Exception e) {
+			System.out.println("okBtn Not displayed"); 
+		}
+	
 	}
 }

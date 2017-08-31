@@ -59,6 +59,9 @@ public abstract class BasePage {
 	
 	@FindBy (id = "sidemenu_item_sm_faq")
 	public MobileElement FAQMenuOption;
+	
+	@FindBy (id="viewHeader")
+	public MobileElement header;
 
 	
 	//@FindBy (xpath = "//android.widget.RelativeLayout[1]/android.view.ViewGroup[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[9]")

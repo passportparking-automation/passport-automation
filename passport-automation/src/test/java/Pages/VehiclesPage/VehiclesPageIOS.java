@@ -38,14 +38,27 @@ public class VehiclesPageIOS extends BasePage implements VehiclesPage {
 	}
 
 	@Override
-	public void AddVTest() {
+	public void NavTest() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void NavTest() {
+	public void navToUpdateVehicleDetialPage() {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void navToUpdateDeleteVehicleDetialPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickTestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
