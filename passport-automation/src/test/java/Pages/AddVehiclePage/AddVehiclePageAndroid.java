@@ -37,7 +37,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	public void addNonDieselYoungerThan2015() {
 		VRMInputBox.sendKeys("DF59HZX");
 		takeScreenshot("dTest2");
-		nickNameInputBox.sendKeys("DF59HZX");
+		nickNameInputBox.sendKeys("NonDieselYoungerThan2015");
 		takeScreenshot("dTest3");
 		saveVButton.click();
 		takeScreenshot("dTest4");	
@@ -46,7 +46,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	public void addNonDieselOlderThan2015() {
 		VRMInputBox.sendKeys("MJI9302");
 		takeScreenshot("dTest21");
-		nickNameInputBox.sendKeys("MJI9302");
+		nickNameInputBox.sendKeys("NonDieselOlderThan2015");
 		takeScreenshot("dTest31");
 		saveVButton.click();
 		takeScreenshot("dTest41");	
@@ -56,7 +56,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	public void addNonDiesel2015() {
 		VRMInputBox.sendKeys("RK65AWJ");
 		takeScreenshot("dTest22");
-		nickNameInputBox.sendKeys("RK65AWJ");
+		nickNameInputBox.sendKeys("NonDiesel2015");
 		takeScreenshot("dTest32");
 		saveVButton.click();
 		takeScreenshot("dTest42");		
@@ -66,7 +66,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	public void addDieselOlderThan2015() {
 		VRMInputBox.sendKeys("DE06YJB");
 		takeScreenshot("dTest23");
-		nickNameInputBox.sendKeys("DE06YJB");
+		nickNameInputBox.sendKeys("DieselOlderThan2015");
 		takeScreenshot("dTest33");
 		saveVButton.click();
 		takeScreenshot("dTest43");
@@ -75,7 +75,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	public void addDieselYoungerThan2015() {
 		VRMInputBox.sendKeys("LV66TXZ");
 		takeScreenshot("dTest24");
-		nickNameInputBox.sendKeys("LV66TXZ");
+		nickNameInputBox.sendKeys("DieselYoungerThan2015");
 		takeScreenshot("dTest34");
 		saveVButton.click();
 		takeScreenshot("dTest44");
@@ -84,7 +84,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	public void addDiesel2015() {
 		VRMInputBox.sendKeys("T888SAP");
 		takeScreenshot("dTest25");
-		nickNameInputBox.sendKeys("T888SAP");
+		nickNameInputBox.sendKeys("Diesel2015");
 		takeScreenshot("dTest35");
 		saveVButton.click();
 		takeScreenshot("dTest45");
@@ -93,7 +93,7 @@ public class AddVehiclePageAndroid extends BasePage implements AddVehiclePage{
 	public void NoGuruRecord() {
 		VRMInputBox.sendKeys("AAAAAAA");
 		takeScreenshot("dTest25");
-		nickNameInputBox.sendKeys("AAAAAAA");
+		nickNameInputBox.sendKeys("NoGuruRecord");
 		takeScreenshot("dTest35");
 		saveVButton.click();
 		takeScreenshot("dTest45");

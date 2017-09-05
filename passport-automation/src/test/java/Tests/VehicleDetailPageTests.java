@@ -69,10 +69,10 @@ public class VehicleDetailPageTests extends TestBase{
 		BasePage.sleep(3000);
 		pinPage.navToLanding();
 		landingPage.navigateToVehiclesPage();
-		vehiclesPage.navToUpdateVehicleDetialPage();
+		vehiclesPage.clickTestVehicle();
 		vehicleDetailPage.NavTest();
 		vehiclesPage.CheckVehiclesPageForExceptions();
-		vehiclesPage.navToUpdateVehicleDetialPage();
+		vehiclesPage.clickTestVehicle();
 		vehicleDetailPage.PrivacyNavTest();
 		vehicleDetailPage.NavToUpdate();
 		updateVehiclePage.NavTest();

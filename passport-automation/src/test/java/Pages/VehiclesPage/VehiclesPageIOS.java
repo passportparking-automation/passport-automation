@@ -44,12 +44,6 @@ public class VehiclesPageIOS extends BasePage implements VehiclesPage {
 	}
 
 	@Override
-	public void navToUpdateVehicleDetialPage() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void navToUpdateDeleteVehicleDetialPage() {
 		// TODO Auto-generated method stub
 		
@@ -57,6 +51,48 @@ public class VehiclesPageIOS extends BasePage implements VehiclesPage {
 
 	@Override
 	public void clickTestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickNonDieselOlderThan2015TestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickNonDieselYoungerThan2015TestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickNonDiesel2015TestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickDiesel2015TestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickDieselYoungThan2015TestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickDieselOlderThan2015TestVehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void clickNoGuruRecordVehicle() {
 		// TODO Auto-generated method stub
 		
 	}

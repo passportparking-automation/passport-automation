@@ -69,7 +69,7 @@ public class UpdateVehiclePageTests extends TestBase{
 		BasePage.sleep(5000);
 		pinPage.navToLanding();
 		landingPage.navigateToVehiclesPage();
-		vehiclesPage.navToUpdateVehicleDetialPage();
+		vehiclesPage.clickTestVehicle();
 		vehicleDetailPage.NavToUpdate();
 		updateVehiclePage.NavTest();
 		vehicleDetailPage.NavToUpdate();

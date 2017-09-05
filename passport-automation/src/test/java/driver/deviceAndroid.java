@@ -12,7 +12,7 @@ public class deviceAndroid {
 	public static final String browserNameChrome = "Chrome";
 	public static final String browserNameFirefox = "Firefox";
 	
-	public static final String appName = "ParkRight-staging_aug29_1058.apk";
+	public static final String appName = "ParkRight-staging_aug31_0650.apk";
 	public static final String appDir = "/Users/jameskoch/Desktop/passportCI";
 	public static final String appPackage = "com.parkopedia.parkright";
 	

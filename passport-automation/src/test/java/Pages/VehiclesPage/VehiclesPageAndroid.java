@@ -30,26 +30,41 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 	public MobileElement saveButton;
 	
 	@FindBy(id="vehicleListItem_1")
-	public MobileElement testVehicle1;
+	public MobileElement mainTestVehicle;
 	
 	@FindBy(id="vehicleListItem_2")
-	public MobileElement testVehicle2;
+	public MobileElement NonDieselOlderThan2015TestVehicle;
+	
+	@FindBy(id="vehicleListItem_3")
+	public MobileElement NonDieselYoungerThan2015TestVehicle;
+	
+	@FindBy(id="vehicleListItem_4")
+	public MobileElement NonDiesel2015TestVehicle;
+	
+	@FindBy(id="vehicleListItem_5")
+	public MobileElement Diesel2015TestVehicle;
+	
+	@FindBy(id="vehicleListItem_6")
+	public MobileElement DieselYoungThan2015TestVehicle;
+	
+	@FindBy(id="vehicleListItem_7")
+	public MobileElement DieselOlderThan2015TestVehicle;
+	
+	@FindBy(id="vehicleListItem_8")
+	public MobileElement NoGuruRecordVehicle;
+	
+	@FindBy(id="vehicleListItem_9")
+	public MobileElement testVehicleToBeDeleted;
+	
+
 	
 	public VehiclesPageAndroid(AppiumDriver driver) {	super(driver);}
 
 
 	public void CheckVehiclesPageForExceptions() {
 		addVehicleButton.isDisplayed();
-		//zoneInfo.isDisplayed();
-/*		zoneTextBox.sendKeys("8904");
-		continueButton.click();
-		BasePage.sleep(2000);
-		assertEquals(header.getText(), "Select Vehicle");
-		takeScreenshot("AddVehicle");
-		assertEquals(listLabel.getText(), "Please choose the vehicle you would like to park in Location 8904 (E1, Bury Street at E1 Westminster City Council)");
-		backButton.click();
-		assertEquals(header.getText(), "Enter Location");*/
 	}
+
 
 	public void navToLanding() {
 		
@@ -76,7 +91,7 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 	}
 	public void clickTestVehicle(){
 		takeScreenshot("addV");
-		testVehicle1.click();
+		mainTestVehicle.click();
 		
 	}
 	
@@ -102,18 +117,48 @@ public class VehiclesPageAndroid extends BasePage implements  VehiclesPage{
 		
 	}
 	public void CheckUpdateToVehiclePage(){
-		testVehicle1.isDisplayed();
+		mainTestVehicle.isDisplayed();
 		takeScreenshot("UpdatedVPage");
-	}
-	
-	public void navToUpdateVehicleDetialPage(){
-		testVehicle1.click();
 	}
 
 	public void navToUpdateDeleteVehicleDetialPage() {
-		testVehicle2.click();
+		testVehicleToBeDeleted.click();
+		
+	}
+	
+	public void clickNonDieselOlderThan2015TestVehicle() {
+		NonDieselOlderThan2015TestVehicle.click();
+		
+	}
+	
+	public void clickNonDieselYoungerThan2015TestVehicle() {
+		NonDieselYoungerThan2015TestVehicle.click();
 		
 	}
 
+	
+	public void clickNonDiesel2015TestVehicle() {
+		NonDiesel2015TestVehicle.click();
+		
+	}
+
+	public void clickDiesel2015TestVehicle() {
+		Diesel2015TestVehicle.click();
+		
+	}
+
+	public void clickDieselYoungThan2015TestVehicle() {
+		DieselYoungThan2015TestVehicle.click();
+		
+	}
+
+	public void clickDieselOlderThan2015TestVehicle() {
+		DieselOlderThan2015TestVehicle.click();
+		
+	}
+
+	public void clickNoGuruRecordVehicle() {
+		NoGuruRecordVehicle.click();		
+	}
 
 }

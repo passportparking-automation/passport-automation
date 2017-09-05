@@ -3,147 +3,21 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
   <test name="ParkRight Test Automation(failed)" parallel="classes">
     <classes>
-      <class name="Tests.YourCardsPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.YourCardsPageTests -->
-      <class name="Tests.PayToParkPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="PayToParkTests"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.PayToParkPageTests -->
-      <class name="Tests.HelpPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.HelpPageTests -->
-      <class name="Tests.MobileVerPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.MobileVerPageTests -->
-      <class name="Tests.CodeVerificationPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.CodeVerificationPageTests -->
-      <class name="Tests.ResetPINPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.ResetPINPageTests -->
-      <class name="Tests.UpdateProfPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.UpdateProfPageTests -->
-      <class name="Tests.SendBugReportPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.SendBugReportPageTests -->
-      <class name="Tests.ActiveSessionPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.ActiveSessionPageTests -->
-      <class name="Tests.FAQPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.FAQPageTests -->
-      <class name="Tests.ProfilePageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.ProfilePageTests -->
-      <class name="Tests.PayDetailsPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.PayDetailsPageTests -->
-      <class name="Tests.AddVehiclePageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.AddVehiclePageTests -->
-      <class name="Tests.VehicleDetailPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.VehicleDetailPageTests -->
-      <class name="Tests.OptionsPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.OptionsPageTests -->
-      <class name="Tests.LandingPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="tearDownAppium"/>
-          <include name="initAppium"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.LandingPageTests -->
-      <class name="Tests.FavoritesPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.FavoritesPageTests -->
-      <class name="Tests.PINPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.PINPageTests -->
-      <class name="Tests.PayMethodPageTests">
-        <methods>
-          <include name="setUpPage"/>
-          <include name="restartApp"/>
-        </methods>
-      </class> <!-- Tests.PayMethodPageTests -->
       <class name="Tests.LengthOfStayPageTests">
         <methods>
           <include name="restartApp"/>
           <include name="setUpPage"/>
+          <include name="CheckLengthOfStayForExceptions"/>
         </methods>
       </class> <!-- Tests.LengthOfStayPageTests -->
-      <class name="Tests.UpdateVehiclePageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.UpdateVehiclePageTests -->
-      <class name="Tests.SignUpPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-        </methods>
-      </class> <!-- Tests.SignUpPageTests -->
-      <class name="Tests.VehiclesPageTests">
+      <class name="Tests.ProfilePageTests">
         <methods>
           <include name="setUpPage"/>
           <include name="restartApp"/>
+          <include name="tearDownAppium"/>
+          <include name="initAppium"/>
         </methods>
-      </class> <!-- Tests.VehiclesPageTests -->
+      </class> <!-- Tests.ProfilePageTests -->
     </classes>
   </test> <!-- ParkRight Test Automation(failed) -->
 </suite> <!-- Failed suite [Test runner] -->

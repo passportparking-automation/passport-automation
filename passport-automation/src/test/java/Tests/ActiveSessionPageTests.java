@@ -92,49 +92,5 @@ public class ActiveSessionPageTests extends TestBase{
 		payMethodPage.acceptPayment();
 		activeSessionPage.CheckActiveSessionPageForExceptions();
 	}
-	
-	/*@Test
-	public void NonDieselOlderThan2015Test() throws InterruptedException{
-
-	}
-	
-	@Test
-	public void NonDieselYoungerThan2015Test() throws InterruptedException{
-		
-	}
-	@Test
-	public void NonDiesel2015Test() throws InterruptedException{
-		
-	}
-	@Test
-	public void Diesel2015Test() throws InterruptedException{
-		
-	}
-	@Test
-	public void DieselOlderThan2015Test() throws InterruptedException{
-		
-	}
-	@Test
-	public void DieselYoungerThan2015Test() throws InterruptedException{
-		landingPage.clickPayToPark();
-		loginPage.clickLoginButtonAndAcceptTerms();
-		mobileVerPage.ValidMobileTest();
-		codeVerificationPage.SendCorrectCodeTest();
-		pINPage.SendCorrectPINTest();
-		zonePage.goToDieselZone1();
-		vehiclesPage.CheckVehiclesPageForExceptions();
-		vehiclesPage.clickAddV();
-		addVehiclePage.addDieselOlderThan2015();
-		losPage.clickMaxStayButton();
-		yourCardsPage.clickTestCreditCard();
-		payMethodPage.CheckPayMethodForExceptions();
-		payMethodPage.declinePayment();
-		
-	}
-	@Test
-	public void NoGuruRecordTest() throws InterruptedException{
-		 
-	}
-	*/
 
 }

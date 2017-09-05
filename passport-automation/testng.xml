@@ -13,9 +13,9 @@
      	<class name="Tests.MobileVerPageTests"/>
      	<class name="Tests.CodeVerificationPageTests"/>
      	<class name="Tests.PINPageTests"/> 
-     	<class name="Tests.ResetPINPageTests"/-->
+     	<class name="Tests.ResetPINPageTests"/>
      	<class name="Tests.ProfilePageTests" />
-     	<!--class name="Tests.UpdateProfPageTests" />
+     	<class name="Tests.UpdateProfPageTests" />
      	<class name="Tests.YourCardsPageTests" />
      	<class name="Tests.PayDetailsPageTests" />
      	<class name="Tests.OptionsPageTests"/>
@@ -23,10 +23,14 @@
        	<class name="Tests.AddVehiclePageTests" />
        	<class name="Tests.VehicleDetailPageTests"/>
        	<class name="Tests.UpdateVehiclePageTests"/>
-       	<class name="Tests.PayToParkPageTests" /-->
+       	<class name="Tests.PayToParkPageTests" />
        	<class name="Tests.LengthOfStayPageTests" />
        	<class name="Tests.PayMethodPageTests" />
-       	<class name="Tests.ActiveSessionPageTests"/>
+       	<class name="Tests.ActiveSessionPageTests"/-->
+       	
+       	
+       	<class name="Tests.ProfilePageTests" />
+       	 	<class name="Tests.LengthOfStayPageTests" />
        	
     </classes>
   </test> <!-- Default test -->

@@ -23,8 +23,17 @@ public class LengthOfStayPageAndroid extends BasePage implements LengthOfStayPag
 	@FindBy (id = "shortcutButton_2")
 	public MobileElement chooseStayButton;
 	
-	@FindBy (id ="spinner_up_button")
+	@FindBy (id ="hourSpinner_up")
 	public MobileElement hourSpinnerUp;
+	
+	@FindBy(id="hourSpinner_down")
+	public MobileElement hourSpinnerDown;
+	
+	@FindBy (id ="minuteSpinner_up")
+	public MobileElement minuteSpinnerUp;
+	
+	@FindBy(id="minuteSpinner_down")
+	public MobileElement minuteSpinnerDown;
 	
 	@FindBy (id ="durationText")
 	public MobileElement durationText;
@@ -48,6 +57,7 @@ public class LengthOfStayPageAndroid extends BasePage implements LengthOfStayPag
 			hourSpinnerUp.click();
 			takeScreenshot("maxHRs"+i );
 		}
+		minuteSpinnerUp.click();
 		String actualTermsTitle = durationText.getText();
 		String expectedTermsTitle = "4 hours";
 		if(expectedTermsTitle.equals(actualTermsTitle)){
@@ -55,6 +65,12 @@ public class LengthOfStayPageAndroid extends BasePage implements LengthOfStayPag
 		}else{
 			assertTrue(false);
 		}
+		takeScreenshot("spinny test 1");
+		minuteSpinnerDown.click();
+		hourSpinnerDown.click();
+		minuteSpinnerDown.click();
+		minuteSpinnerUp.click();
+		takeScreenshot("spinny test 2");
 		nextButton.click();
 	}
 

@@ -45,4 +45,46 @@ public class PayMethodPageIOS extends BasePage implements PayMethodPage {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void checkPopForTax_NonDieselYoungerThan2015() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkPopForTax_NonDieselOlderThan2015() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkPopForTax_NonDiesel2015() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkPopForTax_Diesel2015() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkPopForTax_DieselYoungerThan2015() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkPopForTax_DieselOlderThan2015() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void checkPopForTax_NoGuruRecord() {
+		// TODO Auto-generated method stub
+		
+	}
 }
