@@ -3,8 +3,8 @@ package driver;
 import java.io.File;
 
 public class deviceAndroid {
-	//James Caps
-	/*
+	//James' Caps
+	
 	public static final String platformName = "Android";
 	public static final String deviceName = "Emulator2";
 	public static final String device = "Android";
@@ -12,14 +12,14 @@ public class deviceAndroid {
 	public static final String browserNameChrome = "Chrome";
 	public static final String browserNameFirefox = "Firefox";
 	
-	public static final String appName = "ParkRight-staging.apk";
+	public static final String appName = "ParkRight-staging_sept22_0106.apk";
 	public static final String appDir = "/Users/jameskoch/Desktop/passportCI";
 	public static final String appPackage = "com.parkopedia.parkright";
-	 */
+	 
 	
 	
-	//Joes Caps
-	
+	//Joe's Caps
+	/*
 	public static final String platformName = "Android";
 	public static final String deviceName = "Emulator3";
 	public static final String device = "Android";
@@ -30,9 +30,8 @@ public class deviceAndroid {
 	public static final String appName = "ParkRight-staging_sept22_0106.apk";
 	public static final String appDir = "/Users/joeakel/Desktop/passportCI";
 	public static final String appPackage = "com.parkopedia.parkright";
-	
+	*/
 
-	
 	//rubabadbubbub
 }
 
