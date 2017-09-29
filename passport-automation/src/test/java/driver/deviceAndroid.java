@@ -31,5 +31,9 @@ public class deviceAndroid {
 	public static final String appDir = "/Users/joeakel/Desktop/passportCI";
 	public static final String appPackage = "com.parkopedia.parkright";
 	
+
 	
+	//rubabadbubbub
 }
+
+
