@@ -3,13 +3,6 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Test runner]" parallel="classes">
   <test name="ParkRight Test Automation(failed)" parallel="classes">
     <classes>
-      <class name="Tests.LengthOfStayPageTests">
-        <methods>
-          <include name="restartApp"/>
-          <include name="setUpPage"/>
-          <include name="CheckLengthOfStayForExceptions"/>
-        </methods>
-      </class> <!-- Tests.LengthOfStayPageTests -->
       <class name="Tests.ProfilePageTests">
         <methods>
           <include name="setUpPage"/>
@@ -18,6 +11,13 @@
           <include name="initAppium"/>
         </methods>
       </class> <!-- Tests.ProfilePageTests -->
+      <class name="Tests.LengthOfStayPageTests">
+        <methods>
+          <include name="restartApp"/>
+          <include name="setUpPage"/>
+          <include name="CheckLengthOfStayForExceptions"/>
+        </methods>
+      </class> <!-- Tests.LengthOfStayPageTests -->
     </classes>
   </test> <!-- ParkRight Test Automation(failed) -->
 </suite> <!-- Failed suite [Test runner] -->
