@@ -21,6 +21,17 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class BasePage {
 
+	@FindBy(id="action_bar")
+	public MobileElement actionBar;
+	
+	@FindBy(id="tab_tickets")
+	public MobileElement tabTickets;
+	
+	@FindBy(id="tab_account")
+	public MobileElement tabAccount;
+	
+	@FindBy(id="tab_more")
+	public MobileElement tabMore;
 		
 	static WebDriverWait wait;
 	

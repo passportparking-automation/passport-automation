@@ -24,7 +24,7 @@ public class deviceAndroid {
 	public static final String browserNameChrome = "Chrome";
 	public static final String browserNameFirefox = "Firefox";
 	
-	public static final String appName = "ParkRight-staging_sept22_0106.apk";
+	public static final String appName = "EasyPay-staging.apk";
 	public static final String appDir = "/Users/joeakel/Desktop/passportCI";
-	public static final String appPackage = "com.parkopedia.parkright";
+	public static final String appPackage = "passportinc.com.mobiletransit";
 }
