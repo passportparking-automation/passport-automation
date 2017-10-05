@@ -8,7 +8,7 @@ import io.appium.java_client.MobileElement;
 
 public class ManageEasyCardPageAndroid extends BasePage implements ManageEasyCardPage {
 	
-	//wubababdubbadub
+	//wubababd
 	
 	@FindBy(id="menu_action_add")
 	public MobileElement menuActionAdd;
