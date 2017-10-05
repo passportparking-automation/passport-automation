@@ -48,6 +48,20 @@ public class ManageEasyCardPageAndroid extends BasePage implements ManageEasyCar
 	
 	@FindBy(id="history_pass")
 	public MobileElement historyPass;
+	
+	//Below are objects that appear in the "Add an EASY Card" pop up after clicking the '+' button on the action bar.
+	
+	@FindBy(id="easy_card_number_entry_instruction")
+	public MobileElement easyCardNumberEntryInstruction;
+	
+	@FindBy(id="easy_card_number_input")
+	public MobileElement easyCardNumberInput;
+	
+	@FindBy(id="easy_card_number_entry_cancel")
+	public MobileElement easyCardNumberEntryCancel;
+	
+	@FindBy(id="easy_card_number_entry_next")
+	public MobileElement easyCardNumberEntryNext;
 
 	public ManageEasyCardPageAndroid(AppiumDriver driver) {super(driver);}
 
