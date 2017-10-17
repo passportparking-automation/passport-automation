@@ -32,6 +32,12 @@ public abstract class BasePage {
 	
 	@FindBy(id="tab_more")
 	public MobileElement tabMore;
+	
+	@FindBy(className="android.widget.ImageButton")
+	public MobileElement backImageButton;
+	
+	@FindBy(id="textinput_error")
+	public MobileElement inputErrorMessage;
 		
 	static WebDriverWait wait;
 	

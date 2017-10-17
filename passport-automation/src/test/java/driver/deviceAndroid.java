@@ -18,7 +18,7 @@ public class deviceAndroid {
 	*/
 	
 	public static final String platformName = "Android";
-	public static final String deviceName = "Emulator3";
+	public static final String deviceName = "0f47570a";
 	public static final String device = "Android";
 	public static final String URL = "http://127.0.0.1:4723/wd/hub";
 	public static final String browserNameChrome = "Chrome";

@@ -14,7 +14,7 @@ public class ForgotPasswordPageAndroid extends BasePage implements ForgotPasswor
 	@FindBy(id="next_button")
 	public MobileElement nextButton;
 	
-	@FindBy(id="security_question_field")
+	@FindBy(id="security_question_layout")
 	public MobileElement securityQuestionField;
 	
 	@FindBy(id="security_answer_field")
@@ -22,48 +22,95 @@ public class ForgotPasswordPageAndroid extends BasePage implements ForgotPasswor
 	
 	@FindBy(id="send_email_button")
 	public MobileElement sendEmailButton;
+	
+	@FindBy(id="security_answer_instructions")
+	public MobileElement secAnswerFieldDesc;
 
 	public ForgotPasswordPageAndroid(AppiumDriver driver) {super(driver);}
 
-	@Override
 	public void NoDataTest() {
-		// TODO Auto-generated method stub
-		
+		nextButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		driver.navigate().back();
+	
 	}
 
-	@Override
 	public void BadEmailTest() {
-		// TODO Auto-generated method stub
-		
+		//userEmailField.clear();
+		userEmailField.sendKeys("jk1@quilmont");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		nextButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		driver.navigate().back();
 	}
 
-	@Override
 	public void NonvalidEmailTest() {
-		// TODO Auto-generated method stub
-		
+		//userEmailField.clear();
+		userEmailField.sendKeys("jakel@quilmont.com");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		nextButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		driver.navigate().back();
 	}
 
-	@Override
 	public void CheckSecurityQuestionsForExcpetions() {
-		// TODO Auto-generated method stub
-		
+		userEmailField.sendKeys("jkoch@quilmont.com");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		nextButton.click();
+		secAnswerFieldDesc.isDisplayed();
+		securityQuestionField.isDisplayed();
+		securityAnswerField.isDisplayed();
+		sendEmailButton.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
 	}
 
-	@Override
 	public void NoAnswerTest() {
-		// TODO Auto-generated method stub
+		sendEmailButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
 		
 	}
 
-	@Override
 	public void WrongAnswerTest() {
-		// TODO Auto-generated method stub
-		
+		securityAnswerField.sendKeys("wrong answer");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		sendEmailButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
 	}
 
-	@Override
+
 	public void CorrectAnswerTest() {
-		// TODO Auto-generated method stub
+		securityAnswerField.sendKeys( "Opera");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		sendEmailButton.click();
+		//popUp.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
 		
 	}
 

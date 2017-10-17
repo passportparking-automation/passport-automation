@@ -5,4 +5,8 @@ public interface SignInPage {
 	public void FailedLoginTest();
 	public void NavigateForgotPassword();
 	public void NavigateCreateAccount();
+	public void SuccesfulLoginTest();
+
+	public void navigateToCreateAccountPage();
+	public void navigateToForgotPasswordPage();
 }

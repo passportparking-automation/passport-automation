@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import Pages.BasePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 
 public class CreateAccountPageAndroid extends BasePage implements CreateAccountPage{
 	
@@ -40,33 +41,136 @@ public class CreateAccountPageAndroid extends BasePage implements CreateAccountP
 
 	public CreateAccountPageAndroid(AppiumDriver driver) {super(driver);}
 
-	@Override
 	public void CheckCreateAccountPageForExceptions() {
-		// TODO Auto-generated method stub
-		
+		firstNameInput.isDisplayed();
+		lastNameInput.isDisplayed();
+		emailInput.isDisplayed();
+		passwordInput.isDisplayed();
+		textInputPasswordToggle.isDisplayed();
+		securityQuestion.isDisplayed();
+		securityAnswer.isDisplayed();
+		takeScreenshot("ScreenShot"+System.currentTimeMillis());
+		int offset = 1;
+		int y = driver.manage().window().getSize().getHeight();
+		int x = driver.manage().window().getSize().getWidth();
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();     
+		touchAction.perform();
+		phoneNumberInput.isDisplayed();
+		zipCodeInput.isDisplayed();
+		registerButton.isDisplayed();
+		takeScreenshot("ScreenShot"+System.currentTimeMillis());
+		driver.navigate().back();
 	}
-
-	@Override
 	public void AlreadyRegisteredTest() {
-		// TODO Auto-generated method stub
+		emailInput.sendKeys("jkoch@quilmont.com");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		passwordInput.sendKeys("Password123!");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		int offset = 1;
+		int y = driver.manage().window().getSize().getHeight();
+		int x = driver.manage().window().getSize().getWidth();
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();     
+		touchAction.perform();
+		registerButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		driver.navigate().back();
 		
 	}
 
-	@Override
 	public void BadEmailStringTest() {
-		// TODO Auto-generated method stub
+		emailInput.sendKeys("jkochquilmontcom");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		passwordInput.sendKeys("Password123!");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		int offset = 1;
+		int y = driver.manage().window().getSize().getHeight();
+		int x = driver.manage().window().getSize().getWidth();
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();     
+		touchAction.perform();
+		registerButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		driver.navigate().back();
 		
 	}
 
-	@Override
 	public void WrongPasswordTest() {
-		// TODO Auto-generated method stub
+		emailInput.sendKeys("jh1@quilmont.com");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		passwordInput.sendKeys("123!");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		int offset = 1;
+		int y = driver.manage().window().getSize().getHeight();
+		int x = driver.manage().window().getSize().getWidth();
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();     
+		touchAction.perform();
+		registerButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		driver.navigate().back();
 		
 	}
 
-	@Override
 	public void SuccessfulAccountCreationTest() {
-		// TODO Auto-generated method stub
+		emailInput.sendKeys("jakel@quilmont.com");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		passwordInput.sendKeys("Password123!");
+		try {
+			driver.hideKeyboard();
+		}
+		catch (Exception e){
+		}
+		
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		int offset = 1;
+		int y = driver.manage().window().getSize().getHeight();
+		int x = driver.manage().window().getSize().getWidth();
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.press(x / 2, y - offset).moveTo(0, -(y - (2 * offset))).release();     
+		touchAction.perform();
+		registerButton.click();
+		inputErrorMessage.isDisplayed();
+		takeScreenshot("Screenshot"+System.currentTimeMillis());
+		driver.navigate().back();
 		
 	}
 

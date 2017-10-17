@@ -21,7 +21,7 @@ public class TicketsPageAndroid extends BasePage implements TicketsPage{
 
 	@Override
 	public void CheckTicketPageForExcpetions() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

@@ -31,4 +31,22 @@ public class SignInPageIOS extends BasePage implements SignInPage{
 		
 	}
 
+	@Override
+	public void SuccesfulLoginTest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void navigateToCreateAccountPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void navigateToForgotPasswordPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

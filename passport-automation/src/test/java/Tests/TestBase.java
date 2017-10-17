@@ -60,7 +60,7 @@ public abstract class TestBase {
 			capabilitiesAndroid.setCapability(MobileCapabilityType.APP, appAndroid);
 			capabilitiesAndroid.setCapability("platformName","android");
 			capabilitiesAndroid.setCapability("appPackage", deviceAndroid.appPackage);
-			capabilitiesAndroid.setCapability("appActivity", "com.parkopedia.parkright.ParkRightApp");
+			//capabilitiesAndroid.setCapability("appActivity", "com.parkopedia.parkright.ParkRightApp");
 			//capabilitiesAndroid.setCapability("automationName", "uiautomator2"); 
 			
 			driver = new AppiumDriver<MobileElement>(url, capabilitiesAndroid);
